@@ -1,0 +1,21 @@
+<div
+  [class.visual-panel__surface--grade]="grade"
+  [class.visual-panel__surface--showcase]="!grade"
+  class="visual-panel__surface"
+>
+  <div class="visual-panel__label">
+    <div
+      [class.visual-panel__icon--grade]="grade"
+      [class.visual-panel__icon--showcase]="!grade"
+      class="visual-panel__icon"
+      [innerHTML]="item.icon | safeHtml"
+    ></div>
+    <p
+      [class.visual-panel__text--grade]="grade"
+      [class.visual-panel__text--showcase]="!grade"
+      class="visual-panel__text"
+    >
+      {{ item.titleKey | translate }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div id="brands-grid" class="brands-marquee" aria-label="Brands">
+  <div class="brands-marquee__track">
+    @for (brand of duplicatedItems(); track brand['model'].id) {
+      <img
+        class="brands-marquee__logo"
+        [src]="brand['model'].src"
+        [alt]="brand['model'].alt || brand['model'].name"
+        width="158"
+        height="48"
+      />
+    }
+  </div>
+</div>

@@ -1,0 +1,65 @@
+.visual-panel {
+  position: relative;
+
+  &__surface {
+    border-radius: 40px 40px 32px 32px;
+    height: 433px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--grade {
+      background: #ffffff;
+    }
+
+    &--showcase {
+      background: #fef2f2;
+    }
+  }
+
+  &__label {
+    text-align: center;
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 16px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--grade {
+      background: #f3f4f6;
+      color: #9ca3af;
+    }
+
+    &--showcase {
+      background: #fee2e2;
+      color: #f87171;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin: 0;
+
+    &--grade {
+      color: #6b7280;
+    }
+
+    &--showcase {
+      color: #f87171;
+    }
+  }
+}

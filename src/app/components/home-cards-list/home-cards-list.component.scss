@@ -1,0 +1,57 @@
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 32px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    :host-context(.dark) & {
+      background: #1f2937;
+      border-color: #374151;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      color: #111827;
+    }
+  }
+
+  &__title {
+    font-family: var(--dcf-site-font-jakarta);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: #111827;
+    margin: 0 0 8px;
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.625;
+    color: #4b5563;
+    margin: 0;
+  }
+}

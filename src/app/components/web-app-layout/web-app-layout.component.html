@@ -1,0 +1,33 @@
+@if (site) {
+  <div class="app-layout">
+    <div class="app-layout__locale">
+      <button
+        type="button"
+        class="app-layout__locale-button"
+        (click)="toggleLocale()"
+        [attr.aria-expanded]="open"
+        aria-label="Language"
+      >
+        {{ currentLocale }}
+        <span class="app-layout__locale-chevron" [class.app-layout__locale-chevron--open]="open"></span>
+      </button>
+      @if (open) {
+        <ul class="app-layout__locale-menu">
+          @for (locale of locales; track locale) {
+            <li>
+              <button
+                type="button"
+                class="app-layout__locale-option"
+                [class.app-layout__locale-option--active]="locale === currentLocale"
+                (click)="selectLocale(locale)"
+              >
+                {{ locale }}
+              </button>
+            </li>
+          }
+        </ul>
+      }
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+}

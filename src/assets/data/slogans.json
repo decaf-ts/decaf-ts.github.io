@@ -1,0 +1,5148 @@
+{
+ "decoration": [
+  {
+   "Slogan": "Decaf-TS Decoration: Metadata, but make it fabulous.",
+   "Tags": "Decorators, Fun, Metadata"
+  },
+  {
+   "Slogan": "Decorate your code like it's going to a TypeScript prom.",
+   "Tags": "TS, Humor, Annotation"
+  },
+  {
+   "Slogan": "Add some flair. Annotate with care.",
+   "Tags": "Decorators, Calm, DX"
+  },
+  {
+   "Slogan": "Because raw classes are so last season.",
+   "Tags": "Decorator, Fashion, Humor"
+  },
+  {
+   "Slogan": "No chaos, just classy metadata.",
+   "Tags": "Metadata, Calm, Technical"
+  },
+  {
+   "Slogan": "Turn boring code into well-dressed functions.",
+   "Tags": "Code Styling, Humor, Decorators"
+  },
+  {
+   "Slogan": "Decorators that don’t crash the party (or the app).",
+   "Tags": "Safe, Humor, DevX"
+  },
+  {
+   "Slogan": "TypeScript just got a glow-up.",
+   "Tags": "TS, Humor, Beauty"
+  },
+  {
+   "Slogan": "Wrap your logic in elegance.",
+   "Tags": "Functional, Calm, Decorators"
+  },
+  {
+   "Slogan": "Annotation so smooth, it should come with a jazz playlist.",
+   "Tags": "Smooth, Metadata, Chill"
+  },
+  {
+   "Slogan": "Less boilerplate, more sparkle.",
+   "Tags": "Code Efficiency, Humor, Decorators"
+  },
+  {
+   "Slogan": "Give your code the decorator it deserves, not the one it fears.",
+   "Tags": "Dark Humor, Decorators, DevX"
+  },
+  {
+   "Slogan": "Make your classes feel seen.",
+   "Tags": "Annotation, Developer Empathy, Metadata"
+  },
+  {
+   "Slogan": "Syntax sugar, now 100% gluten-free.",
+   "Tags": "Humor, Technical, Decorators"
+  },
+  {
+   "Slogan": "Decorators so chill, they come with their own latte foam art.",
+   "Tags": "Coffee-themed, Chill, Decorators"
+  },
+  {
+   "Slogan": "Transform your functions into fancy, metadata-laced showoffs.",
+   "Tags": "Decorators, Fun, Tech"
+  },
+  {
+   "Slogan": "Now serving annotations with extra chill.",
+   "Tags": "Chill, Decorators, Calm"
+  },
+  {
+   "Slogan": "Decaf-TS Decoration: For code that wants to be more than just functional.",
+   "Tags": "Decorators, Metadata, Humor"
+  },
+  {
+   "Slogan": "Your functions. Now with personality.",
+   "Tags": "Decorators, Metadata, Fun"
+  },
+  {
+   "Slogan": "Add context. Subtract chaos.",
+   "Tags": "Annotation, Calm, Developer"
+  },
+  {
+   "Slogan": "Why just write code when you can accessorize it?",
+   "Tags": "Humor, Decorators, Style"
+  },
+  {
+   "Slogan": "Put the 'extra' in 'extract metadata'.",
+   "Tags": "Metadata, Decorators, Fun"
+  },
+  {
+   "Slogan": "Less mess. More metadata.",
+   "Tags": "Developer Experience, Clean Code, Decorators"
+  },
+  {
+   "Slogan": "Because your code deserves a little pampering.",
+   "Tags": "Humor, Calm, DevX"
+  },
+  {
+   "Slogan": "Type-safe, over-caffeinated styling for your code’s ego.",
+   "Tags": "Coffee-themed, Decorators, Fun"
+  },
+  {
+   "Slogan": "Your backend just put on its Sunday best.",
+   "Tags": "Decorator, Humor, Tech"
+  },
+  {
+   "Slogan": "Annotation for humans. Metadata for machines. Sass for everyone.",
+   "Tags": "Decorators, Humor, Metadata"
+  },
+  {
+   "Slogan": "Turn ‘meh’ code into ‘damn, son’.",
+   "Tags": "Humor, Decorators, Style"
+  },
+  {
+   "Slogan": "The eyeliner of your API surface.",
+   "Tags": "Decorators, Metaphor, Fun"
+  },
+  {
+   "Slogan": "Decorators: Because function signatures weren’t dramatic enough.",
+   "Tags": "Humor, Drama, TS"
+  },
+  {
+   "Slogan": "Code with more sparkle than a teenage vampire.",
+   "Tags": "Decorators, Humor, Metadata"
+  },
+  {
+   "Slogan": "Put a ring on your logic. It’s committed now.",
+   "Tags": "Humor, Decorators, Marriage Metaphor"
+  },
+  {
+   "Slogan": "Less ‘raw function’, more ‘Michelin-star method’.",
+   "Tags": "Decorators, Food Metaphor, Tech"
+  },
+  {
+   "Slogan": "Your code. Curated by Vogue.",
+   "Tags": "Humor, Style, Decorators"
+  },
+  {
+   "Slogan": "Decorators so smooth they come with a barista.",
+   "Tags": "Coffee-themed, Smooth, DevX"
+  },
+  {
+   "Slogan": "Add intent. Ditch the boilerplate therapy sessions.",
+   "Tags": "Developer Humor, Decorators, Clean Code"
+  },
+  {
+   "Slogan": "Let your classes speak fluent metadata.",
+   "Tags": "Decorators, Metadata, DX"
+  },
+  {
+   "Slogan": "The accessories that actually improve performance.",
+   "Tags": "Decorators, Performance, Humor"
+  },
+  {
+   "Slogan": "Be the kind of code that comments itself — in metadata.",
+   "Tags": "Decorators, Self-aware, Humor"
+  },
+  {
+   "Slogan": "Syntax that slaps — politely.",
+   "Tags": "Decorators, Humor, Calm"
+  },
+  {
+   "Slogan": "Chill annotations for chill developers.",
+   "Tags": "Calm, Decorators, DevX"
+  },
+  {
+   "Slogan": "Decorate once, impress forever.",
+   "Tags": "Efficiency, Decorators, Branding"
+  },
+  {
+   "Slogan": "From bland to branded with one line.",
+   "Tags": "Decorator, DevX, Humor"
+  },
+  {
+   "Slogan": "Because decorators shouldn’t come with existential dread.",
+   "Tags": "Developer Humor, Calm, Decorators"
+  },
+  {
+   "Slogan": "Write less code. Decorate more personality.",
+   "Tags": "Humor, Decorators, Minimalism"
+  },
+  {
+   "Slogan": "Functionality meets flair.",
+   "Tags": "Decorators, Fun, Tech"
+  },
+  {
+   "Slogan": "The sprinkle of syntactic joy your code forgot it needed.",
+   "Tags": "Decorators, Joy, Calm"
+  },
+  {
+   "Slogan": "Tell your logic it's pretty. It deserves it.",
+   "Tags": "Humor, Decorators, Developer Empathy"
+  },
+  {
+   "Slogan": "Code annotation that doesn’t scream in ALL CAPS.",
+   "Tags": "Calm, Decorators, DX"
+  }
+ ],
+ "logging": [
+  {
+   "Slogan": "Decaf‑TS logging: record your errors without racing your heart.",
+   "Tags": "Logging, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Log entries that whisper, not scream — decaf edition.",
+   "Tags": "Logging, Chill, Humor"
+  },
+  {
+   "Slogan": "When your logs relax, your dev workflow rejoices.",
+   "Tags": "DeveloperDX, Calm, Logging"
+  },
+  {
+   "Slogan": "Capture info, warn gently, error kindly.",
+   "Tags": "Logging, Calm, Technical"
+  },
+  {
+   "Slogan": "Logging so smooth you’ll forget you hit an exception.",
+   "Tags": "Logging, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "No caffeine crash in your logs — only clean tracebacks.",
+   "Tags": "Tracebacks, Calm, Humor"
+  },
+  {
+   "Slogan": "Errors happen. Your logger doesn’t need an energy drink.",
+   "Tags": "Errors, Logging, Calm"
+  },
+  {
+   "Slogan": "Logs that brew while you sip your decaf.",
+   "Tags": "Logging, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "A logger that logs quietly, like library footsteps at midnight.",
+   "Tags": "Logging, Metaphor, Calm"
+  },
+  {
+   "Slogan": "Your console’s decaf‑shot: strong insight, low jitter.",
+   "Tags": "Console, Coffee‑themed, Insight"
+  },
+  {
+   "Slogan": "Debug mode, but make it decaf.",
+   "Tags": "Debugging, Coffee‑themed, Logging"
+  },
+  {
+   "Slogan": "Log levels handled like barista foam: light and consistent.",
+   "Tags": "LogLevels, Calm, Humor"
+  },
+  {
+   "Slogan": "Crash less. Log more. Stay mellow.",
+   "Tags": "Logging, Productivity, Calm"
+  },
+  {
+   "Slogan": "Strict typing, soft logging — the Decaf‑TS way.",
+   "Tags": "Typing, Logging, Technical"
+  },
+  {
+   "Slogan": "Your logs in full flavour, zero spill‑over.",
+   "Tags": "Logging, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "When your logger purrs instead of roars, you’re using decaf.",
+   "Tags": "Logging, Humor, Calm"
+  },
+  {
+   "Slogan": "Record everything. Panic nothing.",
+   "Tags": "Logging, Calm, Developer"
+  },
+  {
+   "Slogan": "Log entries that read like your best espresso: rich, clear, no crash.",
+   "Tags": "Logging, Coffee‑themed, Metaphor"
+  },
+  {
+   "Slogan": "Let your logger sit back in the armchair while you build features.",
+   "Tags": "Logging, Chill, Developer"
+  },
+  {
+   "Slogan": "Logs that won’t keep you up at night worrying about state.",
+   "Tags": "Logging, Calm, State"
+  },
+  {
+   "Slogan": "From info to error with the same mellow vibration.",
+   "Tags": "Logging, Calm, Technical"
+  },
+  {
+   "Slogan": "Your logs don’t need caffeine — your productivity does enough already.",
+   "Tags": "Logging, Humor, Productivity"
+  },
+  {
+   "Slogan": "Structured logs, decaf‑style: clear, calm, consistent.",
+   "Tags": "Logging, Structure, Calm"
+  },
+  {
+   "Slogan": "When your logger is relaxed, your builds deploy smoother.",
+   "Tags": "Logging, DevOps, Calm"
+  },
+  {
+   "Slogan": "Log formatting that’s less shout, more conversation.",
+   "Tags": "Logging, Casting, Calm"
+  },
+  {
+   "Slogan": "Your logger’s flavour profile: mellow, robust, decaf.",
+   "Tags": "Logging, Coffee‑themed, Branding"
+  },
+  {
+   "Slogan": "Choose your level: DEBUG, INFO, WARN… all chill.",
+   "Tags": "LogLevels, Calm, Technical"
+  },
+  {
+   "Slogan": "Silence the jitters in your error logs.",
+   "Tags": "Errors, Logging, Calm"
+  },
+  {
+   "Slogan": "When the stack trace doesn’t spike your caffeine levels.",
+   "Tags": "Traceback, Humor, Logging"
+  },
+  {
+   "Slogan": "Console logs that relax as much as your morning brew.",
+   "Tags": "Console, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Your logger: the barista of observability.",
+   "Tags": "Observability, Logging, Coffee‑themed"
+  },
+  {
+   "Slogan": "Record the chaos quietly; debug it calmly.",
+   "Tags": "Debugging, Calm, Logging"
+  },
+  {
+   "Slogan": "No caffeine in your logs, no chaos in your codebase.",
+   "Tags": "Logging, Calm, Tech"
+  },
+  {
+   "Slogan": "Build features, not panic‑traces.",
+   "Tags": "Developer, Logging, Calm"
+  },
+  {
+   "Slogan": "Log handlers that prioritize calm over commotion.",
+   "Tags": "Handlers, Calm, Logging"
+  },
+  {
+   "Slogan": "Error logs with grace, not with heart palpitations.",
+   "Tags": "Errors, Logging, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your logs sipping tea while your stack drinks decaf.",
+   "Tags": "Metaphor, Logging, Humor"
+  },
+  {
+   "Slogan": "Log watchers that don’t watch you crash.",
+   "Tags": "Monitoring, Logging, Calm"
+  },
+  {
+   "Slogan": "Analytics? Sure. Panic? Never.",
+   "Tags": "Analytics, Calm, Logging"
+  },
+  {
+   "Slogan": "Quiet logs. Loud features.",
+   "Tags": "Logging, Productivity, Calm"
+  },
+  {
+   "Slogan": "Let your logger brew consistency into your application.",
+   "Tags": "Logging, Consistency, Calm"
+  },
+  {
+   "Slogan": "Turn chaos into entries, entries into calm.",
+   "Tags": "Logging, Workflow, Humor"
+  },
+  {
+   "Slogan": "Your code’s new favourite lounge: Logger Edition.",
+   "Tags": "Logging, Chill, Developer"
+  },
+  {
+   "Slogan": "Log format so smooth it feels like a decaf latte.",
+   "Tags": "Logging, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Decaf‑TS logging: because even your errors deserve peace.",
+   "Tags": "Logging, Calm, Branding"
+  }
+ ],
+ "utils": [
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That's Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That’s Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That’s Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That’s Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That’s Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That’s Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That’s Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That’s Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That’s Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "No caffeine, no chaos. Just clean code.",
+   "Tags": "Coffee-themed, Calm, Tech"
+  },
+  {
+   "Slogan": "Full flavor, no jitters. That’s Decaf-TS.",
+   "Tags": "Coffee-themed, Cheerful"
+  },
+  {
+   "Slogan": "Chill fullstack. Powered by Decaf.",
+   "Tags": "Coffee-themed, Fun, Tech"
+  },
+  {
+   "Slogan": "Decaf-TS: Brewed for calm code.",
+   "Tags": "Coffee-themed, Branding"
+  },
+  {
+   "Slogan": "Smooth as your morning Decaf.",
+   "Tags": "Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "All the kick, none of the crash.",
+   "Tags": "Coffee-themed, Energetic"
+  },
+  {
+   "Slogan": "Sip back and ship faster.",
+   "Tags": "Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Keep calm and code Decaf.",
+   "Tags": "Coffee-themed, Playful"
+  },
+  {
+   "Slogan": "Code without the caffeine shakes.",
+   "Tags": "Coffee-themed, Humorous"
+  },
+  {
+   "Slogan": "Your fullstack, decaffeinated.",
+   "Tags": "Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "Decaf-TS: Where smart contracts meet smart interfaces.",
+   "Tags": "Blockchain, Smart Contracts, Tech"
+  },
+  {
+   "Slogan": "Ship dApps without the stress.",
+   "Tags": "Blockchain, Cheerful, Developer"
+  },
+  {
+   "Slogan": "No CRUD, no problem — Decaf your data.",
+   "Tags": "Data, No-CRUD, Chill"
+  },
+  {
+   "Slogan": "From DID to UI, without breaking a sweat.",
+   "Tags": "DID, SSI, UI, Calm"
+  },
+  {
+   "Slogan": "Decaf-TS: Your frontend already understands your smart contract.",
+   "Tags": "Smart Contracts, DX, Magic"
+  },
+  {
+   "Slogan": "Self-sovereign by design. Productive by default.",
+   "Tags": "SSI, Developer, Calm"
+  },
+  {
+   "Slogan": "Build once. Deploy everywhere. Decentralized and delightful.",
+   "Tags": "Blockchain, Multi-platform, Happy"
+  },
+  {
+   "Slogan": "Data that defines its own destiny.",
+   "Tags": "SSI, Data-driven, Empowerment"
+  },
+  {
+   "Slogan": "Goodbye CRUD, hello intent-based interfaces.",
+   "Tags": "No-CRUD, UI, Technical"
+  },
+  {
+   "Slogan": "The smoothest path from DID to done.",
+   "Tags": "DID, Workflow, Chill"
+  },
+  {
+   "Slogan": "Because your dApp deserves more than boilerplate.",
+   "Tags": "Blockchain, DevX, Efficiency"
+  },
+  {
+   "Slogan": "Own your data. Own your flow.",
+   "Tags": "SSI, Control, Ownership"
+  },
+  {
+   "Slogan": "Write logic like it belongs with the data — because it does.",
+   "Tags": "Data Logic, Developer, Smart"
+  },
+  {
+   "Slogan": "From smart contracts to smarter frontends.",
+   "Tags": "Smart Contracts, UI, DX"
+  },
+  {
+   "Slogan": "No caffeine. No CRUD. Just the future.",
+   "Tags": "No-CRUD, Coffee-themed, Futuristic"
+  },
+  {
+   "Slogan": "The future of web3 UX is Decaf.",
+   "Tags": "Blockchain, UX, Vision"
+  },
+  {
+   "Slogan": "Code with confidence. Govern with clarity.",
+   "Tags": "Blockchain, Governance, Calm"
+  },
+  {
+   "Slogan": "Interfaces that obey the data, not the other way around.",
+   "Tags": "UI, Data Logic, Self-aware"
+  },
+  {
+   "Slogan": "Brew business logic right into your bytes.",
+   "Tags": "Data Logic, Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "DIDs done differently — and delightfully.",
+   "Tags": "DID, Self-Sovereign, Playful"
+  },
+  {
+   "Slogan": "Decaf-TS-TS: Where blockchain contracts meet smart interfaces.",
+   "Tags": "Blockchain, Smart Contracts, Tech"
+  },
+  {
+   "Slogan": "Ship dApps without the stress.",
+   "Tags": "Blockchain, Cheerful, Developer"
+  },
+  {
+   "Slogan": "No boilerplate, no problem — Decaf-TS your data.",
+   "Tags": "Data, No-CRUD, Chill"
+  },
+  {
+   "Slogan": "From DID to UI, without breaking a sweat.",
+   "Tags": "DID, SSI, UI, Calm"
+  },
+  {
+   "Slogan": "Decaf-TS-TS: Your frontend already understands your blockchain contract.",
+   "Tags": "Smart Contracts, DX, Magic"
+  },
+  {
+   "Slogan": "Self-sovereign by design. Productive by default.",
+   "Tags": "SSI, Developer, Calm"
+  },
+  {
+   "Slogan": "Build once. Deploy everywhere. Decentralized and delightful.",
+   "Tags": "Blockchain, Multi-platform, Happy"
+  },
+  {
+   "Slogan": "Data that defines its own destiny.",
+   "Tags": "SSI, Data-driven, Empowerment"
+  },
+  {
+   "Slogan": "Goodbye boilerplate, hello intent-based interfaces.",
+   "Tags": "No-CRUD, UI, Technical"
+  },
+  {
+   "Slogan": "The smoothest path from DID to done.",
+   "Tags": "DID, Workflow, Chill"
+  },
+  {
+   "Slogan": "Because your dApp deserves more than boilerplate.",
+   "Tags": "Blockchain, DevX, Efficiency"
+  },
+  {
+   "Slogan": "Own your data. Own your flow.",
+   "Tags": "SSI, Control, Ownership"
+  },
+  {
+   "Slogan": "Write logic like it belongs with the data — because it does.",
+   "Tags": "Data Logic, Developer, Smart"
+  },
+  {
+   "Slogan": "From blockchain contracts to smarter frontends.",
+   "Tags": "Smart Contracts, UI, DX"
+  },
+  {
+   "Slogan": "No caffeine. No boilerplate. Just the future.",
+   "Tags": "No-CRUD, Coffee-themed, Futuristic"
+  },
+  {
+   "Slogan": "The future of web3 UX is Decaf-TS.",
+   "Tags": "Blockchain, UX, Vision"
+  },
+  {
+   "Slogan": "Code with confidence. Govern with clarity.",
+   "Tags": "Blockchain, Governance, Calm"
+  },
+  {
+   "Slogan": "Interfaces that obey the data, not the other way around.",
+   "Tags": "UI, Data Logic, Self-aware"
+  },
+  {
+   "Slogan": "Brew business logic right into your bytes.",
+   "Tags": "Data Logic, Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "DIDs done differently — and delightfully.",
+   "Tags": "DID, Self-Sovereign, Playful"
+  },
+  {
+   "Slogan": "Decaf-TS-TS: Where blockchain contracts meet smart interfaces.",
+   "Tags": "Blockchain, Smart Contracts, Tech"
+  },
+  {
+   "Slogan": "Ship dApps without the stress.",
+   "Tags": "Blockchain, Cheerful, Developer"
+  },
+  {
+   "Slogan": "No boilerplate, no problem — Decaf-TS your data.",
+   "Tags": "Data, No-CRUD, Chill"
+  },
+  {
+   "Slogan": "From DID to UI, without breaking a sweat.",
+   "Tags": "DID, SSI, UI, Calm"
+  },
+  {
+   "Slogan": "Decaf-TS-TS: Your frontend already understands your blockchain contract.",
+   "Tags": "Smart Contracts, DX, Magic"
+  },
+  {
+   "Slogan": "Self-sovereign by design. Productive by default.",
+   "Tags": "SSI, Developer, Calm"
+  },
+  {
+   "Slogan": "Build once. Deploy everywhere. Decentralized and delightful.",
+   "Tags": "Blockchain, Multi-platform, Happy"
+  },
+  {
+   "Slogan": "Data that defines its own destiny.",
+   "Tags": "SSI, Data-driven, Empowerment"
+  },
+  {
+   "Slogan": "Goodbye boilerplate, hello intent-based interfaces.",
+   "Tags": "No-CRUD, UI, Technical"
+  },
+  {
+   "Slogan": "The smoothest path from DID to done.",
+   "Tags": "DID, Workflow, Chill"
+  },
+  {
+   "Slogan": "Because your dApp deserves more than boilerplate.",
+   "Tags": "Blockchain, DevX, Efficiency"
+  },
+  {
+   "Slogan": "Own your data. Own your flow.",
+   "Tags": "SSI, Control, Ownership"
+  },
+  {
+   "Slogan": "Write logic like it belongs with the data — because it does.",
+   "Tags": "Data Logic, Developer, Smart"
+  },
+  {
+   "Slogan": "From blockchain contracts to smarter frontends.",
+   "Tags": "Smart Contracts, UI, DX"
+  },
+  {
+   "Slogan": "No caffeine. No boilerplate. Just the future.",
+   "Tags": "No-CRUD, Coffee-themed, Futuristic"
+  },
+  {
+   "Slogan": "The future of web3 UX is Decaf-TS.",
+   "Tags": "Blockchain, UX, Vision"
+  },
+  {
+   "Slogan": "Code with confidence. Govern with clarity.",
+   "Tags": "Blockchain, Governance, Calm"
+  },
+  {
+   "Slogan": "Interfaces that obey the data, not the other way around.",
+   "Tags": "UI, Data Logic, Self-aware"
+  },
+  {
+   "Slogan": "Brew business logic right into your bytes.",
+   "Tags": "Data Logic, Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "DIDs done differently — and delightfully.",
+   "Tags": "DID, Self-Sovereign, Playful"
+  },
+  {
+   "Slogan": "Decaf-TS-TS: Where blockchain contracts meet smart interfaces.",
+   "Tags": "Blockchain, Smart Contracts, Tech"
+  },
+  {
+   "Slogan": "Ship dApps without the stress.",
+   "Tags": "Blockchain, Cheerful, Developer"
+  },
+  {
+   "Slogan": "No boilerplate, no problem — Decaf-TS your data.",
+   "Tags": "Data, No-CRUD, Chill"
+  },
+  {
+   "Slogan": "From DID to UI, without breaking a sweat.",
+   "Tags": "DID, SSI, UI, Calm"
+  },
+  {
+   "Slogan": "Decaf-TS-TS: Your frontend already understands your blockchain contract.",
+   "Tags": "Smart Contracts, DX, Magic"
+  },
+  {
+   "Slogan": "Self-sovereign by design. Productive by default.",
+   "Tags": "SSI, Developer, Calm"
+  },
+  {
+   "Slogan": "Build once. Deploy everywhere. Decentralized and delightful.",
+   "Tags": "Blockchain, Multi-platform, Happy"
+  },
+  {
+   "Slogan": "Data that defines its own destiny.",
+   "Tags": "SSI, Data-driven, Empowerment"
+  },
+  {
+   "Slogan": "Goodbye boilerplate, hello intent-based interfaces.",
+   "Tags": "No-CRUD, UI, Technical"
+  },
+  {
+   "Slogan": "The smoothest path from DID to done.",
+   "Tags": "DID, Workflow, Chill"
+  },
+  {
+   "Slogan": "Because your dApp deserves more than boilerplate.",
+   "Tags": "Blockchain, DevX, Efficiency"
+  },
+  {
+   "Slogan": "Own your data. Own your flow.",
+   "Tags": "SSI, Control, Ownership"
+  },
+  {
+   "Slogan": "Write logic like it belongs with the data — because it does.",
+   "Tags": "Data Logic, Developer, Smart"
+  },
+  {
+   "Slogan": "From blockchain contracts to smarter frontends.",
+   "Tags": "Smart Contracts, UI, DX"
+  },
+  {
+   "Slogan": "No caffeine. No boilerplate. Just the future.",
+   "Tags": "No-CRUD, Coffee-themed, Futuristic"
+  },
+  {
+   "Slogan": "The future of web3 UX is Decaf-TS.",
+   "Tags": "Blockchain, UX, Vision"
+  },
+  {
+   "Slogan": "Code with confidence. Govern with clarity.",
+   "Tags": "Blockchain, Governance, Calm"
+  },
+  {
+   "Slogan": "Interfaces that obey the data, not the other way around.",
+   "Tags": "UI, Data Logic, Self-aware"
+  },
+  {
+   "Slogan": "Brew business logic right into your bytes.",
+   "Tags": "Data Logic, Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "DIDs done differently — and delightfully.",
+   "Tags": "DID, Self-Sovereign, Playful"
+  },
+  {
+   "Slogan": "Decaf-TS-TS: Where blockchain contracts meet smart interfaces.",
+   "Tags": "Blockchain, Smart Contracts, Tech"
+  },
+  {
+   "Slogan": "Ship dApps without the stress.",
+   "Tags": "Blockchain, Cheerful, Developer"
+  },
+  {
+   "Slogan": "No boilerplate, no problem — Decaf-TS your data.",
+   "Tags": "Data, No-CRUD, Chill"
+  },
+  {
+   "Slogan": "From DID to UI, without breaking a sweat.",
+   "Tags": "DID, SSI, UI, Calm"
+  },
+  {
+   "Slogan": "Decaf-TS-TS: Your frontend already understands your blockchain contract.",
+   "Tags": "Smart Contracts, DX, Magic"
+  },
+  {
+   "Slogan": "Self-sovereign by design. Productive by default.",
+   "Tags": "SSI, Developer, Calm"
+  },
+  {
+   "Slogan": "Build once. Deploy everywhere. Decentralized and delightful.",
+   "Tags": "Blockchain, Multi-platform, Happy"
+  },
+  {
+   "Slogan": "Data that defines its own destiny.",
+   "Tags": "SSI, Data-driven, Empowerment"
+  },
+  {
+   "Slogan": "Goodbye boilerplate, hello intent-based interfaces.",
+   "Tags": "No-CRUD, UI, Technical"
+  },
+  {
+   "Slogan": "The smoothest path from DID to done.",
+   "Tags": "DID, Workflow, Chill"
+  },
+  {
+   "Slogan": "Because your dApp deserves more than boilerplate.",
+   "Tags": "Blockchain, DevX, Efficiency"
+  },
+  {
+   "Slogan": "Own your data. Own your flow.",
+   "Tags": "SSI, Control, Ownership"
+  },
+  {
+   "Slogan": "Write logic like it belongs with the data — because it does.",
+   "Tags": "Data Logic, Developer, Smart"
+  },
+  {
+   "Slogan": "From blockchain contracts to smarter frontends.",
+   "Tags": "Smart Contracts, UI, DX"
+  },
+  {
+   "Slogan": "No caffeine. No boilerplate. Just the future.",
+   "Tags": "No-CRUD, Coffee-themed, Futuristic"
+  },
+  {
+   "Slogan": "The future of web3 UX is Decaf-TS.",
+   "Tags": "Blockchain, UX, Vision"
+  },
+  {
+   "Slogan": "Code with confidence. Govern with clarity.",
+   "Tags": "Blockchain, Governance, Calm"
+  },
+  {
+   "Slogan": "Interfaces that obey the data, not the other way around.",
+   "Tags": "UI, Data Logic, Self-aware"
+  },
+  {
+   "Slogan": "Brew business logic right into your bytes.",
+   "Tags": "Data Logic, Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "DIDs done differently — and delightfully.",
+   "Tags": "DID, Self-Sovereign, Playful"
+  }
+ ],
+ "reflection": [
+  {
+   "Slogan": "Reflection: gaze into your metadata without the caffeine crash.",
+   "Tags": "Reflection, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "Inspect types, models, metadata — quietly, calmly, decaf‑style.",
+   "Tags": "Metadata, Calm, Developer"
+  },
+  {
+   "Slogan": "When your code can see itself, you don’t need espresso to wake up bugs.",
+   "Tags": "Introspection, Humor, Calm"
+  },
+  {
+   "Slogan": "Reflect your models into runtime — no adrenaline needed.",
+   "Tags": "Runtime, Calm, Typing"
+  },
+  {
+   "Slogan": "Decorators reflect. Developers relax.",
+   "Tags": "Decorators, Calm, Tech"
+  },
+  {
+   "Slogan": "Metadata so visible you’ll forget you ever caffeinated your code.",
+   "Tags": "Metadata, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Reflection tools: the decaf mirror for your TypeScript stack.",
+   "Tags": "Tools, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "Peek under the hood without revving the engine.",
+   "Tags": "Introspection, Calm, Technical"
+  },
+  {
+   "Slogan": "Types, classes, decorators — all laid out like latte art.",
+   "Tags": "Types, Fun, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your model’s secrets told calmly, not screamed under espresso lighting.",
+   "Tags": "Models, Calm, Humor"
+  },
+  {
+   "Slogan": "Reflection layer: bridging compile‑time intent with runtime clarity.",
+   "Tags": "Execution, Tech, Calm"
+  },
+  {
+   "Slogan": "When the code reflects your domain, your heart doesn’t skip a beat.",
+   "Tags": "DomainModel, Calm, Developer"
+  },
+  {
+   "Slogan": "Inspect your decorators, introspect your schemas — stay mellow while you do it.",
+   "Tags": "Decorators, Schemas, Calm"
+  },
+  {
+   "Slogan": "No caffeine spikes. Just metadata insights.",
+   "Tags": "Metadata, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Reflection: your dev toolkit’s lounge chair.",
+   "Tags": "DeveloperDX, Chill, Tech"
+  },
+  {
+   "Slogan": "Your stack reflects itself so you don’t reflect your stress.",
+   "Tags": "Stack, Humor, Calm"
+  },
+  {
+   "Slogan": "Metadata introspection done decaf—as smooth as your morning cup.",
+   "Tags": "Introspection, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Forget the brain‑jitters; focus on insights.",
+   "Tags": "Insights, Calm, Developer"
+  },
+  {
+   "Slogan": "Reflection module: where your decorators go live and your coffee stays cool.",
+   "Tags": "Module, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "When your code understands itself, you understand coffee better.",
+   "Tags": "Metaprogramming, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Read metadata. React with calm. Ship features.",
+   "Tags": "Metadata, Workflow, Calm"
+  },
+  {
+   "Slogan": "Introspect your models like you sip decaf—slowly and intentionally.",
+   "Tags": "Models, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Reflection tools that look at your types so your IDE doesn’t have to drink espresso.",
+   "Tags": "IDE, Humor, Tech"
+  },
+  {
+   "Slogan": "Your metadata’s best friend—and your heart rate’s as stable as your DB.",
+   "Tags": "Metadata, Calm, Tech"
+  },
+  {
+   "Slogan": "Reflection: because even your decorators deserve a coffee break.",
+   "Tags": "Decorators, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "See into your models; don’t see your caffeine intake spike.",
+   "Tags": "Models, Humor, Calm"
+  },
+  {
+   "Slogan": "Inspect relationships, properties and hooks — in zen mode.",
+   "Tags": "Relationships, Chill, Developer"
+  },
+  {
+   "Slogan": "Your code’s mirror: clean reflections, no jitter lines.",
+   "Tags": "Mirror, Calm, Tech"
+  },
+  {
+   "Slogan": "Type metadata laid bare with decaf elegance.",
+   "Tags": "Types, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "When your code reflects your intent, your coffee reflects your mood.",
+   "Tags": "Intent, Metaphor, Calm"
+  },
+  {
+   "Slogan": "Reflection: turning runtime mystery into developer serenity.",
+   "Tags": "Runtime, DeveloperDX, Calm"
+  },
+  {
+   "Slogan": "Peek at annotations, inspect attributes — your heart stays steady.",
+   "Tags": "Annotations, Calm, Technical"
+  },
+  {
+   "Slogan": "Metadata visibility high, caffeine demand low.",
+   "Tags": "Metadata, Coffee‑themed, Humor"
+  },
+  {
+   "Slogan": "Your stack’s reflection lens: focus on clarity, not chaos.",
+   "Tags": "Stack, Clarity, Calm"
+  },
+  {
+   "Slogan": "Reflection: the decaf upgrade for your introspection game.",
+   "Tags": "Reflection, Branding, Developer"
+  },
+  {
+   "Slogan": "Inspect your model graphs while your coffee stays cool.",
+   "Tags": "Graph, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Let your decorators shine in runtime; you stay in lounge mode.",
+   "Tags": "Decorators, Chill, Tech"
+  },
+  {
+   "Slogan": "When your metadata is clean, your dev backlog shrinks.",
+   "Tags": "Metadata, Productivity, Calm"
+  },
+  {
+   "Slogan": "Reflection layer: strong typing meets strong peace of mind.",
+   "Tags": "Typing, Calm, Technical"
+  },
+  {
+   "Slogan": "See your stack from above, stay grounded below.",
+   "Tags": "Overview, Metaphor, Calm"
+  },
+  {
+   "Slogan": "Your code’s reflection pool: accurate, smooth, decaf‑cold.",
+   "Tags": "Metaphor, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Reflection: because you already caffeinated your coffee—your code doesn’t need extra.",
+   "Tags": "Coffee‑themed, Humor, Developer"
+  }
+ ],
+ "decorator-validation": [
+  {
+   "Slogan": "Decorator‑validation: where your models learn self‑control rather than caffeine spikes.",
+   "Tags": "Validation, Coffee‑themed, Models"
+  },
+  {
+   "Slogan": "Strongly‑typed validation so your objects don’t tremble like your espresso shot.",
+   "Tags": "Typing, Validation, Coffee‑themed"
+  },
+  {
+   "Slogan": "Decorators that check your email, not your heartbeat.",
+   "Tags": "Decorators, Humor, Validation"
+  },
+  {
+   "Slogan": "No more runtime surprises — only decaf‑calm data.",
+   "Tags": "Runtime, Calm, Technical"
+  },
+  {
+   "Slogan": "Validate your model while sipping decaf — what a combo.",
+   "Tags": "Validation, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Errors caught before they brew into crisis.",
+   "Tags": "Errors, Validation, Calm"
+  },
+  {
+   "Slogan": "Your model gets the spa treatment: validated, refreshed, calm.",
+   "Tags": "Model, Metaphor, Relaxed"
+  },
+  {
+   "Slogan": "Schema rules that enforce clarity instead of chaos.",
+   "Tags": "Schema, Validation, Technical"
+  },
+  {
+   "Slogan": "Validation decorators that whisper, not shout.",
+   "Tags": "Decorators, Calm, Developer"
+  },
+  {
+   "Slogan": "You build the model. We build the guardrails. You stay cool.",
+   "Tags": "Model, Guardrails, Calm"
+  },
+  {
+   "Slogan": "Validate once, deploy many — and keep your blood pressure down.",
+   "Tags": "Deploy, Validation, Calm"
+  },
+  {
+   "Slogan": "Because your code shouldn’t need espresso to survive bugs.",
+   "Tags": "Coffee‑themed, Validation, Humor"
+  },
+  {
+   "Slogan": "From missing fields to invalid types — handled with decaf elegance.",
+   "Tags": "Validation, Types, Calm"
+  },
+  {
+   "Slogan": "Decorators that keep your invalid data from going wild.",
+   "Tags": "Decorators, Validation, Fun"
+  },
+  {
+   "Slogan": "Model invariants? More like model peace‑tants.",
+   "Tags": "Invariants, Humorous, Calm"
+  },
+  {
+   "Slogan": "Validation so smooth your data feels pampered.",
+   "Tags": "Validation, Calm, Developer"
+  },
+  {
+   "Slogan": "Your developers stay comfy, your models stay consistent.",
+   "Tags": "DeveloperDX, Validation, Calm"
+  },
+  {
+   "Slogan": "Strong typing + validation + decaf — the developer’s trifecta.",
+   "Tags": "Typing, Validation, Coffee‑themed"
+  },
+  {
+   "Slogan": "Stop racing to fix invalid data. Let validation win the race calmly.",
+   "Tags": "Race, Validation, Calm"
+  },
+  {
+   "Slogan": "Fields, rules and decorators — served like a latte, not a red bull.",
+   "Tags": "Fields, Coffee‑themed, Validation"
+  },
+  {
+   "Slogan": "Your model’s personal trainer: strict but mellow.",
+   "Tags": "Model, Metaphor, Developer"
+  },
+  {
+   "Slogan": "Reject invalid states gently, not violently.",
+   "Tags": "States, Validation, Calm"
+  },
+  {
+   "Slogan": "Decorator‑validation: because your code already drinks enough coffee.",
+   "Tags": "Coffee‑themed, Validation, Humor"
+  },
+  {
+   "Slogan": "Validate your data. Don’t caffeinate your errors.",
+   "Tags": "Validation, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "From null pointers to clean objects — one decorator at a time.",
+   "Tags": "Null, Validation, Technical"
+  },
+  {
+   "Slogan": "When your models behave, your code relaxes.",
+   "Tags": "Model, Calm, Developer"
+  },
+  {
+   "Slogan": "Validation logic so quiet it might just hum a tune.",
+   "Tags": "Validation, Calm, Fun"
+  },
+  {
+   "Slogan": "Give your data boundaries instead of jitters.",
+   "Tags": "Boundaries, Validation, Calm"
+  },
+  {
+   "Slogan": "Invalid type? Not today. We decaf your type system.",
+   "Tags": "Types, Humor, Validation"
+  },
+  {
+   "Slogan": "Your inbox might spam you. Your models won’t.",
+   "Tags": "Models, Validation, Humor"
+  },
+  {
+   "Slogan": "Validation decorators: your data’s safety net in decaf colour.",
+   "Tags": "Decorators, Safety, Coffee‑themed"
+  },
+  {
+   "Slogan": "Tagged for validation, not tagged for panic.",
+   "Tags": "Tags, Validation, Calm"
+  },
+  {
+   "Slogan": "When your validation is VIP, your bugs stay out of the lounge.",
+   "Tags": "VIP, Validation, Metaphor"
+  },
+  {
+   "Slogan": "Decorator‑validation: the silent guardian of your data fit.",
+   "Tags": "Guardian, Validation, Calm"
+  },
+  {
+   "Slogan": "Consistency without caffeine. Elegance without effort.",
+   "Tags": "Consistency, Calm, Developer"
+  },
+  {
+   "Slogan": "Invalid data walks in. Decorators escort it out politely.",
+   "Tags": "Data, Validation, Humor"
+  },
+  {
+   "Slogan": "Strong types, strong rules, strong decaf‑vibes.",
+   "Tags": "Typing, Validation, Coffee‑themed"
+  },
+  {
+   "Slogan": "Prevent mistakes before they flee into production.",
+   "Tags": "Production, Validation, Calm"
+  },
+  {
+   "Slogan": "Your code’s immune system: decorator‑validation.",
+   "Tags": "ImmuneSystem, Validation, Metaphor"
+  },
+  {
+   "Slogan": "Models that check themselves before you ship them.",
+   "Tags": "Models, Validation, Developer"
+  },
+  {
+   "Slogan": "From undefined to defined — one decorator latte at a time.",
+   "Tags": "Undefined, Validation, Fun"
+  },
+  {
+   "Slogan": "Model health check: activated.",
+   "Tags": "HealthCheck, Validation, Calm"
+  },
+  {
+   "Slogan": "Decaf‑TS decorator‑validation: because rules don’t need caffeine.",
+   "Tags": "Validation, Branding, Coffee‑themed"
+  }
+ ],
+ "injectable-decorators": [
+  {
+   "Slogan": "Injectable‑Decorators: for dependency injection without the caffeine crash.",
+   "Tags": "DI, Coffee‑themed, Chill"
+  },
+  {
+   "Slogan": "Services that stay calm and single‑toned.",
+   "Tags": "Singleton, Calm, Technical"
+  },
+  {
+   "Slogan": "Injectables with latte‑style smoothness.",
+   "Tags": "Injectables, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "When your dependencies relax, your code shines.",
+   "Tags": "Dependencies, Calm, Productivity"
+  },
+  {
+   "Slogan": "Decorate your classes instead of overdosing on caffeine.",
+   "Tags": "Decorators, Humor, DI"
+  },
+  {
+   "Slogan": "Lazy inject. Latte sip. Low stress.",
+   "Tags": "LazyLoading, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Services: lean, typed and decaf‑ready.",
+   "Tags": "Services, Calm, Branding"
+  },
+  {
+   "Slogan": "Let the framework inject calm into your architecture.",
+   "Tags": "Architecture, Calm, DI"
+  },
+  {
+   "Slogan": "No adrenaline‑rush dependencies—just clean injectables.",
+   "Tags": "DI, Humor, Calm"
+  },
+  {
+   "Slogan": "Singletons that don’t give you singleton panic.",
+   "Tags": "Singleton, DeveloperDX, Calm"
+  },
+  {
+   "Slogan": "When your components stay composed, so does your heartbeat.",
+   "Tags": "Components, Calm, DI"
+  },
+  {
+   "Slogan": "Provider‑level control without the heart palpitations.",
+   "Tags": "Providers, Calm, Technical"
+  },
+  {
+   "Slogan": "Injectables that serve features, not caffeine jitters.",
+   "Tags": "Injectables, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Register once, relax forever.",
+   "Tags": "Registration, Chill, Developer"
+  },
+  {
+   "Slogan": "Dependency injection with a decaf mindset.",
+   "Tags": "DI, Coffee‑themed, Branding"
+  },
+  {
+   "Slogan": "Let the container handle life‑cycle while you handle the latte.",
+   "Tags": "Lifecycle, Humorous, Developer"
+  },
+  {
+   "Slogan": "Your architecture’s barista: smoother constructs, stronger features.",
+   "Tags": "Architecture, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Inject calm. Avoid crashes.",
+   "Tags": "Calm, Succinct, Developer"
+  },
+  {
+   "Slogan": "Decorators that plug in your services like espresso machines plug in coffee.",
+   "Tags": "Decorators, Coffee‑themed, Humor"
+  },
+  {
+   "Slogan": "Modules, providers and cappuccino vibes.",
+   "Tags": "Modules, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "When your DI stack mellows, your dev team relaxes.",
+   "Tags": "DI, Team, Calm"
+  },
+  {
+   "Slogan": "Injectables that handle wiring while you sip your decaf.",
+   "Tags": "Wiring, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "From class to instance without the caffeine spike.",
+   "Tags": "Classes, Calm, DI"
+  },
+  {
+   "Slogan": "Avoid circular dependencies and caffeine spirals.",
+   "Tags": "CircularDeps, Humor, Technical"
+  },
+  {
+   "Slogan": "Services injected like cream into coffee—smooth blend.",
+   "Tags": "Services, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your DI container just checked in for its coffee break.",
+   "Tags": "DI, Fun, Chill"
+  },
+  {
+   "Slogan": "Lazy‑load your modules. No sprint after coffee needed.",
+   "Tags": "LazyLoad, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Injectables with good taste and zero crash.",
+   "Tags": "Injectables, Coffee‑themed, Calm"
+  },
+  {
+   "Slogan": "Let your architecture brew steadily while you ship features.",
+   "Tags": "Architecture, Productivity, Calm"
+  },
+  {
+   "Slogan": "Dependency graphs that look like latte art, not chaos.",
+   "Tags": "DependencyGraph, Coffee‑themed, Humor"
+  },
+  {
+   "Slogan": "Injectable‑Decorators: because your services deserve a decaf‑upgrade.",
+   "Tags": "Services, Branding, Coffee‑themed"
+  },
+  {
+   "Slogan": "Register. Inject. Relax.",
+   "Tags": "Workflow, Calm, Developer"
+  },
+  {
+   "Slogan": "Your services lounge in the container while your code wears sneakers.",
+   "Tags": "Services, Metaphor, Humor"
+  },
+  {
+   "Slogan": "Singletons don’t have to mean chaos; they can mean calm.",
+   "Tags": "Singleton, Calm, Developer"
+  },
+  {
+   "Slogan": "Inject your dependencies without injecting caffeine.",
+   "Tags": "DI, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "When the architecture chills, your feature rollout hums.",
+   "Tags": "Architecture, Calm, Productivity"
+  },
+  {
+   "Slogan": "Decorator‑driven DI so you don’t decorate your blood pressure.",
+   "Tags": "Decorators, Humor, Developer"
+  },
+  {
+   "Slogan": "One injector to rule them all, but quietly.",
+   "Tags": "Injector, Calm, Technical"
+  },
+  {
+   "Slogan": "Your services should pass tests, not palpitations.",
+   "Tags": "Testing, Calm, DI"
+  },
+  {
+   "Slogan": "Injectables served neat, without the espresso shot.",
+   "Tags": "Injectables, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Keep calm and inject dependencies.",
+   "Tags": "DI, Playful, Calm"
+  },
+  {
+   "Slogan": "Let the container take the wheel while you sip slowly.",
+   "Tags": "Container, Chill, Developer"
+  },
+  {
+   "Slogan": "Switch the coffee for code; your DI stays stable.",
+   "Tags": "Code, Calm, DI"
+  },
+  {
+   "Slogan": "Services humming quietly. Heartbeat humming quietly too.",
+   "Tags": "Services, Calm, Developer"
+  },
+  {
+   "Slogan": "Decorator‑based DI: strong type safety, no caffeine spikes.",
+   "Tags": "Decorators, Typing, Calm"
+  },
+  {
+   "Slogan": "Injectable‑Decorators: for code that steams smoothly, not shouts loudly.",
+   "Tags": "Branding, Calm, Technical"
+  }
+ ],
+ "as-zod": [
+  {
+   "Slogan": "as-zod: Turn your models into schemas without turning your code into chaos.",
+   "Tags": "Zod, Validation, Calm"
+  },
+  {
+   "Slogan": "Bridge your data types to runtime safety — decaf style.",
+   "Tags": "Zod, TypeSafety, Coffee-themed"
+  },
+  {
+   "Slogan": "Your TypeScript types deserve more than caffeine-fuelled runtime surprises.",
+   "Tags": "Typescript, Zod, Humor"
+  },
+  {
+   "Slogan": "From model to schema in one smooth sip.",
+   "Tags": "Zod, Workflow, Coffee-themed"
+  },
+  {
+   "Slogan": "Validate with confidence. Relaxed heart-rate included.",
+   "Tags": "Validation, Calm, Developer"
+  },
+  {
+   "Slogan": "as-zod: Because your code should parse data, not your blood pressure.",
+   "Tags": "Zod, Humor, Calm"
+  },
+  {
+   "Slogan": "Schema generation + type inference = less caffeine, more clarity.",
+   "Tags": "Inference, Zod, Coffee-themed"
+  },
+  {
+   "Slogan": "Make invalid data walk the plank while you sip decaf.",
+   "Tags": "Validation, Fun, Coffee-themed"
+  },
+  {
+   "Slogan": "From safeParse to sleep at night.",
+   "Tags": "Zod, Relaxation, Developer"
+  },
+  {
+   "Slogan": "as-zod: your model’s barista for brewing schema definitions.",
+   "Tags": "Zod, Metaphor, Coffee-themed"
+  },
+  {
+   "Slogan": "as-zod: now with 30% more chill and 70% fewer bugs.",
+   "Tags": "Validation, Calm, Humor"
+  },
+  {
+   "Slogan": "Zod schemas so smooth, they autocorrect your stress.",
+   "Tags": "Zod, Developer, Fun"
+  },
+  {
+   "Slogan": "Runtime validation that won't trigger your fight-or-flight.",
+   "Tags": "Zod, Calm, Developer"
+  },
+  {
+   "Slogan": "Code serenity now. Errors later. Maybe.",
+   "Tags": "Zod, Humor, DevX"
+  },
+  {
+   "Slogan": "Zod your types without sacrificing your sanity.",
+   "Tags": "TypeSafety, Developer, Chill"
+  },
+  {
+   "Slogan": "From TS model to runtime zen.",
+   "Tags": "Calm, Zod, Workflow"
+  },
+  {
+   "Slogan": "Decaf the validation process.",
+   "Tags": "Coffee-themed, Developer, Chill"
+  },
+  {
+   "Slogan": "Less runtime panic. More compile-time tea time.",
+   "Tags": "TypeScript, Humor, Calm"
+  },
+  {
+   "Slogan": "Safely parse like a sleepy ninja.",
+   "Tags": "Zod, Fun, Developer"
+  },
+  {
+   "Slogan": "Parse responsibly. Type enthusiastically.",
+   "Tags": "Validation, Types, Humor"
+  },
+  {
+   "Slogan": "Zod schemas that don’t need a therapist afterward.",
+   "Tags": "Zod, Developer, Humor"
+  },
+  {
+   "Slogan": "Coffee in the mug. Types in the schema. Zen in the soul.",
+   "Tags": "Coffee-themed, Zod, Calm"
+  },
+  {
+   "Slogan": "Schema validation without heart palpitations.",
+   "Tags": "Validation, Calm, Tech"
+  },
+  {
+   "Slogan": "Your runtime checks deserve spa day energy.",
+   "Tags": "Zod, Humor, Developer"
+  },
+  {
+   "Slogan": "Skip the caffeine jitters. Keep the type safety.",
+   "Tags": "Zod, TypeSafety, Coffee-themed"
+  },
+  {
+   "Slogan": "Infer types like a boss. Validate like a monk.",
+   "Tags": "Developer, Zod, Humor"
+  },
+  {
+   "Slogan": "Zod-powered. Jitter-free.",
+   "Tags": "Coffee-themed, Zod, Fun"
+  },
+  {
+   "Slogan": "as-zod: because schemas don’t need to scream.",
+   "Tags": "Validation, Calm, Humor"
+  },
+  {
+   "Slogan": "Type-safe and coffee-safe.",
+   "Tags": "Zod, Coffee-themed, Developer"
+  },
+  {
+   "Slogan": "Errors handled with a gentle sigh.",
+   "Tags": "Calm, Developer, Zod"
+  },
+  {
+   "Slogan": "Chill out. Your data’s valid.",
+   "Tags": "Validation, Humor, Coffee-themed"
+  },
+  {
+   "Slogan": "Don't just type. Decaf-type.",
+   "Tags": "Typescript, Calm, Humor"
+  },
+  {
+   "Slogan": "Types. Schemas. Less drama.",
+   "Tags": "Zod, TypeSafety, Calm"
+  },
+  {
+   "Slogan": "Infer everything. Panic about nothing.",
+   "Tags": "Inference, Calm, Developer"
+  },
+  {
+   "Slogan": "Zod with the calmness of a sleeping golden retriever.",
+   "Tags": "Zod, Humor, Developer"
+  },
+  {
+   "Slogan": "Because a failed parse shouldn’t ruin your lunch.",
+   "Tags": "Validation, Humor, Zod"
+  },
+  {
+   "Slogan": "Catch bad data. Release good vibes.",
+   "Tags": "Validation, Chill, Developer"
+  },
+  {
+   "Slogan": "Write once, validate forever.",
+   "Tags": "Developer, Zod, Coffee-themed"
+  },
+  {
+   "Slogan": "Schemas that let you sleep better at night.",
+   "Tags": "Validation, Calm, Sleep"
+  },
+  {
+   "Slogan": "From unparsed to unperturbed.",
+   "Tags": "Zod, Calm, Developer"
+  },
+  {
+   "Slogan": "Compile-time cuddles, runtime hugs.",
+   "Tags": "Types, Humor, Developer"
+  },
+  {
+   "Slogan": "Get your schema straight — no coffee required.",
+   "Tags": "Zod, Coffee-themed, Humor"
+  },
+  {
+   "Slogan": "Keep calm and infer on.",
+   "Tags": "Inference, Calm, Humor"
+  },
+  {
+   "Slogan": "as-zod: For devs who love types and loathe chaos.",
+   "Tags": "Zod, Calm, TypeSafety"
+  },
+  {
+   "Slogan": "Take a breath. Now validate.",
+   "Tags": "Developer, Calm, Validation"
+  },
+  {
+   "Slogan": "Zodify like it's a lazy Sunday.",
+   "Tags": "Zod, Chill, Fun"
+  },
+  {
+   "Slogan": "Let your schemas meditate.",
+   "Tags": "Calm, Decorators, Validation"
+  },
+  {
+   "Slogan": "A fresh pot of types, every parse.",
+   "Tags": "Coffee-themed, Zod, Developer"
+  }
+ ],
+ "db-decorators": [
+  {
+   "Slogan": "db‑decorators: So your models wear suits, not roller‑skates.",
+   "Tags": "Decorators, Models, Style"
+  },
+  {
+   "Slogan": "Decorate your data so your code doesn’t caffeinate itself.",
+   "Tags": "Decorators, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "From @entity to @column — make your data look sharp in decaf mode.",
+   "Tags": "Annotations, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "When your model looks professional, your bugs wear pajamas.",
+   "Tags": "Models, Humor, Decorators"
+  },
+  {
+   "Slogan": "Mark your relationships like a barista marks your decaf latte.",
+   "Tags": "Relations, Coffee‑themed, Metaphor"
+  },
+  {
+   "Slogan": "Schema decor so smooth you’ll forget you’re doing backend work.",
+   "Tags": "Schema, Chill, Developer"
+  },
+  {
+   "Slogan": "Decorators that bring elegance, not adrenaline.",
+   "Tags": "Decorators, Calm, Technical"
+  },
+  {
+   "Slogan": "Your model’s wardrobe: tidy, typed, decaf‑prepared.",
+   "Tags": "Models, Coffee‑themed, Typescript"
+  },
+  {
+   "Slogan": "Let your decorators do the pomp while you do the code.",
+   "Tags": "Decorators, Productivity, Calm"
+  },
+  {
+   "Slogan": "Column, PK, relation — all without you sweating a coffee break.",
+   "Tags": "Schema, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Annotate and relax — your repository sees everything anyway.",
+   "Tags": "Annotations, Chill, Backend"
+  },
+  {
+   "Slogan": "We swapped caffeine for decorators — same energy, less crash.",
+   "Tags": "Decorators, Humor, Calm"
+  },
+  {
+   "Slogan": "When your model metadata is crisp, your dev‑flow is calm.",
+   "Tags": "Metadata, DeveloperDX, Calm"
+  },
+  {
+   "Slogan": "Decorators: because your code deserves latte art too.",
+   "Tags": "Decorators, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Mark it up, ship it out, sip your decaf.",
+   "Tags": "Decorators, Workflow, Coffee‑themed"
+  },
+  {
+   "Slogan": "Relations that don’t tangle your wiring — wired for decaf.",
+   "Tags": "Relations, Calm, Decorators"
+  },
+  {
+   "Slogan": "Your models don’t need energy drinks; they need annotations.",
+   "Tags": "Models, Humor, Decorators"
+  },
+  {
+   "Slogan": "From @table to @oneToMany — style your schema like a latte menu.",
+   "Tags": "Schema, Decorators, Coffee‑themed"
+  },
+  {
+   "Slogan": "Clean decor, clean data, no caffeine crash.",
+   "Tags": "Decorators, Calm, Technical"
+  },
+  {
+   "Slogan": "Schema decorators with zero jitters and full flavour.",
+   "Tags": "Schema, Coffee‑themed, Style"
+  },
+  {
+   "Slogan": "Inject metadata, not panic.",
+   "Tags": "Metadata, Calm, Developer"
+  },
+  {
+   "Slogan": "Your DB model’s fashion statement: decaf cool.",
+   "Tags": "Models, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Decorators that whisper ‘persist’ instead of shouting ‘error’.",
+   "Tags": "Decorators, Calm, Backend"
+  },
+  {
+   "Slogan": "Default your columns like you default your brew: easy and chill.",
+   "Tags": "Columns, Chill, Coffee‑themed"
+  },
+  {
+   "Slogan": "Schema style guide: lean, typed, decaf‑approved.",
+   "Tags": "Schema, Developer, Calm"
+  },
+  {
+   "Slogan": "When the backend looks good, you feel good. And you didn’t need espresso.",
+   "Tags": "Backend, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Decorate your data so your queries don’t need adrenaline.",
+   "Tags": "Decorators, Calm, Technical"
+  },
+  {
+   "Slogan": "Models wear less boilerplate in these threads.",
+   "Tags": "Boilerplate, Developer, Decorators"
+  },
+  {
+   "Slogan": "Typed metadata + relaxed devs = sustainable stack.",
+   "Tags": "Typing, Calm, Developer"
+  },
+  {
+   "Slogan": "When your persistence layer is a boutique café, not a nightclub.",
+   "Tags": "Metaphor, Persistence, Coffee‑themed"
+  },
+  {
+   "Slogan": "Decorators: your model’s barista‑style garnish.",
+   "Tags": "Decorators, Fun, Coffee‑themed"
+  },
+  {
+   "Slogan": "Mark your fields, relationships and indices — sit back while they sort themselves.",
+   "Tags": "Indices, Chill, Backend"
+  },
+  {
+   "Slogan": "Your models deserve more than spaghetti; they deserve decaf structure.",
+   "Tags": "Models, Humor, Decorators"
+  },
+  {
+   "Slogan": "When annotated properly, your repository thanks you.",
+   "Tags": "Repository, Developer, Calm"
+  },
+  {
+   "Slogan": "Schema metadata: served neat, no sugar‑rush.",
+   "Tags": "Schema, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Decorators that give your code purpose and your devs pause.",
+   "Tags": "Decorators, Calm, Developer"
+  },
+  {
+   "Slogan": "Your DB model’s vibe: cozy café, not caffeine chaos.",
+   "Tags": "Database, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Stop decorating chaos; start decorating clarity.",
+   "Tags": "Decorators, Calm, Technical"
+  },
+  {
+   "Slogan": "Schema style guide: decaf edition.",
+   "Tags": "Schema, Branding, Calm"
+  },
+  {
+   "Slogan": "Your code’s annotation lounge — come in, relax, persist.",
+   "Tags": "Developer, Calm, Decorators"
+  },
+  {
+   "Slogan": "When your model metadata aligns, your dev day flows.",
+   "Tags": "Metadata, Productivity, Calm"
+  },
+  {
+   "Slogan": "db‑decorators: Because your data deserves decaf elegance.",
+   "Tags": "Decorators, Branding, Coffee‑themed"
+  }
+ ],
+ "transactional-decorators": [
+  {
+   "Slogan": "Transactional‑Decorators: commit your code without committing your caffeine overdose.",
+   "Tags": "Transactions, Coffee‑themed, Calm"
+  },
+  {
+   "Slogan": "Decorate your methods with @transactional like you garnish your latte.",
+   "Tags": "Decorators, Fun, Technical"
+  },
+  {
+   "Slogan": "Begin transaction. Sip decaf. Then commit without the crash.",
+   "Tags": "Workflow, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Lock, save, rollback—while your heart rate stays mellow.",
+   "Tags": "Transactions, Chill, Developer"
+  },
+  {
+   "Slogan": "When your methods execute calmly, your database stays sane.",
+   "Tags": "DeveloperDX, Calm, Technical"
+  },
+  {
+   "Slogan": "Batch operations? Just another day at the café.",
+   "Tags": "BatchOps, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "No caffeine jitters—just ACID comforts.",
+   "Tags": "ACID, Humor, Technical"
+  },
+  {
+   "Slogan": "Let your service classes relax—transactional support’s got your back.",
+   "Tags": "Services, Calm, Developer"
+  },
+  {
+   "Slogan": "Methods wrapped in @transactional: because code should run like a decaf drip.",
+   "Tags": "Decorators, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "Start, commit, end—handled quietly, like a gentle espresso pour.",
+   "Tags": "Workflow, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Transactional context: your code’s relaxation lounge.",
+   "Tags": "Context, Chill, Developer"
+  },
+  {
+   "Slogan": "Errors within a transaction? Rollback, breathe, and move on.",
+   "Tags": "ErrorHandling, Calm, Technical"
+  },
+  {
+   "Slogan": "Your methods coffee‑break while the transaction runs.",
+   "Tags": "Metaphor, Fun, Developer"
+  },
+  {
+   "Slogan": "Commit the change. Keep the calm.",
+   "Tags": "Commit, Calm, Technical"
+  },
+  {
+   "Slogan": "Decorator‑driven transactions so you don’t transact your blood pressure.",
+   "Tags": "Decorators, Humor, Calm"
+  },
+  {
+   "Slogan": "When concurrency looms, splash in decaf and stay ready.",
+   "Tags": "Concurrency, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Transaction boundaries without the caffeine boundaries.",
+   "Tags": "Boundaries, Calm, Technical"
+  },
+  {
+   "Slogan": "Lock your data, unlock your dev chill.",
+   "Tags": "Locking, Chill, Developer"
+  },
+  {
+   "Slogan": "From method start to transaction end—smooth as a decaf latte.",
+   "Tags": "Workflow, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "Isolation levels? More like relaxation levels.",
+   "Tags": "Isolation, Humor, Technical"
+  },
+  {
+   "Slogan": "Decorate once. Transact forever. Heart rate unchanged.",
+   "Tags": "Decorators, Calm, Developer"
+  },
+  {
+   "Slogan": "Avoid commit storms and caffeine storms alike.",
+   "Tags": "Commits, Humor, Calm"
+  },
+  {
+   "Slogan": "Your code runs slow‑brew, not sprint‑brew.",
+   "Tags": "Performance, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Transaction manager in one hand, decaf in the other.",
+   "Tags": "Developer, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Rollback made polite. No caffeine crash required.",
+   "Tags": "Rollback, Calm, Technical"
+  },
+  {
+   "Slogan": "Atomic operations served with a side of serenity.",
+   "Tags": "Atomicity, Calm, Developer"
+  },
+  {
+   "Slogan": "Decorator meets transaction meets developer zen.",
+   "Tags": "Decorators, Calm, Developer"
+  },
+  {
+   "Slogan": "Start your unit of work. Start your decaf drip.",
+   "Tags": "UnitOfWork, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "Transaction boundaries that don’t boundary your sleep.",
+   "Tags": "Sleep, Calm, Developer"
+  },
+  {
+   "Slogan": "Your DB commit queue shouldn’t spike your adrenaline.",
+   "Tags": "Database, Calm, Technical"
+  },
+  {
+   "Slogan": "Let your transaction finish before your coffee cools.",
+   "Tags": "Timing, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Because your data deserves the same decaf treatment as your code.",
+   "Tags": "Data, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Transactions handled. Features shipped. Jitters avoided.",
+   "Tags": "Workflow, Productivity, Calm"
+  },
+  {
+   "Slogan": "Decorator‑based transaction control: lean code, relaxed developers.",
+   "Tags": "Decorators, DeveloperDX, Calm"
+  },
+  {
+   "Slogan": "Isolation, atomicity and peace of mind.",
+   "Tags": "ACID, Calm, Technical"
+  },
+  {
+   "Slogan": "Your method calls get the lounge‑treatment.",
+   "Tags": "MethodCalls, Metaphor, Chill"
+  },
+  {
+   "Slogan": "No caffeine sprint. Just a smooth commit.",
+   "Tags": "Commit, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Your architecture’s in‑between‑transaction nap zone.",
+   "Tags": "Architecture, Relaxed, Developer"
+  },
+  {
+   "Slogan": "Avoid accidental double‑commit binges.",
+   "Tags": "Bugs, Calm, Technical"
+  },
+  {
+   "Slogan": "Wrap your services in calm, not in a caffeine frenzy.",
+   "Tags": "Services, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Transaction decorators: your code’s coffee break.",
+   "Tags": "Decorators, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Commit when ready. Relax always.",
+   "Tags": "Commit, Chill, Developer"
+  },
+  {
+   "Slogan": "Transactional‑Decorators: because even your database deserves decaf code.",
+   "Tags": "Branding, Coffee‑themed, Calm"
+  }
+ ],
+ "core": [
+  {
+   "Slogan": "Decaf‑TS Core: the calm under‑layer your stack didn’t know it needed.",
+   "Tags": "Core, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Build strong models. Then sit back and sip your decaf.",
+   "Tags": "Models, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Repository pattern without the caffeine crash.",
+   "Tags": "Repository, Calm, Technical"
+  },
+  {
+   "Slogan": "Adapters plug in. You relax. It’s that decaf simple.",
+   "Tags": "Adapter, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Query DSL so smooth it’s like foam on a latte.",
+   "Tags": "QueryDSL, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Strong‑typed models + low‑stress devs = win.",
+   "Tags": "Typing, Developer, Calm"
+  },
+  {
+   "Slogan": "Plug persistence into your code without plugging in your adrenaline.",
+   "Tags": "Persistence, Calm, Technical"
+  },
+  {
+   "Slogan": "Your data‑layer’s decaf revolution.",
+   "Tags": "DataLayer, Branding, Coffee‑themed"
+  },
+  {
+   "Slogan": "From in‑memory to HTTP to SQL — all served decaf.",
+   "Tags": "Adapter, FullStack, Coffee‑themed"
+  },
+  {
+   "Slogan": "Typed models. Calm code. Zero jitters.",
+   "Tags": "Typing, Calm, Developer"
+  },
+  {
+   "Slogan": "Hook your business logic, not your blood pressure.",
+   "Tags": "BusinessLogic, Humor, Calm"
+  },
+  {
+   "Slogan": "Pagination and observers that don’t observe your panic.",
+   "Tags": "Pagination, Observer, Calm"
+  },
+  {
+   "Slogan": "Base classes that let you build, not burn out.",
+   "Tags": "BaseClasses, Developer, Calm"
+  },
+  {
+   "Slogan": "Because your code deserves a barista‑quality data layer.",
+   "Tags": "Branding, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Register your model, take a breath, build features.",
+   "Tags": "Model, Developer, Calm"
+  },
+  {
+   "Slogan": "Adapters agnostic. Devs relaxed.",
+   "Tags": "Adapter, Chill, Developer"
+  },
+  {
+   "Slogan": "Table, column, relation — served decaf style.",
+   "Tags": "Schema, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Support for CRUD, bulk ops and low heart‑rate.",
+   "Tags": "CRUD, Productivity, Calm"
+  },
+  {
+   "Slogan": "Use decorators. Not stimulants.",
+   "Tags": "Decorators, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "A data stack so mellow your IDE sighs in relief.",
+   "Tags": "DeveloperDX, Calm, Humor"
+  },
+  {
+   "Slogan": "From Model to Repository to Adapter: the smooth journey.",
+   "Tags": "Flow, Technical, Calm"
+  },
+  {
+   "Slogan": "Clean architecture. Clean code. Clean coffee cup.",
+   "Tags": "Architecture, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Let the core hold the weight while your features fly.",
+   "Tags": "Core, Productivity, Calm"
+  },
+  {
+   "Slogan": "Sequence, statement, observer — in decaf harmony.",
+   "Tags": "Sequence, Observer, Calm"
+  },
+  {
+   "Slogan": "Adapter‑agnostic so you can choose your storage, not your stress level.",
+   "Tags": "Adapter, Calm, Technical"
+  },
+  {
+   "Slogan": "Type models once, query everywhere, heart‑rate unchanged.",
+   "Tags": "Typing, Query, Calm"
+  },
+  {
+   "Slogan": "Your code’s new backbone—strong, steady, decaf.",
+   "Tags": "Backbone, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Build data access layers while your coffee cools.",
+   "Tags": "Developer, Coffee‑themed, Chill"
+  },
+  {
+   "Slogan": "Because caffeine should happen in your cup, not your stack.",
+   "Tags": "Coffee‑themed, Humor, Technical"
+  },
+  {
+   "Slogan": "Models that represent, repos that respect, devs that rest.",
+   "Tags": "Models, Repository, Calm"
+  },
+  {
+   "Slogan": "Unified API across storages so you don’t switch modes (or jump heartbeats).",
+   "Tags": "API, Adapter, Calm"
+  },
+  {
+   "Slogan": "Plug‑and‑play persistence. Pour yourself a decaf.",
+   "Tags": "Persistence, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "When your core is calm, your stack behaves.",
+   "Tags": "Stack, Calm, Technical"
+  },
+  {
+   "Slogan": "Write logic like you’re writing a memo — not a frantic caffeine rush.",
+   "Tags": "Developer, Humor, Calm"
+  },
+  {
+   "Slogan": "Observe changes without observing panic.",
+   "Tags": "Observer, Calm, DataFlow"
+  },
+  {
+   "Slogan": "Your data model’s best friend and your heartbeat’s ally.",
+   "Tags": "Model, Calm, Developer"
+  },
+  {
+   "Slogan": "From raw record to typed instance without the roller‑coaster.",
+   "Tags": "Mapping, Smooth, Technical"
+  },
+  {
+   "Slogan": "Dedicate your cup to decaf, your stack to clarity.",
+   "Tags": "Coffee‑themed, Branding, Developer"
+  },
+  {
+   "Slogan": "Stop chasing features. Let your core chase complexity.",
+   "Tags": "Developer, Productivity, Calm"
+  },
+  {
+   "Slogan": "Adapters evolve; your code stays stable and serene.",
+   "Tags": "Adapter, Stability, Calm"
+  },
+  {
+   "Slogan": "Strong base. Smooth finish. Zero caffeine crash.",
+   "Tags": "Branding, Coffee‑themed, Calm"
+  },
+  {
+   "Slogan": "Your code workflow’s recliner: lean back, ship features.",
+   "Tags": "Workflow, Chill, Technical"
+  },
+  {
+   "Slogan": "Model validation, repository wiring, decorators—without the buzz.",
+   "Tags": "Validation, Decorators, Calm"
+  },
+  {
+   "Slogan": "Let your core handle the plumbing while you sip gently.",
+   "Tags": "Core, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Decaf‑TS Core: because even your low‑level layers deserve elegance.",
+   "Tags": "Core, Calm, Branding"
+  },
+  {
+   "Slogan": "Build once, adapt many. Heart‑rate stays steady.",
+   "Tags": "Adaptability, Calm, Developer"
+  }
+ ],
+ "for-http": [
+  {
+   "Slogan": "Decaf‑TS for HTTP: Sip APIs, not jitters.",
+   "Tags": "HTTP, Calm, Coffee-themed"
+  },
+  {
+   "Slogan": "REST endpoints so smooth you’d call them latte‑level.",
+   "Tags": "REST, Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Brewed for your API layer: no caffeine required.",
+   "Tags": "API, Coffee-themed, Calm"
+  },
+  {
+   "Slogan": "CRUD like you’re lounging in a café, not sprinting in a tunnel.",
+   "Tags": "CRUD, Relaxed, Coffee-themed"
+  },
+  {
+   "Slogan": "Axios ready, decaf steady — HTTP done right.",
+   "Tags": "Axios, Technical, Coffee-themed"
+  },
+  {
+   "Slogan": "Don’t rush the request — enjoy the brew of connectivity.",
+   "Tags": "HTTP, Chill, Wordplay"
+  },
+  {
+   "Slogan": "HTTP adapter: the decaf version of your backend connection.",
+   "Tags": "Adapter, Chill, Backend"
+  },
+  {
+   "Slogan": "Calm APIs, clean code, zero caffeine crash.",
+   "Tags": "API, Calm, Productivity"
+  },
+  {
+   "Slogan": "When your endpoints move slower than your coffee sip, you’re doing it right.",
+   "Tags": "Endpoints, Funny, Coffee-themed"
+  },
+  {
+   "Slogan": "Restful, restful, and restful. Yes, three times.",
+   "Tags": "REST, Funny, Repetition"
+  },
+  {
+   "Slogan": "Let your HTTP calls mellow like a smooth decaf mocha.",
+   "Tags": "HTTP, Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "Requests that won’t wake you at 3 AM with errors.",
+   "Tags": "Debugging, Calm, Humor"
+  },
+  {
+   "Slogan": "Say goodbye to shaky connections. Hello, decaf stability.",
+   "Tags": "Stability, Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Your REST wrapper with zero jitter and maximum chill.",
+   "Tags": "REST, Calm, Adapter"
+  },
+  {
+   "Slogan": "From endpoint to espresso‑style calm.",
+   "Tags": "Endpoints, Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "Because your API deserves more than an energy drink.",
+   "Tags": "API, Humor, Coffee-themed"
+  },
+  {
+   "Slogan": "HTTP adapter: full flavour, no jitters, all productivity.",
+   "Tags": "Adapter, Productive, Coffee-themed"
+  },
+  {
+   "Slogan": "We turned down the caffeine in your HTTP layer so your code can stay calm.",
+   "Tags": "HTTP, Calm, Humor"
+  },
+  {
+   "Slogan": "Decaf‑TS for HTTP — where major code meets mellow endpoints.",
+   "Tags": "Endpoints, Chill, Technical"
+  },
+  {
+   "Slogan": "Sip your coffee while the adapter handles the heavy lifting.",
+   "Tags": "Developer, Coffee-themed, Calm"
+  },
+  {
+   "Slogan": "Settle into the couch of HTTP adapters: decaf‑level comfort.",
+   "Tags": "Couch, Adapter, Coffee-themed"
+  },
+  {
+   "Slogan": "Don’t sprint your API calls — stroll them with style.",
+   "Tags": "API, Humor, Chill"
+  },
+  {
+   "Slogan": "Relaxed REST, de‑caffeinated connections, serious developer delight.",
+   "Tags": "REST, Developer, Coffee-themed"
+  },
+  {
+   "Slogan": "No crash after deploy: the adapter version of decaf.",
+   "Tags": "Adapter, Calm, Deploy"
+  },
+  {
+   "Slogan": "Transport your models over HTTP, not over a roller‑coaster.",
+   "Tags": "HTTP, Humor, Models"
+  },
+  {
+   "Slogan": "When your backend is chill, you can brew your coffee in peace.",
+   "Tags": "Backend, Calm, Coffee-themed"
+  },
+  {
+   "Slogan": "Let your API layer take a nap while you build features.",
+   "Tags": "API, Relaxed, Developer"
+  },
+  {
+   "Slogan": "Adapter so smooth you’ll forget you’re even using HTTP.",
+   "Tags": "Adapter, Smooth, Chill"
+  },
+  {
+   "Slogan": "From create to delete without the caffeine shakes.",
+   "Tags": "CRUD, Coffee-themed, Humor"
+  },
+  {
+   "Slogan": "Zero boilerplate, all flavor — decaf‑style HTTP.",
+   "Tags": "Boilerplate, Fun, Coffee-themed"
+  },
+  {
+   "Slogan": "Plug in your models; the adapter takes it from there (silently, calmly).",
+   "Tags": "Models, Adapter, Chill"
+  },
+  {
+   "Slogan": "HTTP calls that whisper, not shout.",
+   "Tags": "HTTP, Humor, Calm"
+  },
+  {
+   "Slogan": "Requests go out; responses come back; developer stays sane.",
+   "Tags": "HTTP, DX, Humor"
+  },
+  {
+   "Slogan": "We took the buzz out of HTTP so you can focus on logic.",
+   "Tags": "HTTP, Calm, Coffee-themed"
+  },
+  {
+   "Slogan": "REST done right: decaf code, full stack, zero crash.",
+   "Tags": "REST, Stack, Coffee-themed"
+  },
+  {
+   "Slogan": "Your frontend’s best friend when your backend needs to chill.",
+   "Tags": "Frontend, Backend, Chill"
+  },
+  {
+   "Slogan": "Latency is your new relaxation timer.",
+   "Tags": "Latency, Funny, Chill"
+  },
+  {
+   "Slogan": "Grow features, not heart palpitations.",
+   "Tags": "Features, Calm, Humor"
+  },
+  {
+   "Slogan": "Build once, deploy everywhere, sip coffee in between.",
+   "Tags": "Deploy, Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "Let the adapter hustle; you stay mellow.",
+   "Tags": "Adapter, Calm, Developer"
+  },
+  {
+   "Slogan": "Calm code solves more problems than hyperactive code.",
+   "Tags": "Calm, Code, Humor"
+  },
+  {
+   "Slogan": "Endpoints with no drama, just parsing and promises.",
+   "Tags": "Endpoints, Chill, Technical"
+  },
+  {
+   "Slogan": "HTTP‑adapter: the decaf espresso shot for your API stack.",
+   "Tags": "Adapter, Coffee-themed, API"
+  },
+  {
+   "Slogan": "Chill out — your REST endpoints are in good hands.",
+   "Tags": "REST, Chill, Comfort"
+  },
+  {
+   "Slogan": "Handle headers like a barista handles milk foam: effortlessly.",
+   "Tags": "Headers, Humor, Coffee-themed"
+  },
+  {
+   "Slogan": "You’re sipping decaf. Your endpoints are sipping decaf. Everyone’s resting nicely.",
+   "Tags": "Endpoints, Humor, Calm"
+  },
+  {
+   "Slogan": "REST, relax, repeat.",
+   "Tags": "REST, Calm, Repetition"
+  },
+  {
+   "Slogan": "Where API meets iced‑latte vibes.",
+   "Tags": "API, Coffee-themed, Chill"
+  },
+  {
+   "Slogan": "No caffeine crash. Just clean requests.",
+   "Tags": "HTTP, Calm, Developer"
+  },
+  {
+   "Slogan": "Decaf‑TS for HTTP: Because your backend shouldn’t keep you up at night.",
+   "Tags": "Backend, Calm, Coffee-themed"
+  }
+ ],
+ "ui-decorators": [
+  {
+   "Slogan": "UI‑Decorators: Where your models dress up for the interface, decaf style.",
+   "Tags": "UI, Coffee‑themed, Decorators"
+  },
+  {
+   "Slogan": "Define UI behaviour in your model. Sip decaf while your interface renders.",
+   "Tags": "UI, Productivity, Coffee‑themed"
+  },
+  {
+   "Slogan": "Decorators that map your data to UI components, not caffeine buzz.",
+   "Tags": "Decorators, UI, Calm"
+  },
+  {
+   "Slogan": "From model class to rendered page without heart palpitations.",
+   "Tags": "Rendering, Calm, UI"
+  },
+  {
+   "Slogan": "When your UI code chills, your users don’t notice the backend freak‑out.",
+   "Tags": "UI, DeepStack, Calm"
+  },
+  {
+   "Slogan": "UI fields that feel like espresso foam—smooth, rich, decaf.",
+   "Tags": "UI, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Render your forms while your coffee cools down.",
+   "Tags": "Forms, Workflow, Coffee‑themed"
+  },
+  {
+   "Slogan": "Hidden props, dynamic layouts — no caffeine required.",
+   "Tags": "Layout, Technical, Calm"
+  },
+  {
+   "Slogan": "ui‑decorators: because your UI should sip, not sprint.",
+   "Tags": "UI, Branding, Calm"
+  },
+  {
+   "Slogan": "Automatic rendering = your hot coffee stays the only hot thing.",
+   "Tags": "Rendering, Humorous, UI"
+  },
+  {
+   "Slogan": "Hide, show, layout — orchestrated like a barista at work.",
+   "Tags": "UI, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your model knows how to render itself—so you don’t have to chug an energy drink.",
+   "Tags": "ModelDriven, UI, Calm"
+  },
+  {
+   "Slogan": "One decorator to rule your interface, one calm dev to brew it.",
+   "Tags": "Decorators, Workflow, Fun"
+  },
+  {
+   "Slogan": "UI‑Adapters optional. Decaf‑calm mandatory.",
+   "Tags": "UI, Branding, Coffee‑themed"
+  },
+  {
+   "Slogan": "Render a list of models while your heartbeat stays unchanged.",
+   "Tags": "ListRendering, Calm, UI"
+  },
+  {
+   "Slogan": "When UI metadata glows, your bugs stay in the shadows.",
+   "Tags": "Metadata, UI, Calm"
+  },
+  {
+   "Slogan": "Let your UI behave like a café lounge, not a nightclub.",
+   "Tags": "UI, Metaphor, Chill"
+  },
+  {
+   "Slogan": "Render engines ready. Coffee in hand. Code in zen.",
+   "Tags": "Rendering, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "UI‑decorators: because forms shouldn’t require espresso shots.",
+   "Tags": "Forms, Humor, UI"
+  },
+  {
+   "Slogan": "From class to component without the code sprint.",
+   "Tags": "Components, UI, Calm"
+  },
+  {
+   "Slogan": "Automatically apply validation rules to UI — while you sip your decaf.",
+   "Tags": "Validation, UI, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your model‑based UI stack’s decaf shot.",
+   "Tags": "UI, Branding, Technical"
+  },
+  {
+   "Slogan": "UI elements that pop gently, not explosively.",
+   "Tags": "UI, UserExperience, Calm"
+  },
+  {
+   "Slogan": "Hiding internals on READ. Showing fields on CREATE. All in decaf mode.",
+   "Tags": "CRUD, UI, Calm"
+  },
+  {
+   "Slogan": "Define your UI in metadata. Real devs relax. Real users click.",
+   "Tags": "Metadata, UI, Developer"
+  },
+  {
+   "Slogan": "Make your UI reflect your data — and your coffee cup reflect your peace.",
+   "Tags": "UI, Coffee‑themed, Metaphor"
+  },
+  {
+   "Slogan": "Automatic validation + UI mapping = fewer bugs, fewer heartbeats.",
+   "Tags": "Validation, UI, Calm"
+  },
+  {
+   "Slogan": "Decorators for UI: because HTML should feel like latte art, not static code.",
+   "Tags": "UI, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "From model to view with zero adrenaline shot.",
+   "Tags": "MVC, Calm, UI"
+  },
+  {
+   "Slogan": "UI behaviour defined inline. Your developers defined. Your heart rate declined.",
+   "Tags": "DeveloperDX, UI, Calm"
+  },
+  {
+   "Slogan": "Your UI stack’s decaf lounge—no jitters, just features.",
+   "Tags": "UI, Coffee‑themed, Branding"
+  },
+  {
+   "Slogan": "Render engine agnostic. Your code caffeinated? Never.",
+   "Tags": "Rendering, Technical, Calm"
+  },
+  {
+   "Slogan": "Use decorators to define UI fields. Use your latte to define your peace.",
+   "Tags": "Decorators, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "UI‑decorators: turning your data models into UI experiences—minus the crash.",
+   "Tags": "UI, LargeScale, Calm"
+  },
+  {
+   "Slogan": "When CRUD meets lounge mode.",
+   "Tags": "CRUD, UI, Chill"
+  },
+  {
+   "Slogan": "Your UI elements should animate like steam, not like an energy spike.",
+   "Tags": "Animations, UI, Calm"
+  },
+  {
+   "Slogan": "Auto‑render your model lists while you sip your morning brew.",
+   "Tags": "Lists, UI, Coffee‑themed"
+  },
+  {
+   "Slogan": "HideOn READ, hidden always—because your UI knows how to chill.",
+   "Tags": "UI, ConditionalRendering, Calm"
+  },
+  {
+   "Slogan": "UI‑Adapters: optional. Relaxation: built‑in.",
+   "Tags": "UI, Developer, Branding"
+  },
+  {
+   "Slogan": "Your UI stack just got a decaf upgrade.",
+   "Tags": "UI, Branding, Fun"
+  },
+  {
+   "Slogan": "Decorators that bridge data to UI while your caffeine bridge is absent.",
+   "Tags": "Decorators, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "UI meta‑programming so your code can brew ideas, not headaches.",
+   "Tags": "MetaProgramming, UI, Calm"
+  },
+  {
+   "Slogan": "When the UI knows the data and the developer knows the coffee, harmony follows.",
+   "Tags": "UI, Coffee‑themed, Calm"
+  },
+  {
+   "Slogan": "Model‑Driven UI rendering: decaf edition.",
+   "Tags": "UI, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Let your UI reflect your domain, not your blood pressure.",
+   "Tags": "DomainDriven, UI, Calm"
+  },
+  {
+   "Slogan": "UI‑Decorators: Because you’ve had enough coffee. Your code hasn’t.",
+   "Tags": "UI, Humor, Branding"
+  }
+ ],
+ "cli": [
+  {
+   "Slogan": "CLI: Your code’s command‑line calm in a caffeinated world.",
+   "Tags": "CLI, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Run commands, not your heartbeat.",
+   "Tags": "CLI, Calm, Humor"
+  },
+  {
+   "Slogan": "Install once. Ship features forever. No caffeine required.",
+   "Tags": "Workflow, Coffee‑themed, Productivity"
+  },
+  {
+   "Slogan": "The CLI that brews your releases smoother than your morning decaf.",
+   "Tags": "Release, Coffee‑themed, DevX"
+  },
+  {
+   "Slogan": "Command‑line interface that doesn’t interface with your panic button.",
+   "Tags": "CLI, Calm, Humor"
+  },
+  {
+   "Slogan": "Generate, test, deploy — with a gentle click, not a frantic chase.",
+   "Tags": "CLI, DevOps, Calm"
+  },
+  {
+   "Slogan": "Scaffolding without the caffeine crash.",
+   "Tags": "Scaffolding, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "CLI commands so smooth you’ll forget you typed them.",
+   "Tags": "CLI, Chill, Developer"
+  },
+  {
+   "Slogan": "Bump version, tag release, sip coffee. Repeat.",
+   "Tags": "Release, Coffee‑themed, Humor"
+  },
+  {
+   "Slogan": "Your terminal’s new best friend — decaf‑approved.",
+   "Tags": "Terminal, Branding, Coffee‑themed"
+  },
+  {
+   "Slogan": "CLI this. Command that. Without causing your dev heart to spike.",
+   "Tags": "CLI, Calm, Developer"
+  },
+  {
+   "Slogan": "Scripts that serve features, not adrenaline.",
+   "Tags": "Scripts, Calm, Technical"
+  },
+  {
+   "Slogan": "Automate the boring parts. Relax during the rest.",
+   "Tags": "Automation, Productivity, Calm"
+  },
+  {
+   "Slogan": "CLI with barista‑level polish.",
+   "Tags": "CLI, Coffee‑themed, UX"
+  },
+  {
+   "Slogan": "Deployments that feel like Sunday brunch.",
+   "Tags": "Deploy, Chill, Metaphor"
+  },
+  {
+   "Slogan": "Run generator. Grab decaf. Celebrate minimal bug count.",
+   "Tags": "Generator, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Your tooling should relax you, not stress you — CLI included.",
+   "Tags": "DevTools, Calm, Developer"
+  },
+  {
+   "Slogan": "Command‑line magic that doesn’t require caffeine spells.",
+   "Tags": "CLI, Humor, Calm"
+  },
+  {
+   "Slogan": "CLI: Because your code deserves smooth launches and smooth lattes.",
+   "Tags": "Release, Coffee‑themed, Branding"
+  },
+  {
+   "Slogan": "No caffeine jitters. Just clean builds.",
+   "Tags": "Build, Calm, Technical"
+  },
+  {
+   "Slogan": "Terminal tasks don’t need to feel like espresso shots.",
+   "Tags": "Terminal, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Execute commands. Exhale. Enjoy decaf.",
+   "Tags": "CLI, Calm, Workflow"
+  },
+  {
+   "Slogan": "From init to publish — a journey less frantic, more refined.",
+   "Tags": "CLI, Release, Calm"
+  },
+  {
+   "Slogan": "Scripts that flow like slow‑pour latte art.",
+   "Tags": "Scripts, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Your code’s new morning ritual: launch CLI, sip decaf, ship features.",
+   "Tags": "Workflow, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Generate templates. Delete boilerplate. Breathe deeply.",
+   "Tags": "Generator, Calm, Developer"
+  },
+  {
+   "Slogan": "CLI commands worthy of a café soundtrack.",
+   "Tags": "CLI, Humor, Branding"
+  },
+  {
+   "Slogan": "Stop sprinting through your tooling. Walk. Breathe. Ship.",
+   "Tags": "Workflow, Calm, DevX"
+  },
+  {
+   "Slogan": "Your terminal session: now in lounge mode.",
+   "Tags": "Terminal, Chill, Developer"
+  },
+  {
+   "Slogan": "From blank project to feature‑rich: all served decaf.",
+   "Tags": "Setup, Coffee‑themed, Productivity"
+  },
+  {
+   "Slogan": "Automate your release train without boarding a stress express.",
+   "Tags": "Release, Calm, Developer"
+  },
+  {
+   "Slogan": "The CLI that keeps your dev pulses steady.",
+   "Tags": "CLI, Wellness, Tech"
+  },
+  {
+   "Slogan": "Less sugar‑rush commands. More stable deployments.",
+   "Tags": "Deploy, Calm, Humor"
+  },
+  {
+   "Slogan": "Forge your project with elegance — no caffeine spikes needed.",
+   "Tags": "ProjectSetup, Calm, Developer"
+  },
+  {
+   "Slogan": "Terminal tasks done while your thoughts stay cool and collected.",
+   "Tags": "Terminal, Calm, DevX"
+  },
+  {
+   "Slogan": "CLI: Because productivity doesn’t require palpitations.",
+   "Tags": "CLI, Calm, Developer"
+  },
+  {
+   "Slogan": "Generate code while your coffee cools.",
+   "Tags": "Coffee‑themed, Generator, Fun"
+  },
+  {
+   "Slogan": "Launch scripts. Not panic attacks.",
+   "Tags": "Scripts, Calm, Humor"
+  },
+  {
+   "Slogan": "Your build scripts finally learned to chill.",
+   "Tags": "Build, Calm, Developer"
+  },
+  {
+   "Slogan": "From run‑nervous‑to‑build to run‑relax‑to‑ship.",
+   "Tags": "Workflow, Humor, Technical"
+  },
+  {
+   "Slogan": "Your code’s liftoff, no caffeine liftoff included.",
+   "Tags": "Release, Calm, Developer"
+  },
+  {
+   "Slogan": "CLI: the quiet hero of your dev stack.",
+   "Tags": "CLI, Branding, Chill"
+  },
+  {
+   "Slogan": "Script once. Breathe often.",
+   "Tags": "Automation, Calm, Developer"
+  },
+  {
+   "Slogan": "Deployments that sip, not slam.",
+   "Tags": "Deploy, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "One CLI to rule them… quietly.",
+   "Tags": "CLI, Humor, Developer"
+  },
+  {
+   "Slogan": "Coffee in your mug. Calm in your terminal.",
+   "Tags": "Coffee‑themed, Terminal, Developer"
+  },
+  {
+   "Slogan": "CLI commands so smooth they pair with your decaf latte.",
+   "Tags": "CLI, Coffee‑themed, UX"
+  },
+  {
+   "Slogan": "Your dev stack’s decaf upgrade starts at the terminal.",
+   "Tags": "CLI, Branding, Developer"
+  }
+ ],
+ "for-couchdb": [
+  {
+   "Slogan": "Put your data on the Couch — it deserves a break.",
+   "Tags": "CouchDB, Chill, Fun"
+  },
+  {
+   "Slogan": "Decaf-TS + CouchDB: the most relaxed stack in tech.",
+   "Tags": "CouchDB, Coffee-themed, Calm"
+  },
+  {
+   "Slogan": "No stress, no schema — just smooth storage.",
+   "Tags": "NoSQL, Calm, Tech"
+  },
+  {
+   "Slogan": "Sit back. Your queries just got simpler.",
+   "Tags": "SQL-like, Chill, Productivity"
+  },
+  {
+   "Slogan": "Declarative indexes. Because you have better things to do.",
+   "Tags": "Indexing, DX, Witty"
+  },
+  {
+   "Slogan": "Query like it’s SQL. Relax like it’s NoSQL.",
+   "Tags": "SQL-like, CouchDB, Duality"
+  },
+  {
+   "Slogan": "Skip the CRUD. Keep the couch.",
+   "Tags": "CRUD-less, Chill, Fun"
+  },
+  {
+   "Slogan": "No setup. No stress. No problem.",
+   "Tags": "Declarative, Easy Setup, Calm"
+  },
+  {
+   "Slogan": "Database queries that feel like a nap in a hammock.",
+   "Tags": "SQL-like, Chill, Joy"
+  },
+  {
+   "Slogan": "Where your data chills and your dev flow soars.",
+   "Tags": "CouchDB, DevX, Chill"
+  },
+  {
+   "Slogan": "Let the indexes build themselves.",
+   "Tags": "Indexing, Productivity, Automation"
+  },
+  {
+   "Slogan": "CouchDB: for developers who like to lean back.",
+   "Tags": "Couch, Calm, Identity"
+  },
+  {
+   "Slogan": "Couch mode: ON. Query mode: AUTO.",
+   "Tags": "CouchDB, Indexing, Chill"
+  },
+  {
+   "Slogan": "Your backend’s comfy recliner.",
+   "Tags": "Backend, Couch Metaphor, Humor"
+  },
+  {
+   "Slogan": "Sleep better knowing your queries just work.",
+   "Tags": "SQL-like, Productivity, Chill"
+  },
+  {
+   "Slogan": "The database that won’t keep you up at night.",
+   "Tags": "CouchDB, Sleep, Calm"
+  },
+  {
+   "Slogan": "No caffeine needed when your queries write themselves.",
+   "Tags": "Indexing, Coffee-themed, Declarative"
+  },
+  {
+   "Slogan": "From query to chill in 0.01s.",
+   "Tags": "Performance, SQL-like, Couch Metaphor"
+  },
+  {
+   "Slogan": "CRUD is so last decade. Welcome to Couch mode.",
+   "Tags": "CRUD-less, Chill, Future"
+  },
+  {
+   "Slogan": "Decaf + Couch = backend bliss.",
+   "Tags": "Stack Combo, Branding, Fun"
+  },
+  {
+   "Slogan": "Put your data on the CouchDB — it deserves a break.",
+   "Tags": "CouchDB, Chill, Fun"
+  },
+  {
+   "Slogan": "Decaf-TS + CouchDBDB: the most reclineed stack in tech.",
+   "Tags": "CouchDB, Coffee-themed, Calm"
+  },
+  {
+   "Slogan": "No stress, no schema — just smooth storage.",
+   "Tags": "NoSQL, Calm, Tech"
+  },
+  {
+   "Slogan": "Sit back. Your queries just got simpler.",
+   "Tags": "SQL-like, Chill, Productivity"
+  },
+  {
+   "Slogan": "Declarative indexes. Because you have better things to do.",
+   "Tags": "Indexing, DX, Witty"
+  },
+  {
+   "Slogan": "Query like it’s SQL. Relax like it’s NoSQL.",
+   "Tags": "SQL-like, CouchDB, Duality"
+  },
+  {
+   "Slogan": "Skip the manual queries. Keep the couch.",
+   "Tags": "CRUD-less, Chill, Fun"
+  },
+  {
+   "Slogan": "No setup. No stress. No problem.",
+   "Tags": "Declarative, Easy Setup, Calm"
+  },
+  {
+   "Slogan": "Database queries that feel like a nap in a hammock.",
+   "Tags": "SQL-like, Chill, Joy"
+  },
+  {
+   "Slogan": "Where your data chills and your dev flow soars.",
+   "Tags": "CouchDB, DevX, Chill"
+  },
+  {
+   "Slogan": "Let the indexes build themselves.",
+   "Tags": "Indexing, Productivity, Automation"
+  },
+  {
+   "Slogan": "CouchDBDB: for developers who like to lean back.",
+   "Tags": "Couch, Calm, Identity"
+  },
+  {
+   "Slogan": "CouchDB mode: ON. Query mode: AUTO.",
+   "Tags": "CouchDB, Indexing, Chill"
+  },
+  {
+   "Slogan": "Your backend’s comfy recliner.",
+   "Tags": "Backend, Couch Metaphor, Humor"
+  },
+  {
+   "Slogan": "Sleep better knowing your queries just work.",
+   "Tags": "SQL-like, Productivity, Chill"
+  },
+  {
+   "Slogan": "The database that won’t keep you up at night.",
+   "Tags": "CouchDB, Sleep, Calm"
+  },
+  {
+   "Slogan": "No caffeine needed when your queries write themselves.",
+   "Tags": "Indexing, Coffee-themed, Declarative"
+  },
+  {
+   "Slogan": "From query to chill in 0.01s.",
+   "Tags": "Performance, SQL-like, Couch Metaphor"
+  },
+  {
+   "Slogan": "manual queries is so last decade. Welcome to CouchDB mode.",
+   "Tags": "CRUD-less, Chill, Future"
+  },
+  {
+   "Slogan": "Decaf + CouchDB = backend bliss.",
+   "Tags": "Stack Combo, Branding, Fun"
+  },
+  {
+   "Slogan": "Put your data on the CouchDB — it deserves a break.",
+   "Tags": "CouchDB, Chill, Fun"
+  },
+  {
+   "Slogan": "Decaf-TS + CouchDBDB: the most reclineed stack in tech.",
+   "Tags": "CouchDB, Coffee-themed, Calm"
+  },
+  {
+   "Slogan": "No stress, no schema — just smooth storage.",
+   "Tags": "NoSQL, Calm, Tech"
+  },
+  {
+   "Slogan": "Sit back. Your queries just got simpler.",
+   "Tags": "SQL-like, Chill, Productivity"
+  },
+  {
+   "Slogan": "Declarative indexes. Because you have better things to do.",
+   "Tags": "Indexing, DX, Witty"
+  },
+  {
+   "Slogan": "Query like it’s SQL. Relax like it’s NoSQL.",
+   "Tags": "SQL-like, CouchDB, Duality"
+  },
+  {
+   "Slogan": "Skip the manual queries. Keep the couch.",
+   "Tags": "CRUD-less, Chill, Fun"
+  },
+  {
+   "Slogan": "No setup. No stress. No problem.",
+   "Tags": "Declarative, Easy Setup, Calm"
+  },
+  {
+   "Slogan": "Database queries that feel like a nap in a hammock.",
+   "Tags": "SQL-like, Chill, Joy"
+  },
+  {
+   "Slogan": "Where your data chills and your dev flow soars.",
+   "Tags": "CouchDB, DevX, Chill"
+  },
+  {
+   "Slogan": "Let the indexes build themselves.",
+   "Tags": "Indexing, Productivity, Automation"
+  },
+  {
+   "Slogan": "CouchDBDB: for developers who like to lean back.",
+   "Tags": "Couch, Calm, Identity"
+  },
+  {
+   "Slogan": "CouchDB mode: ON. Query mode: AUTO.",
+   "Tags": "CouchDB, Indexing, Chill"
+  },
+  {
+   "Slogan": "Your backend’s comfy recliner.",
+   "Tags": "Backend, Couch Metaphor, Humor"
+  },
+  {
+   "Slogan": "Sleep better knowing your queries just work.",
+   "Tags": "SQL-like, Productivity, Chill"
+  },
+  {
+   "Slogan": "The database that won’t keep you up at night.",
+   "Tags": "CouchDB, Sleep, Calm"
+  },
+  {
+   "Slogan": "No caffeine needed when your queries write themselves.",
+   "Tags": "Indexing, Coffee-themed, Declarative"
+  },
+  {
+   "Slogan": "From query to chill in 0.01s.",
+   "Tags": "Performance, SQL-like, Couch Metaphor"
+  },
+  {
+   "Slogan": "manual queries is so last decade. Welcome to CouchDB mode.",
+   "Tags": "CRUD-less, Chill, Future"
+  },
+  {
+   "Slogan": "Decaf + CouchDB = backend bliss.",
+   "Tags": "Stack Combo, Branding, Fun"
+  },
+  {
+   "Slogan": "Put your data on the CouchDB — it deserves a break.",
+   "Tags": "CouchDB, Chill, Fun"
+  },
+  {
+   "Slogan": "Decaf-TS + CouchDBDB: the most reclineed stack in tech.",
+   "Tags": "CouchDB, Coffee-themed, Calm"
+  },
+  {
+   "Slogan": "No stress, no schema — just smooth storage.",
+   "Tags": "NoSQL, Calm, Tech"
+  },
+  {
+   "Slogan": "Sit back. Your queries just got simpler.",
+   "Tags": "SQL-like, Chill, Productivity"
+  },
+  {
+   "Slogan": "Declarative indexes. Because you have better things to do.",
+   "Tags": "Indexing, DX, Witty"
+  },
+  {
+   "Slogan": "Query like it’s SQL. Relax like it’s NoSQL.",
+   "Tags": "SQL-like, CouchDB, Duality"
+  },
+  {
+   "Slogan": "Skip the manual queries. Keep the couch.",
+   "Tags": "CRUD-less, Chill, Fun"
+  },
+  {
+   "Slogan": "No setup. No stress. No problem.",
+   "Tags": "Declarative, Easy Setup, Calm"
+  },
+  {
+   "Slogan": "Database queries that feel like a nap in a hammock.",
+   "Tags": "SQL-like, Chill, Joy"
+  },
+  {
+   "Slogan": "Where your data chills and your dev flow soars.",
+   "Tags": "CouchDB, DevX, Chill"
+  },
+  {
+   "Slogan": "Let the indexes build themselves.",
+   "Tags": "Indexing, Productivity, Automation"
+  },
+  {
+   "Slogan": "CouchDBDB: for developers who like to lean back.",
+   "Tags": "Couch, Calm, Identity"
+  },
+  {
+   "Slogan": "CouchDB mode: ON. Query mode: AUTO.",
+   "Tags": "CouchDB, Indexing, Chill"
+  },
+  {
+   "Slogan": "Your backend’s comfy recliner.",
+   "Tags": "Backend, Couch Metaphor, Humor"
+  },
+  {
+   "Slogan": "Sleep better knowing your queries just work.",
+   "Tags": "SQL-like, Productivity, Chill"
+  },
+  {
+   "Slogan": "The database that won’t keep you up at night.",
+   "Tags": "CouchDB, Sleep, Calm"
+  },
+  {
+   "Slogan": "No caffeine needed when your queries write themselves.",
+   "Tags": "Indexing, Coffee-themed, Declarative"
+  },
+  {
+   "Slogan": "From query to chill in 0.01s.",
+   "Tags": "Performance, SQL-like, Couch Metaphor"
+  },
+  {
+   "Slogan": "manual queries is so last decade. Welcome to CouchDB mode.",
+   "Tags": "CRUD-less, Chill, Future"
+  },
+  {
+   "Slogan": "Decaf + CouchDB = backend bliss.",
+   "Tags": "Stack Combo, Branding, Fun"
+  },
+  {
+   "Slogan": "Put your data on the CouchDB — it deserves a break.",
+   "Tags": "CouchDB, Chill, Fun"
+  },
+  {
+   "Slogan": "Decaf-TS + CouchDBDB: the most reclineed stack in tech.",
+   "Tags": "CouchDB, Coffee-themed, Calm"
+  },
+  {
+   "Slogan": "No stress, no schema — just smooth storage.",
+   "Tags": "NoSQL, Calm, Tech"
+  },
+  {
+   "Slogan": "Sit back. Your queries just got simpler.",
+   "Tags": "SQL-like, Chill, Productivity"
+  },
+  {
+   "Slogan": "Declarative indexes. Because you have better things to do.",
+   "Tags": "Indexing, DX, Witty"
+  },
+  {
+   "Slogan": "Query like it’s SQL. Relax like it’s NoSQL.",
+   "Tags": "SQL-like, CouchDB, Duality"
+  },
+  {
+   "Slogan": "Skip the manual queries. Keep the couch.",
+   "Tags": "CRUD-less, Chill, Fun"
+  },
+  {
+   "Slogan": "No setup. No stress. No problem.",
+   "Tags": "Declarative, Easy Setup, Calm"
+  },
+  {
+   "Slogan": "Database queries that feel like a nap in a hammock.",
+   "Tags": "SQL-like, Chill, Joy"
+  },
+  {
+   "Slogan": "Where your data chills and your dev flow soars.",
+   "Tags": "CouchDB, DevX, Chill"
+  },
+  {
+   "Slogan": "Let the indexes build themselves.",
+   "Tags": "Indexing, Productivity, Automation"
+  },
+  {
+   "Slogan": "CouchDBDB: for developers who like to lean back.",
+   "Tags": "Couch, Calm, Identity"
+  },
+  {
+   "Slogan": "CouchDB mode: ON. Query mode: AUTO.",
+   "Tags": "CouchDB, Indexing, Chill"
+  },
+  {
+   "Slogan": "Your backend’s comfy recliner.",
+   "Tags": "Backend, Couch Metaphor, Humor"
+  },
+  {
+   "Slogan": "Sleep better knowing your queries just work.",
+   "Tags": "SQL-like, Productivity, Chill"
+  },
+  {
+   "Slogan": "The database that won’t keep you up at night.",
+   "Tags": "CouchDB, Sleep, Calm"
+  },
+  {
+   "Slogan": "No caffeine needed when your queries write themselves.",
+   "Tags": "Indexing, Coffee-themed, Declarative"
+  },
+  {
+   "Slogan": "From query to chill in 0.01s.",
+   "Tags": "Performance, SQL-like, Couch Metaphor"
+  },
+  {
+   "Slogan": "manual queries is so last decade. Welcome to CouchDB mode.",
+   "Tags": "CRUD-less, Chill, Future"
+  },
+  {
+   "Slogan": "Decaf + CouchDB = backend bliss.",
+   "Tags": "Stack Combo, Branding, Fun"
+  }
+ ],
+ "for-nano": [
+  {
+   "Slogan": "Decaf-TS + Nano: the smallest way to connect with the chillest database.",
+   "Tags": "Nano, CouchDB, Fun, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Big things come in Nano packages.",
+   "Tags": "Nano, Tech, Playful, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Tiny client. Massive chill.",
+   "Tags": "Nano, CouchDB, Chill, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Connect to CouchDB, the Nano way.",
+   "Tags": "Nano, Connector, Calm, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Nano handles your data while you sip your coffee.",
+   "Tags": "Nano, Coffee-themed, Relaxed, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + No sweat, just sync.",
+   "Tags": "Nano, CouchDB, Developer Experience, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Nano + CouchDB = Zero config, full comfort.",
+   "Tags": "Nano, CouchDB, Ease, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Write less, rest more.",
+   "Tags": "Nano, Fun, Dev Productivity, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Let Nano do the lifting while you do the lounging.",
+   "Tags": "Nano, Couch, Lazy Dev, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Nano’s so smooth, you’ll forget it’s working.",
+   "Tags": "Nano, DX, Reliable, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano: the smallest way to connect with the relaxest database.",
+   "Tags": "Nano, CouchDB, Fun, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Big things come in nano packages.",
+   "Tags": "Nano, Tech, Playful, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Tiny client. Massive relax.",
+   "Tags": "Nano, CouchDB, Chill, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Connect to your Couch, the nano way.",
+   "Tags": "Nano, Connector, Calm, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano handles your data while you sip your coffee.",
+   "Tags": "Nano, Coffee-themed, Relaxed, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + No sweat, just sync.",
+   "Tags": "Nano, CouchDB, Developer Experience, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano + your Couch = Zero config, full comfort.",
+   "Tags": "Nano, CouchDB, Ease, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Write less, rest more.",
+   "Tags": "Nano, Fun, Dev Productivity, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Let nano do the lifting while you do the lounging.",
+   "Tags": "Nano, Couch, Lazy Dev, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano’s so smooth, you’ll forget it’s working.",
+   "Tags": "Nano, DX, Reliable, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano: the smallest way to connect with the relaxest database.",
+   "Tags": "Nano, CouchDB, Fun, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Big things come in nano packages.",
+   "Tags": "Nano, Tech, Playful, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Tiny client. Massive relax.",
+   "Tags": "Nano, CouchDB, Chill, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Connect to your Couch, the nano way.",
+   "Tags": "Nano, Connector, Calm, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano handles your data while you sip your coffee.",
+   "Tags": "Nano, Coffee-themed, Relaxed, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + No sweat, just sync.",
+   "Tags": "Nano, CouchDB, Developer Experience, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano + your Couch = Zero config, full comfort.",
+   "Tags": "Nano, CouchDB, Ease, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Write less, rest more.",
+   "Tags": "Nano, Fun, Dev Productivity, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Let nano do the lifting while you do the lounging.",
+   "Tags": "Nano, Couch, Lazy Dev, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano’s so smooth, you’ll forget it’s working.",
+   "Tags": "Nano, DX, Reliable, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano: the smallest way to connect with the relaxest database.",
+   "Tags": "Nano, CouchDB, Fun, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Big things come in nano packages.",
+   "Tags": "Nano, Tech, Playful, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Tiny client. Massive relax.",
+   "Tags": "Nano, CouchDB, Chill, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Connect to your Couch, the nano way.",
+   "Tags": "Nano, Connector, Calm, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano handles your data while you sip your coffee.",
+   "Tags": "Nano, Coffee-themed, Relaxed, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + No sweat, just sync.",
+   "Tags": "Nano, CouchDB, Developer Experience, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano + your Couch = Zero config, full comfort.",
+   "Tags": "Nano, CouchDB, Ease, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Write less, rest more.",
+   "Tags": "Nano, Fun, Dev Productivity, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Let nano do the lifting while you do the lounging.",
+   "Tags": "Nano, Couch, Lazy Dev, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano’s so smooth, you’ll forget it’s working.",
+   "Tags": "Nano, DX, Reliable, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano: the smallest way to connect with the relaxest database.",
+   "Tags": "Nano, CouchDB, Fun, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Big things come in nano packages.",
+   "Tags": "Nano, Tech, Playful, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Tiny client. Massive relax.",
+   "Tags": "Nano, CouchDB, Chill, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Connect to your Couch, the nano way.",
+   "Tags": "Nano, Connector, Calm, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano handles your data while you sip your coffee.",
+   "Tags": "Nano, Coffee-themed, Relaxed, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + No sweat, just sync.",
+   "Tags": "Nano, CouchDB, Developer Experience, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano + your Couch = Zero config, full comfort.",
+   "Tags": "Nano, CouchDB, Ease, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Write less, rest more.",
+   "Tags": "Nano, Fun, Dev Productivity, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + Let nano do the lifting while you do the lounging.",
+   "Tags": "Nano, Couch, Lazy Dev, Decaf-TS"
+  },
+  {
+   "Slogan": "Decaf-TS + nano’s so smooth, you’ll forget it’s working.",
+   "Tags": "Nano, DX, Reliable, Decaf-TS"
+  }
+ ],
+ "for-pouch": [
+  {
+   "Slogan": "Decaf‑TS for Pouch: Your local DB, minus the caffeine crash.",
+   "Tags": "PouchDB, Coffee‑themed, LocalStorage"
+  },
+  {
+   "Slogan": "Store it offline, sync it later, keep your heart rate steady.",
+   "Tags": "Offline, Sync, Calm"
+  },
+  {
+   "Slogan": "PouchDB adapter: the decaf version of local data hustle.",
+   "Tags": "Adapter, Coffee‑themed, LocalDB"
+  },
+  {
+   "Slogan": "Cache, query, relax—your Pouch just kicked back.",
+   "Tags": "Cache, Chill, Developer"
+  },
+  {
+   "Slogan": "When the network naps, your data doesn’t skip a beat.",
+   "Tags": "Network, OfflineFirst, Calm"
+  },
+  {
+   "Slogan": "Local storage with latte vibes.",
+   "Tags": "LocalDB, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "No caffeine spikes, just smooth data flow between client and server.",
+   "Tags": "Sync, Calm, FullStack"
+  },
+  {
+   "Slogan": "Your browser’s little recliner for data—Pouch style.",
+   "Tags": "Browser, Metaphor, Chill"
+  },
+  {
+   "Slogan": "From offline mode to online glory without the jitters.",
+   "Tags": "OfflineFirst, Calm, Tech"
+  },
+  {
+   "Slogan": "Your PouchDB adapter: where your data lounges while you build features.",
+   "Tags": "PouchDB, Developer, Calm"
+  },
+  {
+   "Slogan": "Store less stress, more state.",
+   "Tags": "StateManagement, Chill, Humor"
+  },
+  {
+   "Slogan": "Syncs in the background while you sip your decaf.",
+   "Tags": "Sync, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Your app’s local DB shouldn’t cause local panic.",
+   "Tags": "LocalDB, Calm, Developer"
+  },
+  {
+   "Slogan": "Say goodbye to network‑anxiety; Pouch has your back.",
+   "Tags": "Network, Calm, PouchDB"
+  },
+  {
+   "Slogan": "Install adapter. Sit back. Let your data relax.",
+   "Tags": "Setup, Chill, Developer"
+  },
+  {
+   "Slogan": "Cache first, worry never.",
+   "Tags": "Cache, Calm, Tech"
+  },
+  {
+   "Slogan": "When your data’s decaf‑chilled, your UX stays smooth.",
+   "Tags": "UX, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Local DB that won’t keep you up at night.",
+   "Tags": "LocalDB, Calm, Humor"
+  },
+  {
+   "Slogan": "Your Pouch: the sofa of your storage stack.",
+   "Tags": "Metaphor, Furniture, Developer"
+  },
+  {
+   "Slogan": "Offline‑ready, worry‑free, heart‑rate free.",
+   "Tags": "OfflineFirst, Calm, Developer"
+  },
+  {
+   "Slogan": "Data on the go, calm in the code.",
+   "Tags": "Mobile, Calm, Developer"
+  },
+  {
+   "Slogan": "Pouch adapter: full flavour of features, none of the crash.",
+   "Tags": "Adapter, Coffee‑themed, LocalDB"
+  },
+  {
+   "Slogan": "Store once, sync everywhere. Then take a coffee break.",
+   "Tags": "Sync, Coffee‑themed, Productivity"
+  },
+  {
+   "Slogan": "Local DB so smooth you’ll feel like writing features in a hammock.",
+   "Tags": "Metaphor, Chill, Developer"
+  },
+  {
+   "Slogan": "Cache it, query it, relax while it handles the rest.",
+   "Tags": "Cache, Chill, Tech"
+  },
+  {
+   "Slogan": "Never let network downtime ruin your morning brew.",
+   "Tags": "Network, Coffee‑themed, Humor"
+  },
+  {
+   "Slogan": "Pouch‑powered persistence: because your code deserves a coffee break too.",
+   "Tags": "Persistence, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Your local storage without the local meltdown.",
+   "Tags": "LocalDB, Calm, Tech"
+  },
+  {
+   "Slogan": "Sync‑queue whisperer: handled quietly while you code loudly.",
+   "Tags": "Sync, Humor, Developer"
+  },
+  {
+   "Slogan": "When your data sleeps locally, your code wakes up productive.",
+   "Tags": "LocalDB, Productivity, Calm"
+  },
+  {
+   "Slogan": "Browser crash? Not on my watch. Pouch is decaf‑steady.",
+   "Tags": "Browser, Stability, Coffee‑themed"
+  },
+  {
+   "Slogan": "Offline? Sure. Panic? Never.",
+   "Tags": "OfflineFirst, Calm, Developer"
+  },
+  {
+   "Slogan": "Let your users go offline without going off the rails.",
+   "Tags": "UX, OfflineFirst, Calm"
+  },
+  {
+   "Slogan": "Write your features while your storage takes a nap.",
+   "Tags": "Developer, Chill, Humor"
+  },
+  {
+   "Slogan": "Pouch adapter: the reclining chair of your persistence layer.",
+   "Tags": "Persistence, Metaphor, Chill"
+  },
+  {
+   "Slogan": "From local insert to remote replication—served slow, smooth, decaf.",
+   "Tags": "Replication, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "Your data deserves a break—and so does your code.",
+   "Tags": "Developer, Coffee‑themed, Calm"
+  },
+  {
+   "Slogan": "Cache the chaos, replicate the calm.",
+   "Tags": "Cache, Sync, Calm"
+  },
+  {
+   "Slogan": "Local DB done right. Heart rate done low.",
+   "Tags": "LocalDB, Calm, Productivity"
+  },
+  {
+   "Slogan": "When your adapter handles hiccups, you handle creativity.",
+   "Tags": "Adapter, Developer, Chill"
+  },
+  {
+   "Slogan": "Installation takes seconds. Relaxation takes minutes.",
+   "Tags": "Setup, Humor, Developer"
+  },
+  {
+   "Slogan": "Your offline mode’s best friend.",
+   "Tags": "OfflineFirst, Chill, Tech"
+  },
+  {
+   "Slogan": "Data synchronization while you sip your latte (decaf, of course).",
+   "Tags": "Sync, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Full‑stack local‑first. Half the jitters.",
+   "Tags": "Fullstack, LocalDB, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your PouchDB adapter: because local data doesn’t need to be high‑octane.",
+   "Tags": "PouchDB, Calm, Developer"
+  },
+  {
+   "Slogan": "Let your data lounge in Pouch while you ship features on repeat.",
+   "Tags": "Features, Chill, Developer"
+  }
+ ],
+ "for-typeorm": [
+  {
+   "Slogan": "Decaf‑TS for TypeORM: get your ORM on… without the caffeine jitters.",
+   "Tags": "TypeORM, Coffee‑themed, ORM"
+  },
+  {
+   "Slogan": "Relational database? More like relaxational database.",
+   "Tags": "Relational, Chill, Humor"
+  },
+  {
+   "Slogan": "TypeORM adapter: your models in full decaf mode.",
+   "Tags": "Adapter, Coffee‑themed, Models"
+  },
+  {
+   "Slogan": "Write entities like you write your morning brew: slow and smooth.",
+   "Tags": "Entities, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Join tables, not muscles. ORM can be relaxing.",
+   "Tags": "Joins, Humor, ORM"
+  },
+  {
+   "Slogan": "Schema migrations that feel like stretching, not sprinting.",
+   "Tags": "Migration, Calm, Technical"
+  },
+  {
+   "Slogan": "Let the adapter handle the mapping — you sip the decaf.",
+   "Tags": "Adapter, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Transactional support without the heart‑palpitations.",
+   "Tags": "Transactions, Calm, ORM"
+  },
+  {
+   "Slogan": "Entities, repositories, queries — all brewed to perfection.",
+   "Tags": "Repositories, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Say goodbye to boilerplate. Hello to barista‑level code.",
+   "Tags": "Boilerplate, Fun, ORM"
+  },
+  {
+   "Slogan": "Use TypeORM under the hood; stay decaf on top.",
+   "Tags": "TypeORM, Coffee‑themed, Stack"
+  },
+  {
+   "Slogan": "Your code deserves the smooth roast of a clean database adapter.",
+   "Tags": "Adapter, Metaphor, Calm"
+  },
+  {
+   "Slogan": "Indexes built automatically. Developer stress? Not today.",
+   "Tags": "Indexes, Calm, Technical"
+  },
+  {
+   "Slogan": "Structure your relations while your heartbeat stays steady.",
+   "Tags": "Relations, Calm, Database"
+  },
+  {
+   "Slogan": "Full‑stack relational, zero caffeine crash.",
+   "Tags": "Fullstack, Relational, Coffee‑themed"
+  },
+  {
+   "Slogan": "Decorator‑driven, espresso‑style calm.",
+   "Tags": "Decorators, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Your ORM layer’s new recliner.",
+   "Tags": "Metaphor, Chill, Tech"
+  },
+  {
+   "Slogan": "Bulk operations without bulk anxiety.",
+   "Tags": "BulkOps, Calm, Technical"
+  },
+  {
+   "Slogan": "TypeORM adapter: bring your data to the table, keep your pulse in the lounge.",
+   "Tags": "Adapter, Coffee‑themed, Database"
+  },
+  {
+   "Slogan": "Write complex queries; skip the caffeine overdose.",
+   "Tags": "Queries, Calm, Developer"
+  },
+  {
+   "Slogan": "Database connections that whisper, not scream.",
+   "Tags": "Connections, Calm, Humor"
+  },
+  {
+   "Slogan": "Run migrations like you run late for coffee: still calm, still effective.",
+   "Tags": "Migration, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Map your objects, map your mind to rest.",
+   "Tags": "Mapping, Chill, ORM"
+  },
+  {
+   "Slogan": "Set up your data source, brew a cup, read a commit message.",
+   "Tags": "Setup, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Because your database should be decaf too.",
+   "Tags": "Database, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Entities and decorators and calm devs everywhere.",
+   "Tags": "Entities, Calm, Developer"
+  },
+  {
+   "Slogan": "From @Entity to @Column with zero adrenaline.",
+   "Tags": "Decorators, Calm, ORM"
+  },
+  {
+   "Slogan": "TypeORM adapter: where high‑performance meets low heart‑rate.",
+   "Tags": "Performance, Calm, Technical"
+  },
+  {
+   "Slogan": "Switch to decaf mode: keep your code going, skip the jitters.",
+   "Tags": "Developer, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Write your data model like you write your latte order: precisely and calmly.",
+   "Tags": "Modeling, Coffee‑themed, Metaphor"
+  },
+  {
+   "Slogan": "Repository patterns served neat, no sugar‑rush needed.",
+   "Tags": "Repository, Calm, Technical"
+  },
+  {
+   "Slogan": "When your adapters fetch smoothly, your product ships faster.",
+   "Tags": "Adapter, Productivity, Calm"
+  },
+  {
+   "Slogan": "Let your code rest while your queries do the work.",
+   "Tags": "Queries, Chill, Developer"
+  },
+  {
+   "Slogan": "TypeORM adapter: the espresso shot for your DB stack — minus the caffeine.",
+   "Tags": "Adapter, Coffee‑themed, Database"
+  },
+  {
+   "Slogan": "Write relations in peace. Your heartbeat thanks you.",
+   "Tags": "Relations, Calm, Developer"
+  },
+  {
+   "Slogan": "Sync your models, not your stress levels.",
+   "Tags": "Models, Calm, Tech"
+  },
+  {
+   "Slogan": "Database access that stays mellow, even under load.",
+   "Tags": "Performance, Calm, Technical"
+  },
+  {
+   "Slogan": "Install, configure, chill. That’s our ORM motto.",
+   "Tags": "Setup, Calm, Fun"
+  },
+  {
+   "Slogan": "Let your database queries sip slowly while you code boldly.",
+   "Tags": "Queries, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "TypeORM adapter: your data’s barista.",
+   "Tags": "Adapter, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Object‑relational mapping without the heart palpitations.",
+   "Tags": "ORM, Calm, Technical"
+  },
+  {
+   "Slogan": "Slow brew your migrations. No rush, no crash.",
+   "Tags": "Migration, Calm, Humorous"
+  },
+  {
+   "Slogan": "High‑level models, low‑level jitter.",
+   "Tags": "Models, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Decaf code. Robust DB. Happy developers.",
+   "Tags": "DeveloperDX, Calm, Branding"
+  },
+  {
+   "Slogan": "Your code’s new favourite lounge: the ORM layer.",
+   "Tags": "Developer, Metaphor, Chill"
+  },
+  {
+   "Slogan": "Celebrate your data model with a decaf latte.",
+   "Tags": "DataModel, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Query, persist, repeat — in a comfy chair.",
+   "Tags": "Queries, Chill, Technical"
+  },
+  {
+   "Slogan": "Because jittery code is bad for both your dev and your database.",
+   "Tags": "Developer, Humor, Calm"
+  },
+  {
+   "Slogan": "TypeORM adapter: where data meets decaf.",
+   "Tags": "Adapter, Calm, Coffee‑themed"
+  }
+ ],
+ "for-fabric": [
+  {
+   "Slogan": "Decaf‑TS for Fabric: chaincode without the caffeine frenzy.",
+   "Tags": "Blockchain, SmartContracts, Coffee‑themed"
+  },
+  {
+   "Slogan": "Deploy your ledger while sipping decaf — no jitters, just consensus.",
+   "Tags": "Ledger, Calm, Blockchain"
+  },
+  {
+   "Slogan": "Smart contracts so smooth you’ll forget you’re on‑chain.",
+   "Tags": "SmartContracts, Chill, Metaphor"
+  },
+  {
+   "Slogan": "From transaction to ledger commit with zero heart palpitations.",
+   "Tags": "Transactions, Calm, Tech"
+  },
+  {
+   "Slogan": "Chain your states, not your caffeine levels.",
+   "Tags": "StateManagement, Humor, Blockchain"
+  },
+  {
+   "Slogan": "Fabric adapter: where your data meets governance and decaf.",
+   "Tags": "Adapter, Governance, Coffee‑themed"
+  },
+  {
+   "Slogan": "Peers, endorsements, and a calm dev‑mindset.",
+   "Tags": "Peers, Calm, Developer"
+  },
+  {
+   "Slogan": "Install, instantiate, invoke — in lounge mode.",
+   "Tags": "LifeCycle, Chill, Blockchain"
+  },
+  {
+   "Slogan": "No espresso‑level speed. Just reliable smart contracts.",
+   "Tags": "Reliable, Technical, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your chaincode’s decaf shot: strong logic, steady flow.",
+   "Tags": "Chaincode, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Consensus achieved. Developer zen reached.",
+   "Tags": "Consensus, Calm, Blockchain"
+  },
+  {
+   "Slogan": "When your network stays calm, your users trust you more.",
+   "Tags": "Network, Trust, Calm"
+  },
+  {
+   "Slogan": "Smart contract functions that don’t shake your coffee mug.",
+   "Tags": "Functions, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Orderer, peer, channel — all in decaf harmony.",
+   "Tags": "Fabric, Calm, Technical"
+  },
+  {
+   "Slogan": "Chain your logic, unchain your stress.",
+   "Tags": "Logic, Calm, Developer"
+  },
+  {
+   "Slogan": "From ledger update to front‑end display without the caffeine crash.",
+   "Tags": "FullStack, Calm, Blockchain"
+  },
+  {
+   "Slogan": "Your DLT stack’s new lounge chair.",
+   "Tags": "DLT, Metaphor, Chill"
+  },
+  {
+   "Slogan": "Invoke transactions. Breathe. Relax.",
+   "Tags": "Transactions, Developer, Calm"
+  },
+  {
+   "Slogan": "Blocks added quietly. Developers relaxed loudly.",
+   "Tags": "Blocks, Humor, Blockchain"
+  },
+  {
+   "Slogan": "No rush to commit. Your chain waits patiently.",
+   "Tags": "Commit, Calm, Tech"
+  },
+  {
+   "Slogan": "Fabric adapter: because your data deserves chain‑quality, not adrenaline‑quality.",
+   "Tags": "Adapter, Branding, Calm"
+  },
+  {
+   "Slogan": "Smart contracts that feel like artisan coffee, not energy drinks.",
+   "Tags": "SmartContracts, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "When your developer heart rate stays baseline, you deploy more often.",
+   "Tags": "DeveloperDX, Calm, Productivity"
+  },
+  {
+   "Slogan": "Configure your endorsement policy… then sip your decaf.",
+   "Tags": "EndorsementPolicy, Humor, Blockchain"
+  },
+  {
+   "Slogan": "Peers gossip. You stay calm.",
+   "Tags": "Peers, Chill, Metaphor"
+  },
+  {
+   "Slogan": "Ledger, channel, contract — served mild, not wild.",
+   "Tags": "Ledger, Calm, Technical"
+  },
+  {
+   "Slogan": "From chaincode to client UI — seamlessly and serenely.",
+   "Tags": "FullStack, Calm, Blockchain"
+  },
+  {
+   "Slogan": "Your smart contract flow, decaf‑style.",
+   "Tags": "Flow, Branding, Coffee‑themed"
+  },
+  {
+   "Slogan": "Invoke, endorse, commit — no caffeine needed.",
+   "Tags": "Invoke, Calm, Technical"
+  },
+  {
+   "Slogan": "When your transactions are smooth, so is your coffee.",
+   "Tags": "Transaction, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Chaincode so chill you’ll need a blanket.",
+   "Tags": "Chaincode, Humor, Calm"
+  },
+  {
+   "Slogan": "Compose your endorsements like you compose latte art.",
+   "Tags": "Endorsements, Fun, Coffee‑themed"
+  },
+  {
+   "Slogan": "Network setup done. Coffee break ready.",
+   "Tags": "Network, Developer, Coffee‑themed"
+  },
+  {
+   "Slogan": "Deploy smart contracts… then deploy your relaxation mode.",
+   "Tags": "Deployment, Calm, Blockchain"
+  },
+  {
+   "Slogan": "Strong consistency. Steady developers.",
+   "Tags": "Consistency, Calm, Technical"
+  },
+  {
+   "Slogan": "Chaincode events? They happen. You don’t feel them.",
+   "Tags": "Events, Chill, Developer"
+  },
+  {
+   "Slogan": "Fabric adapter: your dev‑stack’s decaf upgrade.",
+   "Tags": "Adapter, Branding, Coffee‑themed"
+  },
+  {
+   "Slogan": "Transactions committed with elegance, not adrenaline.",
+   "Tags": "Transactions, Calm, Developer"
+  },
+  {
+   "Slogan": "When the consensus mechanism relaxes, so does your release schedule.",
+   "Tags": "Consensus, Productivity, Calm"
+  },
+  {
+   "Slogan": "Blocks validated while you validate your morning brew.",
+   "Tags": "Blocks, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Smart contracts without the caffeine crash — only the logical clarity.",
+   "Tags": "SmartContracts, Calm, Technical"
+  },
+  {
+   "Slogan": "Leverage Fabric. Sip decaf. Code cool.",
+   "Tags": "Fabric, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "From peer to channel to ledger — let your stack lounge.",
+   "Tags": "Peer, Channel, Chill"
+  },
+  {
+   "Slogan": "Chain your logic. Unchain your stress.",
+   "Tags": "Logic, Calm, Developer"
+  },
+  {
+   "Slogan": "Decaf‑TS for Fabric: your blockchain’s decaf shot.",
+   "Tags": "Blockchain, Branding, Coffee‑themed"
+  }
+ ],
+ "for-nest": [
+  {
+   "Slogan": "Decaf‑TS for Nest: Serve your backend like a barista serves espresso.",
+   "Tags": "NestJS, Coffee‑themed, Backend"
+  },
+  {
+   "Slogan": "Keep the jitters out of your controllers. Code in decaf mode.",
+   "Tags": "NestJS, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Dependency injection? More like decaf injection—no crash afterwards.",
+   "Tags": "DI, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "When your modules are relaxed, your developers are too.",
+   "Tags": "Modules, Chill, Developer"
+  },
+  {
+   "Slogan": "From route to response without the caffeine spike.",
+   "Tags": "Routing, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Controllers that don’t buzz — just handle requests.",
+   "Tags": "Controllers, Backend, Calm"
+  },
+  {
+   "Slogan": "NestJS + Decaf = backend brew you can sip slowly.",
+   "Tags": "NestJS, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "No crash after deploy—because you didn’t over‑caffeinate your stack.",
+   "Tags": "Deploy, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Let your pipes flow like a smooth latte stream.",
+   "Tags": "Pipes, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Guards, interceptors and decaf peace of mind.",
+   "Tags": "Security, Calm, Humor"
+  },
+  {
+   "Slogan": "Providers brew features quietly in the background.",
+   "Tags": "Providers, Backend, Coffee‑themed"
+  },
+  {
+   "Slogan": "When your backend is decaf‑calm, your frontend sleeps better.",
+   "Tags": "Frontend‑Backend, Chill, Coffee‑themed"
+  },
+  {
+   "Slogan": "REST, GraphQL or gRPC—serve them all with decaf composure.",
+   "Tags": "API, Calm, Technical"
+  },
+  {
+   "Slogan": "Your service layer should be smooth, not jittery.",
+   "Tags": "Services, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "We turned the caffeine knob down so your logs stay readable.",
+   "Tags": "Logging, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Decorators that feel like latte art — pretty, expressive, calming.",
+   "Tags": "Decorators, Expressive, Coffee‑themed"
+  },
+  {
+   "Slogan": "Intercepting chaos since you went decaf.",
+   "Tags": "ErrorHandling, Humor, Calm"
+  },
+  {
+   "Slogan": "Queue, schedule, process—without racing your heartbeat.",
+   "Tags": "Jobs, Chill, Technical"
+  },
+  {
+   "Slogan": "Plug in a module and pour yourself a mocha.",
+   "Tags": "Modules, Fun, Coffee‑themed"
+  },
+  {
+   "Slogan": "Middleware that whispers, not yells.",
+   "Tags": "Middleware, Calm, Humor"
+  },
+  {
+   "Slogan": "Dependency injection with the serenity of a Swiss café.",
+   "Tags": "DI, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Scalable backend. Minimal jitters. Maximum chill.",
+   "Tags": "Scalability, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your controllers nap while workers handle the grind.",
+   "Tags": "Workers, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Keep calm and nest on.",
+   "Tags": "NestJS, Playful, Calm"
+  },
+  {
+   "Slogan": "Decaf‑TS for Nest: Serve features not heart palpitations.",
+   "Tags": "Backend, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Endpoints that deliver smoothly—no caffeine crash on the client side.",
+   "Tags": "Endpoints, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Feature flags? More like flavor flags—pick your brew strength.",
+   "Tags": "Features, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Controllers that handle requests, not anxiety.",
+   "Tags": "Controllers, Calm, Developer"
+  },
+  {
+   "Slogan": "No boilerplate, just brew‑plate.",
+   "Tags": "Boilerplate, Fun, Coffee‑themed"
+  },
+  {
+   "Slogan": "From module to microservice with a sip of decaf.",
+   "Tags": "Microservice, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Let your backend be the café where your data rests.",
+   "Tags": "Backend, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Middleware with mellow vibes only.",
+   "Tags": "Middleware, Chill, Humor"
+  },
+  {
+   "Slogan": "Build features while your heart rate stays low.",
+   "Tags": "Productivity, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Decaf‑powered services: because bugs brewed in anxiety taste bad.",
+   "Tags": "Services, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Locks, tokens and sessions—handled quietly, like background music in a café.",
+   "Tags": "Auth, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "No rush, no crash—just clean architecture.",
+   "Tags": "Architecture, Calm, Technical"
+  },
+  {
+   "Slogan": "Let your logs brew slowly and your features deploy smoothly.",
+   "Tags": "Logs, Deploy, Coffee‑themed"
+  },
+  {
+   "Slogan": "Dependency graphs that don’t tangle you up like over‑caffeination.",
+   "Tags": "DI, Calm, Humor"
+  },
+  {
+   "Slogan": "Serve HTTP, WebSocket, event streams—while sipping your decaf.",
+   "Tags": "WebSocket, Event‑Driven, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your backend should be as smooth as your morning brew.",
+   "Tags": "Backend, Coffee‑themed, Calm"
+  },
+  {
+   "Slogan": "Testing controllers while you test your patience—minus the caffeine crash.",
+   "Tags": "Testing, Humor, Calm"
+  },
+  {
+   "Slogan": "No caffeine required: just module, provider, export, repeat.",
+   "Tags": "NestJS, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Let your services lounge while your endpoints hustle.",
+   "Tags": "Services, Chill, Backend"
+  },
+  {
+   "Slogan": "Decaf‑TS for Nest: Your restful backend’s chill companion.",
+   "Tags": "Backend, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Requests processed. Developers relaxed. Coffee in hand.",
+   "Tags": "DeveloperDX, Coffee‑themed, Calm"
+  },
+  {
+   "Slogan": "Install module. Brew code. Repeat.",
+   "Tags": "Setup, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "The backend stack that doesn’t give you heartbeats.",
+   "Tags": "Backend, Humor, Calm"
+  }
+ ],
+ "styles": [
+  {
+   "Slogan": "Styles: because your code deserves to wear something other than default.",
+   "Tags": "Styles, Coffee‑themed, DevX"
+  },
+  {
+   "Slogan": "CSS? More like Calm Style Sheets.",
+   "Tags": "CSS, Calm, Styles"
+  },
+  {
+   "Slogan": "Design your UI while your heart rate stays unchanged.",
+   "Tags": "UI, Calm, Styles"
+  },
+  {
+   "Slogan": "Less chaos in your stylesheet, more chill in your dev‑flow.",
+   "Tags": "Stylesheet, DeveloperDX, Calm"
+  },
+  {
+   "Slogan": "Styles that make your components sip, not sprint.",
+   "Tags": "Components, Coffee‑themed, Styles"
+  },
+  {
+   "Slogan": "No caffeine crash; only clean style classes.",
+   "Tags": "Styles, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "When your styles are calm, the user thinks you’re a designer.",
+   "Tags": "UX, Calm, Styles"
+  },
+  {
+   "Slogan": "Style sheets so smooth you’ll forget what chaos looked like.",
+   "Tags": "Stylesheet, Humor, DevX"
+  },
+  {
+   "Slogan": "Refactor your CSS. Reduce your caffeine.",
+   "Tags": "Refactor, Coffee‑themed, Styles"
+  },
+  {
+   "Slogan": "From raw markup to design spa — one style package at a time.",
+   "Tags": "Markup, Styles, Calm"
+  },
+  {
+   "Slogan": "Style tokens that feel like latte foam — subtle, creamy, perfect.",
+   "Tags": "DesignTokens, Coffee‑themed, Styles"
+  },
+  {
+   "Slogan": "Keep calm and apply styles.",
+   "Tags": "Styles, Playful, Calm"
+  },
+  {
+   "Slogan": "Your CSS architecture’s new recliner.",
+   "Tags": "CSS, Metaphor, Styles"
+  },
+  {
+   "Slogan": "When your styles chill, your users groove.",
+   "Tags": "UserExperience, Calm, Styles"
+  },
+  {
+   "Slogan": "Design system? More like de‑caff‑system.",
+   "Tags": "DesignSystem, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "Style variables that whisper instead of scream.",
+   "Tags": "Variables, Calm, Styles"
+  },
+  {
+   "Slogan": "Your UI’s wardrobe just got better and your energy level stayed low.",
+   "Tags": "UI, Coffee‑themed, Styles"
+  },
+  {
+   "Slogan": "Smarter styles. More features. Fewer heart palpitations.",
+   "Tags": "DeveloperDX, Styles, Calm"
+  },
+  {
+   "Slogan": "Style classes that don’t keep you up at night.",
+   "Tags": "Stylesheet, Calm, DevX"
+  },
+  {
+   "Slogan": "Your components put on their Sunday best.",
+   "Tags": "Components, Humor, Styles"
+  },
+  {
+   "Slogan": "The only hot there should be is your coffee, not your build time.",
+   "Tags": "BuildTime, Coffee‑themed, Styles"
+  },
+  {
+   "Slogan": "Style‑guide compatibility without style‑guide anxiety.",
+   "Tags": "StyleGuide, Calm, Styles"
+  },
+  {
+   "Slogan": "Typography that doesn’t give your eyes tremors.",
+   "Tags": "Typography, Calm, Styles"
+  },
+  {
+   "Slogan": "Color palettes so mellow they should come with a blanket.",
+   "Tags": "ColorPalette, Chill, Styles"
+  },
+  {
+   "Slogan": "Your UI’s zen master: Styles edition.",
+   "Tags": "UI, Calm, Styles"
+  },
+  {
+   "Slogan": "CSS modules sipping decaf in the morning.",
+   "Tags": "CSS‑Modules, Coffee‑themed, Styles"
+  },
+  {
+   "Slogan": "Variables, mixins, and calm devs everywhere.",
+   "Tags": "Sass, Calm, Styles"
+  },
+  {
+   "Slogan": "The stylesheet that doesn’t race your heartbeat.",
+   "Tags": "Stylesheet, Calm, Developer"
+  },
+  {
+   "Slogan": "Design tokens with zero caffeine workaround.",
+   "Tags": "DesignTokens, Coffee‑themed, Styles"
+  },
+  {
+   "Slogan": "When your layout flows, you don’t need energy drinks.",
+   "Tags": "Layout, Calm, Styles"
+  },
+  {
+   "Slogan": "Style‑lint that actually makes you smile.",
+   "Tags": "Linting, Humor, Styles"
+  },
+  {
+   "Slogan": "Your CSS architecture deserves a calm retirement plan.",
+   "Tags": "Architecture, Calm, Styles"
+  },
+  {
+   "Slogan": "Styles that hold it together while your code self‑destructs (less).",
+   "Tags": "Styles, Humor, Developer"
+  },
+  {
+   "Slogan": "From grid to flex to hammock mode.",
+   "Tags": "Layout, Metaphor, Styles"
+  },
+  {
+   "Slogan": "Style guides that don’t guide you into panic.",
+   "Tags": "StyleGuide, Calm, UX"
+  },
+  {
+   "Slogan": "Your UI deserves better than default margins.",
+   "Tags": "UI, Humor, Styles"
+  },
+  {
+   "Slogan": "Design tokens: the secret ingredient your UI barista adds.",
+   "Tags": "DesignTokens, Coffee‑themed, Styles"
+  },
+  {
+   "Slogan": "Clean styles. Clear components. Calm devs.",
+   "Tags": "Styles, DeveloperDX, Calm"
+  },
+  {
+   "Slogan": "When your colors cooperate, your features ship smoother.",
+   "Tags": "Colors, Productivity, Styles"
+  },
+  {
+   "Slogan": "Component theming that doesn’t theme your adrenal gland.",
+   "Tags": "Theming, Calm, Styles"
+  },
+  {
+   "Slogan": "Style variables that actually behave.",
+   "Tags": "Variables, Fun, Styles"
+  },
+  {
+   "Slogan": "Runs on tokens, not energy shots.",
+   "Tags": "DesignTokens, Coffee‑themed, Styles"
+  },
+  {
+   "Slogan": "Styles that make your UI look like a high‑end café, not a discount coffee chain.",
+   "Tags": "UI, Metaphor, Styles"
+  },
+  {
+   "Slogan": "Packaged styles. Unpacked peace.",
+   "Tags": "Packaging, Calm, Styles"
+  },
+  {
+   "Slogan": "The only thing left to style: your coffee mug.",
+   "Tags": "Coffee‑themed, Fun, Styles"
+  },
+  {
+   "Slogan": "Styles: turning markup into mood without the midnight debugging.",
+   "Tags": "Markup, Mood, Styles"
+  },
+  {
+   "Slogan": "Your UI stack’s decaf aesthetic upgrade.",
+   "Tags": "Styling, Branding, Calm"
+  }
+ ],
+ "for-angular": [
+  {
+   "Slogan": "Decaf‑TS for Angular: build components, not caffeine panic.",
+   "Tags": "Angular, Coffee‑themed, Frontend"
+  },
+  {
+   "Slogan": "Templates that flow smoother than your decaf espresso.",
+   "Tags": "Templates, Chill, Coffee‑themed"
+  },
+  {
+   "Slogan": "Modules, components and services—all served decaffeinated.",
+   "Tags": "Modules, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "When change detection relaxes, so does your heart rate.",
+   "Tags": "ChangeDetection, Calm, Frontend"
+  },
+  {
+   "Slogan": "Angular + Decaf‑TS = UI that won’t keep you up at night.",
+   "Tags": "Angular, Calm, Branding"
+  },
+  {
+   "Slogan": "Lazy‑loaded routes, fully awake developers (without the caffeine).",
+   "Tags": "Routing, LazyLoad, Humor"
+  },
+  {
+   "Slogan": "Components that stay composed—even when your data doesn’t.",
+   "Tags": "Components, Chill, Developer"
+  },
+  {
+   "Slogan": "No jittery animations, just smooth transitions and smooth devs.",
+   "Tags": "Animations, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Services that inject calm instead of adrenaline.",
+   "Tags": "Services, Calm, Angular"
+  },
+  {
+   "Slogan": "Write directives like you write your morning brew—full of flavor, zero crash.",
+   "Tags": "Directives, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Angular forms that keep your UI steady and your caffeine intake low.",
+   "Tags": "Forms, Calm, Frontend"
+  },
+  {
+   "Slogan": "State management? More like state‑relaxation management.",
+   "Tags": "State, Chill, Frontend"
+  },
+  {
+   "Slogan": "Build your SPA while sipping decaf—framework won’t outpace you.",
+   "Tags": "SPA, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Pipes that filter chaos from your code.",
+   "Tags": "Pipes, Calm, Humor"
+  },
+  {
+   "Slogan": "Components with metadata that feel like latte art.",
+   "Tags": "Metadata, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "When your change bags are quiet, your users don’t panic.",
+   "Tags": "ChangeDetection, Calm, UX"
+  },
+  {
+   "Slogan": "Decaf‑TS for Angular: where UI code relaxes and features deploy fast.",
+   "Tags": "UI, Calm, Productivity"
+  },
+  {
+   "Slogan": "Bindings that don’t bind you to adrenaline.",
+   "Tags": "Bindings, Calm, Frontend"
+  },
+  {
+   "Slogan": "Animations that ease in like a steaming cup of decaf.",
+   "Tags": "Animations, Coffee‑themed, UI"
+  },
+  {
+   "Slogan": "RxJS observables that observe your calm, not your heart rate.",
+   "Tags": "RxJS, Chill, Humor"
+  },
+  {
+   "Slogan": "You write the logic; the framework writes the latte foam.",
+   "Tags": "Developer, Coffee‑themed, Frontend"
+  },
+  {
+   "Slogan": "When the UI adapts, you relax.",
+   "Tags": "UI, Calm, Adaptation"
+  },
+  {
+   "Slogan": "Angular modules that feel like a restful Sunday morning.",
+   "Tags": "Modules, Calm, Metaphor"
+  },
+  {
+   "Slogan": "Directive your stress to zero.",
+   "Tags": "Directives, Humor, Calm"
+  },
+  {
+   "Slogan": "Decaf mode: code components, sip coffee, deploy features.",
+   "Tags": "Coffee‑themed, Workflow, Frontend"
+  },
+  {
+   "Slogan": "Your UI stack’s decaf shot—strong features, gentle developer experience.",
+   "Tags": "UI Stack, Branding, Calm"
+  },
+  {
+   "Slogan": "Forms that validate so smoothly you forget about the coffee break.",
+   "Tags": "Forms, Smooth, Developer"
+  },
+  {
+   "Slogan": "When your UI layer relaxes, your backend gets jealous.",
+   "Tags": "UI, Humor, Fullstack"
+  },
+  {
+   "Slogan": "Angular routes that don’t dig into your veins.",
+   "Tags": "Routing, Humor, Calm"
+  },
+  {
+   "Slogan": "Change detection strategy: OnPush your heart‑rate too.",
+   "Tags": "ChangeDetection, Humor, Angular"
+  },
+  {
+   "Slogan": "Components that serve features, not caffeine bursts.",
+   "Tags": "Components, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Templates that load like your server: calm and measured.",
+   "Tags": "Templates, Chill, Tech"
+  },
+  {
+   "Slogan": "Services that whisper requests rather than shout them.",
+   "Tags": "Services, Calm, Frontend"
+  },
+  {
+   "Slogan": "When your UI feels like a café lounge, not a roller‑coaster.",
+   "Tags": "UI, Metaphor, Calm"
+  },
+  {
+   "Slogan": "Build your Angular app while your code stays decaf‑serene.",
+   "Tags": "Build, Calm, Branding"
+  },
+  {
+   "Slogan": "No caffeine crash in your UI stack, just smooth user experience.",
+   "Tags": "UX, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "Directives that make your code shine… without shining your pupils.",
+   "Tags": "Directives, Humor, Frontend"
+  },
+  {
+   "Slogan": "Keep calm and compile Angular.",
+   "Tags": "Compile, Playful, Calm"
+  },
+  {
+   "Slogan": "Decaf‑TS for Angular: sip your coffee, ship your UI.",
+   "Tags": "UI, Coffee‑themed, Productivity"
+  },
+  {
+   "Slogan": "Your components deserve the decaf treatment.",
+   "Tags": "Components, Branding, Coffee‑themed"
+  },
+  {
+   "Slogan": "Services with calm APIs, not caffeine APIs.",
+   "Tags": "Services, Calm, Technical"
+  },
+  {
+   "Slogan": "Modules that plug in seamlessly… like your decaf plug in the morning.",
+   "Tags": "Modules, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Templates that keep your DOM awake—and your nerves asleep.",
+   "Tags": "DOM, Humor, Calm"
+  },
+  {
+   "Slogan": "When the UI updates quietly, the product gets spotlighted.",
+   "Tags": "UI, DevX, Calm"
+  },
+  {
+   "Slogan": "Build with Angular. Brew with Decaf‑TS.",
+   "Tags": "Angular, Coffee‑themed, Branding"
+  }
+ ],
+ "mcp-server": [
+  {
+   "Slogan": "mcp‑server: your code’s decaf gateway to data and tools.",
+   "Tags": "MCP, Server, Coffee‑themed"
+  },
+  {
+   "Slogan": "Deploy a server without deploying your stress levels.",
+   "Tags": "Server, Calm, Developer"
+  },
+  {
+   "Slogan": "Protocol, server, chill mode enabled.",
+   "Tags": "MCP, Chill, Tech"
+  },
+  {
+   "Slogan": "Endpoints that serve logic not caffeine spikes.",
+   "Tags": "Endpoints, Coffee‑themed, Technical"
+  },
+  {
+   "Slogan": "Your server, no jitters, all features.",
+   "Tags": "Server, Calm, Productivity"
+  },
+  {
+   "Slogan": "Start the MCP‑server. Sip your decaf. Ship your tool.",
+   "Tags": "Workflow, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Handle context, not heart palpitations.",
+   "Tags": "Context, Calm, Developer"
+  },
+  {
+   "Slogan": "MCP server so smooth you’ll forget you’re online.",
+   "Tags": "MCP, Fun, Tech"
+  },
+  {
+   "Slogan": "Serve resources. Skip the caffeine crash.",
+   "Tags": "Resources, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Your backend calmer than your morning latte.",
+   "Tags": "Backend, Coffee‑themed, Chill"
+  },
+  {
+   "Slogan": "Endpoints designed by baristas, not adrenaline junkies.",
+   "Tags": "Endpoints, Coffee‑themed, Humor"
+  },
+  {
+   "Slogan": "Schema, tool, transport — decaf edition.",
+   "Tags": "Schema, Tooling, Calm"
+  },
+  {
+   "Slogan": "From resource definition to runtime chill in one server.",
+   "Tags": "Runtime, Calm, Server"
+  },
+  {
+   "Slogan": "Connect, query, relax.",
+   "Tags": "Workflow, Chill, Developer"
+  },
+  {
+   "Slogan": "Server‑side logic that sits back and sips decaf.",
+   "Tags": "Server, Metaphor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Your MCP stack’s low‑caffeine upgrade.",
+   "Tags": "MCP, Branding, Calm"
+  },
+  {
+   "Slogan": "Deploy without the buzz—just business logic.",
+   "Tags": "Deploy, Calm, Technical"
+  },
+  {
+   "Slogan": "Serve tools, not tremors.",
+   "Tags": "Tools, Calm, Developer"
+  },
+  {
+   "Slogan": "HTTP, STDIO or SSE—same calm server.",
+   "Tags": "Transport, Calm, Tech"
+  },
+  {
+   "Slogan": "Queries processed while your coffee cools.",
+   "Tags": "Queries, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Run context‑server. Take a breath. Repeat.",
+   "Tags": "Server, Calm, Developer"
+  },
+  {
+   "Slogan": "Requests handled. Heart rate stable.",
+   "Tags": "Requests, Calm, Tech"
+  },
+  {
+   "Slogan": "Your server’s script‑kiddie free and caffeine‑free.",
+   "Tags": "Security, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Build MCP‑tools while your dev‑flow stays mellow.",
+   "Tags": "Tools, Developer, Calm"
+  },
+  {
+   "Slogan": "Server configuration: zero panic, 100% features.",
+   "Tags": "Configuration, Calm, Productivity"
+  },
+  {
+   "Slogan": "Content negotiation done like a quiet café chat.",
+   "Tags": "Protocol, Metaphor, Calm"
+  },
+  {
+   "Slogan": "Error handling that doesn’t cause your heartbeat to spin.",
+   "Tags": "ErrorHandling, Calm, Tech"
+  },
+  {
+   "Slogan": "Deploy your server. Uninstall anxiety.",
+   "Tags": "Deploy, Humor, Developer"
+  },
+  {
+   "Slogan": "When the server behaves, you behave. Sip decaf.",
+   "Tags": "Behavior, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Secure channels. Safe features. Less caffeine.",
+   "Tags": "Security, Calm, Coffee‑themed"
+  },
+  {
+   "Slogan": "MCP‑server: your peace‑of‑mind layer in the stack.",
+   "Tags": "Server, Calm, Branding"
+  },
+  {
+   "Slogan": "Transport routes that don’t route you into a panic room.",
+   "Tags": "Transport, Humor, Tech"
+  },
+  {
+   "Slogan": "Build multi‑tool servers while your heartbeat stays baseline.",
+   "Tags": "Tools, Developer, Calm"
+  },
+  {
+   "Slogan": "Requests served with latte art precision.",
+   "Tags": "Requests, Coffee‑themed, Fun"
+  },
+  {
+   "Slogan": "Your server is the barista. Your logic the espresso—decaf option included.",
+   "Tags": "Metaphor, Coffee‑themed, Developer"
+  },
+  {
+   "Slogan": "Handle real time. Avoid real-time panic.",
+   "Tags": "RealTime, Calm, Tech"
+  },
+  {
+   "Slogan": "Server logs with whispers, not screams.",
+   "Tags": "Logging, Calm, Developer"
+  },
+  {
+   "Slogan": "Configuration files that feel like reading a cappuccino menu.",
+   "Tags": "Configuration, Humor, Coffee‑themed"
+  },
+  {
+   "Slogan": "Serve, don’t sprint.",
+   "Tags": "Workflow, Calm, Developer"
+  },
+  {
+   "Slogan": "Endpoints created. Features shipped. Anxiety paused.",
+   "Tags": "Workflow, Calm, Technical"
+  },
+  {
+   "Slogan": "Your server’s performance: strong logic, gentle vibration.",
+   "Tags": "Performance, Calm, Tech"
+  },
+  {
+   "Slogan": "MCP server for developers who prefer footrests over foot‑races.",
+   "Tags": "Developer, Metaphor, Calm"
+  },
+  {
+   "Slogan": "Transport choices? Pick chill.",
+   "Tags": "Transport, Calm, Developer"
+  },
+  {
+   "Slogan": "Server architecture that pairs well with green tea too.",
+   "Tags": "Architecture, Coffee‑themed, Wellness"
+  },
+  {
+   "Slogan": "From tool invocation to result delivery without raising your pulse.",
+   "Tags": "Tools, Developer, Calm"
+  },
+  {
+   "Slogan": "API endpoints that feel like lounge conversations.",
+   "Tags": "API, Metaphor, Calm"
+  },
+  {
+   "Slogan": "Decaf‑TS MCP‑server: because your data deserves a break too.",
+   "Tags": "Branding, Coffee‑themed, Tech"
+  },
+  {
+   "Slogan": "Deploy once. Relax always.",
+   "Tags": "Deploy, Calm, Developer"
+  },
+  {
+   "Slogan": "Your server stack’s unwinding lounge chair.",
+   "Tags": "Stack, Metaphor, Chill"
+  }
+ ],
+ "for-react-native": [
+  {
+   "Slogan": "Decaf-TS for React Native: mobile dev without the caffeine jitters.",
+   "Tags": "React Native, Mobile, Coffee-themed"
+  },
+  {
+   "Slogan": "Build beautifully, run smoothly, stay decaf.",
+   "Tags": "Mobile, Calm, Developer"
+  },
+  {
+   "Slogan": "Native apps, decaffeinated stack.",
+   "Tags": "React Native, Coffee-themed, Technical"
+  },
+  {
+   "Slogan": "Let your UI breathe. Let your code chill.",
+   "Tags": "UI, Calm, Mobile"
+  },
+  {
+   "Slogan": "Cross-platform without cross-surges in your heartbeat.",
+   "Tags": "CrossPlatform, Calm, Developer"
+  },
+  {
+   "Slogan": "React Native adapter that sips, not slams.",
+   "Tags": "Adapter, Coffee-themed, Mobile"
+  },
+  {
+   "Slogan": "Use your phone. Not your adrenaline rush.",
+   "Tags": "Mobile, Humor, Calm"
+  },
+  {
+   "Slogan": "From iOS to Android with one calm stack.",
+   "Tags": "Mobile, Fullstack, Calm"
+  },
+  {
+   "Slogan": "Install. Code. Sip decaf. Deploy mobile.",
+   "Tags": "Workflow, Coffee-themed, Mobile"
+  },
+  {
+   "Slogan": "Your mobile code’s hammock — lightweight, relaxed, powerful.",
+   "Tags": "Metaphor, Mobile, Chill"
+  },
+  {
+   "Slogan": "React Native just got a calm infusion.",
+   "Tags": "React Native, Infusion, Coffee-themed"
+  },
+  {
+   "Slogan": "Shake your phone, not your mental state.",
+   "Tags": "Mobile, Humor, Calm"
+  },
+  {
+   "Slogan": "App development that doesn’t spike your cortisol.",
+   "Tags": "Mobile, Chill, Wellness"
+  },
+  {
+   "Slogan": "Because your code should run — not run away screaming.",
+   "Tags": "Mobile, Humor, Developer"
+  },
+  {
+   "Slogan": "Fast reload. Slower heart rate.",
+   "Tags": "React Native, Calm, Speed"
+  },
+  {
+   "Slogan": "Decaf your development. Boost your UX.",
+   "Tags": "React Native, UX, Calm"
+  },
+  {
+   "Slogan": "Deploy with the serenity of a yoga instructor.",
+   "Tags": "Mobile, Humor, Calm"
+  },
+  {
+   "Slogan": "From coffee-fueled to calm-fueled mobile workflows.",
+   "Tags": "Coffee-themed, Mobile, Workflow"
+  },
+  {
+   "Slogan": "A mobile stack your nervous system approves of.",
+   "Tags": "Calm, Tech, Mobile"
+  },
+  {
+   "Slogan": "Decaf-TS RN: Runs smooth. Feels smooth. Is smooth.",
+   "Tags": "Mobile, Coffee-themed, Fun"
+  },
+  {
+   "Slogan": "For devs who want to build apps, not anxiety.",
+   "Tags": "Mental Health, Humor, Mobile"
+  },
+  {
+   "Slogan": "React Native without the React panic.",
+   "Tags": "React Native, Humor, Calm"
+  },
+  {
+   "Slogan": "Tap. Swipe. Sip. Ship.",
+   "Tags": "Mobile, Minimal, Coffee-themed"
+  },
+  {
+   "Slogan": "Ditch the crash reports. Embrace the nap reports.",
+   "Tags": "Humor, Mobile, Stability"
+  },
+  {
+   "Slogan": "Mobile dev. Now with 90% less debugging rage.",
+   "Tags": "Developer, Mobile, Humor"
+  },
+  {
+   "Slogan": "Smoother animations. Smoother nervous system.",
+   "Tags": "UX, Calm, Mobile"
+  },
+  {
+   "Slogan": "Skip the lags. Skip the lattes.",
+   "Tags": "Performance, Coffee-themed, Humor"
+  },
+  {
+   "Slogan": "Cross-platform coolness without the chaos.",
+   "Tags": "Chill, Calm, Mobile"
+  },
+  {
+   "Slogan": "The stack that makes hot reload feel like spa day.",
+   "Tags": "Developer, Calm, Metaphor"
+  },
+  {
+   "Slogan": "No bugs. No buzz. Just balance.",
+   "Tags": "Mobile, Calm, Developer"
+  },
+  {
+   "Slogan": "Native performance with barista-level smoothness.",
+   "Tags": "Performance, Coffee-themed, Mobile"
+  },
+  {
+   "Slogan": "Write once. Chill everywhere.",
+   "Tags": "Cross-platform, Calm, Mobile"
+  },
+  {
+   "Slogan": "Decaf for React Native: Code like it's Sunday morning.",
+   "Tags": "Calm, Mobile, Coffee-themed"
+  },
+  {
+   "Slogan": "From code to coast mode.",
+   "Tags": "Metaphor, Chill, Mobile"
+  },
+  {
+   "Slogan": "Brew native apps without burning your dev hours.",
+   "Tags": "Mobile, Coffee-themed, Productivity"
+  },
+  {
+   "Slogan": "The only stack that pairs well with herbal tea.",
+   "Tags": "Mobile, Humor, Wellness"
+  },
+  {
+   "Slogan": "One stack. Infinite chill.",
+   "Tags": "Mobile, Calm, Tech"
+  },
+  {
+   "Slogan": "Install Decaf-TS RN. Uninstall stress.",
+   "Tags": "Mobile, Workflow, Calm"
+  },
+  {
+   "Slogan": "Less caffeine. More features.",
+   "Tags": "Mobile, Coffee-themed, Calm"
+  },
+  {
+   "Slogan": "React Native... without the React nightmares.",
+   "Tags": "Mobile, Humor, Sleep"
+  },
+  {
+   "Slogan": "Hot reloading. Cold brew energy.",
+   "Tags": "Mobile, Coffee-themed, Developer"
+  },
+  {
+   "Slogan": "Make mobile apps, not heart palpitations.",
+   "Tags": "Humor, Calm, Developer"
+  },
+  {
+   "Slogan": "UI that flows like a slow-poured latte.",
+   "Tags": "Mobile, Coffee-themed, UI"
+  },
+  {
+   "Slogan": "Push updates, not your stress threshold.",
+   "Tags": "Mobile, Humor, Productivity"
+  },
+  {
+   "Slogan": "Code in calm. Compile in confidence.",
+   "Tags": "Mobile, Calm, Developer"
+  },
+  {
+   "Slogan": "React Native. Refactored for restfulness.",
+   "Tags": "Mobile, Tech, Calm"
+  },
+  {
+   "Slogan": "No state management meltdowns.",
+   "Tags": "Mobile, Humor, Chill"
+  },
+  {
+   "Slogan": "Crashes belong in test flights. Not production.",
+   "Tags": "Mobile, Developer, Reliability"
+  },
+  {
+   "Slogan": "Go native. Stay mellow.",
+   "Tags": "Mobile, Calm, React Native"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+<div id="faq-grid" class="faq-list">
+  <div class="faq-list__column">
+    @for (item of column(0); track item['model'].id) {
+      <div class="faq-list__entry">
+        <h3 class="faq-list__question">{{ item['model'].title }}</h3>
+        <p class="faq-list__answer">{{ item['model'].description }}</p>
+      </div>
+    }
+  </div>
+  <div class="faq-list__column">
+    @for (item of column(1); track item['model'].id) {
+      <div class="faq-list__entry">
+        <h3 class="faq-list__question">{{ item['model'].title }}</h3>
+        <p class="faq-list__answer">{{ item['model'].description }}</p>
+      </div>
+    }
+  </div>
+</div>

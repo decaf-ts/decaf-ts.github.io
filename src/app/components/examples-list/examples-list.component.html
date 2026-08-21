@@ -1,0 +1,16 @@
+<div id="examples-list" class="example-cards">
+  @for (item of items; track item['model'].id) {
+    <article class="example-cards__item">
+      <div class="example-cards__header">
+        <h3 class="example-cards__title">{{ item['model'].title }}</h3>
+        @if (item['model'].lang) {
+          <span class="example-cards__lang">{{ item['model'].lang }}</span>
+        }
+      </div>
+      <p class="example-cards__summary">{{ item['model'].summary }}</p>
+      @if (item['model'].code) {
+        <pre class="example-cards__code"><code>{{ item['model'].code }}</code></pre>
+      }
+    </article>
+  }
+</div>

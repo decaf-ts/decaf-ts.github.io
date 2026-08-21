@@ -21,3 +21,8 @@
 !/workdocs/reports/jest.coverage.config.cjs
 /node_modules
 !.gitkeep
+# Angular / Playwright test artifacts
+**/.angular/
+**/test-results/
+**/playwright-report/
+/www

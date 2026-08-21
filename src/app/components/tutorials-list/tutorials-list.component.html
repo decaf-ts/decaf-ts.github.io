@@ -1,0 +1,12 @@
+<div id="tutorials-list" class="tutorial-cards">
+  @for (item of items; track item['model'].id) {
+    <article class="tutorial-cards__item">
+      <div class="tutorial-cards__badge">{{ item['model'].module }}</div>
+      <h3 class="tutorial-cards__title">{{ item['model'].title }}</h3>
+      <p class="tutorial-cards__summary">{{ item['model'].summary }}</p>
+      @if (item['model'].code) {
+        <pre class="tutorial-cards__code"><code>{{ item['model'].code }}</code></pre>
+      }
+    </article>
+  }
+</div>

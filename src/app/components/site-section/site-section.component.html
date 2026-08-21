@@ -1,0 +1,275 @@
+@switch (model.kind) {
+  @case ('hero') {
+    <section class="site-section site-section--hero">
+      <app-site-nav [items]="navItems()" [cta]="cta()"></app-site-nav>
+      <div class="site-section__hero-inner">
+        @for (item of byTag('news'); track item.id) {
+          <div class="site-section__news-badge">
+            <span class="site-section__news-icon" [innerHTML]="item.icon | safeHtml"></span>
+            <span class="site-section__news-label">{{ item.titleKey | translate }}</span>
+          </div>
+        }
+        <div class="site-section__hero-title-wrap">
+          <h1 class="site-section__hero-title">{{ model.titleKey | translate }}</h1>
+        </div>
+        <div class="site-section__hero-subtitle-wrap">
+          <p class="site-section__hero-subtitle">{{ model.subtitleKey | translate }}</p>
+        </div>
+        <div class="site-section__hero-actions">
+          @for (item of byTag('cta-primary'); track item.id) {
+            <a [routerLink]="hrefOrNil(item.href)" class="site-section__btn site-section__btn--primary-hero">{{
+              item.titleKey | translate
+            }}</a>
+          }
+          @for (item of byTag('cta-secondary'); track item.id) {
+            <button class="site-section__btn site-section__btn--ghost">{{ item.titleKey | translate }}</button>
+          }
+        </div>
+        @for (item of byTag('preview'); track item.id) {
+          <div class="site-section__hero-preview">
+            <div class="site-section__hero-preview-frame">
+              <div class="site-section__hero-preview-surface">
+                <div class="site-section__hero-preview-panel">
+                  <div class="site-section__hero-preview-icon" [innerHTML]="item.icon | safeHtml"></div>
+                  <p class="site-section__hero-preview-label">{{ item.titleKey | translate }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="site-section__glow" aria-hidden="true"></div>
+    </section>
+  }
+
+  @case ('page-hero') {
+    <section class="site-section site-section--page-hero">
+      <app-site-nav [items]="navItems()" [cta]="cta()"></app-site-nav>
+      <div class="site-section__page-hero-inner">
+        @if (queryModule()) {
+          <span class="site-section__page-hero-module">{{ queryModule() }}</span>
+        }
+        <h1 id="page-hero-title" class="site-section__page-hero-title">
+          {{ model.title || (model.titleKey | translate) }}
+        </h1>
+        <p id="page-hero-subtitle" class="site-section__page-hero-subtitle">
+          {{ model.subtitle || (model.subtitleKey | translate) }}
+        </p>
+      </div>
+      <div class="site-section__glow" aria-hidden="true"></div>
+    </section>
+  }
+
+  @case ('logo-cloud') {
+    <div class="site-section site-section--band">
+      <div class="site-section__container site-section__container--center">
+        <h2 class="site-section__title">{{ model.titleKey | translate }}</h2>
+        <p class="site-section__subtitle">{{ model.subtitleKey | translate }}</p>
+        <app-brands-list class="site-section__list"></app-brands-list>
+      </div>
+    </div>
+  }
+
+  @case ('features') {
+    <section class="site-section site-section--band">
+      <div class="site-section__container site-section__container--center">
+        @if (model.kickerKey) {
+          <span class="site-section__kicker">{{ model.kickerKey | translate }}</span>
+        }
+        <h2 class="site-section__title">{{ model.titleKey | translate }}</h2>
+        @if (model.subtitleKey) {
+          <p class="site-section__subtitle">{{ model.subtitleKey | translate }}</p>
+        }
+        <app-home-cards-list class="site-section__list"></app-home-cards-list>
+      </div>
+    </section>
+  }
+
+  @case ('cta') {
+    <section class="site-section site-section--cta">
+      <div class="site-section__container site-section__cta-inner">
+        <div class="site-section__cta-copy">
+          <h2 class="site-section__cta-title">{{ model.titleKey | translate }}</h2>
+          @if (model.subtitleKey) {
+            <p class="site-section__cta-subtitle">{{ model.subtitleKey | translate }}</p>
+          }
+        </div>
+        <div class="site-section__cta-actions">
+          @for (item of byTag('cta-primary'); track item.id) {
+            <a [routerLink]="hrefOrNil(item.href)" class="site-section__btn site-section__btn--primary-hero">{{
+              item.titleKey | translate
+            }}</a>
+          }
+          @for (item of byTag('cta-secondary'); track item.id) {
+            <button class="site-section__btn site-section__btn--ghost-dark">{{ item.titleKey | translate }}</button>
+          }
+        </div>
+      </div>
+    </section>
+  }
+
+  @case ('showcase') {
+    <section [class]="showcaseSectionClass()">
+      <div class="site-section__container">
+        <div class="site-section__showcase" [class.site-section__showcase--flip]="visualOnLeft()">
+          @if (visualOnLeft()) {
+            <visual-panel [item]="visual()" [grade]="true"></visual-panel>
+          }
+          <div class="site-section__showcase-copy">
+            @if (model.kickerKey) {
+              <span class="site-section__kicker site-section__kicker--red">{{ model.kickerKey | translate }}</span>
+            }
+            <h2 class="site-section__showcase-title">{{ model.titleKey | translate }}</h2>
+            @if (model.subtitleKey) {
+              <p class="site-section__showcase-subtitle">{{ model.subtitleKey | translate }}</p>
+            }
+            <button class="site-section__btn site-section__btn--indigo">{{ 'showcase.see_how' | translate }}</button>
+          </div>
+          @if (!visualOnLeft()) {
+            <visual-panel [item]="visual()" [grade]="false"></visual-panel>
+          }
+        </div>
+      </div>
+    </section>
+  }
+
+  @case ('faq') {
+    <section class="site-section site-section--band">
+      <div class="site-section__container site-section__container--center">
+        @if (model.kickerKey) {
+          <span class="site-section__kicker site-section__kicker--red">{{ model.kickerKey | translate }}</span>
+        }
+        <h2 class="site-section__title">{{ model.titleKey | translate }}</h2>
+        @if (model.subtitleKey) {
+          <p class="site-section__subtitle">{{ model.subtitleKey | translate }}</p>
+        }
+        <app-faq-list class="site-section__list site-section__list--faq"></app-faq-list>
+      </div>
+    </section>
+  }
+
+  @case ('modules') {
+    <section class="site-section site-section--band">
+      <div class="site-section__container">
+        <app-modules-list></app-modules-list>
+      </div>
+    </section>
+  }
+
+  @case ('features-page') {
+    <section class="site-section site-section--band">
+      <div class="site-section__container">
+        <app-module-features-list [filterByModule]="moduleFilter()"></app-module-features-list>
+      </div>
+    </section>
+  }
+
+  @case ('tutorials') {
+    <section class="site-section site-section--band">
+      <div class="site-section__container">
+        <app-tutorials-list [filterByModule]="moduleFilter()"></app-tutorials-list>
+      </div>
+    </section>
+  }
+
+  @case ('examples') {
+    <section class="site-section site-section--band">
+      <div class="site-section__container">
+        <app-examples-list [filterByModule]="moduleFilter()"></app-examples-list>
+      </div>
+    </section>
+  }
+
+  @case ('community') {
+    <section class="site-section site-section--band">
+      <div class="site-section__container site-section__container--center">
+        @if (model.kickerKey) {
+          <span class="site-section__kicker">{{ model.kickerKey | translate }}</span>
+        }
+        <h2 class="site-section__title">{{ model.titleKey | translate }}</h2>
+        @if (model.subtitleKey) {
+          <p class="site-section__subtitle">{{ model.subtitleKey | translate }}</p>
+        }
+        <div class="site-section__community">
+          @for (item of communityCards(); track item.id) {
+            <a
+              [href]="rawHref(item.href) || hrefOrNil(item.href) || '#'"
+              [attr.target]="rawHref(item.href) ? '_blank' : null"
+              class="site-section__community-card"
+            >
+              <span class="site-section__community-icon" [innerHTML]="item.icon | safeHtml"></span>
+              <h3 class="site-section__community-title">{{ item.titleKey | translate }}</h3>
+              <p class="site-section__community-description">{{ item.descriptionKey | translate }}</p>
+            </a>
+          }
+        </div>
+      </div>
+    </section>
+  }
+
+  @case ('footer') {
+    <footer class="site-section site-section--footer">
+      <div class="site-section__container">
+        <div class="site-section__footer-top">
+          <div class="site-section__footer-brand">
+            <img src="assets/logo1.png" class="site-section__footer-logo" alt="{{ 'common.logo_alt' | translate }}" />
+            @if (model.titleKey) {
+              <p class="site-section__footer-description">{{ model.titleKey | translate }}</p>
+            }
+          </div>
+          <div class="site-section__footer-cols">
+            @for (col of linkColumns(); track col.tag) {
+              <div class="site-section__footer-col">
+                <h3 class="site-section__footer-col-title">{{ col.titleKey | translate }}</h3>
+                <div class="site-section__footer-col-links">
+                  @for (link of col.links; track link.id) {
+                    <a [href]="link.href" class="site-section__footer-link">{{ link.titleKey | translate }}</a>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="site-section__footer-bottom">
+          <p class="site-section__footer-copyright">{{ model.subtitleKey | translate }}</p>
+          @if (footerSlogan) {
+            <p class="site-section__footer-slogan">{{ footerSlogan }}</p>
+          }
+          <div class="site-section__footer-socials">
+            @for (item of socialItems(); track item.id) {
+              <a
+                [href]="item.href"
+                class="site-section__footer-social"
+                target="_blank"
+                rel="noopener"
+                [attr.aria-label]="item.name"
+              >
+                <span [innerHTML]="item.icon | safeHtml"></span>
+              </a>
+            }
+          </div>
+        </div>
+      </div>
+    </footer>
+  }
+
+  @case ('footer-slim') {
+    <footer class="site-section site-section--footer-slim">
+      <div class="site-section__container">
+        <div class="site-section__footer-slim-inner">
+          <div class="site-section__footer-slim-brand">
+            <img
+              src="assets/logo-footer.png"
+              class="site-section__footer-slim-logo"
+              alt="{{ 'common.logo_alt' | translate }}"
+            />
+            @if (model.titleKey) {
+              <p class="site-section__footer-slim-copy">{{ model.titleKey | translate }}</p>
+            }
+          </div>
+          <p class="site-section__footer-slim-copyright">{{ model.subtitleKey | translate }}</p>
+        </div>
+      </div>
+    </footer>
+  }
+}

@@ -1,0 +1,22 @@
+<nav class="site-nav relative z-10 w-full px-16 py-6">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center space-x-2">
+      <img src="assets/logo_contrast.svg" alt="{{ 'common.logo_alt' | translate }}" class="h-9 w-auto" />
+    </div>
+    <div class="hidden md:flex items-center space-x-8">
+      @for (item of items; track item.id) {
+        <a [routerLink]="internalHref(item.href)" class="site-nav__link text-white hover:text-white/80 transition-colors">
+          {{ item.titleKey | translate }}
+        </a>
+      }
+    </div>
+    @if (cta) {
+      <a
+        [routerLink]="internalHref(cta.href)"
+        class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full hover:bg-white/30 transition-all duration-300"
+      >
+        {{ cta.titleKey | translate }}
+      </a>
+    }
+  </div>
+</nav>

@@ -1,0 +1,68 @@
+/* ==========================================================================
+   Web Page Design Tokens - mirrors the www mock design system
+   (Tailwind default palette used by the mock's CDN config + Inter/Jakarta fonts)
+   ========================================================================== */
+
+$dcf-site-font-inter: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+$dcf-site-font-jakarta: 'Plus Jakarta Sans', 'Inter', sans-serif;
+
+$dcf-color-site-gray-50: #f9fafb;
+$dcf-color-site-gray-100: #f3f4f6;
+$dcf-color-site-gray-200: #e5e7eb;
+$dcf-color-site-gray-300: #d1d5db;
+$dcf-color-site-gray-400: #9ca3af;
+$dcf-color-site-gray-500: #6b7280;
+$dcf-color-site-gray-600: #4b5563;
+$dcf-color-site-gray-700: #374151;
+$dcf-color-site-gray-900: #111827;
+
+$dcf-color-site-red-50: #fef2f2;
+$dcf-color-site-red-100: #fee2e2;
+$dcf-color-site-red-300: #fca5a5;
+$dcf-color-site-red-400: #f87171;
+$dcf-color-site-red-500: #ef4444;
+
+$dcf-color-site-indigo-600: #4f46e5;
+$dcf-color-site-indigo-700: #4338ca;
+$dcf-color-site-indigo-800: #3730a3;
+
+$dcf-color-site-purple-600: #9333ea;
+$dcf-color-site-pink-500: #ec4899;
+$dcf-color-site-orange-400: #fb923c;
+
+$dcf-color-site-white: #ffffff;
+
+$dcf-color-site-background: $dcf-color-site-white;
+
+:root {
+  --dcf-site-color-white: #{$dcf-color-site-white};
+
+  --dcf-site-color-gray-50: #{$dcf-color-site-gray-50};
+  --dcf-site-color-gray-100: #{$dcf-color-site-gray-100};
+  --dcf-site-color-gray-200: #{$dcf-color-site-gray-200};
+  --dcf-site-color-gray-300: #{$dcf-color-site-gray-300};
+  --dcf-site-color-gray-400: #{$dcf-color-site-gray-400};
+  --dcf-site-color-gray-500: #{$dcf-color-site-gray-500};
+  --dcf-site-color-gray-600: #{$dcf-color-site-gray-600};
+  --dcf-site-color-gray-700: #{$dcf-color-site-gray-700};
+  --dcf-site-color-gray-900: #{$dcf-color-site-gray-900};
+
+  --dcf-site-color-red-50: #{$dcf-color-site-red-50};
+  --dcf-site-color-red-100: #{$dcf-color-site-red-100};
+  --dcf-site-color-red-300: #{$dcf-color-site-red-300};
+  --dcf-site-color-red-400: #{$dcf-color-site-red-400};
+  --dcf-site-color-red-500: #{$dcf-color-site-red-500};
+
+  --dcf-site-color-indigo-600: #{$dcf-color-site-indigo-600};
+  --dcf-site-color-indigo-700: #{$dcf-color-site-indigo-700};
+  --dcf-site-color-indigo-800: #{$dcf-color-site-indigo-800};
+
+  --dcf-site-color-purple-600: #{$dcf-color-site-purple-600};
+  --dcf-site-color-pink-500: #{$dcf-color-site-pink-500};
+  --dcf-site-color-orange-400: #{$dcf-color-site-orange-400};
+
+  --dcf-site-font-inter: #{$dcf-site-font-inter};
+  --dcf-site-font-jakarta: #{$dcf-site-font-jakarta};
+
+  --dcf-default-dynamic-font: var(--dcf-site-font-inter);
+}

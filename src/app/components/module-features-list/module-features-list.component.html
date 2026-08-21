@@ -1,0 +1,8 @@
+<div id="feature-modules" class="feature-cards">
+  @for (item of items; track item['model'].id) {
+    <article class="feature-cards__item">
+      <h3 class="feature-cards__title">{{ item['model'].title }}</h3>
+      <p class="feature-cards__description">{{ item['model'].description }}</p>
+    </article>
+  }
+</div>

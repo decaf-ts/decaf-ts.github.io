@@ -1,0 +1,142 @@
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 80px;
+    align-items: center;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__kicker-text {
+    color: #f87171;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__title {
+    font-family: var(--dcf-site-font-jakarta);
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    color: #111827;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__title-link {
+    color: #111827;
+    text-decoration: none;
+
+    &:hover {
+      color: #4338ca;
+    }
+  }
+
+  &__version {
+    font-family: var(--dcf-site-font-inter);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #7c3aed;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    white-space: nowrap;
+  }
+
+  &__excerpt {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #4b5563;
+    margin: 0;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__action {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &--primary {
+      background: #4f46e5;
+      color: #ffffff;
+
+      &:hover {
+        background: #4338ca;
+      }
+    }
+
+    &--secondary {
+      background: #ffffff;
+      color: #4f46e5;
+      border: 1px solid #4f46e5;
+
+      &:hover {
+        background: #eef2ff;
+      }
+    }
+  }
+
+  &__visual-panel {
+    background: #fef2f2;
+    border-radius: 40px 40px 32px 32px;
+    min-height: 300px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  &__visual-icon {
+    width: 80px;
+    height: 80px;
+    background: #fee2e2;
+    border-radius: 9999px;
+  }
+
+  &__visual-label {
+    font-size: 0.875rem;
+    color: #f87171;
+    font-weight: 500;
+    margin: 0;
+  }
+}

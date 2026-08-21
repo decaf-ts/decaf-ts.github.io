@@ -1,0 +1,243 @@
+{
+  "document": {
+    "title": "Decaf - Seção Hero"
+  },
+  "modules": {
+    "document_title": "Decaf - Módulos",
+    "title": "Explorar Módulos",
+    "subtitle": "Veja todos os módulos do Decaf e aprenda a usá‑los com exemplos extraídos da documentação.",
+    "kicker": "Módulo",
+    "see_examples": "Ver Exemplos",
+    "demo_label": "Exemplos do Módulo",
+    "no_examples": "Ainda não há exemplos.",
+    "demo_icon": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" class=\"text-red-300\"><path d=\"M9 12L11 14L15 10\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+    "see_tutorials": "Ver Tutoriais"
+  },
+  "nav": {
+    "modules": "Módulos",
+    "features": "Recursos",
+    "documentation": "Documentação",
+    "community": "Comunidade"
+  },
+  "cta": {
+    "get_started": "Começar"
+  },
+  "banner": {
+    "latest_news": "Últimas novidades do Decaf v0.2"
+  },
+  "hero": {
+    "title": "Preparado para Criadores.",
+    "subtitle": "Como um conjunto para desenvolvimento em TypeScript, o Decaf simplifica o desenvolvimento full‑stack e multiplataforma: leve, adaptável e feito para suas necessidades ✨",
+    "preview_label": "Prévia da Aplicação",
+    "cta": {
+      "explore_modules": "Explorar Módulos",
+      "documentation": "Documentação"
+    }
+  },
+  "logo_cloud": {
+    "title": "Confiado ao redor do mundo",
+    "description": "Marcas renomadas unidas para inovação incansável e excelência excepcional, criando soluções digitais verdadeiramente inovadoras."
+  },
+  "features": {
+    "kicker": "Poder com Flexibilidade",
+    "title": "Descubra o Poder dos Módulos",
+    "description": "O Decaf oferece um conjunto de módulos para agilizar seu desenvolvimento. Cada módulo aumenta a funcionalidade mantendo o fluxo eficiente.",
+    "document_title": "Decaf - Recursos"
+  },
+  "cta2": {
+    "title": "Codifique Melhor, Construa Mais Rápido.",
+    "description": "Agilize seu desenvolvimento com o Decaf e traga eficiência para cada projeto, sem esforço.",
+    "get_started": "Começar",
+    "see_docs": "Ver Documentação"
+  },
+  "examples": {
+    "document_title": "Decaf - Exemplos",
+    "title": "Exemplos para {module}",
+    "no_description": "Sem descrição disponível.",
+    "code": "Código",
+    "example_title": "Exemplo {n} · {lang}",
+    "example_how_when": "Quando usar: aplique este trecho em cenários típicos onde o módulo é integrado à sua aplicação ou scripts.",
+    "errors": {
+      "no_module": "Nenhum módulo especificado. Adicione ?module=<nome> ao URL.",
+      "not_found": "Módulo não encontrado.",
+      "no_examples": "Nenhum exemplo encontrado para este módulo.",
+      "load_failed": "Falha ao carregar os dados de exemplos."
+    },
+    "modules": {
+      "fallback": {
+        "title": "Exemplos para {module}",
+        "summary": "Exemplos de uso e boas práticas para {module}."
+      },
+      "decoration": {
+        "title": "Decoration",
+        "summary": "Decorators e utilitários de metadados para TypeScript."
+      },
+      "logging": {
+        "title": "Logging",
+        "summary": "Utilitários de logging estruturado e integrações."
+      },
+      "utils": {
+        "title": "Utils",
+        "summary": "Utilitários gerais para projetos Decaf."
+      },
+      "reflection": {
+        "title": "Reflection",
+        "summary": "Ajuda para reflexão de tipos em runtime."
+      },
+      "decorator-validation": {
+        "title": "Validação com Decorators",
+        "summary": "Padrões de validação baseados em decorators."
+      },
+      "injectable-decorators": {
+        "title": "Decorators Injetáveis",
+        "summary": "Decorators amigáveis à injeção de dependências."
+      },
+      "as-zod": {
+        "title": "As Zod",
+        "summary": "Auxiliares do Zod e pontes de schema."
+      },
+      "db-decorators": {
+        "title": "DB Decorators",
+        "summary": "Mapeamento e acesso a banco via decorators."
+      },
+      "transactional-decorators": {
+        "title": "Decorators Transacionais",
+        "summary": "Tratamento de transações com decorators."
+      },
+      "core": {
+        "title": "Core",
+        "summary": "Primitivas centrais partilhadas entre módulos."
+      },
+      "for-http": {
+        "title": "Para HTTP",
+        "summary": "Integrações e auxiliares de cliente/servidor HTTP."
+      },
+      "ui-decorators": {
+        "title": "UI Decorators",
+        "summary": "Padrões de UI habilitados por decorators."
+      },
+      "cli": {
+        "title": "CLI",
+        "summary": "Ferramentas e auxiliares de linha de comando."
+      },
+      "for-couchdb": {
+        "title": "Para CouchDB",
+        "summary": "Integrações e auxiliares para CouchDB."
+      },
+      "for-nano": {
+        "title": "Para Nano",
+        "summary": "Auxiliares baseados em Nano."
+      },
+      "for-pouch": {
+        "title": "Para Pouch",
+        "summary": "Integrações e auxiliares PouchDB."
+      },
+      "for-typeorm": {
+        "title": "Para TypeORM",
+        "summary": "Auxiliares e padrões TypeORM."
+      },
+      "for-fabric": {
+        "title": "Para Fabric",
+        "summary": "Ferramentas e exemplos Hyperledger Fabric."
+      },
+      "for-nest": {
+        "title": "Para Nest",
+        "summary": "Integrações e decorators para NestJS."
+      },
+      "styles": {
+        "title": "Styles",
+        "summary": "Estilos e tokens compartilhados para UI."
+      },
+      "for-angular": {
+        "title": "Para Angular",
+        "summary": "Integrações e auxiliares Angular."
+      },
+      "mcp-server": {
+        "title": "MCP Server",
+        "summary": "Componentes de servidor Model Context Protocol."
+      },
+      "for-react-native": {
+        "title": "Para React Native",
+        "summary": "Integrações e auxiliares React Native."
+      },
+      "demo": {
+        "title": "Demo",
+        "summary": "Módulo de demonstração."
+      }
+    }
+  },
+  "showcase": {
+    "kicker": "Mostrando Inovação",
+    "task": {
+      "title": "Gerencie uma lista de tarefas dinâmica.",
+      "description": "Adicione, veja e remova tarefas com facilidade. Use os métodos addTask e removeTask para gerenciar dinamicamente sua lista e exibir os resultados.",
+      "demo_label": "Demonstração de Tarefas"
+    },
+    "grade": {
+      "demo_label": "Demonstração de Notas",
+      "title": "Acompanhe as notas dos alunos sem papelada."
+    },
+    "see_how": "Veja Como Funciona"
+  },
+  "faq": {
+    "kicker": "Respostas ao Seu Alcance",
+    "title": "Perguntas Frequentes",
+    "description": "Explore nossas FAQs para saber mais sobre como a plataforma funciona, seus recursos e como ela pode ajudar a criar e gerenciar conteúdo com facilidade."
+  },
+  "footer": {
+    "description": "Uma suíte para desenvolvimento \nTypeScript",
+    "col": {
+      "product": "Produto",
+      "contact": "Contato",
+      "legal": "Informações Legais"
+    },
+    "product": {
+      "documentation": "Documentação",
+      "api": "Referência da API",
+      "blog": "Artigos",
+      "support": "Central de Suporte"
+    },
+    "contact": {
+      "email": "E‑mail",
+      "chat": "Chat ao Vivo",
+      "feedback": "Feedback",
+      "help": "Ajuda"
+    },
+    "legal": {
+      "terms": "Termos de Serviço",
+      "privacy": "Política de Privacidade",
+      "cookie": "Política de Cookies",
+      "gdpr": "Conformidade GDPR"
+    },
+    "copyright": "© 2025 Decaf. Todos os direitos reservados."
+  },
+  "common": {
+    "logo_alt": "Logo Decaf",
+    "brand_alt": "Marca"
+  },
+  "tutorials": {
+    "document_title": "Decaf - Tutoriais",
+    "title": "Tutoriais",
+    "subtitle": "Exemplos e receitas reais de alto valor para usar os módulos @decaf-ts."
+  },
+  "community": {
+    "document_title": "Decaf - Comunidade",
+    "title": "Comunidade",
+    "subtitle": "Conecte-se com outros desenvolvedores Decaf, contribua com o projeto e aprenda em conjunto.",
+    "kicker": "Participe",
+    "discover": "Descubra maneiras de se envolver",
+    "discover_subtitle": "Adoramos contribuições — de código e documentação a ajudar outros no chat.",
+    "discord": {
+      "title": "Discord",
+      "description": "Participe do chat da comunidade para tirar dúvidas, compartilhar ideias e conhecer outros desenvolvedores Decaf."
+    },
+    "github": {
+      "title": "GitHub",
+      "description": "Explore o monorepo, abra issues, envie pull requests e acompanhe o roadmap."
+    },
+    "tutorials": {
+      "title": "Tutoriais",
+      "description": "Guias passo a passo e manuais de contribuição para você produzir com o Decaf."
+    }
+  }
+}

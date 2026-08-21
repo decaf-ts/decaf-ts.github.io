@@ -1,0 +1,11 @@
+<div id="features-grid" class="home-cards">
+  @for (item of items; track item['model'].id) {
+    <div class="home-cards__item">
+      <div class="home-cards__icon" [innerHTML]="card(item).icon | safeHtml"></div>
+      <div class="home-cards__body">
+        <h3 class="home-cards__title">{{ card(item).title }}</h3>
+        <p class="home-cards__description">{{ card(item).description }}</p>
+      </div>
+    </div>
+  }
+</div>

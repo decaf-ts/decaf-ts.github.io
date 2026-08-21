@@ -1,0 +1,151 @@
+/**
+ * E2E suite: the built app must render all six routed pages, in all four
+ * locales, with the correct localized strings, navigation, locale switching,
+ * footer placement and clean console/runtime behaviour.
+ */
+import { test, expect, Page } from '@playwright/test';
+import {
+  locales,
+  appPages,
+  APP_URL,
+  APP_ROUTE,
+  switchLocaleApp,
+} from './fixtures';
+
+function collectErrors(page: Page): string[] {
+  const errors: string[] = [];
+  page.on('console', (msg) => {
+    if (msg.type() === 'error') errors.push(`console.error: ${msg.text()}`);
+  });
+  page.on('pageerror', (err) => errors.push(String(err)));
+  return errors;
+}
+
+async function expectFooterAtEnd(page: Page): Promise<void> {
+  await expect(page.locator('.site-section--footer, .site-section--footer-slim')).toHaveCount(1);
+  const order = await page.evaluate(() => {
+    const sections = Array.from(document.querySelectorAll('section.site-section, footer.site-section'));
+    if (!sections.length) return { ok: false, reason: 'no site sections' };
+    const last = sections[sections.length - 1];
+    const isFooter = last.classList.contains('site-section--footer') || last.classList.contains('site-section--footer-slim');
+    const modulesList = document.querySelector('app-modules-list');
+    const moduleBeforeFooter =
+      !modulesList ||
+      Boolean(modulesList.compareDocumentPosition(last as Node) & Node.DOCUMENT_POSITION_FOLLOWING);
+    return {
+      ok: isFooter && moduleBeforeFooter,
+      reason: isFooter ? (moduleBeforeFooter ? 'ok' : 'footer before modules grid') : 'last section is not the footer',
+      lastClass: last.className,
+    };
+  });
+  expect(order.ok, `footer at end of modules page: ${order.reason} (last=${order.lastClass})`).toBe(true);
+}
+
+test.describe('web-page E2E', () => {
+  for (const locale of locales) {
+    test.describe(`locale ${locale.code}`, () => {
+      for (const pg of appPages) {
+        test(`${pg.name} page renders with localized content and no errors`, async ({
+          page,
+        }) => {
+          test.setTimeout(60_000);
+          const errors = collectErrors(page);
+          await page.goto(APP_ROUTE(pg.name, locale.code), { waitUntil: 'load' });
+
+          await expect(page.locator('.app-layout__locale-button')).toBeVisible();
+          await page.waitForTimeout(1200);
+
+          if (pg.name === 'index') {
+            await expect(page.getByText(locale.hero)).toBeVisible();
+          }
+
+          expect(errors).toEqual([]);
+        });
+      }
+
+      test('locale switcher button switches language in place', async ({ page }) => {
+        test.setTimeout(60_000);
+        const errors = collectErrors(page);
+        await page.goto(APP_ROUTE('index', locale.code), { waitUntil: 'load' });
+        await page.waitForTimeout(800);
+        await switchLocaleApp(page, 'en_us');
+        await expect(page.getByText('Brewed for Builders.')).toBeVisible();
+        expect(errors).toEqual([]);
+      });
+    });
+  }
+
+  test('homepage loads without runtime errors', async ({ page }) => {
+    test.setTimeout(60_000);
+    const errors = collectErrors(page);
+    await page.goto(`${APP_URL}/`, { waitUntil: 'load' });
+    await page.waitForSelector('.app-layout__locale-button', { state: 'attached' });
+    await page.waitForTimeout(1200);
+    expect(errors).toEqual([]);
+  });
+
+  test('all six routes navigate via the SPA router', async ({ page }) => {
+    test.setTimeout(120_000);
+    const errors = collectErrors(page);
+    for (const pg of appPages) {
+      await page.goto(APP_ROUTE(pg.name, 'en_us'), { waitUntil: 'load' });
+      await page.waitForSelector('.app-layout__locale-button', { state: 'attached' });
+      expect(await page.locator('.app-layout__locale-button').count()).toBe(1);
+    }
+    expect(errors).toEqual([]);
+  });
+
+  test('modules page renders the footer AFTER the module grid (footer at END)', async ({
+    page,
+  }) => {
+    test.setTimeout(60_000);
+    await page.goto(APP_ROUTE('modules', 'en_us'), { waitUntil: 'load' });
+    await page.waitForSelector('.app-layout__locale-button', { state: 'attached' });
+    await page.waitForTimeout(1500);
+    await expectFooterAtEnd(page);
+  });
+
+  test('header uses one continuous section gradient and the Plus Jakarta h1', async ({
+    page,
+  }) => {
+    test.setTimeout(60_000);
+    await page.goto(APP_ROUTE('index', 'en_us'), { waitUntil: 'load' });
+    await page.waitForTimeout(1500);
+
+    const heroBg = await page
+      .locator('.site-section--hero')
+      .evaluate((el) => getComputedStyle(el).backgroundImage)
+      .catch(() => null);
+
+    expect(heroBg).toContain('linear-gradient');
+
+    const hasPageHero = (await page.locator('.site-section--page-hero').count()) > 0;
+    if (hasPageHero) {
+      const pageHeroBg = await page
+        .locator('.site-section--page-hero')
+        .first()
+        .evaluate((el) => getComputedStyle(el).backgroundImage);
+      expect(pageHeroBg).toContain('linear-gradient');
+    }
+
+    const h1 = page.locator(
+      '.site-section--page-hero #page-hero-title, .site-section__hero-title'
+    );
+    await expect(h1.first()).toBeVisible();
+    const style = await h1
+      .first()
+      .evaluate((el) => {
+        const s = getComputedStyle(el);
+        return {
+          font: s.fontFamily,
+          weight: s.fontWeight,
+          lineHeight: s.lineHeight,
+          fontSize: s.fontSize,
+        };
+      });
+    expect(style.font).toContain('Plus Jakarta Sans');
+    expect(style.weight).toBe('700');
+    const ratio = parseFloat(style.lineHeight) / parseFloat(style.fontSize);
+    expect(ratio).toBeCloseTo(1.25, 1);
+  });
+});

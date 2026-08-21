@@ -1,0 +1,97 @@
+<section id="modules-list" class="modules-list">
+  @for (item of items; track item['model'].name; let index = $index) {
+    <article class="modules-list__row">
+      @if (index % 2 === 0) {
+        <div class="modules-list__content">
+          
+            <div class="modules-list__kicker"><span class="modules-list__kicker-text">{{
+                'modules.kicker' | translate
+            }}</span></div>
+            <div class="modules-list__heading-group">
+              <h2 class="modules-list__title">
+                <a
+                  [routerLink]="'/features'"
+                  [queryParams]="{ module: module(item).name }"
+                  class="modules-list__title-link"
+                >
+                  {{ module(item).title || module(item).name }}
+                </a>
+                @if (module(item).version) {
+                  <span class="modules-list__version">v{{ module(item).version }}</span>
+                }
+              </h2>
+              <p class="modules-list__excerpt">{{ excerpt(module(item).description) }}</p>
+            </div>
+          
+          <div class="modules-list__actions">
+            <a
+              [routerLink]="'/examples'"
+              [queryParams]="{ module: module(item).name }"
+              class="modules-list__action modules-list__action--primary"
+            >
+              {{ 'modules.see_examples' | translate }}
+            </a>
+            <a
+              [routerLink]="'/tutorials'"
+              [queryParams]="{ module: module(item).name }"
+              class="modules-list__action modules-list__action--secondary"
+            >
+              {{ 'modules.see_tutorials' | translate }}
+            </a>
+          </div>
+        </div>
+        <div class="modules-list__visual">
+          <div class="modules-list__visual-panel">
+            <div class="modules-list__visual-icon"></div>
+            <p class="modules-list__visual-label">{{ 'modules.demo_label' | translate }}</p>
+          </div>
+        </div>
+      } @else {
+        <div class="modules-list__visual">
+          <div class="modules-list__visual-panel">
+            <div class="modules-list__visual-icon"></div>
+            <p class="modules-list__visual-label">{{ 'modules.demo_label' | translate }}</p>
+          </div>
+        </div>
+        <div class="modules-list__content">
+          
+            <div class="modules-list__kicker"><span class="modules-list__kicker-text">{{
+                'modules.kicker' | translate
+            }}</span></div>
+            <div class="modules-list__heading-group">
+              <h2 class="modules-list__title">
+                <a
+                  [routerLink]="'/features'"
+                  [queryParams]="{ module: module(item).name }"
+                  class="modules-list__title-link"
+                >
+                  {{ module(item).title || module(item).name }}
+                </a>
+                @if (module(item).version) {
+                  <span class="modules-list__version">v{{ module(item).version }}</span>
+                }
+              </h2>
+              <p class="modules-list__excerpt">{{ excerpt(module(item).description) }}</p>
+            </div>
+          
+          <div class="modules-list__actions">
+            <a
+              [routerLink]="'/examples'"
+              [queryParams]="{ module: module(item).name }"
+              class="modules-list__action modules-list__action--primary"
+            >
+              {{ 'modules.see_examples' | translate }}
+            </a>
+            <a
+              [routerLink]="'/tutorials'"
+              [queryParams]="{ module: module(item).name }"
+              class="modules-list__action modules-list__action--secondary"
+            >
+              {{ 'modules.see_tutorials' | translate }}
+            </a>
+          </div>
+        </div>
+      }
+    </article>
+  }
+</section>

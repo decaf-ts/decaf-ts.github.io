@@ -1,0 +1,18 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@decaf-ts/core/ram": ["node_modules/@decaf-ts/core/lib/ram"],
+      "@decaf-ts/core": ["node_modules/@decaf-ts/core/lib"],
+      "@decaf-ts/core/*": ["node_modules/@decaf-ts/core/lib/*"]
+    }
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": [
+    "src/**/*.d.ts",
+    "src/app/**/*.ts",
+    "src/site/**/*.ts"
+  ],
+  "exclude": ["src/**/*.test.ts"]
+}

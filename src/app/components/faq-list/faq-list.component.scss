@@ -1,0 +1,32 @@
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 56px;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__question {
+    font-family: var(--dcf-site-font-jakarta);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #111827;
+    margin: 0 0 12px;
+  }
+
+  &__answer {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #4b5563;
+    margin: 0;
+  }
+}

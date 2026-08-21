@@ -7,6 +7,7 @@ const config = {
   transform: { "^.+\\.ts$": "ts-jest" },
   testEnvironment: "node",
   testRegex: "/tests/.*\\.(test|spec)\\.(ts|tsx)$",
+  testPathIgnorePatterns: ["/node_modules/", "/tests/playwright/"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   collectCoverage: false,
   coverageDirectory: "./workdocs/reports/coverage",

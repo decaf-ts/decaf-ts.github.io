@@ -1,0 +1,11 @@
+@if (model) {
+  @if (header()) {
+    <ngx-decaf-model-renderer [model]="header()"></ngx-decaf-model-renderer>
+  }
+  @for (section of bodySections(); track section.id) {
+    <ngx-decaf-model-renderer [model]="section"></ngx-decaf-model-renderer>
+  }
+  @if (footerSection()) {
+    <ngx-decaf-model-renderer [model]="footerSection()"></ngx-decaf-model-renderer>
+  }
+}
