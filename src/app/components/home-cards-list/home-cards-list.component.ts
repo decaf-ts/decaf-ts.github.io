@@ -6,13 +6,16 @@ import { ModuleListBase } from '../list-base/module-list.base';
 
 /**
  * @module app/components/HomeCardsListComponent
- * @description Renders the homepage marketing card grid from the `HomeCard` RamAdapter table.
+ * @description Renders the homepage marketing card grid from the `HomeCard` RamAdapter
+ * table as a seamless CSS marquee (the www-mock `#features-grid` geometry).
  */
 
 /**
- * @description Angular component rendering the homepage feature cards.
- * @summary Extends {@link ModuleListBase} so the marketing grid loads from the `HomeCard`
- * table via the list set query and renders each card's title, description and icon.
+ * @description Angular component rendering the homepage feature card marquee.
+ * @summary Extends {@link ModuleListBase} so the marketing cards load from the `HomeCard`
+ * table via the list set query. The three unique cards are cycled into the mock's
+ * eight-card 4x2 grid and the scrolling is achieved purely through CSS keyframes on a
+ * duplicated page track — no directive mutates the DOM.
  * @class
  * @extends ModuleListBase
  * @example
@@ -33,10 +36,21 @@ export class HomeCardsListComponent extends ModuleListBase {
 
   /**
    * @description The card model of a mapped list row.
-   * @param {KeyValue} item - The mapped list row.
+   * @param {object} item - The mapped list row.
    * @returns {HomeCard} The underlying model.
    */
   card(item: KeyValue): HomeCard {
     return item['model'] as HomeCard;
+  }
+
+  /**
+   * @description Cycles the unique cards into the mock's eight-card pattern.
+   * @returns {KeyValue[]} The eight grid rows (indices 0,1,2,0,1,2,0,1 of the table).
+   */
+  cycledItems(): KeyValue[] {
+    const items = this.items || [];
+    if (!items.length) return [];
+    const pattern = [0, 1, 2, 0, 1, 2, 0, 1];
+    return pattern.map((i) => items[i % items.length]);
   }
 }

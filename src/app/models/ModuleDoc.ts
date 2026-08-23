@@ -1,7 +1,7 @@
 import { prop } from '@decaf-ts/decoration';
 import { list, Model, model } from '@decaf-ts/decorator-validation';
 import { pk } from '@decaf-ts/core';
-import { uimodel } from '@decaf-ts/ui-decorators';
+import { uilistmodel } from '@decaf-ts/ui-decorators';
 import { SiteItem } from './SiteItem';
 
 /**
@@ -26,9 +26,7 @@ import { SiteItem } from './SiteItem';
  *   examples: [new SiteItem({ kind: 'example', title: 'Add metadata to a class' })],
  * });
  */
-@uimodel('app-module-doc', {
-  label: 'site.module.label',
-})
+@uilistmodel('app-module-doc')
 @model()
 export class ModuleDoc extends Model {
   /**

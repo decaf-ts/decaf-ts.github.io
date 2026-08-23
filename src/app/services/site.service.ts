@@ -137,7 +137,7 @@ export class SiteService extends Service {
             {
               id: `${locale}_nav_cta`,
               kind: 'link',
-              tag: 'cta-primary',
+              tag: 'nav-cta',
               titleKey: 'cta.get_started',
               href: '/modules',
             },

@@ -1,11 +1,21 @@
-<div id="features-grid" class="home-cards">
-  @for (item of items; track item['model'].id) {
-    <div class="home-cards__item">
-      <div class="home-cards__icon" [innerHTML]="card(item).icon | safeHtml"></div>
-      <div class="home-cards__body">
-        <h3 class="home-cards__title">{{ card(item).title }}</h3>
-        <p class="home-cards__description">{{ card(item).description }}</p>
+<div id="features-grid" class="home-cards-marquee" aria-label="Features">
+  <div class="home-cards-marquee__track">
+    @for (copy of [0, 1]; track copy) {
+      <div class="home-cards-marquee__page" [attr.aria-hidden]="copy === 1 ? 'true' : null">
+        <div class="home-cards">
+          @for (item of cycledItems(); track $index) {
+            <div class="home-cards__item">
+              <div class="home-cards__icon-wrap">
+                <div class="home-cards__icon" [innerHTML]="card(item).icon | safeHtml"></div>
+              </div>
+              <div class="home-cards__body">
+                <h3 class="home-cards__title">{{ card(item).title }}</h3>
+                <p class="home-cards__description">{{ card(item).description }}</p>
+              </div>
+            </div>
+          }
+        </div>
       </div>
-    </div>
-  }
+    }
+  </div>
 </div>

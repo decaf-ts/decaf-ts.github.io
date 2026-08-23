@@ -42,7 +42,25 @@
     "kicker": "Poder e Flexibilidade",
     "title": "Descobre o Poder dos Módulos",
     "description": "O Decaf oferece uma suíte de módulos para agilizar o teu desenvolvimento. Cada módulo aumenta a funcionalidade mantendo o fluxo eficiente.",
-    "document_title": "Decaf - Funcionalidades"
+    "document_title": "Decaf - Funcionalidades",
+    "modules": {
+      "decoration": {
+        "title": "Decoration",
+        "summary": "Decorators e auxiliares de metadata para TypeScript."
+      },
+      "logging": {
+        "title": "Logging",
+        "summary": "Utilitários de logging estruturado e integrações."
+      },
+      "utils": {
+        "title": "Utils",
+        "summary": "Utilitários gerais para projectos Decaf."
+      },
+      "reflection": {
+        "title": "Reflection",
+        "summary": "Auxiliares de reflexão de tipos em runtime."
+      }
+    }
   },
   "cta2": {
     "title": "Programa Melhor, Constrói Mais Rápido.",

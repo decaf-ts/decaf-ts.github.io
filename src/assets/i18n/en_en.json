@@ -47,7 +47,25 @@
       "title": "Tutorials — {module}",
       "subtitle": "High-value, real-life examples and recipes for using {module} in your projects."
     },
-    "document_title": "Decaf - Features"
+    "document_title": "Decaf - Features",
+    "modules": {
+      "decoration": {
+        "title": "Decoration",
+        "summary": "Decorator helpers and a Metadata runtime to store and query structured metadata."
+      },
+      "logging": {
+        "title": "Logging",
+        "summary": "Lightweight structured logging with pluggable factories and handy decorators for method instrumentation."
+      },
+      "utils": {
+        "title": "Utils",
+        "summary": "General purpose utilities for CLI, filesystem, HTTP, and text processing to speed up common tasks."
+      },
+      "reflection": {
+        "title": "Reflection",
+        "summary": "Runtime type inspection utilities built on reflect-metadata for validators and metadata-driven systems."
+      }
+    }
   },
   "cta2": {
     "title": "Code Smarter, Build Faster.",

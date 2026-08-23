@@ -12,9 +12,12 @@ import { HomeCardsListComponent } from '../home-cards-list/home-cards-list.compo
 import { FaqListComponent } from '../faq-list/faq-list.component';
 import { ModulesListComponent } from '../modules-list/modules-list.component';
 import { ModuleFeaturesListComponent } from '../module-features-list/module-features-list.component';
+import { FeatureCardsListComponent } from '../feature-cards-list/feature-cards-list.component';
+import { ModuleOverviewListComponent } from '../module-overview-list/module-overview-list.component';
 import { TutorialsListComponent } from '../tutorials-list/tutorials-list.component';
 import { ExamplesListComponent } from '../examples-list/examples-list.component';
 import { SloganService } from '../../services/slogans.service';
+import { SiteService } from '../../services/site.service';
 
 /**
  * @module app/components/SiteSectionComponent
@@ -52,6 +55,8 @@ import { SloganService } from '../../services/slogans.service';
     FaqListComponent,
     ModulesListComponent,
     ModuleFeaturesListComponent,
+    FeatureCardsListComponent,
+    ModuleOverviewListComponent,
     TutorialsListComponent,
     ExamplesListComponent,
   ],
@@ -69,13 +74,27 @@ export class SiteSectionComponent extends NgxComponentDirective implements OnIni
    */
   footerSlogan: string | null = null;
 
-  constructor(private sloganService: SloganService, override router: Router) {
+  /**
+   * @description Resolved `@decaf-ts` package version of the `?module=` target, when known.
+   */
+  moduleVersion: string | null = null;
+
+  constructor(
+    private sloganService: SloganService,
+    private siteService: SiteService,
+    override router: Router
+  ) {
     super();
   }
 
   async ngOnInit(): Promise<void> {
     if (this.model.kind === 'footer') {
       this.footerSlogan = await this.sloganService.slogan(this.queryModule() || undefined);
+    }
+    const moduleName = this.queryModule();
+    if (this.model.kind === 'page-hero' && moduleName) {
+      const versions = await this.siteService.getModuleVersions();
+      this.moduleVersion = versions[moduleName] || null;
     }
   }
 
@@ -97,10 +116,10 @@ export class SiteSectionComponent extends NgxComponentDirective implements OnIni
 
   /**
    * @description Resolves the primary CTA item from the section items.
-   * @returns {SiteItem|undefined} The `cta-primary` link item of the section.
+   * @returns {SiteItem|undefined} The `nav-cta` link item of the section.
    */
   cta(): SiteItem | undefined {
-    return this.model.items.find((i) => i.kind === 'link' && i.tag === 'cta-primary');
+    return this.model.items.find((i) => i.kind === 'link' && i.tag === 'nav-cta');
   }
 
   /**

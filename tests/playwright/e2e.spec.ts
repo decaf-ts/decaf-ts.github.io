@@ -145,7 +145,31 @@ test.describe('web-page E2E', () => {
       });
     expect(style.font).toContain('Plus Jakarta Sans');
     expect(style.weight).toBe('700');
-    const ratio = parseFloat(style.lineHeight) / parseFloat(style.fontSize);
-    expect(ratio).toBeCloseTo(1.25, 1);
+
+    // The index hero h1 must match the www-mock's actual Tailwind-CDN
+    // rendering (AC #1: pixel-perfect to the mock), not the spec intent.
+    // The mock class is `text-6xl md:text-7xl lg:text-8xl leading-tight`.
+    // Tailwind Play CDN's per-size `line-height` on `text-7xl`/`text-8xl`
+    // (both `1`) overrides `leading-tight` (1.25) at md+, but `leading-tight`
+    // wins at mobile. The app reproduces this exactly (see
+    // site-section.component.scss `&__hero-title`), so the expected ratio is
+    // 1.25 at mobile and 1.0 at md+.
+    const heroTitle = h1.first();
+    for (const [label, vp, expectedRatio] of [
+      ['mobile (390)', { width: 390, height: 844 }, 1.25],
+      ['md (768)', { width: 768, height: 1024 }, 1.0],
+      ['lg (1280)', { width: 1280, height: 800 }, 1.0],
+    ] as const) {
+      await page.setViewportSize(vp);
+      await page.waitForTimeout(150);
+      const ratio = await heroTitle.evaluate((el) => {
+        const s = getComputedStyle(el);
+        return parseFloat(s.lineHeight) / parseFloat(s.fontSize);
+      });
+      expect(ratio, `hero h1 line-height/font-size ratio at ${label}`).toBeCloseTo(
+        expectedRatio,
+        1
+      );
+    }
   });
 });

@@ -4,19 +4,19 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { KeyValue } from '@decaf-ts/for-angular';
 import { ModuleDoc } from '../../models/ModuleDoc';
 import { ModuleListBase } from '../list-base/module-list.base';
+import { SafeHtmlPipe } from '../safe-html.pipe';
 
 /**
  * @module app/components/ModulesListComponent
  * @description Renders the module catalogue from the `ModuleDoc` RamAdapter table as
- * alternating showcase rows, showing the installed `@decaf-ts` package version chip.
+ * alternating showcase rows.
  */
 
 /**
  * @description Angular component rendering the module catalogue rows.
  * @summary Extends {@link ModuleListBase} so the modules load from the `ModuleDoc` table via
- * the list set query. Each row mirrors the www-mock `renderModule()` alternation and shows
- * the module's resolved package version next to its title, plus `see_examples`/`see_tutorials`
- * CTAs linking to the filtered pages.
+ * the list set query. Each row mirrors the www-mock `renderModule()` alternation with
+ * `see_examples`/`see_tutorials` CTAs linking to the filtered pages.
  * @class
  * @extends ModuleListBase
  * @example
@@ -25,7 +25,7 @@ import { ModuleListBase } from '../list-base/module-list.base';
 @Component({
   selector: 'app-modules-list',
   standalone: true,
-  imports: [RouterLink, TranslatePipe],
+  imports: [RouterLink, TranslatePipe, SafeHtmlPipe],
   templateUrl: './modules-list.component.html',
   styleUrl: './modules-list.component.scss',
 })

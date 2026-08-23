@@ -1,14 +1,24 @@
 .brands-marquee {
   overflow: hidden;
   width: 100%;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  max-width: 32rem;
+  margin: 0 auto;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+
+  @media (min-width: 640px) {
+    max-width: 36rem;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: none;
+    margin: 0;
+  }
 
   &__track {
     display: flex;
-    align-items: center;
-    gap: 32px;
-    width: max-content;
+    width: calc(200% + 64px);
+    will-change: transform;
     animation: brands-marquee__scroll 30s linear infinite;
 
     &:hover {
@@ -16,11 +26,53 @@
     }
   }
 
-  &__logo {
-    max-height: 48px;
-    width: auto;
-    object-fit: contain;
-    flex-shrink: 0;
+  &__page {
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 40px 32px 0 0;
+    box-sizing: border-box;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px 32px;
+    align-items: center;
+    width: 100%;
+
+    > .brands-marquee__logo {
+      grid-column: span 2;
+      width: 100%;
+      max-height: 48px;
+      object-fit: contain;
+    }
+
+    > .brands-marquee__logo:nth-child(4),
+    > .brands-marquee__logo:nth-child(5) {
+      grid-column-start: 2;
+    }
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 40px 40px;
+
+      > .brands-marquee__logo:nth-child(5) {
+        grid-column-start: auto;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+
+      > .brands-marquee__logo {
+        grid-column: span 1;
+      }
+
+      > .brands-marquee__logo:nth-child(4),
+      > .brands-marquee__logo:nth-child(5) {
+        grid-column-start: auto;
+      }
+    }
   }
 }
 

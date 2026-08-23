@@ -1,0 +1,15 @@
+<div id="module-overview" class="module-overview">
+  @for (item of items; track item['model'].name) {
+    <article class="module-overview__card">
+      <h3 class="module-overview__title">{{ title(module(item)) }}</h3>
+      <p class="module-overview__summary">{{ summary(module(item)) }}</p>
+      <a
+        [routerLink]="'/features'"
+        [queryParams]="{ module: module(item).name }"
+        class="module-overview__link"
+      >
+        {{ 'modules.see_examples' | translate }}
+      </a>
+    </article>
+  }
+</div>

@@ -33,10 +33,14 @@ describe('web-page model decoration', () => {
     expect(ui.tag).toBe('app-site-section');
   });
 
-  it('decorates ModuleDoc as a @uimodel container with the app-module-doc tag', () => {
-    const ui = Metadata.get(ModuleDoc as unknown as AnyClass, 'ui.uimodel') as { tag: string };
-    expect(ui).toBeDefined();
-    expect(ui.tag).toBe('app-module-doc');
+  it('decorates ModuleDoc as a @uilistmodel leaf item (not a container)', () => {
+    const ui = Metadata.get(ModuleDoc as unknown as AnyClass, 'ui.uimodel');
+    expect(ui).toBeUndefined();
+    const listMeta = Metadata.get(ModuleDoc as unknown as AnyClass, 'ui.uilistmodel') as {
+      item: { tag: string };
+    };
+    expect(listMeta).toBeDefined();
+    expect(listMeta.item.tag).toBe('app-module-doc');
   });
 
   it('decorates SiteItem as a @uilistmodel leaf item (not a container)', () => {

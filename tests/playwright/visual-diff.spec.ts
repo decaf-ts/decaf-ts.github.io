@@ -11,9 +11,25 @@
  *      VISUAL_TARGET=app npx playwright test visual-diff
  */
 import { test, expect } from '@playwright/test';
-import { locales, pages, breakpoints, openMock, openApp } from './fixtures';
+import * as fs from 'node:fs';
+import * as path from 'node:path';
+import { locales, pages, breakpoints, openMock, openApp, prepareFullCapture } from './fixtures';
 
 const TARGET = process.env.VISUAL_TARGET || 'app';
+const VISUAL_DIR = path.resolve(process.cwd(), 'tests/playwright/visual');
+
+/** Read the stored mock golden's pixel height so the app capture matches the
+ *  reference dimensions (height gaps become pixel diffs, not hard mismatches).
+ *  Playwright sanitises snapshot names by replacing every char outside
+ *  [a-zA-Z0-9-] with `-` (so locale codes like `en_en` become `en-en`); apply
+ *  the same transform to locate the golden file on disk. */
+function goldenHeight(name: string): number | undefined {
+  const stem = name.replace(/\.png$/, '').replace(/[^a-zA-Z0-9-]/g, '-');
+  const p = path.join(VISUAL_DIR, stem + '.png');
+  if (!fs.existsSync(p)) return undefined;
+  const b = fs.readFileSync(p);
+  return b.readUInt32BE(20);
+}
 
 test.describe(`visual-diff (target=${TARGET})`, () => {
   for (const pg of pages) {
@@ -30,9 +46,18 @@ test.describe(`visual-diff (target=${TARGET})`, () => {
               await openApp(page, pg.name, locale.code);
             }
 
+            // Grow the viewport to the full content height and capture a plain
+            // viewport screenshot (width == breakpoint width), instead of
+            // `fullPage` whose CDP contentSize includes unclipped composited
+            // marquee layers and inflates the golden width past the viewport.
+            // For the app, pin the height to the mock golden's height so any
+            // content-height gap surfaces as a tolerable pixel diff.
             const name = `${pg.name}-${locale.code}-${bp.name}.png`;
+            const fixedHeight = TARGET === 'app' ? goldenHeight(name) : undefined;
+            await prepareFullCapture(page, bp.width, fixedHeight);
+
             await expect(page).toHaveScreenshot(name, {
-              fullPage: true,
+              fullPage: false,
               animations: 'disabled',
               caret: 'hide',
               maxDiffPixelRatio: 0.03,

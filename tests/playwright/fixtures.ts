@@ -142,3 +142,52 @@ export async function switchLocaleApp(page, localeCode) {
 export function visualExpect(page) {
   return expect(page);
 }
+
+/**
+ * Capture the full page at the breakpoint's viewport WIDTH without relying on
+ * Playwright `fullPage` (which uses CDP `contentSize` — the unclipped painted
+ * bounds of composited layers, e.g. the marquee `transform` track, and so
+ * ignores ancestor `overflow: hidden`, inflating the captured width far past
+ * the viewport). Instead this grows the viewport height to the document's full
+ * content height and takes a plain viewport screenshot, so the capture width is
+ * always exactly the breakpoint width and composited horizontal overflow is
+ * clipped by the viewport. The marquee is first frozen (see freezeMarquees) and
+ * CSS animations are disabled at capture time so the marquee band is
+ * deterministic and comparable between the mock and the app.
+ *
+ * When `fixedHeight` is given (the app-verification path passes the mock
+ * golden's pixel height), the viewport is set to that height so the captured
+ * image dimensions always match the golden; any height gap then surfaces as a
+ * pixel diff (counted against the suite tolerance) rather than a hard
+ * dimension-mismatch failure — small rounding gaps pass, large content gaps
+ * fail.
+ */
+export async function prepareFullCapture(page, width, fixedHeight) {
+  // Freeze elements whose min-height resolves to the viewport height (i.e.
+  // `min-height: 100vh`) to their current pixel height before resizing the
+  // viewport.  Without this, resizing the viewport to the full content height
+  // causes 100vh to expand to that height, inflating hero sections and pushing
+  // all subsequent content below the screenshot capture area.
+  await page.evaluate(() => {
+    const innerH = window.innerHeight;
+    const els = document.querySelectorAll('*');
+    for (const el of els) {
+      const s = getComputedStyle(el);
+      const mh = parseInt(s.minHeight, 10);
+      if (mh === innerH && s.minHeight.endsWith('px')) {
+        el.style.minHeight = Math.round(el.getBoundingClientRect().height) + 'px';
+      }
+    }
+  });
+
+  let fullHeight;
+  if (fixedHeight && fixedHeight > 0) {
+    fullHeight = fixedHeight;
+  } else {
+    fullHeight = await page.evaluate(
+      () => Math.ceil(Math.max(document.documentElement.scrollHeight, document.body.scrollHeight))
+    );
+  }
+  await page.setViewportSize({ width, height: fullHeight });
+  return fullHeight;
+}

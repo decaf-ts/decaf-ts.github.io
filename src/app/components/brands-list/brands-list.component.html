@@ -1,13 +1,19 @@
 <div id="brands-grid" class="brands-marquee" aria-label="Brands">
   <div class="brands-marquee__track">
-    @for (brand of duplicatedItems(); track brand['model'].id) {
-      <img
-        class="brands-marquee__logo"
-        [src]="brand['model'].src"
-        [alt]="brand['model'].alt || brand['model'].name"
-        width="158"
-        height="48"
-      />
+    @for (copy of [0, 1]; track copy) {
+      <div class="brands-marquee__page" [attr.aria-hidden]="copy === 1 ? 'true' : null">
+        <div class="brands-marquee__grid">
+          @for (brand of pageItems(); track $index) {
+            <img
+              class="brands-marquee__logo"
+              [src]="brand['model'].src"
+              [alt]="brand['model'].alt || brand['model'].name"
+              width="158"
+              height="48"
+            />
+          }
+        </div>
+      </div>
     }
   </div>
 </div>

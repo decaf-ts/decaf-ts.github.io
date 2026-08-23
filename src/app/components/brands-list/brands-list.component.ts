@@ -31,10 +31,12 @@ export class BrandsListComponent extends ModuleListBase {
   override modelName = 'Brand';
 
   /**
-   * @description Doubles the mapped rows so the CSS track loops seamlessly.
-   * @returns {KeyValue[]} The duplicated item list.
+   * @description Cycles the mapped logos into the mock's five-slot cloud row.
+   * @returns {KeyValue[]} The five grid rows (indices 0..4 of the table, cycled).
    */
-  duplicatedItems(): KeyValue[] {
-    return [...(this.items || []), ...(this.items || [])];
+  pageItems(): KeyValue[] {
+    const items = this.items || [];
+    if (!items.length) return [];
+    return Array.from({ length: 5 }, (_, i) => items[i % items.length]);
   }
 }

@@ -305,7 +305,7 @@ function buildNavItems(locale: SiteLocale): SeedItem[] {
     {
       kind: 'link' as const,
       id: `${locale}_nav_cta`,
-      tag: 'cta-primary',
+      tag: 'nav-cta',
       titleKey: 'cta.get_started',
       href: '/modules',
     },

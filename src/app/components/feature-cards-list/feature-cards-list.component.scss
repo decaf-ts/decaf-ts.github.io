@@ -1,0 +1,50 @@
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 24px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    background: #f9fafb;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__title {
+    font-family: var(--dcf-site-font-jakarta);
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #111827;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4b5563;
+    margin: 0;
+  }
+}

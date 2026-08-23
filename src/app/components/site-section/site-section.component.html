@@ -29,6 +29,7 @@
           <div class="site-section__hero-preview">
             <div class="site-section__hero-preview-frame">
               <div class="site-section__hero-preview-surface">
+                <div class="site-section__hero-preview-overlay" aria-hidden="true"></div>
                 <div class="site-section__hero-preview-panel">
                   <div class="site-section__hero-preview-icon" [innerHTML]="item.icon | safeHtml"></div>
                   <p class="site-section__hero-preview-label">{{ item.titleKey | translate }}</p>
@@ -47,7 +48,9 @@
       <app-site-nav [items]="navItems()" [cta]="cta()"></app-site-nav>
       <div class="site-section__page-hero-inner">
         @if (queryModule()) {
-          <span class="site-section__page-hero-module">{{ queryModule() }}</span>
+          <span class="site-section__page-hero-module">{{ queryModule() }}{{
+            moduleVersion ? ' v' + moduleVersion : ''
+          }}</span>
         }
         <h1 id="page-hero-title" class="site-section__page-hero-title">
           {{ model.title || (model.titleKey | translate) }}
@@ -61,11 +64,11 @@
   }
 
   @case ('logo-cloud') {
-    <div class="site-section site-section--band">
-      <div class="site-section__container site-section__container--center">
+    <div class="site-section site-section--logo-cloud">
+      <div class="site-section__container site-section__container--narrow site-section__container--center">
         <h2 class="site-section__title">{{ model.titleKey | translate }}</h2>
         <p class="site-section__subtitle">{{ model.subtitleKey | translate }}</p>
-        <app-brands-list class="site-section__list"></app-brands-list>
+        <app-brands-list class="site-section__list site-section__list--brands"></app-brands-list>
       </div>
     </div>
   }
@@ -87,6 +90,11 @@
 
   @case ('cta') {
     <section class="site-section site-section--cta">
+      <div class="site-section__cta-decor" aria-hidden="true">
+        <div class="site-section__cta-decor-shape site-section__cta-decor-shape--1"></div>
+        <div class="site-section__cta-decor-shape site-section__cta-decor-shape--2"></div>
+        <div class="site-section__cta-decor-shape site-section__cta-decor-shape--3"></div>
+      </div>
       <div class="site-section__container site-section__cta-inner">
         <div class="site-section__cta-copy">
           <h2 class="site-section__cta-title">{{ model.titleKey | translate }}</h2>
@@ -96,12 +104,12 @@
         </div>
         <div class="site-section__cta-actions">
           @for (item of byTag('cta-primary'); track item.id) {
-            <a [routerLink]="hrefOrNil(item.href)" class="site-section__btn site-section__btn--primary-hero">{{
+            <a [routerLink]="hrefOrNil(item.href)" class="site-section__btn site-section__btn--sm site-section__btn--primary-hero">{{
               item.titleKey | translate
             }}</a>
           }
           @for (item of byTag('cta-secondary'); track item.id) {
-            <button class="site-section__btn site-section__btn--ghost-dark">{{ item.titleKey | translate }}</button>
+            <button class="site-section__btn site-section__btn--sm site-section__btn--ghost-dark">{{ item.titleKey | translate }}</button>
           }
         </div>
       </div>
@@ -116,14 +124,22 @@
             <visual-panel [item]="visual()" [grade]="true"></visual-panel>
           }
           <div class="site-section__showcase-copy">
-            @if (model.kickerKey) {
-              <span class="site-section__kicker site-section__kicker--red">{{ model.kickerKey | translate }}</span>
-            }
-            <h2 class="site-section__showcase-title">{{ model.titleKey | translate }}</h2>
-            @if (model.subtitleKey) {
-              <p class="site-section__showcase-subtitle">{{ model.subtitleKey | translate }}</p>
-            }
-            <button class="site-section__btn site-section__btn--indigo">{{ 'showcase.see_how' | translate }}</button>
+            <div class="site-section__showcase-text">
+              @if (model.kickerKey) {
+                <div>
+                  <span class="site-section__kicker site-section__kicker--red">{{ model.kickerKey | translate }}</span>
+                </div>
+              }
+              <div class="site-section__showcase-main">
+                <h2 class="site-section__showcase-title">{{ model.titleKey | translate }}</h2>
+                @if (model.subtitleKey) {
+                  <p class="site-section__showcase-subtitle">{{ model.subtitleKey | translate }}</p>
+                }
+              </div>
+            </div>
+            <div>
+              <button class="site-section__btn site-section__btn--sm site-section__btn--indigo">{{ 'showcase.see_how' | translate }}</button>
+            </div>
           </div>
           @if (!visualOnLeft()) {
             <visual-panel [item]="visual()" [grade]="false"></visual-panel>
@@ -134,22 +150,28 @@
   }
 
   @case ('faq') {
-    <section class="site-section site-section--band">
-      <div class="site-section__container site-section__container--center">
-        @if (model.kickerKey) {
-          <span class="site-section__kicker site-section__kicker--red">{{ model.kickerKey | translate }}</span>
-        }
-        <h2 class="site-section__title">{{ model.titleKey | translate }}</h2>
-        @if (model.subtitleKey) {
-          <p class="site-section__subtitle">{{ model.subtitleKey | translate }}</p>
-        }
-        <app-faq-list class="site-section__list site-section__list--faq"></app-faq-list>
+    <section class="site-section site-section--band site-section--band-lg">
+      <div class="site-section__container">
+        <div class="site-section__faq-wrap">
+          <div class="site-section__faq-header">
+            @if (model.kickerKey) {
+              <div class="site-section__faq-kicker-wrap">
+                <span class="site-section__kicker site-section__kicker--red">{{ model.kickerKey | translate }}</span>
+              </div>
+            }
+            <h2 class="site-section__title site-section__title--lg">{{ model.titleKey | translate }}</h2>
+            @if (model.subtitleKey) {
+              <p class="site-section__subtitle site-section__subtitle--plain">{{ model.subtitleKey | translate }}</p>
+            }
+          </div>
+          <app-faq-list class="site-section__list site-section__list--faq"></app-faq-list>
+        </div>
       </div>
     </section>
   }
 
   @case ('modules') {
-    <section class="site-section site-section--band">
+    <section class="site-section site-section--band site-section--band-lg">
       <div class="site-section__container">
         <app-modules-list></app-modules-list>
       </div>
@@ -157,25 +179,40 @@
   }
 
   @case ('features-page') {
-    <section class="site-section site-section--band">
+    <section class="site-section site-section--band site-section--band-lg">
       <div class="site-section__container">
-        <app-module-features-list [filterByModule]="moduleFilter()"></app-module-features-list>
+        @if (moduleFilter()) {
+          <app-module-features-list [filterByModule]="moduleFilter()"></app-module-features-list>
+        } @else {
+          <div class="features-overview">
+            <app-feature-cards-list class="features-overview__cards"></app-feature-cards-list>
+            <app-module-overview-list class="features-overview__modules"></app-module-overview-list>
+          </div>
+        }
       </div>
     </section>
   }
 
   @case ('tutorials') {
-    <section class="site-section site-section--band">
+    <section class="site-section site-section--band site-section--band-lg">
       <div class="site-section__container">
-        <app-tutorials-list [filterByModule]="moduleFilter()"></app-tutorials-list>
+        @if (moduleFilter()) {
+          <app-tutorials-list [filterByModule]="moduleFilter()"></app-tutorials-list>
+        } @else {
+          <div class="site-section__error-box">{{ 'examples.errors.no_module' | translate }}</div>
+        }
       </div>
     </section>
   }
 
   @case ('examples') {
-    <section class="site-section site-section--band">
+    <section class="site-section site-section--band site-section--band-lg">
       <div class="site-section__container">
-        <app-examples-list [filterByModule]="moduleFilter()"></app-examples-list>
+        @if (moduleFilter()) {
+          <app-examples-list [filterByModule]="moduleFilter()"></app-examples-list>
+        } @else {
+          <div class="site-section__error-box">{{ 'examples.errors.no_module' | translate }}</div>
+        }
       </div>
     </section>
   }
@@ -212,7 +249,9 @@
       <div class="site-section__container">
         <div class="site-section__footer-top">
           <div class="site-section__footer-brand">
-            <img src="assets/logo1.png" class="site-section__footer-logo" alt="{{ 'common.logo_alt' | translate }}" />
+            <div class="site-section__footer-logo-box">
+              <img src="assets/logo1.png" class="site-section__footer-logo" alt="{{ 'common.logo_alt' | translate }}" />
+            </div>
             @if (model.titleKey) {
               <p class="site-section__footer-description">{{ model.titleKey | translate }}</p>
             }
