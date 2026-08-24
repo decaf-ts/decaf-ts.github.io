@@ -74,7 +74,7 @@ export class Section extends Model {
   @prop() href: string = '';
 
   /**
-   * @description Optional page/route name hint consumed by list sections and the SloganService.
+   * @description Optional page/route name hint consumed by list sections and the SloganService for module‑biased slogan selection.
    */
   @prop() module: string = '';
 

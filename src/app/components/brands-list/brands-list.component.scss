@@ -3,8 +3,6 @@
   width: 100%;
   max-width: 32rem;
   margin: 0 auto;
-  -webkit-mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
 
   @media (min-width: 640px) {
     max-width: 36rem;
@@ -41,31 +39,37 @@
     width: 100%;
 
     > .brands-marquee__logo {
-      grid-column: span 2;
+      grid-column-end: span 2;
       width: 100%;
+      height: auto;
       max-height: 48px;
       object-fit: contain;
     }
 
-    > .brands-marquee__logo:nth-child(4),
+    > .brands-marquee__logo:nth-child(4) {
+      @media (min-width: 640px) {
+        grid-column-start: 2;
+      }
+    }
+
     > .brands-marquee__logo:nth-child(5) {
       grid-column-start: 2;
+
+      @media (min-width: 640px) {
+        grid-column-start: auto;
+      }
     }
 
     @media (min-width: 640px) {
       grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 40px 40px;
-
-      > .brands-marquee__logo:nth-child(5) {
-        grid-column-start: auto;
-      }
     }
 
     @media (min-width: 1024px) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
 
       > .brands-marquee__logo {
-        grid-column: span 1;
+        grid-column-end: span 1;
       }
 
       > .brands-marquee__logo:nth-child(4),

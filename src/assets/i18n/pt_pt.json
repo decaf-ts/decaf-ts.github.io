@@ -11,7 +11,7 @@
     "demo_label": "Exemplos do Módulo",
     "no_examples": "Ainda não há exemplos.",
     "demo_icon": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" class=\"text-red-300\"><path d=\"M9 12L11 14L15 10\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
-    "see_tutorials": "Ver Tutoriais"
+    "see_tutorials": "See Tutorials"
   },
   "nav": {
     "modules": "Módulos",
@@ -23,7 +23,13 @@
     "get_started": "Começar"
   },
   "banner": {
-    "latest_news": "Últimas novidades do Decaf v0.2"
+    "latest_news": "Últimas novidades do Decaf v0.2",
+    "slogans": [
+      "Constrói com ousadia. Feito para devs.",
+      "Modular por design. Produtivo por omissão.",
+      "Menos boilerplate. Mais entregas.",
+      "TypeScript primeiro. Em todo o lado."
+    ]
   },
   "hero": {
     "title": "Preparado para Criadores.",
@@ -42,25 +48,7 @@
     "kicker": "Poder e Flexibilidade",
     "title": "Descobre o Poder dos Módulos",
     "description": "O Decaf oferece uma suíte de módulos para agilizar o teu desenvolvimento. Cada módulo aumenta a funcionalidade mantendo o fluxo eficiente.",
-    "document_title": "Decaf - Funcionalidades",
-    "modules": {
-      "decoration": {
-        "title": "Decoration",
-        "summary": "Decorators e auxiliares de metadata para TypeScript."
-      },
-      "logging": {
-        "title": "Logging",
-        "summary": "Utilitários de logging estruturado e integrações."
-      },
-      "utils": {
-        "title": "Utils",
-        "summary": "Utilitários gerais para projectos Decaf."
-      },
-      "reflection": {
-        "title": "Reflection",
-        "summary": "Auxiliares de reflexão de tipos em runtime."
-      }
-    }
+    "document_title": "Decaf - Funcionalidades"
   },
   "cta2": {
     "title": "Programa Melhor, Constrói Mais Rápido.",
@@ -192,8 +180,7 @@
       "demo_label": "Demonstração de Tarefas"
     },
     "grade": {
-      "demo_label": "Demonstração de Notas",
-      "title": "Acompanhe as notas dos alunos sem papelada."
+      "demo_label": "Demonstração de Notas"
     },
     "see_how": "Ver Como Funciona"
   },

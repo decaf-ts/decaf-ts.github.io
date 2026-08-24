@@ -52,9 +52,10 @@
   &__news-label {
     color: #ffffff;
     font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
   }
 
   &__hero-title-wrap {
@@ -241,7 +242,7 @@
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
     color: #ffffff;
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -332,6 +333,8 @@
     }
 
     &--narrow {
+      padding: 0 24px;
+
       @media (min-width: 1024px) {
         padding: 0 32px;
       }
@@ -339,27 +342,35 @@
   }
 
   &__kicker {
-    display: inline-block;
-    margin-bottom: 16px;
+    display: inline;
     color: #fb923c;
     font-size: 0.875rem;
-    line-height: 1.43;
+    line-height: 1.25rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.025em;
 
     &--red {
       color: #f87171;
     }
   }
 
+  &__kicker-wrap {
+    margin-bottom: 16px;
+  }
+
   &__title {
     font-family: var(--dcf-site-font-jakarta);
-    font-weight: 800;
-    font-size: clamp(2rem, 4.5vw, 3rem);
-    line-height: 1;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
     color: #111827;
     margin: 0 0 24px;
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      line-height: 1;
+    }
 
     &--lg {
       font-size: 3rem;
@@ -382,6 +393,7 @@
 
   &__list {
     display: block;
+    text-align: left;
 
     @media (max-width: 480px) {
       > .brands-marquee {
@@ -466,7 +478,7 @@
   &__cta-inner {
     position: relative;
     z-index: 10;
-    padding: 96px 40px;
+    padding: 96px 64px;
   }
 
   &__cta-copy {
@@ -477,7 +489,7 @@
   &__cta-title {
     font-family: var(--dcf-site-font-jakarta);
     font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: 3rem;
     line-height: 1.25;
     color: #ffffff;
     margin: 0 0 24px;
@@ -493,6 +505,7 @@
   &__cta-actions {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
 
     @media (min-width: 640px) {
@@ -514,7 +527,6 @@
   &__showcase-copy {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 32px;
   }
 
@@ -522,6 +534,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    .site-section__kicker {
+      margin-bottom: 0;
+    }
   }
 
   &__showcase-main {
@@ -533,7 +549,7 @@
   &__showcase-title {
     font-family: var(--dcf-site-font-jakarta);
     font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: 3rem;
     line-height: 1.25;
     color: #111827;
     margin: 0;
@@ -560,6 +576,10 @@
 
   &__faq-kicker-wrap {
     margin-bottom: 24px;
+
+    .site-section__kicker {
+      margin-bottom: 0;
+    }
   }
 
   &__community {
@@ -643,8 +663,6 @@
   }
 
   &__footer-logo-box {
-    width: 72px;
-    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -690,6 +708,10 @@
     font-size: 1rem;
     color: #111827;
     margin: 0;
+
+    &--bold {
+      font-weight: 700;
+    }
   }
 
   &__footer-col-links {
@@ -714,12 +736,12 @@
     padding: 24px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     gap: 16px;
 
     @media (min-width: 640px) {
       flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
@@ -727,8 +749,13 @@
     color: #4b5563;
     font-size: 0.875rem;
     margin: 0;
-    text-align: center;
-    flex: 1;
+    text-align: left;
+    width: 100%;
+
+    @media (min-width: 640px) {
+      width: auto;
+      flex: 1;
+    }
   }
 
   &__footer-slogan {
@@ -736,7 +763,12 @@
     font-size: 0.875rem;
     margin: 0;
     text-align: center;
-    flex: 1;
+    width: 100%;
+
+    @media (min-width: 640px) {
+      width: auto;
+      flex: 1;
+    }
   }
 
   &__footer-socials {
@@ -744,11 +776,20 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    flex: 1;
+    width: 100%;
+
+    @media (min-width: 640px) {
+      width: auto;
+      flex: 1;
+      justify-content: flex-end;
+    }
   }
 
   &__footer-social {
     color: #4b5563;
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
     transition: color 0.3s ease;
 
     svg {
@@ -763,20 +804,14 @@
 
   &--footer-slim {
     background: #ffffff;
-    border-top: 1px solid #e5e7eb;
     padding: 40px 0;
   }
 
   &__footer-slim-inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
-
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
   }
 
   &__footer-slim-brand {
@@ -797,6 +832,15 @@
 
   &__footer-slim-copyright {
     color: #6b7280;
+    margin: 0;
+  }
+
+  &__footer-slogan--slim {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+    width: 100%;
     margin: 0;
   }
 }

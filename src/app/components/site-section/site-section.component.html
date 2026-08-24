@@ -52,12 +52,8 @@
             moduleVersion ? ' v' + moduleVersion : ''
           }}</span>
         }
-        <h1 id="page-hero-title" class="site-section__page-hero-title">
-          {{ model.title || (model.titleKey | translate) }}
-        </h1>
-        <p id="page-hero-subtitle" class="site-section__page-hero-subtitle">
-          {{ model.subtitle || (model.subtitleKey | translate) }}
-        </p>
+        <h1 id="page-hero-title" class="site-section__page-hero-title">{{ model.title || (model.titleKey | translate) }}</h1>
+        <p id="page-hero-subtitle" class="site-section__page-hero-subtitle">{{ model.subtitle || (model.subtitleKey | translate) }}</p>
       </div>
       <div class="site-section__glow" aria-hidden="true"></div>
     </section>
@@ -77,7 +73,9 @@
     <section class="site-section site-section--band">
       <div class="site-section__container site-section__container--center">
         @if (model.kickerKey) {
-          <span class="site-section__kicker">{{ model.kickerKey | translate }}</span>
+          <div class="site-section__kicker-wrap">
+            <span class="site-section__kicker">{{ model.kickerKey | translate }}</span>
+          </div>
         }
         <h2 class="site-section__title">{{ model.titleKey | translate }}</h2>
         @if (model.subtitleKey) {
@@ -221,7 +219,9 @@
     <section class="site-section site-section--band">
       <div class="site-section__container site-section__container--center">
         @if (model.kickerKey) {
-          <span class="site-section__kicker">{{ model.kickerKey | translate }}</span>
+          <div class="site-section__kicker-wrap">
+            <span class="site-section__kicker">{{ model.kickerKey | translate }}</span>
+          </div>
         }
         <h2 class="site-section__title">{{ model.titleKey | translate }}</h2>
         @if (model.subtitleKey) {
@@ -259,15 +259,15 @@
           <div class="site-section__footer-cols">
             @for (col of linkColumns(); track col.tag) {
               <div class="site-section__footer-col">
-                <h3 class="site-section__footer-col-title">{{ col.titleKey | translate }}</h3>
+                <h3 class="site-section__footer-col-title" [class.site-section__footer-col-title--bold]="col.tag === 'legal'">{{ col.titleKey | translate }}</h3>
                 <div class="site-section__footer-col-links">
-                  @for (link of col.links; track link.id) {
-                    <a [href]="link.href" class="site-section__footer-link">{{ link.titleKey | translate }}</a>
-                  }
-                </div>
+              @for (link of col.links; track link.id) {
+                <a [href]="link.href" class="site-section__footer-link">{{ link.titleKey | translate }}</a>
+              }
               </div>
-            }
-          </div>
+            </div>
+          }
+        </div>
         </div>
         <div class="site-section__footer-bottom">
           <p class="site-section__footer-copyright">{{ model.subtitleKey | translate }}</p>
@@ -304,6 +304,9 @@
             />
             @if (model.titleKey) {
               <p class="site-section__footer-slim-copy">{{ model.titleKey | translate }}</p>
+            }
+            @if (footerSlogan) {
+              <p class="site-section__footer-slogan site-section__footer-slogan--slim">{{ footerSlogan }}</p>
             }
           </div>
           <p class="site-section__footer-slim-copyright">{{ model.subtitleKey | translate }}</p>

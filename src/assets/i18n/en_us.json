@@ -139,7 +139,8 @@
     "get_started": "Get Started"
   },
   "banner": {
-    "latest_news": "Latest news from Decaf v0.2"
+    "latest_news": "Latest news from Decaf v0.2",
+    "slogans": ["Build boldly. Brewed for developers.", "Modular by design. Productive by default.", "Less boilerplate. More shipping.", "TypeScript-first. Everywhere."]
   },
   "hero": {
     "title": "Brewed for Builders.",
@@ -192,8 +193,7 @@
       "demo_label": "Task Management Demo"
     },
     "grade": {
-      "demo_label": "Grade Tracking Demo",
-      "title": "Keep track of student grades without the paperwork."
+      "demo_label": "Grade Tracking Demo"
     },
     "see_how": "See How It Works"
   },

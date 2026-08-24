@@ -40,6 +40,13 @@ export class Brand extends Model {
    */
   @prop() alt: string = '';
 
+  /**
+   * @description Zero-based position of the brand in the logo cloud row, mirroring the
+   * immutable `www-mock` locale `brands` array order so the seeded rows render in the
+   * same left-to-right sequence regardless of the adapter's internal table iteration order.
+   */
+  @prop() order: number = 0;
+
   constructor(args: Partial<Brand> = {}) {
     super(args);
   }

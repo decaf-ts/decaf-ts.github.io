@@ -5,18 +5,13 @@
     </div>
     <div class="hidden md:flex items-center space-x-8">
       @for (item of items; track item.id) {
-        <a [routerLink]="internalHref(item.href)" class="site-nav__link text-white hover:text-white/80 transition-colors">
-          {{ item.titleKey | translate }}
-        </a>
+        <a [routerLink]="internalHref(item.href)" class="site-nav__link text-white hover:text-white/80 transition-colors">{{ item.titleKey | translate }}</a>
       }
     </div>
     @if (cta) {
       <a
         [routerLink]="internalHref(cta.href)"
-        class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full hover:bg-white/30 transition-all duration-300"
-      >
-        {{ cta.titleKey | translate }}
-      </a>
+        class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full hover:bg-white/30 transition-all duration-300">{{ cta.titleKey | translate }}</a>
     }
   </div>
 </nav>

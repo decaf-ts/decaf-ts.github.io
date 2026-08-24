@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { firstValueFrom } from 'rxjs';
 import { Dynamic, NgxComponentDirective } from '@decaf-ts/for-angular';
 import { SafeHtmlPipe } from '../safe-html.pipe';
 import { Section } from '../../structure/Section';
@@ -16,7 +17,6 @@ import { FeatureCardsListComponent } from '../feature-cards-list/feature-cards-l
 import { ModuleOverviewListComponent } from '../module-overview-list/module-overview-list.component';
 import { TutorialsListComponent } from '../tutorials-list/tutorials-list.component';
 import { ExamplesListComponent } from '../examples-list/examples-list.component';
-import { SloganService } from '../../services/slogans.service';
 import { SiteService } from '../../services/site.service';
 
 /**
@@ -70,7 +70,7 @@ export class SiteSectionComponent extends NgxComponentDirective implements OnIni
   override model!: Section;
 
   /**
-   * @description Selected slogan resolved lazily from the catalog for full footers.
+   * @description Selected slogan resolved lazily from the i18n translation key `banner.slogans` for full footers.
    */
   footerSlogan: string | null = null;
 
@@ -80,7 +80,7 @@ export class SiteSectionComponent extends NgxComponentDirective implements OnIni
   moduleVersion: string | null = null;
 
   constructor(
-    private sloganService: SloganService,
+    private ngxTranslate: TranslateService,
     private siteService: SiteService,
     override router: Router
   ) {
@@ -88,8 +88,14 @@ export class SiteSectionComponent extends NgxComponentDirective implements OnIni
   }
 
   async ngOnInit(): Promise<void> {
-    if (this.model.kind === 'footer') {
-      this.footerSlogan = await this.sloganService.slogan(this.queryModule() || undefined);
+    if (this.model.kind === 'footer' || this.model.kind === 'footer-slim') {
+      const slogans = await firstValueFrom(this.ngxTranslate.get('banner.slogans'));
+      this.footerSlogan =
+        Array.isArray(slogans) && slogans.length > 0
+          ? (slogans[0] as string)
+          : typeof slogans === 'string' && slogans && slogans !== 'banner.slogans'
+            ? slogans
+            : null;
     }
     const moduleName = this.queryModule();
     if (this.model.kind === 'page-hero' && moduleName) {

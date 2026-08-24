@@ -243,17 +243,18 @@ export class SiteService extends Service {
     const exampleRepo = Repository.forModel(Example);
     const featureRepo = Repository.forModel(ModuleFeature);
 
-    for (const b of seed.brands ?? []) {
+    for (const [idx, b] of (seed.brands ?? []).entries()) {
       await brandRepo.delete(`${locale}_${b.name}`).catch(() => undefined);
       await brandRepo.create(Model.fromModel(new Brand(), {
         id: `${locale}_${b.name}`,
         name: b.name,
         src: b.src,
         alt: b.name,
+        order: idx,
       }) as Brand, ctx).catch(() => undefined);
     }
 
-    for (const c of seed.cards ?? []) {
+    for (const [idx, c] of (seed.cards ?? []).entries()) {
       const id = `${locale}_${(c.title || 'card').toLowerCase().replace(/[^a-z0-9]+/g, '_')}`;
       await cardRepo.delete(id).catch(() => undefined);
       await cardRepo.create(Model.fromModel(new HomeCard(), {
@@ -261,16 +262,18 @@ export class SiteService extends Service {
         title: c.title || '',
         description: c.description || '',
         icon: c.icon || '',
+        order: idx,
       }) as HomeCard, ctx).catch(() => undefined);
     }
 
-    for (const f of seed.faq ?? []) {
+    for (const [idx, f] of (seed.faq ?? []).entries()) {
       const id = `${locale}_${(f.title || 'faq').toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 40)}`;
       await faqRepo.delete(id).catch(() => undefined);
       await faqRepo.create(Model.fromModel(new Faq(), {
         id,
         title: f.title || '',
         description: f.body || '',
+        order: idx,
       }) as Faq, ctx).catch(() => undefined);
     }
 

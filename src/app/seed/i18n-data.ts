@@ -2,10 +2,9 @@
 // AUTO-GENERATED from www-mock/locales - do not hand edit. Re-run scripts/data-transform.cjs
 /**
  * @module app/seed/i18n-data
- * @description Auto-generated per-locale site content (brands, cards, faq, tutorials and
- * feature modules) extracted from the www-mock locale JSON files. Footer slogans are not
- * part of this seed — they are collected into the `slogans.json` catalog consumed by
- * {@link app/services/SloganService}.
+  * @description Auto-generated per-locale site content (brands, cards, faq, tutorials and
+  * feature modules) extracted from the www-mock locale JSON files. Footer slogans are now
+  * stored directly in each locale file under the `banner.slogans` key, not in a separate catalog.
  * @summary Exposes the plain-data content types and the per-locale site seed used by
  * {@link app/seed/site.seed} to build the site graph and by the site services/pages to
  * render module features, tutorials and examples.

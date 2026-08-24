@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrderDirection } from '@decaf-ts/core';
 import { KeyValue } from '@decaf-ts/for-angular';
 import { SafeHtmlPipe } from '../safe-html.pipe';
 import { HomeCard } from '../../models/HomeCard';
@@ -33,6 +34,9 @@ export class HomeCardsListComponent extends ModuleListBase {
    * @description Model class name resolved by the list query against the RamAdapter.
    */
   override modelName = 'HomeCard';
+
+  override sortBy = 'order';
+  override sortDirection: OrderDirection = OrderDirection.ASC;
 
   /**
    * @description The card model of a mapped list row.

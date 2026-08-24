@@ -36,6 +36,8 @@ export class Faq extends Model {
    */
   @prop() description: string = '';
 
+  @prop() order: number = 0;
+
   constructor(args: Partial<Faq> = {}) {
     super(args);
   }

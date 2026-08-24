@@ -13,17 +13,18 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #ffffff;
-  color: var(--dcf-site-color-gray-900);
+  background: transparent;
+  color: #000000;
   font-family: var(--dcf-site-font-inter);
   font-size: 16px;
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
 }
 
 a {

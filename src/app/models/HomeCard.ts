@@ -41,6 +41,8 @@ export class HomeCard extends Model {
    */
   @prop() icon: string = '';
 
+  @prop() order: number = 0;
+
   constructor(args: Partial<HomeCard> = {}) {
     super(args);
   }

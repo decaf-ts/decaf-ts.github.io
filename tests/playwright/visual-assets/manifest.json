@@ -1,0 +1,78 @@
+{
+  "https://cdn.tailwindcss.com": {
+    "contentType": "text/javascript; charset=utf-8",
+    "path": "tailwind/tailwind-play.js"
+  },
+  "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=block": {
+    "contentType": "text/css; charset=utf-8",
+    "path": "google-fonts/fonts.css"
+  },
+  "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap": {
+    "contentType": "text/css; charset=utf-8",
+    "path": "google-fonts/fonts.css"
+  },
+  "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-1.woff2"
+  },
+  "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-2.woff2"
+  },
+  "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-3.woff2"
+  },
+  "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-4.woff2"
+  },
+  "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-5.woff2"
+  },
+  "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-6.woff2"
+  },
+  "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-7.woff2"
+  },
+  "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-8.woff2"
+  },
+  "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko40yyygA.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-9.woff2"
+  },
+  "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko50yyygA.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-10.woff2"
+  },
+  "https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko70yyygA.woff2": {
+    "contentType": "font/woff2",
+    "path": "google-fonts/font-11.woff2"
+  },
+  "https://tailwindcss.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg": {
+    "contentType": "image/svg+xml; charset=utf-8",
+    "path": "brand-logos/reform-logo-gray-900.svg"
+  },
+  "https://tailwindcss.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg": {
+    "contentType": "image/svg+xml; charset=utf-8",
+    "path": "brand-logos/savvycal-logo-gray-900.svg"
+  },
+  "https://tailwindcss.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg": {
+    "contentType": "image/svg+xml; charset=utf-8",
+    "path": "brand-logos/statamic-logo-gray-900.svg"
+  },
+  "https://tailwindcss.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg": {
+    "contentType": "image/svg+xml; charset=utf-8",
+    "path": "brand-logos/transistor-logo-gray-900.svg"
+  },
+  "https://tailwindcss.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg": {
+    "contentType": "image/svg+xml; charset=utf-8",
+    "path": "brand-logos/tuple-logo-gray-900.svg"
+  }
+}

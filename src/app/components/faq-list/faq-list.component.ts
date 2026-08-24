@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrderDirection } from '@decaf-ts/core';
 import { KeyValue } from '@decaf-ts/for-angular';
 import { ModuleListBase } from '../list-base/module-list.base';
 
@@ -27,6 +28,9 @@ export class FaqListComponent extends ModuleListBase {
    * @description Model class name resolved by the list query against the RamAdapter.
    */
   override modelName = 'Faq';
+
+  override sortBy = 'order';
+  override sortDirection: OrderDirection = OrderDirection.ASC;
 
   /**
    * @description Returns the mapped rows of the requested column.

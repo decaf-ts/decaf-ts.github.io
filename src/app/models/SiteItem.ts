@@ -30,8 +30,7 @@ export class SiteItem extends Model {
   /**
    * @description Discriminator for the item rendering: 'nav', 'link', 'inline', 'social',
    * 'card', 'example', 'tutorial', 'text' (default). Slogans, brands and faq entries are
-   * no longer `SiteItem` records — they live in the {@link app/services/SloganService},
-   * {@link app/models/Brand} and {@link app/models/Faq} tables respectively.
+   * no longer `SiteItem` records — slogans are provided via the i18n `banner.slogans` key, while brands and faq entries live in the {@link app/models/Brand} and {@link app/models/Faq} tables respectively.
    */
   @prop() kind: string = 'text';
 

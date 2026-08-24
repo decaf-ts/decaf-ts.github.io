@@ -1,15 +1,15 @@
-import { defineConfig, devices } from '@playwright/test';
-import { APP_URL } from './fixtures';
+import { defineConfig } from '@playwright/test';
+import { APP_URL } from './playwright/fixtures';
 
 export default defineConfig({
-  testDir: '.',
+  testDir: './playwright',
   testMatch: '**/*.spec.ts',
   fullyParallel: false,
   workers: 2,
   timeout: 90_000,
   expect: { timeout: 20_000 },
   use: {
-    ...devices['Desktop Chrome'],
+    browserName: 'chromium',
     viewport: { width: 1280, height: 800 },
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',

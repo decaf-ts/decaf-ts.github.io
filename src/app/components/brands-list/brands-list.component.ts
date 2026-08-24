@@ -37,6 +37,11 @@ export class BrandsListComponent extends ModuleListBase {
   pageItems(): KeyValue[] {
     const items = this.items || [];
     if (!items.length) return [];
-    return Array.from({ length: 5 }, (_, i) => items[i % items.length]);
+    const sorted = [...items].sort((a, b) => {
+      const ao = ((a['model'] && a['model']['order']) ?? a['order'] ?? 0) as number;
+      const bo = ((b['model'] && b['model']['order']) ?? b['order'] ?? 0) as number;
+      return (ao as number) - (bo as number);
+    });
+    return Array.from({ length: 5 }, (_, i) => sorted[i % sorted.length]);
   }
 }
