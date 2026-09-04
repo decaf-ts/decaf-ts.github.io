@@ -6,9 +6,9 @@ create a new project using this one as a template.
 
 clone it `git clone <project>` and navigate to the root folder `cd <project>`
 
-add a `.token` file containing your access token to the git repository (allows for git opts to work seamlessly).
+enroll your access token once via `decaf utils credentials setup` (stored in the OS keychain with env-var fallback - never inside the repository).
 
-run `npm run set-git-auth` to update your repo's git config to include the token
+run `npm run set-git-auth` to register the OS-native git credential helper (`decaf utils credentials git-helper`)
 
 #### If your project has private dependencies or publishes to private npm registries, create an `.npmrc` containing:
 
@@ -29,7 +29,7 @@ Changing:
 
 ### Installation
 
-Run `npm install` (or `npm run do-install` if you have private dependencies and a `.token` file) to install the dependencies:
+Run `npm install` (or `npm run do-install` if you have private dependencies - it resolves the npm token via `decaf utils credentials`) to install the dependencies:
 
 If this is the first time you are running this command, it will also (according to your choices:
 
@@ -44,12 +44,12 @@ The repository exposes the following npm scripts:
 
 #### Setup and Maintenance
 
-- `do-install` – reads the `.token` file into the `TOKEN` environment variable and runs `npm install`, which is handy when private registries require an auth token.
+- `do-install` – resolves the npm token via `decaf utils credentials` into the `NPM_TOKEN` environment variable and runs `npm install`, which is handy when private registries require an auth token.
 - `update-dependencies` – upgrades all dependencies that start with `@decaf-ts/` to their latest version.
 - `update-scripts` – downloads the latest GitHub workflows, configs, and templates from the [ts-workspace](https://github.com/decaf-ts/ts-workspace) template repository.
 - `sync-codex` – copies the prompts under `./.codex/prompts` into `~/.codex/prompts` so Codex CLI can reuse them.
 - `on-first-run` – bootstraps the project by calling `update-scripts` with the `--boot` flag.
-- `set-git-auth` – configures git remotes to use the token stored in `.token`; run this once per repository.
+- `set-git-auth` – registers the OS-native git credential helper via `decaf utils credentials git-helper`; run this once per repository.
 - `flash-forward` – bumps every dependency to the latest version via `npm-check-updates` and re-installs.
 - `reset` – restores the repository to the state of the default branch (wipes the working tree and re-installs dependencies); use with care.
 
@@ -79,7 +79,7 @@ The repository exposes the following npm scripts:
 
 #### Docker
 
-- `docker:login` – authenticates against `ghcr.io` using the credentials stored in `.dockeruser` and `.dockertoken`.
+- `docker:login` – authenticates against `ghcr.io` using registry credentials resolved via `decaf utils credentials`.
 - `docker:build` – convenience alias that delegates to `docker:build-base`.
 - `docker:build-base` – builds the base container image with BuildKit using the version from `package.json`.
 - `docker:publish` – convenience alias that delegates to `docker:publish-base`.
@@ -95,6 +95,7 @@ All automated test scripts live in `package.json`:
 - `test:all` – executes the entire Jest test suite under `tests`.
 - `test:dist` – runs the full suite twice, once against the compiled `lib` output and once against the `dist` bundle (via the `TEST_TARGET` environment variable).
 - `test:circular` – checks the source for circular dependencies using `dpdm`.
+- `prepare-it-tests` – no-op hook called by the shared CI workflows (`npm run prepare-it-tests --if-present`) before any test/coverage run; repositories whose integration tests need backing infrastructure implement it to boot that infra.
 - `coverage` – wipes previous coverage JSON files and runs the full test suite with the coverage-specific Jest config to emit reports and badges.
 
 ## Linting
@@ -181,7 +182,7 @@ The template comes with ci/cd for :
 
 This repository automates releases in the following manner:
 
-- run `./bin/tag-release.sh <version> <message>` (arguments are optional):
+- run `decaf utils tag-release --tag <version> --message <message>` (arguments are optional):
   - if arguments are missing, you will be prompted for them;
 - it will run `npm run prepare-pr` to ensure documentation, tests, and coverage are up to date;
 - it will commit all changes if needed;
@@ -206,7 +207,7 @@ Where:
 
 ### Publishing
 
-Unless the `-no-ci` flag is passed in the commit message when running `./bin/tag-release.sh`, publishing will be handled
+Unless the `-no-ci` flag is passed in the commit message when running `decaf utils tag-release`, publishing will be handled
 automatically by github/gitlab (triggered by the tag).
 
 When the `-no-ci` flag is passed then you can:
@@ -214,7 +215,7 @@ When the `-no-ci` flag is passed then you can:
 - run `npm publish`. This command assumes :
   - you have previously run the release script and tagged the repository;
   - you have you publishing properly configured in `npmrc` and `package.json`;
-  - The token for any special access required is stored in the `.token` file;
+  - The token for any special access required is resolved via `decaf utils credentials`;
 
 ### AI
 
@@ -361,17 +362,3 @@ Common commands for builds, tests, and documentation generation are available in
 
 - Setup for node 22, but will work at least with 16;
 - Requires docker to build documentation (drawings and PlantUML)
-
-
-
-## Coding Principles
-
-- group similar functionality in folders (analog to namespaces but without any namespace declaration)
-- one class per file;
-- one interface per file (unless interface is just used as a type);
-- group types as other interfaces in a types.ts file per folder;
-- group constants or enums in a constants.ts file per folder;
-- group decorators in a decorators.ts file per folder;
-- group pure/utilitarian functions in a utils.ts file per folder, or create a dedicated file per related functionality. Try to limit the export of these outside the package.
-- always import from the specific file, never from a folder or index file (exceptions for dependencies on other packages)
-- All classes, interfaces, constants and types should always be exported
