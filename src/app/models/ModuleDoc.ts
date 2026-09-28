@@ -55,6 +55,32 @@ export class ModuleDoc extends Model {
   @prop() base_path: string = '';
 
   /**
+   * @description Git repository url of the module (`links.repo`), resolved for the active locale.
+   */
+  @prop() repo: string = '';
+
+  /**
+   * @description Technical documentation url of the module (`links.docs`), resolved for the active locale.
+   */
+  @prop() docs: string = '';
+
+  /**
+   * @description GitHub Pages url of the module (`links.githubPages`), resolved for the active locale.
+   */
+  @prop() githubPages: string = '';
+
+  /**
+   * @description Storyboard/storybook url of the module (`links.storyboard`), when the module is a UI library.
+   */
+  @prop() storyboard: string = '';
+
+  /**
+   * @description Locale the record was seeded for (`en_en`, `en_us`, `pt_br`, `pt_pt`), so a page can
+   * tell which localization of the module content is loaded in the RamAdapter.
+   */
+  @prop() locale: string = '';
+
+  /**
    * @description Resolved `@decaf-ts/*` package version (from the build-time versions asset).
    */
   @prop() version: string = '';

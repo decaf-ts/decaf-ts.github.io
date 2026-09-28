@@ -60,20 +60,31 @@ export class SloganService {
     return entry.Slogan || entry.text || null;
   }
 
-  private catalogPromise(): Promise<Record<string, SloganEntry[]>> {
-    if (this.catalog) return Promise.resolve(this.catalog);
+  private async catalogPromise(): Promise<Record<string, SloganEntry[]>> {
+    if (this.catalog) return this.catalog;
     if (!this.loading) {
-      this.loading = fetch('assets/data/slogans.json')
-        .then((response) => (response.ok ? response.json() : {}))
-        .catch(() => ({}))
-        .then((catalog: Record<string, SloganEntry[]>) => {
-          this.catalog = catalog || {};
-          return this.catalog;
-        })
-        .finally(() => {
-          this.loading = undefined;
-        });
+      this.loading = this.loadCatalog();
     }
     return this.loading;
+  }
+
+  /**
+   * @description Loads the slogans catalog asset once, caching the result.
+   * @returns {Promise<Record<string, SloganEntry[]>>} The parsed catalog (empty on failure).
+   */
+  private async loadCatalog(): Promise<Record<string, SloganEntry[]>> {
+    let catalog: Record<string, SloganEntry[]> = {};
+    try {
+      const response = await fetch('assets/data/slogans.json');
+      if (response.ok) {
+        catalog = (await response.json()) as Record<string, SloganEntry[]>;
+      }
+    } catch {
+      // missing/invalid catalog asset — fall back to an empty catalog
+      catalog = {};
+    }
+    this.catalog = catalog || {};
+    this.loading = undefined;
+    return this.catalog;
   }
 }

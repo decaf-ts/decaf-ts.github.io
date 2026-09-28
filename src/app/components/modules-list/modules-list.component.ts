@@ -4,7 +4,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { KeyValue } from '@decaf-ts/for-angular';
 import { ModuleDoc } from '../../models/ModuleDoc';
 import { ModuleListBase } from '../list-base/module-list.base';
-import { SafeHtmlPipe } from '../safe-html.pipe';
+import { MODULE_LINK_ORDER, ModuleLinkKey, moduleLinkLabel } from '../../seed/link-labels';
 
 /**
  * @module app/components/ModulesListComponent
@@ -25,7 +25,7 @@ import { SafeHtmlPipe } from '../safe-html.pipe';
 @Component({
   selector: 'app-modules-list',
   standalone: true,
-  imports: [RouterLink, TranslatePipe, SafeHtmlPipe],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './modules-list.component.html',
   styleUrl: './modules-list.component.scss',
 })
@@ -42,6 +42,28 @@ export class ModulesListComponent extends ModuleListBase {
    */
   module(item: KeyValue): ModuleDoc {
     return item['model'] as ModuleDoc;
+  }
+
+  /**
+   * @description The external links seeded on a module record, in display order.
+   * @summary Reads `repo`, `docs`, `githubPages` and `storyboard` from the adapter-backed
+   * {@link ModuleDoc}, skipping the ones the content team left empty so only verified links
+   * render.
+   * @param {ModuleDoc} mod - The module record.
+   * @returns {Object[]} The label + href pairs of the module's external links.
+   */
+  links(mod: ModuleDoc): { label: string; href: string }[] {
+    const values: Record<ModuleLinkKey, string> = {
+      repo: mod.repo,
+      docs: mod.docs,
+      githubPages: mod.githubPages,
+      storyboard: mod.storyboard,
+    };
+    const locale = (this.translateService?.getCurrentLang() as string) || 'en_us';
+    return MODULE_LINK_ORDER.map((key) => ({
+      label: moduleLinkLabel(key, locale),
+      href: values[key],
+    })).filter((link) => !!link.href);
   }
 
   /**

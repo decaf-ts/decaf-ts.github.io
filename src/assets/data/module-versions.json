@@ -14,7 +14,7 @@
  "for-typeorm": "0.11.1",
  "injectable-decorators": "1.19.0",
  "integrations": "0.6.2",
- "logging": "0.23.7",
+ "logging": "0.26.3",
  "styles": "0.7.3",
  "transactional-decorators": "0.12.0",
  "ui-decorators": "0.18.0",

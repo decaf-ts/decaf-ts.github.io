@@ -30,6 +30,20 @@
               [queryParams]="{ module: module(item).name }"
               class="modules-list__action modules-list__action--secondary">{{ 'modules.see_tutorials' | translate }}</a>
           </div>
+          @if (links(module(item)).length) {
+            <ul class="modules-list__links">
+              @for (link of links(module(item)); track link.href) {
+                <li class="modules-list__links-item">
+                  <a
+                    [href]="link.href"
+                    class="modules-list__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >{{ link.label }}</a>
+                </li>
+              }
+            </ul>
+          }
         </div>
         <div class="modules-list__visual">
           <div class="modules-list__visual-panel">
@@ -72,6 +86,20 @@
               [queryParams]="{ module: module(item).name }"
               class="modules-list__action modules-list__action--secondary">{{ 'modules.see_tutorials' | translate }}</a>
           </div>
+          @if (links(module(item)).length) {
+            <ul class="modules-list__links">
+              @for (link of links(module(item)); track link.href) {
+                <li class="modules-list__links-item">
+                  <a
+                    [href]="link.href"
+                    class="modules-list__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >{{ link.label }}</a>
+                </li>
+              }
+            </ul>
+          }
         </div>
       }
     </article>

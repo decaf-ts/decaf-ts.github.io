@@ -31,7 +31,7 @@ describe('module-doc seeding', () => {
     const decoration = await repo.read('decoration');
     expect(decoration).toBeInstanceOf(ModuleDoc);
     expect(decoration!.name).toBe('decoration');
-    expect(decoration!.title).toBe('decoration');
+    expect(decoration!.title).toBe('Decoration');
     expect(decoration!.summary).not.toBe('');
 
     expect(modules.map((m) => m.name)).toContain('logging');

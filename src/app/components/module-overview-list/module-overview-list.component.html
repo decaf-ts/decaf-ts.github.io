@@ -7,6 +7,20 @@
         [routerLink]="'/features'"
         [queryParams]="{ module: module(item).name }"
         class="module-overview__link">{{ 'modules.see_examples' | translate }}</a>
+      @if (links(module(item)).length) {
+        <ul class="module-overview__links">
+          @for (link of links(module(item)); track link.href) {
+            <li class="module-overview__links-item">
+              <a
+                [href]="link.href"
+                class="module-overview__link module-overview__link--external"
+                target="_blank"
+                rel="noopener noreferrer"
+              >{{ link.label }}</a>
+            </li>
+          }
+        </ul>
+      }
     </article>
   }
 </div>

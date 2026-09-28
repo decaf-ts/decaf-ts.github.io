@@ -66,7 +66,7 @@ describe('iterable table seeding reads', () => {
   it('reads seeded ModuleFeature rows back through Repository.forModel', async () => {
     await service.seed('en_us');
     const feature = await Repository.forModel(ModuleFeature).read(
-      'feature_decoration_composable_decorators'
+      'feature_decoration_flavour_aware_decorators'
     );
     expect(feature).toBeInstanceOf(ModuleFeature);
     expect(feature!.module).toBe('decoration');
