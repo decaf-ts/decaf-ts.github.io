@@ -1,0 +1,161 @@
+<div class="showcase-demo" [attr.data-kind]="kind">
+  @if (label) {
+    <p class="showcase-demo__label">{{ label }}</p>
+  }
+
+  <div class="showcase-demo__panel">
+    <div class="showcase-demo__controls">
+      @if (isSwitch() || isQuery()) {
+        <div class="showcase-demo__options">
+          @for (option of options(); track option) {
+            <button
+              type="button"
+              class="showcase-demo__option"
+              [class.showcase-demo__option--active]="selected === option"
+              (click)="select(option)"
+            >{{ option }}</button>
+          }
+        </div>
+      }
+
+      @if (isForm()) {
+        <div class="showcase-demo__options">
+          @for (field of fields(); track field) {
+            <button
+              type="button"
+              class="showcase-demo__option"
+              [class.showcase-demo__option--active]="selected === field"
+              (click)="select(field)"
+            >{{ field }}</button>
+          }
+        </div>
+      }
+
+      @if (isModelForm()) {
+        <div class="showcase-demo__options">
+          @for (tag of tags(); track tag) {
+            <span class="showcase-demo__tag">{{ tag }}</span>
+          }
+        </div>
+      }
+
+      @if (isStepper()) {
+        <div class="showcase-demo__run">
+          <button type="button" class="showcase-demo__run-btn" (click)="run()">
+            {{ 'showcase.run_demo' | translate }}
+          </button>
+          @if (running) {
+            <button type="button" class="showcase-demo__step-btn" (click)="next()">›</button>
+          }
+          @if (step >= 0) {
+            <button type="button" class="showcase-demo__reset-btn" (click)="reset()">⟲</button>
+          }
+        </div>
+      }
+
+      @if (isFlags()) {
+        <div class="showcase-demo__flags">
+          @for (flag of flags(); track flag) {
+            <button
+              type="button"
+              class="showcase-demo__flag"
+              [class.showcase-demo__flag--on]="isFlagOn(flag)"
+              (click)="toggleFlag(flag)"
+            >
+              <span class="showcase-demo__flag-dot"></span>
+              {{ flag }}
+            </button>
+          }
+        </div>
+      }
+
+      @if (isForm() || isCrypto()) {
+        <label class="showcase-demo__field">
+          <span class="showcase-demo__field-label">{{ (selected || model()) }}</span>
+          <input
+            class="showcase-demo__input"
+            type="text"
+            [value]="value"
+            (input)="value = $any($event.target).value"
+          />
+        </label>
+      }
+    </div>
+
+    <div class="showcase-demo__output">
+      @if (isSwitch()) {
+        @if (isGuard()) {
+          <div
+            class="showcase-demo__verdict"
+            [class.showcase-demo__verdict--allow]="guardOutcome() === 'allow'"
+            [class.showcase-demo__verdict--block]="guardOutcome() === 'block'"
+          >{{ (guardOutcome() === 'allow' ? 'showcase.demo.allow' : 'showcase.demo.block') | translate }}</div>
+        }
+        <pre class="showcase-demo__code"><code>{{ preview() }}</code></pre>
+      }
+
+      @if (isRoutes()) {
+        <ul class="showcase-demo__routes">
+          @for (route of routes(); track route) {
+            <li class="showcase-demo__route">{{ route }}</li>
+          }
+        </ul>
+      }
+
+      @if (isQuery()) {
+        <pre class="showcase-demo__code"><code>{{ query() }}</code></pre>
+      }
+
+      @if (isStepper()) {
+        <ol class="showcase-demo__steps">
+          @for (item of steps(); track item; let i = $index) {
+            <li
+              class="showcase-demo__step"
+              [class.showcase-demo__step--active]="i === step"
+              [class.showcase-demo__step--done]="i < step"
+            >
+              <span class="showcase-demo__step-dot"></span>
+              {{ item }}
+            </li>
+          }
+        </ol>
+      }
+
+      @if (isFlags()) {
+        <ul class="showcase-demo__flag-results">
+          @for (flag of flags(); track flag) {
+            <li class="showcase-demo__flag-result">
+              <span>{{ flag }}</span>
+              <span class="showcase-demo__flag-state">{{
+                (isFlagOn(flag) ? 'showcase.demo.on' : 'showcase.demo.off') | translate
+              }}</span>
+            </li>
+          }
+        </ul>
+      }
+
+      @if (isForm()) {
+        <div
+          class="showcase-demo__verdict"
+          [class.showcase-demo__verdict--allow]="isValid()"
+          [class.showcase-demo__verdict--block]="!isValid()"
+        >{{ (isValid() ? 'showcase.demo.valid' : 'showcase.demo.invalid') | translate }}</div>
+      }
+
+      @if (isModelForm()) {
+        <pre class="showcase-demo__code"><code>{{ modelPreview() }}</code></pre>
+      }
+
+      @if (isCrypto()) {
+        <div class="showcase-demo__crypto">
+          <p class="showcase-demo__crypto-row">
+            <span>{{ 'showcase.demo.plain' | translate }}</span><code>{{ value }}</code>
+          </p>
+          <p class="showcase-demo__crypto-row">
+            <span>{{ 'showcase.demo.cipher' | translate }}</span><code>{{ cipher() }}</code>
+          </p>
+        </div>
+      }
+    </div>
+  </div>
+</div>

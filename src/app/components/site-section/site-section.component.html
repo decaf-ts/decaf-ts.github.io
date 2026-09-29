@@ -4,10 +4,10 @@
       <app-site-nav [items]="navItems()" [cta]="cta()"></app-site-nav>
       <div class="site-section__hero-inner">
         @for (item of byTag('news'); track item.id) {
-          <div class="site-section__news-badge">
+          <a class="site-section__news-badge" [routerLink]="item.href || '/news'">
             <span class="site-section__news-icon" [innerHTML]="item.icon | safeHtml"></span>
             <span class="site-section__news-label">{{ item.titleKey | translate }}</span>
-          </div>
+          </a>
         }
         <div class="site-section__hero-title-wrap">
           <h1 class="site-section__hero-title">{{ model.titleKey | translate }}</h1>
@@ -197,7 +197,8 @@
         @if (moduleFilter()) {
           <app-tutorials-list [filterByModule]="moduleFilter()"></app-tutorials-list>
         } @else {
-          <div class="site-section__error-box">{{ 'examples.errors.no_module' | translate }}</div>
+          <p class="site-section__hint">{{ 'tutorials.default_hint' | translate }}</p>
+          <app-tutorials-list></app-tutorials-list>
         }
       </div>
     </section>
@@ -209,7 +210,8 @@
         @if (moduleFilter()) {
           <app-examples-list [filterByModule]="moduleFilter()"></app-examples-list>
         } @else {
-          <div class="site-section__error-box">{{ 'examples.errors.no_module' | translate }}</div>
+          <p class="site-section__hint">{{ 'examples.default_hint' | translate }}</p>
+          <app-examples-list></app-examples-list>
         }
       </div>
     </section>
@@ -240,6 +242,75 @@
             </a>
           }
         </div>
+      </div>
+    </section>
+  }
+
+  @case ('documentation') {
+    <section class="site-section site-section--band site-section--band-lg">
+      <div class="site-section__container">
+        <app-documentation-list></app-documentation-list>
+      </div>
+    </section>
+  }
+
+  @case ('showcase-highlights') {
+    <section class="site-section site-section--band site-section--band-lg">
+      <div class="site-section__container">
+        @if (model.kickerKey) {
+          <div class="site-section__kicker-wrap">
+            <span class="site-section__kicker site-section__kicker--red">{{ model.kickerKey | translate }}</span>
+          </div>
+        }
+        <h2 class="site-section__title site-section__title--lg">{{ model.titleKey | translate }}</h2>
+        @if (model.subtitleKey) {
+          <p class="site-section__subtitle site-section__subtitle--plain">{{ model.subtitleKey | translate }}</p>
+        }
+        <app-showcase-highlights-list
+          class="site-section__list"
+          [marquee]="isLanding()"
+        ></app-showcase-highlights-list>
+        @if (model.href) {
+          <div class="site-section__actions">
+            <a [routerLink]="model.href" class="site-section__btn site-section__btn--sm site-section__btn--indigo">{{
+              'showcase.see_how' | translate
+            }}</a>
+          </div>
+        }
+      </div>
+    </section>
+  }
+
+  @case ('decaf-apps') {
+    <section class="site-section site-section--band site-section--band-lg">
+      <div class="site-section__container">
+        @if (model.kickerKey) {
+          <div class="site-section__kicker-wrap">
+            <span class="site-section__kicker site-section__kicker--red">{{ model.kickerKey | translate }}</span>
+          </div>
+        }
+        <h2 class="site-section__title site-section__title--lg">{{ model.titleKey | translate }}</h2>
+        @if (model.subtitleKey) {
+          <p class="site-section__subtitle site-section__subtitle--plain">{{ model.subtitleKey | translate }}</p>
+        }
+        <app-decaf-apps-list class="site-section__list"></app-decaf-apps-list>
+      </div>
+    </section>
+  }
+
+  @case ('news') {
+    <section class="site-section site-section--band site-section--band-lg">
+      <div class="site-section__container">
+        @if (model.kickerKey) {
+          <div class="site-section__kicker-wrap">
+            <span class="site-section__kicker site-section__kicker--red">{{ model.kickerKey | translate }}</span>
+          </div>
+        }
+        <h2 class="site-section__title site-section__title--lg">{{ model.titleKey | translate }}</h2>
+        @if (model.subtitleKey) {
+          <p class="site-section__subtitle site-section__subtitle--plain">{{ model.subtitleKey | translate }}</p>
+        }
+        <app-news-list class="site-section__list"></app-news-list>
       </div>
     </section>
   }

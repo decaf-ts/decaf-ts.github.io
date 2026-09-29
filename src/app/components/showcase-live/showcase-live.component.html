@@ -1,0 +1,41 @@
+<div class="showcase-live" [attr.data-live-kind]="kind">
+  @switch (kind) {
+    @case ('model') {
+      <div class="showcase-live__builder">
+        <ngx-decaf-model-builder [preview]="true"></ngx-decaf-model-builder>
+      </div>
+    }
+    @case ('ui') {
+      <div class="showcase-live__grid">
+        <div class="showcase-live__list">
+          <ngx-decaf-list
+            [model]="crossUiModel"
+            [data]="crossUiData"
+            [mapper]="crossUiMapper"
+            [type]="'infinite'"
+            [showSearchbar]="false"
+            [showRefresher]="false"
+            [createButton]="false"
+            [enableFilter]="false"
+            [loadMoreData]="false"
+            [operations]="['read']"
+          ></ngx-decaf-list>
+        </div>
+        <div class="showcase-live__form">
+          <ngx-decaf-model-renderer
+            [model]="crossUiModel"
+            [globals]="{ operation: 'create' }"
+          ></ngx-decaf-model-renderer>
+        </div>
+      </div>
+    }
+    @case ('forms') {
+      <div class="showcase-live__form">
+        <ngx-decaf-model-renderer
+          [model]="validationModel"
+          [globals]="{ operation: 'create' }"
+        ></ngx-decaf-model-renderer>
+      </div>
+    }
+  }
+</div>

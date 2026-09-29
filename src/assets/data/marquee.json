@@ -1,0 +1,487 @@
+{
+ "_meta": {
+  "title": "Homepage marquees — brands and modules",
+  "specification": "DECAF-49",
+  "description": "Curated, decaf-relevant items for the two homepage marquees. The FE maps each item to its marquee and renders `label[locale]` plus an inline SVG chosen from the `icon` hint. `href` is an optional deep link.",
+  "locales": [
+   "en",
+   "pt"
+  ],
+  "iconVocabulary": "Semantic icon names (lucide-style). FE owns the name -> inline SVG map; unknown names fall back to a neutral mark.",
+  "order": "Array order is the intended display order; the marquee may duplicate the list to fill its track."
+ },
+ "brands": [
+  {
+   "id": "decaf-ts",
+   "name": "decaf-ts",
+   "label": {
+    "en": "The decaffeinated TypeScript framework.",
+    "pt": "O framework TypeScript descafeinado."
+   },
+   "icon": "coffee",
+   "href": "https://github.com/decaf-ts"
+  },
+  {
+   "id": "for-angular",
+   "name": "for-angular",
+   "label": {
+    "en": "Model-driven Angular UI and rendering engine.",
+    "pt": "UI Angular orientada a modelos e motor de renderização."
+   },
+   "icon": "code-bracket",
+   "href": "https://decaf-ts.github.io/for-angular/"
+  },
+  {
+   "id": "ui-decorators",
+   "name": "ui-decorators",
+   "label": {
+    "en": "Render models as UI, declaratively.",
+    "pt": "Renderize modelos como UI, de forma declarativa."
+   },
+   "icon": "swatch",
+   "href": "https://decaf-ts.github.io/ui-decorators/"
+  },
+  {
+   "id": "with-ai",
+   "name": "with-ai",
+   "label": {
+    "en": "Skills, agents and MCP for decaf.",
+    "pt": "Skills, agentes e MCP para o decaf."
+   },
+   "icon": "sparkles",
+   "href": "https://github.com/decaf-ts/with-ai"
+  },
+  {
+   "id": "flipbored",
+   "name": "flipbored",
+   "label": {
+    "en": "RSS magazine reader built on decaf.",
+    "pt": "Leitor de revistas RSS feito com decaf."
+   },
+   "icon": "rss",
+   "href": "https://github.com/decaf-ts/flipbored"
+  },
+  {
+   "id": "astratrace",
+   "name": "AstraTrace",
+   "label": {
+    "en": "Supply-chain traceability on decaf.",
+    "pt": "Rastreabilidade de cadeia de suprimentos com decaf."
+   },
+   "icon": "link",
+   "href": "https://github.com/pharmaledgerassoc/astratrace"
+  },
+  {
+   "id": "weaver",
+   "name": "weaver",
+   "label": {
+    "en": "Fabric chaincode from TypeScript.",
+    "pt": "Chaincode Fabric a partir de TypeScript."
+   },
+   "icon": "share",
+   "href": "https://decaf-ts.github.io/for-fabric/"
+  },
+  {
+   "id": "as-graph",
+   "name": "as-graph",
+   "label": {
+    "en": "Typed graph workflows.",
+    "pt": "Workflows de grafo tipados."
+   },
+   "icon": "share",
+   "href": "https://github.com/decaf-ts/as-graph"
+  },
+  {
+   "id": "as-infra",
+   "name": "as-infra",
+   "label": {
+    "en": "Portable infrastructure as code.",
+    "pt": "Infraestrutura portável como código."
+   },
+   "icon": "server-stack",
+   "href": "https://github.com/decaf-ts/as-infra"
+  },
+  {
+   "id": "reusable-actions",
+   "name": "reusable-actions",
+   "label": {
+    "en": "Shared CI workflows.",
+    "pt": "Workflows de CI partilhados."
+   },
+   "icon": "arrow-path",
+   "href": "https://github.com/decaf-ts/reusable-actions"
+  },
+  {
+   "id": "crypto",
+   "name": "crypto",
+   "label": {
+    "en": "Field-level encryption.",
+    "pt": "Criptografia em nível de campo."
+   },
+   "icon": "lock",
+   "href": "https://decaf-ts.github.io/crypto/"
+  },
+  {
+   "id": "testing",
+   "name": "testing",
+   "label": {
+    "en": "Evidence-based test reporting.",
+    "pt": "Relatórios de teste baseados em evidência."
+   },
+   "icon": "flask",
+   "href": "https://decaf-ts.github.io/testing/"
+  },
+  {
+   "id": "demo",
+   "name": "demo",
+   "label": {
+    "en": "The reference decaf application.",
+    "pt": "A aplicação decaf de referência."
+   },
+   "icon": "play",
+   "href": "https://github.com/decaf-ts/demo"
+  },
+  {
+   "id": "web-page",
+   "name": "web-page",
+   "label": {
+    "en": "This site, a decaf application.",
+    "pt": "Este site, uma aplicação decaf."
+   },
+   "icon": "globe-alt",
+   "href": "https://github.com/decaf-ts/web-page"
+  }
+ ],
+ "modules": [
+  {
+   "id": "utils",
+   "name": "utils",
+   "label": {
+    "en": "A comprehensive TypeScript utility library standardizing CLI, input, filesystem, HTTP, package and text helpers.",
+    "pt": "Biblioteca de utilitários TypeScript: CLI, entrada, filesystem, HTTP e texto."
+   },
+   "icon": "wrench",
+   "href": "https://decaf-ts.github.io/utils/"
+  },
+  {
+   "id": "logging",
+   "name": "logging",
+   "label": {
+    "en": "A fast MiniLogger core with pluggable adapters, filters and transports for browser and Node.js.",
+    "pt": "Núcleo MiniLogger rápido, com adaptadores, filtros e transportes."
+   },
+   "icon": "list",
+   "href": "https://decaf-ts.github.io/logging/"
+  },
+  {
+   "id": "testing",
+   "name": "testing",
+   "label": {
+    "en": "The testing toolkit for Decaf packages: evidence reporting, jest helpers, performance runs and Xray teardowns.",
+    "pt": "Kit de testes decaf: relatórios de evidência, helpers Jest e Xray."
+   },
+   "icon": "flask",
+   "href": "https://github.com/decaf-ts/for-testing#readme"
+  },
+  {
+   "id": "decoration",
+   "name": "decoration",
+   "label": {
+    "en": "Flavour-aware decorator builder and a centralized runtime metadata store for TypeScript classes and their members.",
+    "pt": "Construtor de decoradores e repositório central de metadados."
+   },
+   "icon": "layers",
+   "href": "https://decaf-ts.github.io/decoration/"
+  },
+  {
+   "id": "decorator-validation",
+   "name": "decorator-validation",
+   "label": {
+    "en": "Declarative, decorator-driven validation, model building, serialization and hashing for TypeScript.",
+    "pt": "Validação declarativa, modelos, serialização e hashing."
+   },
+   "icon": "shield-check",
+   "href": "https://decaf-ts.github.io/decorator-validation/"
+  },
+  {
+   "id": "injectable-decorators",
+   "name": "injectable-decorators",
+   "label": {
+    "en": "A lightweight, decorator-based dependency-injection registry with lazy loading and custom transformations.",
+    "pt": "Injeção de dependências leve baseada em decoradores."
+   },
+   "icon": "plug",
+   "href": "https://decaf-ts.github.io/injectable-decorators/"
+  },
+  {
+   "id": "as-zod",
+   "name": "as-zod",
+   "label": {
+    "en": "A small add-on enabling two-way conversion between Decaf Models and Zod schemas.",
+    "pt": "Conversão bidirecional entre modelos decaf e esquemas Zod."
+   },
+   "icon": "arrows-exchange",
+   "href": "https://decaf-ts.github.io/as-zod/"
+  },
+  {
+   "id": "db-decorators",
+   "name": "db-decorators",
+   "label": {
+    "en": "Decorators and utilities for the repository pattern: model identity, composition, versioning and operation hooks.",
+    "pt": "Padrão repositório: identidade, composição, versão e hooks."
+   },
+   "icon": "database",
+   "href": "https://decaf-ts.github.io/db-decorators/"
+  },
+  {
+   "id": "transactional-decorators",
+   "name": "transactional-decorators",
+   "label": {
+    "en": "Transaction management through decorators and locks, with atomic execution and concurrency control.",
+    "pt": "Transações e locks via decoradores, com execução atómica."
+   },
+   "icon": "lock-closed",
+   "href": "https://decaf-ts.github.io/transactional-decorators/"
+  },
+  {
+   "id": "core",
+   "name": "core",
+   "label": {
+    "en": "The foundational Decaf package: models, repository pattern, adapters, a query DSL, task engine and migrations.",
+    "pt": "Base do decaf: modelos, repositórios, adaptadores, queries e migrações."
+   },
+   "icon": "cube",
+   "href": "https://decaf-ts.github.io/core/"
+  },
+  {
+   "id": "crypto",
+   "name": "crypto",
+   "label": {
+    "en": "A unified SubtleCrypto interface for browser and Node.js, with model property encryption and JWT support.",
+    "pt": "Interface SubtleCrypto unificada, criptografia de campos e JWT."
+   },
+   "icon": "lock",
+   "href": "https://decaf-ts.github.io/crypto/"
+  },
+  {
+   "id": "for-http",
+   "name": "for-http",
+   "label": {
+    "en": "CRUD-style repositories and services over REST APIs, with an Axios adapter and a webhook engine.",
+    "pt": "Repositórios e serviços REST com adaptador Axios e webhooks."
+   },
+   "icon": "cloud",
+   "href": "https://decaf-ts.github.io/for-http/"
+  },
+  {
+   "id": "ui-decorators",
+   "name": "ui-decorators",
+   "label": {
+    "en": "A declarative approach to UI rendering: render models as components with validation and CRUD-aware visibility.",
+    "pt": "Renderização declarativa de modelos como componentes de UI."
+   },
+   "icon": "swatch",
+   "href": "https://decaf-ts.github.io/ui-decorators/"
+  },
+  {
+   "id": "cli",
+   "name": "cli",
+   "label": {
+    "en": "A modular CLI framework that discovers and loads commands from any Decaf package through a single decaf entry point.",
+    "pt": "Framework CLI modular que descobre comandos de qualquer pacote decaf."
+   },
+   "icon": "terminal",
+   "href": "https://decaf-ts.github.io/cli/"
+  },
+  {
+   "id": "for-couchdb",
+   "name": "for-couchdb",
+   "label": {
+    "en": "A CouchDB adapter with Mango queries, indexing, sequences and document operations.",
+    "pt": "Adaptador CouchDB com queries Mango, índices e sequências."
+   },
+   "icon": "cylinder",
+   "href": "https://decaf-ts.github.io/for-couchdb/"
+  },
+  {
+   "id": "for-nano",
+   "name": "for-nano",
+   "label": {
+    "en": "A lightweight CouchDB-via-Nano adapter with CRUD, indexes, change feed dispatch and admin helpers.",
+    "pt": "Adaptador CouchDB via Nano com CRUD, índices e change feed."
+   },
+   "icon": "bolt",
+   "href": "https://decaf-ts.github.io/for-nano/"
+  },
+  {
+   "id": "for-pouch",
+   "name": "for-pouch",
+   "label": {
+    "en": "A PouchDB/CouchDB adapter and repository with Mango queries, indexes, relations and bulk ops.",
+    "pt": "Adaptador PouchDB com queries Mango, índices e operações em lote."
+   },
+   "icon": "archive-box",
+   "href": "https://decaf-ts.github.io/for-pouch/"
+  },
+  {
+   "id": "for-typeorm",
+   "name": "for-typeorm",
+   "label": {
+    "en": "A TypeORM-backed adapter wiring Decaf models, repositories and queries into relational databases.",
+    "pt": "Adaptador TypeORM que liga modelos decaf a bancos relacionais."
+   },
+   "icon": "table-cells",
+   "href": "https://decaf-ts.github.io/for-typeorm/"
+  },
+  {
+   "id": "for-fabric",
+   "name": "for-fabric",
+   "label": {
+    "en": "Hyperledger Fabric chaincode building blocks: repositories, CRUD contracts, sequences and events.",
+    "pt": "Blocos de chaincode Hyperledger Fabric: repositórios e contratos CRUD."
+   },
+   "icon": "link",
+   "href": "https://decaf-ts.github.io/for-fabric/"
+  },
+  {
+   "id": "for-nest",
+   "name": "for-nest",
+   "label": {
+    "en": "NestJS integration: Decaf modules, request pipeline, auth decorators, webhooks and migrations.",
+    "pt": "Integração NestJS: módulos decaf, pipeline, auth e webhooks."
+   },
+   "icon": "squares-2x2",
+   "href": "https://github.com/decaf-ts/for-nest#readme"
+  },
+  {
+   "id": "styles",
+   "name": "styles",
+   "label": {
+    "en": "Shared styles and theming used by the Decaf UI component libraries.",
+    "pt": "Estilos e temas partilhados pelas bibliotecas de UI decaf."
+   },
+   "icon": "paint-brush",
+   "href": "https://github.com/decaf-ts/styles#readme"
+  },
+  {
+   "id": "integrations",
+   "name": "integrations",
+   "label": {
+    "en": "Reusable helpers for Keycloak, Kibana, Nest auth, graph engine and org-based authorization scaffolding.",
+    "pt": "Helpers para Keycloak, Kibana, auth Nest, grafo e autorização."
+   },
+   "icon": "puzzle-piece",
+   "href": "https://github.com/decaf-ts/integrations#readme"
+  },
+  {
+   "id": "for-angular",
+   "name": "for-angular",
+   "label": {
+    "en": "The Decaf rendering engine and component library for Angular: models, lists, forms, modals and pipes.",
+    "pt": "Motor de renderização e biblioteca de componentes Angular decaf."
+   },
+   "icon": "code-bracket",
+   "href": "https://decaf-ts.github.io/for-angular/"
+  },
+  {
+   "id": "for-react-native",
+   "name": "for-react-native",
+   "label": {
+    "en": "Utilities and a rendering engine for using Decaf models in React Native apps.",
+    "pt": "Motor de renderização e utilitários decaf para React Native."
+   },
+   "icon": "device-phone-mobile",
+   "href": "https://github.com/decaf-ts/for-react-native#readme"
+  },
+  {
+   "id": "demo",
+   "name": "demo",
+   "label": {
+    "en": "A reference Decaf application exercising models, forms, layouts, handlers and a CLI.",
+    "pt": "Aplicação decaf de referência com modelos, formulários e CLI."
+   },
+   "icon": "play",
+   "href": "https://github.com/decaf-ts/demo#readme"
+  },
+  {
+   "id": "for-drizzle",
+   "name": "for-drizzle",
+   "label": {
+    "en": "A schema-first Drizzle ORM adapter for SQLite, MySQL and PostgreSQL.",
+    "pt": "Adaptador Drizzle schema-first para SQLite, MySQL e PostgreSQL."
+   },
+   "icon": "circle-stack",
+   "href": "https://github.com/decaf-ts/for-drizzle#readme"
+  },
+  {
+   "id": "weaver",
+   "name": "weaver",
+   "label": {
+    "en": "Fabric tooling: build scripts, Docker/Compose generation, Fabric CA and network helpers.",
+    "pt": "Ferramentas Fabric: builds, Docker/Compose, CA e rede."
+   },
+   "icon": "share",
+   "href": "https://decaf-ts.github.io/fabric-weaver/"
+  },
+  {
+   "id": "with-ai",
+   "name": "with-ai",
+   "label": {
+    "en": "The decaf-ts AI tooling package: the authoritative skills and agents catalog, plus an MCP server and a decaf CLI module.",
+    "pt": "Catálogo de skills e agentes, servidor MCP e módulo CLI decaf."
+   },
+   "icon": "sparkles",
+   "href": "https://decaf-ts.github.io/with-ai/"
+  },
+  {
+   "id": "reusable-actions",
+   "name": "reusable-actions",
+   "label": {
+    "en": "Shared GitHub Actions workflows: build, coverage, CodeQL, Snyk, Trivy scans, Renovate remediation and release automation.",
+    "pt": "Workflows GitHub Actions partilhados: build, cobertura e segurança."
+   },
+   "icon": "arrow-path",
+   "href": "https://github.com/decaf-ts/reusable-actions#readme"
+  },
+  {
+   "id": "for-nextjs",
+   "name": "for-nextjs",
+   "label": {
+    "en": "A Decaf rendering engine for Next.js: model-driven pages and layouts.",
+    "pt": "Motor de renderização decaf para Next.js: páginas e layouts."
+   },
+   "icon": "globe-alt",
+   "href": "https://github.com/decaf-ts/for-nextjs#readme"
+  },
+  {
+   "id": "for-react",
+   "name": "for-react",
+   "label": {
+    "en": "A Decaf rendering engine for React: model-driven components from ui-decorators.",
+    "pt": "Motor de renderização decaf para React: componentes de modelo."
+   },
+   "icon": "atom-symbol",
+   "href": "https://github.com/decaf-ts/for-react#readme"
+  },
+  {
+   "id": "as-infra",
+   "name": "as-infra",
+   "label": {
+    "en": "Infrastructure-as-code workspace: Terraform, Helm charts, ArgoCD and observability for portable deployments.",
+    "pt": "Infraestrutura como código: Terraform, Helm, ArgoCD e observabilidade."
+   },
+   "icon": "server-stack",
+   "href": "https://github.com/decaf-ts/as-infrastructure#readme"
+  },
+  {
+   "id": "as-graph",
+   "name": "as-graph",
+   "label": {
+    "en": "A graph namespace module with Type/Class/Interface nodes, utilities and a CLI.",
+    "pt": "Módulo de grafos com nós Type/Class/Interface e CLI."
+   },
+   "icon": "share",
+   "href": "https://github.com/decaf-ts/as-graph#readme"
+  }
+ ]
+}

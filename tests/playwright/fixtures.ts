@@ -296,7 +296,7 @@ async function installMockFontRoute(page) {
  * so blocking the decaf variable-Inter @import leaves only those static faces
  * and makes the app render text identically to the mock.
  */
-async function installAppFontRoutes(page) {
+export async function installAppFontRoutes(page) {
   // Serve the app's font binaries from the same vendored woff2 pin the mock
   // uses, so the app and mock paint the exact same font bytes.
   await page.route('**/fonts.gstatic.com/**', fulfillFromVendored);
@@ -324,11 +324,17 @@ async function installAppFontRoutes(page) {
 }
 
 export const locales = [
-  { code: 'en_us', hero: 'Brewed for Builders.', navFeatures: 'Features', navModules: 'Modules', modulesTitle: 'Explore Modules', examplesTitle: 'Examples for {module}', docTitle: 'Decaf - Hero Section' },
-  { code: 'en_en', hero: 'Brewed for Builders.', navFeatures: 'Features', navModules: 'Modules', modulesTitle: 'Explore Modules', examplesTitle: 'Examples for {module}', docTitle: 'Decaf - Hero Section' },
-  { code: 'pt_br', hero: 'Preparado para Criadores.', navFeatures: 'Recursos', navModules: 'Módulos', modulesTitle: 'Explorar Módulos', examplesTitle: 'Exemplos para {module}', docTitle: 'Decaf - Seção Hero' },
-  { code: 'pt_pt', hero: 'Preparado para Criadores.', navFeatures: 'Funcionalidades', navModules: 'Módulos', modulesTitle: 'Explorar Módulos', examplesTitle: 'Exemplos para {module}', docTitle: 'Decaf - Secção Hero' },
+  { code: 'en_us', hero: 'Brewed for Builders.', navFeatures: 'Features', navModules: 'Modules', modulesTitle: 'Explore Modules', examplesTitle: 'Examples for {module}', docTitle: 'Decaf - Hero Section', documentationTitle: 'Documentation Hub', showcaseTitle: 'What Decaf Does, In Code', appsTitle: 'Apps Built with Decaf', newsTitle: 'Latest Releases', communityTitle: 'Community', showcaseDetailTitle: 'Extensible Decoration' },
+  { code: 'en_en', hero: 'Brewed for Builders.', navFeatures: 'Features', navModules: 'Modules', modulesTitle: 'Explore Modules', examplesTitle: 'Examples for {module}', docTitle: 'Decaf - Hero Section', documentationTitle: 'Documentation Hub', showcaseTitle: 'What Decaf Does, In Code', appsTitle: 'Apps Built with Decaf', newsTitle: 'Latest Releases', communityTitle: 'Community', showcaseDetailTitle: 'Extensible Decoration' },
+  { code: 'pt_br', hero: 'Preparado para Criadores.', navFeatures: 'Recursos', navModules: 'Módulos', modulesTitle: 'Explorar Módulos', examplesTitle: 'Exemplos para {module}', docTitle: 'Decaf - Seção Hero', documentationTitle: 'Central de Documentação', showcaseTitle: 'O Que o Decaf Faz, em Código', appsTitle: 'Apps Feitas com Decaf', newsTitle: 'Últimos Lançamentos', communityTitle: 'Comunidade', showcaseDetailTitle: 'Decoração Extensível' },
+  { code: 'pt_pt', hero: 'Preparado para Criadores.', navFeatures: 'Funcionalidades', navModules: 'Módulos', modulesTitle: 'Explorar Módulos', examplesTitle: 'Exemplos para {module}', docTitle: 'Decaf - Secção Hero', documentationTitle: 'Central de Documentação', showcaseTitle: 'O Que o Decaf Faz, em Código', appsTitle: 'Apps Feitas com Decaf', newsTitle: 'Últimos Lançamentos', communityTitle: 'Comunidade', showcaseDetailTitle: 'Decoração Extensível' },
 ];
+
+/**
+ * The showcase highlight whose detail page (`/showcase/:id`) the suites exercise.
+ * The id is a stable content id from `src/assets/data/showcase.json`.
+ */
+export const SHOWCASE_DETAIL_ID = 'extensible-decoration';
 
 export const pages = [
   { name: 'index', appPath: '', mockFile: 'index.html' },
@@ -338,10 +344,19 @@ export const pages = [
   { name: 'examples', appPath: 'examples', mockFile: 'examples.html' },
 ];
 
-// All routed SPA pages (the www-mock reference has no community.html, so the
-// community route is covered by the e2e suite only, not the visual diff).
+/**
+ * All routed SPA pages. The www-mock reference only ships the five round-1
+ * pages (`index`, `modules`, `features`, `tutorials`, `examples`), so the round-2
+ * routes (`documentation`, `showcase`, `showcase/:id`, `apps`, `news`) and
+ * `community` are covered by the e2e + ui-i18n suites only, not by the visual diff.
+ */
 export const appPages = [
   ...pages,
+  { name: 'documentation', appPath: 'documentation', mockFile: null as string | null },
+  { name: 'showcase', appPath: 'showcase', mockFile: null as string | null },
+  { name: 'showcase-detail', appPath: `showcase/${SHOWCASE_DETAIL_ID}`, mockFile: null as string | null },
+  { name: 'apps', appPath: 'apps', mockFile: null as string | null },
+  { name: 'news', appPath: 'news', mockFile: null as string | null },
   { name: 'community', appPath: 'community', mockFile: null as string | null },
 ];
 
@@ -350,10 +365,13 @@ export const breakpoints = [
   { name: 'mobile', width: 390, height: 844 },
 ];
 
-export const APP_ROUTE = (pageName: string, localeCode: string) =>
-  pageName === 'index'
-    ? `${APP_URL}/?lang=${localeCode}`
-    : `${APP_URL}/${pageName}?lang=${localeCode}`;
+/**
+ * Build the URL of a routed app page. `appPath` is the route's path relative to
+ * the app root (`''` for the index); the locale travels as `?lang=`, the same
+ * query parameter `LocaleService` resolves the initial locale from.
+ */
+export const APP_ROUTE = (appPath: string, localeCode: string) =>
+  appPath ? `${APP_URL}/${appPath}?lang=${localeCode}` : `${APP_URL}/?lang=${localeCode}`;
 
 /**
  * Freeze any rAF-driven marquee (the www-mock DecafMarquee and the app's CSS-keyframe
@@ -671,7 +689,7 @@ export async function openMock(page, mockFile, localeCode) {
 }
 
 /** Open the built app at a route using `?lang=` for the requested locale. */
-export async function openApp(page, pageName, localeCode) {
+export async function openApp(page, appPath, localeCode, options: { reportMode?: boolean } = {}) {
   await trackResizeListeners(page);
   // Pin Math.random so any random-dependent rendering (e.g. the footer slogan
   // selection the mock pins identically) is deterministic and reproducible
@@ -680,13 +698,19 @@ export async function openApp(page, pageName, localeCode) {
     Math.random = () => 0;
   });
   await installAppFontRoutes(page);
-  await page.goto(APP_ROUTE(pageName, localeCode), { waitUntil: 'load' });
-  await page.waitForSelector('.app-layout__locale-button', { state: 'attached' });
-  // The mock has no locale selector — hide the app's fixed locale button so
+  if (options.reportMode) {
+    // Registered AFTER the app-wide document route so it wins (Playwright matches
+    // the most recently registered matching route first) and blanks every i18n
+    // resource, which is how report mode renders the visible translation keys.
+    await installEmptyI18nRoutes(page);
+  }
+  await page.goto(APP_ROUTE(appPath, localeCode), { waitUntil: 'load' });
+  await page.waitForSelector('.site-nav__locale-button', { state: 'attached' });
+  // The mock has no locale selector — hide the app's nav locale control so
   // it doesn't overlay the top-right corner in visual-diff captures.
   await page.addStyleTag({
     content: [
-      '.app-layout__locale { display: none !important; }',
+      '.site-nav__locale { display: none !important; }',
       // Kill CSS-keyframe marquee animations at the stylesheet level so the
       // track stays at translateX(0) regardless of when the screenshot is
       // taken.  Inline `animation: none` can be overridden by Playwright's
@@ -701,19 +725,50 @@ export async function openApp(page, pageName, localeCode) {
 }
 
 /**
+ * The locale codes in the order `SITE_LOCALES` declares them. The nav's locale
+ * menu renders one option per code in this exact order with the translated display
+ * name as its text (never the raw code), so the option is selected by index.
+ */
+export const SITE_LOCALE_CODES = ['en_en', 'en_us', 'pt_br', 'pt_pt'] as const;
+
+/**
  * Switch the built app to the requested locale through its button-based
- * locale menu (the reworked layout renders a fixed locale button instead of
- * the old `<select class="locale-select">` used by the www-mock).
+ * locale menu. The nav chrome (`SiteNavComponent`) renders the language selector
+ * inside the page hero as `.site-nav__locale-button` / `.site-nav__locale-option`
+ * (the round-2 nav replaced the old layout-owned `.app-layout__locale-*` control).
  */
 export async function switchLocaleApp(page, localeCode) {
-  const button = page.locator('.app-layout__locale-button');
+  const button = page.locator('.site-nav__locale-button');
   await button.waitFor({ state: 'visible' });
   await button.click();
-  const option = page.locator('.app-layout__locale-option', {
-    hasText: localeCode,
-  });
+  const index = SITE_LOCALE_CODES.indexOf(localeCode);
+  if (index < 0) throw new Error(`unsupported locale code: ${localeCode}`);
+  const option = page.locator('.site-nav__locale-option').nth(index);
   await option.click();
   await page.waitForTimeout(600);
+}
+
+/**
+ * Glob matching the app's translation resource requests
+ * (`./assets/i18n/<lang>.json`), served by `I18nLoader`.
+ */
+export const I18N_RESOURCE_GLOB = '**/assets/i18n/*.json';
+
+/**
+ * Report mode without touching app source: serve an empty translation object for
+ * every i18n resource request, so `TranslateService.instant(key)` resolves to the
+ * key itself and every `| translate` element renders its visible translation key.
+ *
+ * The app has no bootstrap-level i18n on/off flag yet (unlike flipbored's
+ * `FLIPBORED__I18N__ENABLED`); when the app grows one, `openApp`'s report-mode
+ * path can switch to it and the ui-i18n spec can use the
+ * `.dcf-translation-key` wrapper directly. Until then this test-side
+ * interception is the equivalent visible-key rendering, with no production change.
+ */
+export async function installEmptyI18nRoutes(page) {
+  await page.route(I18N_RESOURCE_GLOB, (route) =>
+    route.fulfill({ status: 200, contentType: 'application/json', body: '{}' }),
+  );
 }
 
 export function visualExpect(page) {

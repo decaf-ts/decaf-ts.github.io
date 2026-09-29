@@ -1,7 +1,10 @@
 /**
- * E2E suite: the built app must render all six routed pages, in all four
- * locales, with the correct localized strings, navigation, locale switching,
- * footer placement and clean console/runtime behaviour.
+ * E2E suite: the built app must render every routed page, in all four locales,
+ * with the correct localized strings, navigation, locale switching, footer
+ * placement and clean console/runtime behaviour.
+ *
+ * Routed pages (11): index, modules, features, tutorials, examples,
+ * documentation, showcase, showcase/:id, apps, news and community.
  */
 import { test, expect, Page } from '@playwright/test';
 import {
@@ -9,6 +12,7 @@ import {
   appPages,
   APP_URL,
   APP_ROUTE,
+  SHOWCASE_DETAIL_ID,
   switchLocaleApp,
 } from './fixtures';
 
@@ -19,6 +23,41 @@ function collectErrors(page: Page): string[] {
   });
   page.on('pageerror', (err) => errors.push(String(err)));
   return errors;
+}
+
+/**
+ * The routed page's localized h1, read from the locale fixture. The
+ * `showcase/:id` route renders a content-owned highlight title instead of an
+ * i18n-keyed page title, and the index hero is checked separately.
+ */
+function pageTitle(pageName: string, locale: (typeof locales)[number]): string | undefined {
+  switch (pageName) {
+    case 'modules':
+      return locale.modulesTitle;
+    case 'documentation':
+      return locale.documentationTitle;
+    case 'showcase':
+      return locale.showcaseTitle;
+    case 'showcase-detail':
+      return locale.showcaseDetailTitle;
+    case 'apps':
+      return locale.appsTitle;
+    case 'news':
+      return locale.newsTitle;
+    case 'community':
+      return locale.communityTitle;
+    default:
+      return undefined;
+  }
+}
+
+/** The routed pages whose layout renders the `SiteNavComponent` chrome. */
+function hasNav(pageName: string): boolean {
+  return pageName !== 'showcase-detail';
+}
+
+async function waitForPage(page: Page): Promise<void> {
+  await page.waitForSelector('app-site-page, app-showcase-detail', { state: 'attached' });
 }
 
 async function expectFooterAtEnd(page: Page): Promise<void> {
@@ -50,13 +89,21 @@ test.describe('web-page E2E', () => {
         }) => {
           test.setTimeout(60_000);
           const errors = collectErrors(page);
-          await page.goto(APP_ROUTE(pg.name, locale.code), { waitUntil: 'load' });
-
-          await expect(page.locator('.app-layout__locale-button')).toBeVisible();
+          await page.goto(APP_ROUTE(pg.appPath, locale.code), { waitUntil: 'load' });
+          await waitForPage(page);
           await page.waitForTimeout(1200);
 
           if (pg.name === 'index') {
             await expect(page.getByText(locale.hero)).toBeVisible();
+          }
+
+          const expectedTitle = pageTitle(pg.name, locale);
+          if (expectedTitle) {
+            await expect(page.getByRole('heading', { name: expectedTitle })).toBeVisible();
+          }
+
+          if (hasNav(pg.name)) {
+            await expect(page.locator('.site-nav__locale-button')).toBeVisible();
           }
 
           expect(errors).toEqual([]);
@@ -66,10 +113,26 @@ test.describe('web-page E2E', () => {
       test('locale switcher button switches language in place', async ({ page }) => {
         test.setTimeout(60_000);
         const errors = collectErrors(page);
-        await page.goto(APP_ROUTE('index', locale.code), { waitUntil: 'load' });
+        await page.goto(APP_ROUTE('documentation', locale.code), { waitUntil: 'load' });
+        await waitForPage(page);
         await page.waitForTimeout(800);
         await switchLocaleApp(page, 'en_us');
-        await expect(page.getByText('Brewed for Builders.')).toBeVisible();
+        await expect(
+          page.getByRole('heading', { name: 'Documentation Hub' })
+        ).toBeVisible();
+        expect(errors).toEqual([]);
+      });
+
+      test('locale switcher switches a round-2 route to pt_br', async ({ page }) => {
+        test.setTimeout(60_000);
+        const errors = collectErrors(page);
+        await page.goto(APP_ROUTE('showcase', locale.code), { waitUntil: 'load' });
+        await waitForPage(page);
+        await page.waitForTimeout(800);
+        await switchLocaleApp(page, 'pt_br');
+        await expect(
+          page.getByRole('heading', { name: 'O Que o Decaf Faz, em Código' })
+        ).toBeVisible();
         expect(errors).toEqual([]);
       });
     });
@@ -79,19 +142,37 @@ test.describe('web-page E2E', () => {
     test.setTimeout(60_000);
     const errors = collectErrors(page);
     await page.goto(`${APP_URL}/`, { waitUntil: 'load' });
-    await page.waitForSelector('.app-layout__locale-button', { state: 'attached' });
+    await page.waitForSelector('.site-nav__locale-button', { state: 'attached' });
     await page.waitForTimeout(1200);
     expect(errors).toEqual([]);
   });
 
-  test('all six routes navigate via the SPA router', async ({ page }) => {
+  test('all routed pages navigate via the SPA router', async ({ page }) => {
     test.setTimeout(120_000);
     const errors = collectErrors(page);
     for (const pg of appPages) {
-      await page.goto(APP_ROUTE(pg.name, 'en_us'), { waitUntil: 'load' });
-      await page.waitForSelector('.app-layout__locale-button', { state: 'attached' });
-      expect(await page.locator('.app-layout__locale-button').count()).toBe(1);
+      await page.goto(APP_ROUTE(pg.appPath, 'en_us'), { waitUntil: 'load' });
+      await waitForPage(page);
+      expect(await page.locator('app-site-page, app-showcase-detail').count()).toBeGreaterThan(0);
     }
+    expect(errors).toEqual([]);
+  });
+
+  test('showcase detail route resolves a highlight and links back to /showcase', async ({
+    page,
+  }) => {
+    test.setTimeout(60_000);
+    const errors = collectErrors(page);
+    await page.goto(APP_ROUTE(`showcase/${SHOWCASE_DETAIL_ID}`, 'en_us'), { waitUntil: 'load' });
+    await waitForPage(page);
+    await page.waitForTimeout(1200);
+    await expect(page.locator('.showcase-detail__title')).toHaveText('Extensible Decoration');
+    await expect(page.locator('.showcase-detail__back')).toBeVisible();
+    await page.locator('.showcase-detail__back').click();
+    await page.waitForURL(/\/showcase(\?|$)/);
+    await expect(
+      page.getByRole('heading', { name: 'What Decaf Does, In Code' })
+    ).toBeVisible();
     expect(errors).toEqual([]);
   });
 
@@ -100,7 +181,7 @@ test.describe('web-page E2E', () => {
   }) => {
     test.setTimeout(60_000);
     await page.goto(APP_ROUTE('modules', 'en_us'), { waitUntil: 'load' });
-    await page.waitForSelector('.app-layout__locale-button', { state: 'attached' });
+    await page.waitForSelector('.site-nav__locale-button', { state: 'attached' });
     await page.waitForTimeout(1500);
     await expectFooterAtEnd(page);
   });
@@ -109,7 +190,7 @@ test.describe('web-page E2E', () => {
     page,
   }) => {
     test.setTimeout(60_000);
-    await page.goto(APP_ROUTE('index', 'en_us'), { waitUntil: 'load' });
+    await page.goto(APP_ROUTE('', 'en_us'), { waitUntil: 'load' });
     await page.waitForTimeout(1500);
 
     const heroBg = await page

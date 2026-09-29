@@ -1,0 +1,53 @@
+<ng-template #highlightCard let-item>
+  <article
+    class="showcase-grid__card"
+    [attr.data-accent]="highlight(item).accent"
+    [attr.title]="highlight(item).tagline || highlight(item).title"
+  >
+    <div class="showcase-grid__icon-wrap">
+      <i class="ti ti-{{ highlight(item).icon || 'sparkles' }}" aria-hidden="true"></i>
+    </div>
+    <h3 class="showcase-grid__title">{{ highlight(item).title }}</h3>
+    <p class="showcase-grid__tagline">{{ highlight(item).tagline }}</p>
+    @if (modulesOf(highlight(item)).length) {
+      <ul class="showcase-grid__modules">
+        @for (module of modulesOf(highlight(item)); track module) {
+          <li class="showcase-grid__module">{{ module }}</li>
+        }
+      </ul>
+    }
+    <a class="showcase-grid__link" [routerLink]="['/showcase', highlight(item).id]">
+      {{ 'showcase.see_code' | translate }}
+    </a>
+    <div class="showcase-grid__overlay" aria-hidden="true">
+      <span class="showcase-grid__overlay-label">{{ 'showcase.see_code' | translate }}</span>
+      <p class="showcase-grid__overlay-text">{{ highlight(item).tagline }}</p>
+    </div>
+  </article>
+</ng-template>
+
+@if (marquee) {
+  <div
+    id="showcase-highlights"
+    class="showcase-marquee"
+    [attr.aria-label]="'showcase.title' | translate"
+  >
+    <div class="showcase-marquee__track">
+      @for (copy of [0, 1]; track copy) {
+        <div class="showcase-marquee__page" [attr.aria-hidden]="copy === 1 ? 'true' : null">
+          <div class="showcase-grid">
+            @for (item of items; track item['model'].id) {
+              <ng-container *ngTemplateOutlet="highlightCard; context: { $implicit: item }"></ng-container>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+} @else {
+  <div id="showcase-highlights" class="showcase-grid">
+    @for (item of items; track item['model'].id) {
+      <ng-container *ngTemplateOutlet="highlightCard; context: { $implicit: item }"></ng-container>
+    }
+  </div>
+}

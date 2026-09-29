@@ -1,8 +1,35 @@
 <div id="feature-modules" class="feature-cards">
-  @for (item of items; track item['model'].id) {
+  @for (item of items; track item['model'].id; let index = $index) {
     <article class="feature-cards__item">
-      <h3 class="feature-cards__title">{{ item['model'].title }}</h3>
-      <p class="feature-cards__description">{{ item['model'].description }}</p>
+      <span class="feature-cards__index">{{ ordinal(index) }}</span>
+      <div class="feature-cards__body">
+        <h3 class="feature-cards__title">{{ feature(item).title }}</h3>
+        <div class="feature-cards__description md-body" [innerHTML]="feature(item).description | markdown"></div>
+      </div>
     </article>
   }
 </div>
+
+@if (examples.length) {
+  <section class="feature-examples">
+    <h3 class="feature-examples__title">{{ 'examples.code' | translate }}</h3>
+    @for (example of examples; track example.id) {
+      <figure class="feature-examples__snippet">
+        @if (example.title) {
+          <figcaption class="feature-examples__snippet-title">
+            {{ example.title }}
+            @if (example.lang) {
+              <span class="feature-examples__lang">{{ example.lang }}</span>
+            }
+          </figcaption>
+        }
+        @if (example.summary) {
+          <p class="feature-examples__snippet-summary">{{ example.summary }}</p>
+        }
+        @if (example.code) {
+          <pre class="feature-examples__code"><code>{{ example.code }}</code></pre>
+        }
+      </figure>
+    }
+  </section>
+}

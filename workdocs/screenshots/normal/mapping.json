@@ -1,0 +1,80 @@
+[
+  {
+    "id": "index",
+    "description": "Home -- hero, module marquee and CTA",
+    "mode": "normal",
+    "file": "normal/index.png"
+  },
+  {
+    "id": "modules",
+    "description": "Modules -- browsable module grid",
+    "mode": "normal",
+    "file": "normal/modules.png"
+  },
+  {
+    "id": "features",
+    "description": "Features -- feature highlights",
+    "mode": "normal",
+    "file": "normal/features.png"
+  },
+  {
+    "id": "tutorials",
+    "description": "Tutorials -- guided tutorial list",
+    "mode": "normal",
+    "file": "normal/tutorials.png"
+  },
+  {
+    "id": "examples",
+    "description": "Examples -- code examples list",
+    "mode": "normal",
+    "file": "normal/examples.png"
+  },
+  {
+    "id": "documentation",
+    "description": "Documentation hub -- round-2 documentation landing page",
+    "mode": "normal",
+    "file": "normal/documentation.png"
+  },
+  {
+    "id": "showcase",
+    "description": "Showcase -- round-2 highlights grid",
+    "mode": "normal",
+    "file": "normal/showcase.png"
+  },
+  {
+    "id": "showcase-detail",
+    "description": "Showcase detail (extensible-decoration) -- highlight with live demo and code",
+    "mode": "normal",
+    "file": "normal/showcase-detail.png"
+  },
+  {
+    "id": "showcase-detail-not-found",
+    "description": "Showcase detail -- unknown id renders the not-found state",
+    "mode": "normal",
+    "file": "normal/showcase-detail-not-found.png"
+  },
+  {
+    "id": "apps",
+    "description": "Apps -- round-2 apps built with Decaf",
+    "mode": "normal",
+    "file": "normal/apps.png"
+  },
+  {
+    "id": "news",
+    "description": "News -- latest releases page",
+    "mode": "normal",
+    "file": "normal/news.png"
+  },
+  {
+    "id": "community",
+    "description": "Community -- round-2 community page",
+    "mode": "normal",
+    "file": "normal/community.png"
+  },
+  {
+    "id": "locale-menu",
+    "description": "Navigation locale menu -- open language popup",
+    "mode": "normal",
+    "file": "normal/locale-menu.png"
+  }
+]

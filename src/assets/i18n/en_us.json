@@ -8,6 +8,7 @@
     "subtitle": "Browse all Decaf modules and learn how to use them with examples extracted from their documentation.",
     "kicker": "Module",
     "see_examples": "See Examples",
+    "read_more": "Read the full description",
     "see_tutorials": "See Tutorials",
     "demo_label": "Module Examples",
     "no_examples": "No examples available yet.",
@@ -16,6 +17,7 @@
   "examples": {
     "document_title": "Decaf - Examples",
     "title": "Examples for {module}",
+    "default_hint": "Pick a module to see its examples, or browse every example below.",
     "no_description": "No description available.",
     "code": "Code",
     "example_title": "Example {n} · {lang}",
@@ -31,21 +33,21 @@
         "title": "Examples for {module}",
         "summary": "Usage examples and best practices for {module}."
       },
-      "decoration": {
-        "title": "Decoration",
-        "summary": "Decorators and metadata helpers for TypeScript."
+      "utils": {
+        "title": "Utils",
+        "summary": "General purpose utilities for Decaf projects."
       },
       "logging": {
         "title": "Logging",
         "summary": "Structured logging utilities and integrations."
       },
-      "utils": {
-        "title": "Utils",
-        "summary": "General purpose utilities for Decaf projects."
+      "testing": {
+        "title": "Testing",
+        "summary": "Test reporting and shared test utilities."
       },
-      "reflection": {
-        "title": "Reflection",
-        "summary": "Runtime type reflection helpers and metadata."
+      "decoration": {
+        "title": "Decoration",
+        "summary": "Decorators and metadata helpers for TypeScript."
       },
       "decorator-validation": {
         "title": "Decorator Validation",
@@ -70,6 +72,10 @@
       "core": {
         "title": "Core",
         "summary": "Core shared primitives across Decaf modules."
+      },
+      "crypto": {
+        "title": "Crypto",
+        "summary": "Field encryption, JWT and crypto services."
       },
       "for-http": {
         "title": "For HTTP",
@@ -111,13 +117,13 @@
         "title": "Styles",
         "summary": "Shared styles and tokens for UI."
       },
+      "integrations": {
+        "title": "Integrations",
+        "summary": "Keycloak, blobs, flags, secrets and more."
+      },
       "for-angular": {
         "title": "For Angular",
         "summary": "Angular integrations and helpers."
-      },
-      "mcp-server": {
-        "title": "MCP Server",
-        "summary": "Model Context Protocol server components."
       },
       "for-react-native": {
         "title": "For React Native",
@@ -126,12 +132,46 @@
       "demo": {
         "title": "Demo",
         "summary": "Demonstration module."
+      },
+      "for-drizzle": {
+        "title": "For Drizzle",
+        "summary": "Drizzle ORM helpers and patterns."
+      },
+      "weaver": {
+        "title": "Weaver",
+        "summary": "Cross-repository workspace orchestration."
+      },
+      "with-ai": {
+        "title": "With AI",
+        "summary": "Skills and agents for AI-assisted development."
+      },
+      "reusable-actions": {
+        "title": "Reusable Actions",
+        "summary": "Shared GitHub Actions workflows."
+      },
+      "for-nextjs": {
+        "title": "For Next.js",
+        "summary": "Next.js integrations and helpers."
+      },
+      "for-react": {
+        "title": "For React",
+        "summary": "React integrations and helpers."
+      },
+      "as-infra": {
+        "title": "As Infra",
+        "summary": "Infrastructure scaffolding and tooling."
+      },
+      "as-graph": {
+        "title": "As Graph",
+        "summary": "Graph data structures and execution."
       }
     }
   },
   "nav": {
     "modules": "Modules",
     "features": "Features",
+    "showcase": "Showcase",
+    "apps": "Apps",
     "documentation": "Documentation",
     "community": "Community"
   },
@@ -140,7 +180,12 @@
   },
   "banner": {
     "latest_news": "Latest news from Decaf v0.2",
-    "slogans": ["Build boldly. Brewed for developers.", "Modular by design. Productive by default.", "Less boilerplate. More shipping.", "TypeScript-first. Everywhere."]
+    "slogans": [
+      "Build boldly. Brewed for developers.",
+      "Modular by design. Productive by default.",
+      "Less boilerplate. More shipping.",
+      "TypeScript-first. Everywhere."
+    ]
   },
   "hero": {
     "title": "Brewed for Builders.",
@@ -195,7 +240,103 @@
     "grade": {
       "demo_label": "Grade Tracking Demo"
     },
-    "see_how": "See How It Works"
+    "see_how": "See How It Works",
+    "title": "What Decaf Does, In Code",
+    "subtitle": "Twelve capabilities that define the suite — each with real snippets and a live demo.",
+    "see_code": "See the code",
+    "modules_used": "Modules used",
+    "run_demo": "Run the demo",
+    "demo": {
+      "allow": "allow",
+      "block": "block",
+      "valid": "valid",
+      "invalid": "invalid",
+      "on": "on",
+      "off": "off",
+      "plain": "plain",
+      "cipher": "cipher"
+    },
+    "not_found": "That showcase highlight does not exist.",
+    "back": "Back to showcase",
+    "model": {
+      "id": {
+        "label": "User id",
+        "placeholder": "1"
+      },
+      "name": {
+        "label": "Full name",
+        "placeholder": "Ada Lovelace"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "ada@example.com"
+      },
+      "website": {
+        "label": "Website",
+        "placeholder": "https://decaf-ts.dev"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "••••••••"
+      },
+      "gender": {
+        "label": "Gender",
+        "options": {
+          "male": "Male",
+          "female": "Female"
+        }
+      },
+      "contact": {
+        "label": "Preferred contact",
+        "options": {
+          "morning": "Morning",
+          "afternoon": "Afternoon",
+          "evening": "Evening"
+        }
+      },
+      "birthdate": {
+        "label": "Birthdate"
+      },
+      "agree": {
+        "label": "I accept the terms"
+      }
+    },
+    "cross_ui": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Graph engine"
+      },
+      "summary": {
+        "label": "Summary",
+        "placeholder": "What this capability does"
+      },
+      "category": {
+        "label": "Category",
+        "options": {
+          "core": "Core",
+          "ui": "UI",
+          "backend": "Backend"
+        }
+      }
+    },
+    "validation": {
+      "name": {
+        "label": "Name",
+        "placeholder": "At least 5 characters"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "••••••••"
+      },
+      "age": {
+        "label": "Age",
+        "placeholder": "18"
+      }
+    }
   },
   "faq": {
     "kicker": "Answers at Your Fingertips",
@@ -236,7 +377,8 @@
   "tutorials": {
     "document_title": "Decaf - Tutorials",
     "title": "Tutorials",
-    "subtitle": "High-value, real-life examples and recipes for using @decaf-ts modules."
+    "subtitle": "High-value, real-life examples and recipes for using @decaf-ts modules.",
+    "default_hint": "Pick a module to see its tutorials, or browse every tutorial below."
   },
   "community": {
     "document_title": "Decaf - Community",
@@ -257,5 +399,40 @@
       "title": "Tutorials",
       "description": "Step-by-step guides and contribution handbooks to get you productive with Decaf."
     }
+  },
+  "apps": {
+    "document_title": "Decaf - Apps",
+    "kicker": "Built with Decaf",
+    "title": "Apps Built with Decaf",
+    "subtitle": "Real applications shipping on the Decaf stack.",
+    "built_with": "Built with",
+    "visit": "Visit",
+    "view_code": "View code",
+    "highlights": "Highlights"
+  },
+  "documentation": {
+    "document_title": "Decaf - Documentation",
+    "kicker": "Documentation",
+    "title": "Documentation Hub",
+    "subtitle": "Jump into the official docs of every Decaf module — APIs, guides and reference material.",
+    "open_docs": "Open docs",
+    "repo": "Repository",
+    "empty": "No documentation is available yet."
+  },
+  "locale": {
+    "names": {
+      "en_en": "English",
+      "en_us": "English (US)",
+      "pt_br": "Portuguese (Brazil)",
+      "pt_pt": "Portuguese (Portugal)"
+    }
+  },
+  "news": {
+    "document_title": "News",
+    "title": "Latest Releases",
+    "subtitle": "What changed across the decaf suite, straight from the changelogs.",
+    "empty": "No releases yet. Check back soon.",
+    "no_notes": "No release notes for this version.",
+    "view_release": "View release"
   }
 }

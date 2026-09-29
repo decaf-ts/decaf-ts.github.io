@@ -12,10 +12,16 @@ import { Faq } from '../models/Faq';
 import { Brand } from '../models/Brand';
 import { Tutorial } from '../models/Tutorial';
 import { Example } from '../models/Example';
+import { ShowcaseHighlight } from '../models/ShowcaseHighlight';
+import { DecafApp } from '../models/DecafApp';
+import { NewsItem } from '../models/NewsItem';
+import { CodeExample } from '../models/CodeExample';
 import { Section } from '../structure/Section';
 import { WebAppPage } from '../structure/WebAppPage';
 import { SiteLocale, SITE_SEED } from '../seed/i18n-data';
 import { buildSite, SeedSection, SeedItem } from '../seed/site.seed';
+import { resolveMarqueeIcon } from '../seed/marquee-icons';
+import { loadDecoratorLinks } from '../seed/decorator-links';
 
 /**
  * @description Localized value as authored by the content team: either a plain
@@ -92,6 +98,120 @@ export interface RawModuleDoc {
 }
 
 /**
+ * @description Raw code snippet entry of a `assets/data/showcase.json` highlight.
+ * @interface RawShowcaseExample
+ * @memberOf module:app/services/SiteService
+ */
+export interface RawShowcaseExample {
+  title?: LocalizedValue;
+  lang?: string;
+  code?: string;
+}
+
+/**
+ * @description One entry of the bundled `assets/data/showcase.json` asset. Text
+ * fields accept the localized `{ en, pt }` shape with `en` fallback; a plain string
+ * is also accepted.
+ * @interface RawShowcaseHighlight
+ * @memberOf module:app/services/SiteService
+ */
+export interface RawShowcaseHighlight {
+  id?: string;
+  slug?: string;
+  order?: number;
+  title?: LocalizedValue;
+  tagline?: LocalizedValue;
+  detail?: LocalizedValue;
+  icon?: string;
+  accent?: string;
+  modules?: string[] | string;
+  demo?: { kind?: string; label?: LocalizedValue; config?: Record<string, unknown> };
+  demoKind?: string;
+  demoLabel?: LocalizedValue;
+  codeExamples?: RawShowcaseExample[];
+}
+
+/**
+ * @description One entry of the bundled `assets/data/apps.json` asset. Text fields
+ * accept the localized `{ en, pt }` shape with `en` fallback; a plain string is
+ * also accepted.
+ * @interface RawDecafApp
+ * @memberOf module:app/services/SiteService
+ */
+export interface RawDecafApp {
+  id?: string;
+  order?: number;
+  name?: string;
+  tagline?: LocalizedValue;
+  description?: LocalizedValue;
+  links?: { repo?: string; site?: string; docs?: string };
+  repo?: string;
+  site?: string;
+  docs?: string;
+  logo?: string;
+  screenshot?: string;
+  modules?: string[] | string;
+  showcase?: string[] | string;
+}
+
+/**
+ * @description One entry of the build-time `assets/data/news.json` asset
+ * (generated from the public GitHub Releases of every roster repository).
+ * @interface RawNewsItem
+ * @memberOf module:app/services/SiteService
+ */
+export interface RawNewsItem {
+  id?: string;
+  order?: number;
+  repo?: string;
+  remote?: string;
+  tag?: string;
+  title?: string;
+  date?: string;
+  url?: string;
+  excerpt?: string;
+  body?: string;
+}
+
+/**
+ * @description One brand entry of the authored `assets/data/marquee.json` asset.
+ * @interface RawMarqueeBrand
+ * @memberOf module:app/services/SiteService
+ */
+export interface RawMarqueeBrand {
+  id?: string;
+  name?: string;
+  label?: LocalizedValue;
+  icon?: string;
+  src?: string;
+}
+
+/**
+ * @description One module card entry of the authored `assets/data/marquee.json` asset.
+ * @interface RawMarqueeModule
+ * @memberOf module:app/services/SiteService
+ */
+export interface RawMarqueeModule {
+  id?: string;
+  name?: string;
+  title?: LocalizedValue;
+  description?: LocalizedValue;
+  label?: LocalizedValue;
+  icon?: string;
+}
+
+/**
+ * @description The authored `assets/data/marquee.json` asset: the revised item lists
+ * of the homepage brands and modules marquees.
+ * @interface RawMarquee
+ * @memberOf module:app/services/SiteService
+ */
+export interface RawMarquee {
+  brands?: RawMarqueeBrand[];
+  modules?: RawMarqueeModule[];
+}
+
+/**
  * @description Locale resolution order used to pick a localized string from the
  * `{ en, pt }` content shape: exact locale, sibling variant, base language, then
  * the `en` fallback.
@@ -123,6 +243,33 @@ const SEEDED_IDS: Record<string, string[]> = {};
  * @memberOf module:app/services/SiteService
  */
 const MODULE_NAMES: string[] = [];
+
+/**
+ * @const SHOWCASE_IDS
+ * @description Identifiers of the seeded {@link ShowcaseHighlight} records, remembered
+ * so `getShowcase()` can read them all back from the RamAdapter.
+ * @type {string[]}
+ * @memberOf module:app/services/SiteService
+ */
+const SHOWCASE_IDS: string[] = [];
+
+/**
+ * @const APP_IDS
+ * @description Identifiers of the seeded {@link DecafApp} records, remembered so
+ * `getApps()` can read them all back from the RamAdapter.
+ * @type {string[]}
+ * @memberOf module:app/services/SiteService
+ */
+const APP_IDS: string[] = [];
+
+/**
+ * @const NEWS_IDS
+ * @description Identifiers of the seeded {@link NewsItem} records, remembered so
+ * `getNews()` can read them all back from the RamAdapter.
+ * @type {string[]}
+ * @memberOf module:app/services/SiteService
+ */
+const NEWS_IDS: string[] = [];
 
 /**
  * @const MODULE_VERSIONS
@@ -228,6 +375,7 @@ export class SiteService extends Service {
     const { log, ctx } = this.logCtx([this.newCtx()], this.seed);
     log.info(`Seeding site data for locale ${locale}`);
     try {
+      await loadDecoratorLinks();
       await this.seedSite(locale, ctx as Context<AdapterFlags>);
       await this.seedModules(locale, ctx as Context<AdapterFlags>);
       await this.seedContent(locale, ctx as Context<AdapterFlags>);
@@ -353,6 +501,65 @@ export class SiteService extends Service {
   }
 
   /**
+   * @description Reads all seeded {@link ShowcaseHighlight} records, ordered.
+   * @returns {Promise<ShowcaseHighlight[]>} Every showcase highlight (empty when none seeded).
+   */
+  async getShowcase(): Promise<ShowcaseHighlight[]> {
+    if (!SHOWCASE_IDS.length) return [];
+    const repo = Repository.forModel(ShowcaseHighlight);
+    try {
+      const rows = await repo.readAll(SHOWCASE_IDS);
+      return rows.slice().sort((a, b) => a.order - b.order);
+    } catch {
+      return [];
+    }
+  }
+
+  /**
+   * @description Reads a single seeded {@link ShowcaseHighlight} by id.
+   * @param {string} id - The highlight identifier (route param).
+   * @returns {Promise<ShowcaseHighlight|undefined>} The highlight, or `undefined`.
+   */
+  async getHighlight(id: string): Promise<ShowcaseHighlight | undefined> {
+    const repo = Repository.forModel(ShowcaseHighlight);
+    try {
+      return await repo.read(id);
+    } catch {
+      return undefined;
+    }
+  }
+
+  /**
+   * @description Reads all seeded {@link DecafApp} records, ordered.
+   * @returns {Promise<DecafApp[]>} Every decaf app (empty when none seeded).
+   */
+  async getApps(): Promise<DecafApp[]> {
+    if (!APP_IDS.length) return [];
+    const repo = Repository.forModel(DecafApp);
+    try {
+      const rows = await repo.readAll(APP_IDS);
+      return rows.slice().sort((a, b) => a.order - b.order);
+    } catch {
+      return [];
+    }
+  }
+
+  /**
+   * @description Reads all seeded {@link NewsItem} records, ordered.
+   * @returns {Promise<NewsItem[]>} Every latest-release news item (empty when none seeded).
+   */
+  async getNews(): Promise<NewsItem[]> {
+    if (!NEWS_IDS.length) return [];
+    const repo = Repository.forModel(NewsItem);
+    try {
+      const rows = await repo.readAll(NEWS_IDS);
+      return rows.slice().sort((a, b) => a.order - b.order);
+    } catch {
+      return [];
+    }
+  }
+
+  /**
    * @description Reads the resolved `@decaf-ts/*` version map.
    * @summary Lazily fetched from the build-time `assets/data/module-versions.json` asset
    * and cached module-scope so module list components show the installed package version.
@@ -386,13 +593,17 @@ export class SiteService extends Service {
   private async seedContent(locale: SiteLocale, ctx?: Context<AdapterFlags>): Promise<void> {
     const seed = SITE_SEED[locale];
     const modules = await this.readRawModules();
+    const marquee = await this.readMarqueeAsset();
 
-    await this.seedBrands(seed, locale, ctx);
-    await this.seedCards(seed, locale, ctx);
+    await this.seedBrands(seed, locale, marquee, ctx);
+    await this.seedCards(seed, locale, marquee, ctx);
     await this.seedFaq(seed, locale, ctx);
     await this.seedExamples(locale, modules, ctx);
     await this.seedTutorials(locale, seed, modules, ctx);
     await this.seedFeatures(locale, seed, modules, ctx);
+    await this.seedShowcase(locale, modules, ctx);
+    await this.seedApps(locale, ctx);
+    await this.seedNews(ctx);
   }
 
   /**
@@ -406,19 +617,26 @@ export class SiteService extends Service {
   private async seedBrands(
     seed: (typeof SITE_SEED)[SiteLocale],
     locale: SiteLocale,
+    marquee?: RawMarquee,
     ctx?: Context<AdapterFlags>
   ): Promise<void> {
     const repo = Repository.forModel(Brand);
     await this.clearPrevious(Brand.name, repo, ctx);
     const ids: string[] = [];
-    for (const [idx, b] of (seed.brands ?? []).entries()) {
-      const id = `${locale}_${b.name}`;
+    const authored = (marquee?.brands ?? []).filter((b) => b && (b.name || b.label));
+    const rows: RawMarqueeBrand[] = authored.length
+      ? authored
+      : (seed.brands ?? []).map((b) => ({ name: b.name, src: b.src }));
+    for (const [idx, b] of rows.entries()) {
+      const name = b.name || localize(b.label as LocalizedValue, locale) || `brand-${idx}`;
+      const id = `${locale}_${b.id || slug(name)}`;
       if (ids.includes(id)) continue;
       const brand = Model.fromModel(new Brand(), {
         id,
-        name: b.name,
-        src: b.src,
-        alt: b.name,
+        name: b.name || localize(b.label as LocalizedValue, locale),
+        src: b.src || '',
+        icon: resolveMarqueeIcon(b.icon || ''),
+        alt: b.name || localize(b.label as LocalizedValue, locale),
         order: idx,
       }) as Brand;
       await repo.create(brand, ctx);
@@ -438,18 +656,34 @@ export class SiteService extends Service {
   private async seedCards(
     seed: (typeof SITE_SEED)[SiteLocale],
     locale: SiteLocale,
+    marquee?: RawMarquee,
     ctx?: Context<AdapterFlags>
   ): Promise<void> {
     const repo = Repository.forModel(HomeCard);
     await this.clearPrevious(HomeCard.name, repo, ctx);
     const ids: string[] = [];
-    for (const [idx, c] of (seed.cards ?? []).entries()) {
-      const id = `${locale}_${slug(c.title || 'card')}`;
+    const authored = (marquee?.modules ?? []).filter((m) => m && (m.name || m.label || m.title));
+    const rows = authored.length
+      ? authored.map((m) => ({
+          id: m.id,
+          title: m.name || m.title || '',
+          description: m.label || m.description || '',
+          icon: resolveMarqueeIcon(m.icon || ''),
+        }))
+      : (seed.cards ?? []).map((c) => ({
+          id: undefined,
+          title: c.title || '',
+          description: c.description || '',
+          icon: c.icon || '',
+        }));
+    for (const [idx, c] of rows.entries()) {
+      const title = localize(c.title as LocalizedValue, locale) || `card-${idx}`;
+      const id = `${locale}_${c.id || slug(title)}`;
       if (ids.includes(id)) continue;
       const card = Model.fromModel(new HomeCard(), {
         id,
-        title: c.title || '',
-        description: c.description || '',
+        title,
+        description: localize(c.description as LocalizedValue, locale),
         icon: c.icon || '',
         order: idx,
       }) as HomeCard;
@@ -628,6 +862,236 @@ export class SiteService extends Service {
       }
     }
     SEEDED_IDS[ModuleFeature.name] = ids;
+  }
+
+  /**
+   * @description Seeds the {@link ShowcaseHighlight} table for a locale.
+   * @summary Prefers the authored `assets/data/showcase.json` highlights and, when the
+   * asset is absent (the content pipeline has not delivered it yet), derives real
+   * highlights from the modules asset so the showcase never renders empty. Localized
+   * text is resolved with `en` fallback and each highlight carries its real code snippets.
+   * @param {SiteLocale} locale - The active locale used to resolve localized text.
+   * @param {RawModuleDoc[]} modules - The merged raw module records (fallback source).
+   * @param {Context<AdapterFlags>} [ctx] - Optional execution context.
+   * @returns {Promise<void>}
+   * @private
+   */
+  private async seedShowcase(
+    locale: SiteLocale,
+    modules: RawModuleDoc[],
+    ctx?: Context<AdapterFlags>
+  ): Promise<void> {
+    const repo = Repository.forModel(ShowcaseHighlight);
+    await this.clearPrevious(ShowcaseHighlight.name, repo, ctx);
+    const authored = await this.readShowcaseAsset();
+    const highlights = authored.length ? authored : this.deriveShowcase(modules);
+    const ids: string[] = [];
+    for (const [idx, raw] of highlights.entries()) {
+      const id = raw.id || raw.slug || slug(localize(raw.title, locale) || `highlight_${idx}`);
+      if (ids.includes(id)) continue;
+      const examples = (raw.codeExamples ?? []).map(
+        (ex, i) =>
+          Model.fromModel(new CodeExample(), {
+            id: `${id}_${i}`,
+            title: localize(ex.title, locale),
+            lang: ex.lang || 'typescript',
+            code: ex.code || '',
+          }) as CodeExample
+      );
+      const record = Model.fromModel(new ShowcaseHighlight(), {
+        id,
+        order: typeof raw.order === 'number' ? raw.order : idx,
+        title: localize(raw.title, locale) || id,
+        tagline: localize(raw.tagline, locale),
+        detail: localize(raw.detail, locale),
+        icon: raw.icon || '',
+        accent: raw.accent || '',
+        modules: joinList(raw.modules),
+        demoKind: raw.demo?.kind || raw.demoKind || '',
+        demoLabel: localize(raw.demo?.label ?? raw.demoLabel, locale),
+        demoConfig: raw.demo?.config ? JSON.stringify(raw.demo.config) : '',
+        codeExamples: examples,
+      }) as ShowcaseHighlight;
+      await repo.create(record, ctx);
+      ids.push(id);
+    }
+    SEEDED_IDS[ShowcaseHighlight.name] = ids;
+    SHOWCASE_IDS.length = 0;
+    SHOWCASE_IDS.push(...ids);
+  }
+
+  /**
+   * @description Seeds the {@link DecafApp} table for a locale.
+   * @summary Reads the authored `assets/data/apps.json` asset; when absent the table
+   * is left empty and the page renders its translated empty state. Localized text is
+   * resolved with `en` fallback.
+   * @param {SiteLocale} locale - The active locale used to resolve localized text.
+   * @param {Context<AdapterFlags>} [ctx] - Optional execution context.
+   * @returns {Promise<void>}
+   * @private
+   */
+  private async seedApps(locale: SiteLocale, ctx?: Context<AdapterFlags>): Promise<void> {
+    const repo = Repository.forModel(DecafApp);
+    await this.clearPrevious(DecafApp.name, repo, ctx);
+    const raw = await this.readAppsAsset();
+    const ids: string[] = [];
+    for (const [idx, app] of raw.entries()) {
+      const id = app.id || slug(app.name || `app_${idx}`);
+      if (ids.includes(id)) continue;
+      const links = app.links ?? {};
+      const record = Model.fromModel(new DecafApp(), {
+        id,
+        order: typeof app.order === 'number' ? app.order : idx,
+        name: app.name || id,
+        tagline: localize(app.tagline, locale),
+        description: localize(app.description, locale),
+        repo: app.repo || links.repo || '',
+        site: app.site || links.site || '',
+        docs: app.docs || links.docs || '',
+        logo: app.logo || '',
+        screenshot: app.screenshot || '',
+        modules: joinList(app.modules),
+        showcase: joinList(app.showcase),
+      }) as DecafApp;
+      await repo.create(record, ctx);
+      ids.push(id);
+    }
+    SEEDED_IDS[DecafApp.name] = ids;
+    APP_IDS.length = 0;
+    APP_IDS.push(...ids);
+  }
+
+  /**
+   * @description Seeds the {@link NewsItem} table from the build-time news asset.
+   * @summary Reads `assets/data/news.json` (generated by `scripts/collect-data.cjs`
+   * from the public GitHub Releases of every roster repository); when the asset is
+   * absent the table is left empty and the page renders its translated empty
+   * state. The locale does not affect the release content, so the rows are shared
+   * across locales.
+   * @param {Context<AdapterFlags>} [ctx] - Optional execution context.
+   * @returns {Promise<void>}
+   * @private
+   */
+  private async seedNews(ctx?: Context<AdapterFlags>): Promise<void> {
+    const repo = Repository.forModel(NewsItem);
+    await this.clearPrevious(NewsItem.name, repo, ctx);
+    const raw = await this.readNewsAsset();
+    const ids: string[] = [];
+    for (const [idx, item] of raw.entries()) {
+      const id = item.id || `${item.repo || 'news'}_${item.tag || idx}`;
+      if (ids.includes(id)) continue;
+      const record = Model.fromModel(new NewsItem(), {
+        id,
+        order: typeof item.order === 'number' ? item.order : idx,
+        repo: item.repo || '',
+        remote: item.remote || item.repo || '',
+        tag: item.tag || '',
+        title: item.title || item.tag || item.repo || '',
+        date: item.date || '',
+        url: item.url || '',
+        excerpt: item.excerpt || '',
+        body: item.body || '',
+      }) as NewsItem;
+      await repo.create(record, ctx);
+      ids.push(id);
+    }
+    SEEDED_IDS[NewsItem.name] = ids;
+    NEWS_IDS.length = 0;
+    NEWS_IDS.push(...ids);
+  }
+
+  /**
+   * @description Derives showcase highlights from the modules asset.
+   * @summary Fallback used when `assets/data/showcase.json` has not been delivered:
+   * turns each module into a highlight whose detail is its description, whose tagline
+   * is its summary and whose snippets are its real examples.
+   * @param {RawModuleDoc[]} modules - The merged raw module records.
+   * @returns {RawShowcaseHighlight[]} The derived highlights.
+   * @private
+   */
+  private deriveShowcase(modules: RawModuleDoc[]): RawShowcaseHighlight[] {
+    return modules.map((raw, idx) => ({
+      id: raw.name,
+      order: idx,
+      title: raw.title || raw.name,
+      tagline: raw.summary || raw.description,
+      detail: raw.description || raw.summary,
+      modules: [raw.name],
+      demoKind: 'modules',
+      demoLabel: raw.title || raw.name,
+      codeExamples: (raw.examples ?? []).map((ex) => ({
+        title: ex.title,
+        lang: ex.lang,
+        code: ex.code,
+      })),
+    }));
+  }
+
+  /**
+   * @description Reads the authored showcase asset as a raw highlight array.
+   * @returns {Promise<RawShowcaseHighlight[]>} The parsed highlights (empty on failure).
+   * @private
+   */
+  private async readShowcaseAsset(): Promise<RawShowcaseHighlight[]> {
+    try {
+      const response = await fetch('assets/data/showcase.json');
+      if (!response.ok) return [];
+      const data: unknown = await response.json();
+      return Array.isArray(data) ? (data as RawShowcaseHighlight[]) : [];
+    } catch {
+      return [];
+    }
+  }
+
+  /**
+   * @description Reads the authored decaf apps asset as a raw app array.
+   * @returns {Promise<RawDecafApp[]>} The parsed apps (empty on failure).
+   * @private
+   */
+  private async readAppsAsset(): Promise<RawDecafApp[]> {
+    try {
+      const response = await fetch('assets/data/apps.json');
+      if (!response.ok) return [];
+      const data: unknown = await response.json();
+      return Array.isArray(data) ? (data as RawDecafApp[]) : [];
+    } catch {
+      return [];
+    }
+  }
+
+  /**
+   * @description Reads the authored homepage marquee asset.
+   * @summary Loads `assets/data/marquee.json`, the revised item lists of the brands
+   * and modules marquees. When absent or malformed the caller falls back to the
+   * locale seed so the homepage always renders.
+   * @returns {Promise<RawMarquee>} The parsed marquee content (empty on failure).
+   * @private
+   */
+  private async readMarqueeAsset(): Promise<RawMarquee> {
+    try {
+      const response = await fetch('assets/data/marquee.json');
+      if (!response.ok) return {};
+      const data: unknown = await response.json();
+      return data && typeof data === 'object' ? (data as RawMarquee) : {};
+    } catch {
+      return {};
+    }
+  }
+
+  /**
+   * @description Reads the build-time news asset as a raw news array.
+   * @returns {Promise<RawNewsItem[]>} The parsed news items (empty on failure).
+   * @private
+   */
+  private async readNewsAsset(): Promise<RawNewsItem[]> {
+    try {
+      const response = await fetch('assets/data/news.json');
+      if (!response.ok) return [];
+      const data: unknown = await response.json();
+      return Array.isArray(data) ? (data as RawNewsItem[]) : [];
+    } catch {
+      return [];
+    }
   }
 
   /**
@@ -822,6 +1286,22 @@ export class SiteService extends Service {
  */
 function slug(value: string): string {
   return (value || '').toLowerCase().replace(/[^a-z0-9]+/g, '_');
+}
+
+/**
+ * @description Normalizes a list-shaped content value to a comma-separated string.
+ * @summary Content assets may express list fields (modules, tags) as either a real
+ * array or an already-joined string; this normalizes both so the model stores one
+ * consistent shape.
+ * @function joinList
+ * @param {string[] | string | undefined} value - The authored value.
+ * @returns {string} The comma-separated representation.
+ * @memberOf module:app/services/SiteService
+ */
+function joinList(value: string[] | string | undefined): string {
+  if (!value) return '';
+  if (Array.isArray(value)) return value.filter(Boolean).join(',');
+  return value;
 }
 
 /**

@@ -1,0 +1,56 @@
+<article class="showcase-detail">
+  <div class="showcase-detail__container">
+    <a class="showcase-detail__back" routerLink="/showcase">← {{ 'showcase.back' | translate }}</a>
+    @if (highlight) {
+      <header class="showcase-detail__header">
+        <div class="showcase-detail__icon-wrap">
+          <i class="ti ti-{{ highlight.icon || 'sparkles' }}" aria-hidden="true"></i>
+        </div>
+        <h1 class="showcase-detail__title">{{ highlight.title }}</h1>
+        @if (highlight.tagline) {
+          <p class="showcase-detail__tagline">{{ highlight.tagline }}</p>
+        }
+        @if (modules().length) {
+          <div class="showcase-detail__modules-wrap">
+            <span class="showcase-detail__modules-label">{{ 'showcase.modules_used' | translate }}</span>
+            <ul class="showcase-detail__modules">
+              @for (module of modules(); track module) {
+                <li class="showcase-detail__module">{{ module }}</li>
+              }
+            </ul>
+          </div>
+        }
+      </header>
+      <section class="showcase-detail__body md-body" [innerHTML]="highlight.detail | markdown"></section>
+      @if (highlight.demoKind) {
+        <section class="showcase-detail__demo">
+          <h2 class="showcase-detail__section-title">{{ 'showcase.run_demo' | translate }}</h2>
+          @if (liveKind()) {
+            <app-showcase-live [kind]="liveKind()"></app-showcase-live>
+          } @else {
+            <app-showcase-demo
+              [kind]="highlight.demoKind"
+              [label]="highlight.demoLabel"
+              [config]="highlight.demoConfig"
+            ></app-showcase-demo>
+          }
+        </section>
+      }
+      @if (highlight.codeExamples.length) {
+        <section class="showcase-detail__code">
+          <h2 class="showcase-detail__section-title">{{ 'showcase.see_code' | translate }}</h2>
+          @for (example of highlight.codeExamples; track example.id) {
+            <figure class="showcase-detail__snippet">
+              @if (example.title) {
+                <figcaption class="showcase-detail__snippet-title">{{ example.title }}</figcaption>
+              }
+              <pre class="showcase-detail__snippet-code"><code>{{ example.code }}</code></pre>
+            </figure>
+          }
+        </section>
+      }
+    } @else if (loaded) {
+      <p class="showcase-detail__not-found">{{ 'showcase.not_found' | translate }}</p>
+    }
+  </div>
+</article>

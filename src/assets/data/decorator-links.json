@@ -1,0 +1,1233 @@
+{
+ "_meta": {
+  "title": "Decorator -> GitHub Pages doc URL map",
+  "specification": "DECAF-49",
+  "purpose": "Every `@decorator` token appearing in the features/modules content (src/assets/data/modules.json) maps to its deployed documentation page in the decorator original repo.",
+  "urlPattern": "https://decaf-ts.github.io/<original-repo>/global.html#<anchor>",
+  "verifiedAt": "2026-09-29",
+  "verifiedAgainst": "Each URL below was fetched and its `global.html` (or the named module/class page) checked for the anchor/member; `kind` records the granularity actually published.",
+  "kinds": {
+   "decorator": "published global decorator with an anchor",
+   "alias": "token as written in content; real export named in `aliasOf`",
+   "module": "documented only on a module page (no published anchor)",
+   "member": "documented on a class page member",
+   "example": "example-local decorator, not a published export",
+   "external": "non-decaf framework decorator, links to its own docs"
+  },
+  "note": "Non-decorator tokens found in the same text are listed under `excluded` so the renderer never links them."
+ },
+ "decorators": {
+  "@Auth": {
+   "repo": "for-nest",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/for-nest/module-for-nest.html",
+   "en": "Enables authentication for a controller.",
+   "pt": "Habilita autenticação para um controller.",
+   "note": "Documented on the for-nest module page."
+  },
+  "@Controller": {
+   "repo": "external",
+   "kind": "external",
+   "url": "https://docs.nestjs.com/controllers",
+   "en": "NestJS controller decorator.",
+   "pt": "Decorador de controller NestJS."
+  },
+  "@Get": {
+   "repo": "external",
+   "kind": "external",
+   "url": "https://docs.nestjs.com/controllers#routing",
+   "en": "NestJS GET route decorator.",
+   "pt": "Decorador de rota GET do NestJS."
+  },
+  "@Info": {
+   "repo": "external",
+   "kind": "external",
+   "url": "https://hyperledger.github.io/fabric-chaincode-node/main/api/fabric-contract-api.Contract.html",
+   "en": "Hyperledger Fabric contract metadata decorator.",
+   "pt": "Decorador de metadados de contrato Hyperledger Fabric."
+  },
+  "@Injectable": {
+   "repo": "external",
+   "kind": "external",
+   "url": "https://docs.nestjs.com/providers",
+   "en": "NestJS injectable provider decorator.",
+   "pt": "Decorador de provider injetável NestJS."
+  },
+  "@Model": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#model",
+   "en": "Marks a class as a decaf model.",
+   "pt": "Marca uma classe como modelo decaf.",
+   "anchor": "model",
+   "aliasOf": "@model"
+  },
+  "@Module": {
+   "repo": "external",
+   "kind": "external",
+   "url": "https://docs.nestjs.com/modules",
+   "en": "NestJS module decorator.",
+   "pt": "Decorador de módulo NestJS."
+  },
+  "@NgModule": {
+   "repo": "external",
+   "kind": "external",
+   "url": "https://angular.dev/api/core/NgModule",
+   "en": "Angular module decorator.",
+   "pt": "Decorador de módulo Angular."
+  },
+  "@Public": {
+   "repo": "for-nest",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/for-nest/module-for-nest.html",
+   "en": "Marks a handler as public.",
+   "pt": "Marca um handler como público.",
+   "note": "Documented on the for-nest module page."
+  },
+  "@Put": {
+   "repo": "external",
+   "kind": "external",
+   "url": "https://docs.nestjs.com/controllers#routing",
+   "en": "NestJS PUT route decorator.",
+   "pt": "Decorador de rota PUT do NestJS."
+  },
+  "@Repository": {
+   "repo": "for-nest",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/for-nest/global.html#Repository",
+   "en": "Registers a NestJS repository provider.",
+   "pt": "Registra um provider de repositório NestJS.",
+   "anchor": "Repository"
+  },
+  "@RequireNamespaces": {
+   "repo": "for-nest",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/for-nest/module-for-nest.html",
+   "en": "Requires namespaces on a handler.",
+   "pt": "Exige namespaces em um handler.",
+   "note": "Documented on the for-nest module page."
+  },
+  "@RequireRoles": {
+   "repo": "for-nest",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/for-nest/module-for-nest.html",
+   "en": "Requires roles on a handler.",
+   "pt": "Exige papéis em um handler.",
+   "note": "Documented on the for-nest module page."
+  },
+  "@Service": {
+   "repo": "for-nest",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/for-nest/global.html#Service",
+   "en": "Registers a NestJS provider service.",
+   "pt": "Registra um serviço provider NestJS.",
+   "anchor": "Service"
+  },
+  "@SkipFabricIdentity": {
+   "repo": "for-nest",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/for-nest/module-for-nest.html",
+   "en": "Skips Fabric identity guarding on a handler.",
+   "pt": "Ignora a proteção de identidade Fabric em um handler.",
+   "note": "Documented on the for-nest module page."
+  },
+  "@Transaction": {
+   "repo": "external",
+   "kind": "external",
+   "url": "https://hyperledger.github.io/fabric-chaincode-node/main/api/",
+   "en": "Hyperledger Fabric transaction decorator.",
+   "pt": "Decorador de transação Hyperledger Fabric.",
+   "note": "Hyperledger Fabric transaction decorator; the Fabric Contract API docs publish no per-decorator page, so this links to the original repo docs index."
+  },
+  "@after": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#after",
+   "en": "Post-operation hook (generic).",
+   "pt": "Hook pós-operação (genérico).",
+   "anchor": "after"
+  },
+  "@afterAny": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#afterAny",
+   "en": "Post-operation hook for any operation.",
+   "pt": "Hook pós-operação para qualquer operação.",
+   "anchor": "afterAny"
+  },
+  "@afterCreate": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#afterCreate",
+   "en": "Runs after create.",
+   "pt": "Executa após criar.",
+   "anchor": "afterCreate"
+  },
+  "@afterCreateUpdate": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#afterCreateUpdate",
+   "en": "Runs after create/update.",
+   "pt": "Executa após criar/atualizar.",
+   "anchor": "afterCreateUpdate"
+  },
+  "@afterDelete": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#afterDelete",
+   "en": "Runs after delete.",
+   "pt": "Executa após excluir.",
+   "anchor": "afterDelete"
+  },
+  "@afterRead": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#afterRead",
+   "en": "Runs after read.",
+   "pt": "Executa após ler.",
+   "anchor": "afterRead"
+  },
+  "@afterUpdate": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#afterUpdate",
+   "en": "Runs after update.",
+   "pt": "Executa após atualizar.",
+   "anchor": "afterUpdate"
+  },
+  "@apply": {
+   "repo": "decoration",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decoration/global.html#apply",
+   "en": "Applies several decorators at once.",
+   "pt": "Aplica vários decoradores de uma vez.",
+   "anchor": "apply"
+  },
+  "@async": {
+   "repo": "decorator-validation",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html",
+   "en": "Marks a model whose validation may be asynchronous.",
+   "pt": "Marca um modelo cuja validação pode ser assíncrona.",
+   "note": "Published export without a deployed per-decorator anchor; links to the repo docs root."
+  },
+  "@attribute": {
+   "repo": "ui-decorators",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/ui-decorators/",
+   "en": "Marks a property for UI rendering (example-local).",
+   "pt": "Marca uma propriedade para renderização de UI (exemplo local).",
+   "note": "Appears only in example code; not a published decaf export. Links to the owning repo docs root."
+  },
+  "@baseComponent": {
+   "repo": "decoration",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/decoration/",
+   "en": "Custom decorator example.",
+   "pt": "Exemplo de decorador customizado.",
+   "note": "Appears only in example code; not a published decaf export. Links to the owning repo docs root."
+  },
+  "@benchmark": {
+   "repo": "logging",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/logging/global.html#benchmark",
+   "en": "Benchmarks a method.",
+   "pt": "Mede o desempenho de um método.",
+   "anchor": "benchmark"
+  },
+  "@column": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#column",
+   "en": "Maps a property to a table column.",
+   "pt": "Mapeia uma propriedade para uma coluna.",
+   "anchor": "column"
+  },
+  "@component": {
+   "repo": "decoration",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/decoration/",
+   "en": "Custom decorator example.",
+   "pt": "Exemplo de decorador customizado.",
+   "note": "Appears only in example code; not a published decaf export. Links to the owning repo docs root."
+  },
+  "@composed": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#composed",
+   "en": "Composes a property value.",
+   "pt": "Compõe o valor de uma propriedade.",
+   "anchor": "composed"
+  },
+  "@composedFromKeys": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#composedFromKeys",
+   "en": "Composes a value from other keys.",
+   "pt": "Compõe um valor a partir de outras chaves.",
+   "anchor": "composedFromKeys"
+  },
+  "@createdAt": {
+   "repo": "core",
+   "kind": "member",
+   "url": "https://decaf-ts.github.io/core/BaseModel.html#createdAt",
+   "en": "Created-at timestamp property/decorator.",
+   "pt": "Propriedade/decorador de timestamp de criação.",
+   "anchor": "createdAt",
+   "note": "Documented on the BaseModel page (property), not a global anchor."
+  },
+  "@createdBy": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#createdBy",
+   "en": "Marks the created-by audit property.",
+   "pt": "Marca a propriedade de auditoria de criação.",
+   "anchor": "createdBy"
+  },
+  "@date": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#date",
+   "en": "Date constraint.",
+   "pt": "Restrição de data.",
+   "anchor": "date"
+  },
+  "@debug": {
+   "repo": "logging",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/logging/global.html#debug",
+   "en": "Logs at debug level.",
+   "pt": "Registra no nível debug.",
+   "anchor": "debug"
+  },
+  "@decorate": {
+   "repo": "decoration",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/decoration/",
+   "en": "Custom decorator example.",
+   "pt": "Exemplo de decorador customizado.",
+   "note": "Appears only in example code; not a published decaf export. Links to the owning repo docs root."
+  },
+  "@description": {
+   "repo": "decoration",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decoration/global.html#description",
+   "en": "Attaches a textual description metadata.",
+   "pt": "Anexa metadados de descrição textual.",
+   "anchor": "description"
+  },
+  "@diff": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#diff",
+   "en": "Values must differ.",
+   "pt": "Valores devem ser diferentes.",
+   "anchor": "diff"
+  },
+  "@email": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#email",
+   "en": "Valid email address.",
+   "pt": "Endereço de e-mail válido.",
+   "anchor": "email"
+  },
+  "@emailValidator": {
+   "repo": "decorator-validation",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/decorator-validation/",
+   "en": "Custom validator example.",
+   "pt": "Exemplo de validador customizado.",
+   "note": "Appears only in example code; not a published decaf export. Links to the owning repo docs root."
+  },
+  "@encrypt": {
+   "repo": "crypto",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/crypto/global.html#encrypt",
+   "en": "Encrypts/decrypts a model property.",
+   "pt": "Criptografa/descriptografa uma propriedade do modelo.",
+   "anchor": "encrypt"
+  },
+  "@eq": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#eq",
+   "en": "Value equality.",
+   "pt": "Igualdade de valor.",
+   "anchor": "eq"
+  },
+  "@equals": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#eq",
+   "en": "Value equality.",
+   "pt": "Igualdade de valor.",
+   "anchor": "eq",
+   "aliasOf": "@eq"
+  },
+  "@final": {
+   "repo": "logging",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/logging/global.html#final",
+   "en": "Final-level log wrapper.",
+   "pt": "Wrapper de log de nível final.",
+   "anchor": "final"
+  },
+  "@greaterThan": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#gt",
+   "en": "Greater than.",
+   "pt": "Maior que.",
+   "anchor": "gt",
+   "aliasOf": "@gt"
+  },
+  "@greaterThanOrEqual": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#gte",
+   "en": "Greater than or equal.",
+   "pt": "Maior ou igual.",
+   "anchor": "gte",
+   "aliasOf": "@gte"
+  },
+  "@gt": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#gt",
+   "en": "Greater than.",
+   "pt": "Maior que.",
+   "anchor": "gt"
+  },
+  "@gte": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#gte",
+   "en": "Greater than or equal.",
+   "pt": "Maior ou igual.",
+   "anchor": "gte"
+  },
+  "@hash": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#hash",
+   "en": "Hashes a property value.",
+   "pt": "Aplica hash ao valor da propriedade.",
+   "anchor": "hash"
+  },
+  "@hashedBy": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#hashedBy",
+   "en": "Hash algorithm metadata.",
+   "pt": "Metadados de algoritmo de hash.",
+   "anchor": "hashedBy"
+  },
+  "@hidden": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#hidden",
+   "en": "Marks a property hidden.",
+   "pt": "Marca uma propriedade como oculta.",
+   "anchor": "hidden"
+  },
+  "@hideOn": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#hideOn",
+   "en": "Hides a field for operations.",
+   "pt": "Oculta um campo para operações.",
+   "anchor": "hideOn"
+  },
+  "@hook": {
+   "repo": "for-http",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/for-http/module-for-http.hooks.html",
+   "en": "Declares a webhook handler.",
+   "pt": "Declara um handler de webhook.",
+   "note": "Documented on the hooks module page."
+  },
+  "@id": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#id",
+   "en": "Marks a property as identity.",
+   "pt": "Marca uma propriedade como identidade.",
+   "anchor": "id"
+  },
+  "@index": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#index",
+   "en": "Creates a database index.",
+   "pt": "Cria um índice no banco.",
+   "anchor": "index"
+  },
+  "@indexed": {
+   "repo": "core",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/core/global.html#index",
+   "en": "Creates a database index.",
+   "pt": "Cria um índice no banco.",
+   "anchor": "index",
+   "aliasOf": "@index"
+  },
+  "@info": {
+   "repo": "logging",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/logging/global.html#info",
+   "en": "Logs at info level.",
+   "pt": "Registra no nível info.",
+   "anchor": "info"
+  },
+  "@inject": {
+   "repo": "injectable-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/injectable-decorators/global.html#inject",
+   "en": "Injects a registered dependency.",
+   "pt": "Injeta uma dependência registrada.",
+   "anchor": "inject"
+  },
+  "@injectable": {
+   "repo": "injectable-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/injectable-decorators/global.html#injectable",
+   "en": "Marks a class as injectable.",
+   "pt": "Marca uma classe como injetável.",
+   "anchor": "injectable"
+  },
+  "@lessThan": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#lt",
+   "en": "Less than.",
+   "pt": "Menor que.",
+   "anchor": "lt",
+   "aliasOf": "@lt"
+  },
+  "@lessThanOrEqual": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#lte",
+   "en": "Less than or equal.",
+   "pt": "Menor ou igual.",
+   "anchor": "lte",
+   "aliasOf": "@lte"
+  },
+  "@list": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#list",
+   "en": "Value belongs to a list.",
+   "pt": "Valor pertence a uma lista.",
+   "anchor": "list"
+  },
+  "@log": {
+   "repo": "logging",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/logging/global.html#log",
+   "en": "Logs a method call.",
+   "pt": "Registra a chamada de um método.",
+   "anchor": "log"
+  },
+  "@logProperty": {
+   "repo": "decoration",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/decoration/",
+   "en": "Custom property decorator example.",
+   "pt": "Exemplo de decorador de propriedade customizado.",
+   "note": "Appears only in example code; not a published decaf export. Links to the owning repo docs root."
+  },
+  "@lt": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#lt",
+   "en": "Less than.",
+   "pt": "Menor que.",
+   "anchor": "lt"
+  },
+  "@lte": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#lte",
+   "en": "Less than or equal.",
+   "pt": "Menor ou igual.",
+   "anchor": "lte"
+  },
+  "@manyToMany": {
+   "repo": "core",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/core/module-core_model.html",
+   "en": "Many-to-many relation.",
+   "pt": "Relação muitos-para-muitos.",
+   "note": "No per-decorator anchor is published; links to the module page that documents it."
+  },
+  "@manyToOne": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#manyToOne",
+   "en": "Many-to-one relation.",
+   "pt": "Relação muitos-para-um.",
+   "anchor": "manyToOne"
+  },
+  "@max": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#max",
+   "en": "Numeric/date maximum.",
+   "pt": "Máximo numérico/data.",
+   "anchor": "max"
+  },
+  "@maxLength": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#maxlength",
+   "en": "Maximum string length.",
+   "pt": "Comprimento máximo de string.",
+   "anchor": "maxlength",
+   "aliasOf": "@maxlength"
+  },
+  "@maxlength": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#maxlength",
+   "en": "Maximum string length.",
+   "pt": "Comprimento máximo de string.",
+   "anchor": "maxlength",
+   "aliasOf": "@maxlength"
+  },
+  "@metadata": {
+   "repo": "decoration",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decoration/global.html#metadata",
+   "en": "Attaches metadata to a class or member.",
+   "pt": "Anexa metadados a uma classe ou membro.",
+   "anchor": "metadata"
+  },
+  "@method": {
+   "repo": "decoration",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decoration/global.html#method",
+   "en": "Metadata decorator for methods.",
+   "pt": "Decorador de metadados para métodos.",
+   "anchor": "method"
+  },
+  "@min": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#min",
+   "en": "Numeric/date minimum.",
+   "pt": "Mínimo numérico/data.",
+   "anchor": "min"
+  },
+  "@minLength": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#minlength",
+   "en": "Minimum string length.",
+   "pt": "Comprimento mínimo de string.",
+   "anchor": "minlength",
+   "aliasOf": "@minlength"
+  },
+  "@minlength": {
+   "repo": "decorator-validation",
+   "kind": "alias",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#minlength",
+   "en": "Minimum string length.",
+   "pt": "Comprimento mínimo de string.",
+   "anchor": "minlength",
+   "aliasOf": "@minlength"
+  },
+  "@mirror": {
+   "repo": "for-fabric",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/for-fabric/module-for-fabric.shared.html",
+   "en": "Mirrors a model between chaincode and client.",
+   "pt": "Espelha um modelo entre chaincode e cliente.",
+   "note": "Documented on the for-fabric shared module page."
+  },
+  "@mobileComponent": {
+   "repo": "decoration",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/decoration/",
+   "en": "Custom decorator example.",
+   "pt": "Exemplo de decorador customizado.",
+   "note": "Appears only in example code; not a published decaf export. Links to the owning repo docs root."
+  },
+  "@model": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#model",
+   "en": "Marks a class as a decaf model.",
+   "pt": "Marca uma classe como modelo decaf.",
+   "anchor": "model"
+  },
+  "@nestjs": {
+   "repo": "external",
+   "kind": "external",
+   "url": "https://docs.nestjs.com/",
+   "en": "NestJS package scope (not a decorator).",
+   "pt": "Escopo de pacote NestJS (não é decorador)."
+  },
+  "@on": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#on",
+   "en": "Pre-operation hook (generic).",
+   "pt": "Hook pré-operação (genérico).",
+   "anchor": "on"
+  },
+  "@onAny": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#onAny",
+   "en": "Pre-operation hook for any operation.",
+   "pt": "Hook pré-operação para qualquer operação.",
+   "anchor": "onAny"
+  },
+  "@onCreate": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#onCreate",
+   "en": "Runs before create.",
+   "pt": "Executa antes de criar.",
+   "anchor": "onCreate"
+  },
+  "@onCreateUpdate": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#onCreateUpdate",
+   "en": "Runs before create/update.",
+   "pt": "Executa antes de criar/atualizar.",
+   "anchor": "onCreateUpdate"
+  },
+  "@onDelete": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#onDelete",
+   "en": "Runs before delete.",
+   "pt": "Executa antes de excluir.",
+   "anchor": "onDelete"
+  },
+  "@onDemand": {
+   "repo": "injectable-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/injectable-decorators/global.html#onDemand",
+   "en": "Creates a fresh instance per injection.",
+   "pt": "Cria uma instância nova a cada injeção.",
+   "anchor": "onDemand"
+  },
+  "@onRead": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#onRead",
+   "en": "Runs before read.",
+   "pt": "Executa antes de ler.",
+   "anchor": "onRead"
+  },
+  "@onUpdate": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#onUpdate",
+   "en": "Runs before update.",
+   "pt": "Executa antes de atualizar.",
+   "anchor": "onUpdate"
+  },
+  "@oneToMany": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#oneToMany",
+   "en": "One-to-many relation.",
+   "pt": "Relação um-para-muitos.",
+   "anchor": "oneToMany"
+  },
+  "@oneToOne": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#oneToOne",
+   "en": "One-to-one relation.",
+   "pt": "Relação um-para-um.",
+   "anchor": "oneToOne"
+  },
+  "@operation": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#operation",
+   "en": "Registers an operation handler.",
+   "pt": "Registra um handler de operação.",
+   "anchor": "operation"
+  },
+  "@option": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#option",
+   "en": "Optional-value constraint.",
+   "pt": "Restrição de valor opcional.",
+   "anchor": "option"
+  },
+  "@param": {
+   "repo": "decoration",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decoration/global.html#param",
+   "anchor": "param",
+   "en": "Metadata decorator for parameters.",
+   "pt": "Decorador de metadados para parâmetros."
+  },
+  "@password": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#password",
+   "en": "Password strength constraint.",
+   "pt": "Restrição de força de senha.",
+   "anchor": "password"
+  },
+  "@pattern": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#pattern",
+   "en": "Regex pattern match.",
+   "pt": "Correspondência de padrão regex.",
+   "anchor": "pattern"
+  },
+  "@pk": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#pk",
+   "en": "Marks the primary key property.",
+   "pt": "Marca a propriedade de chave primária.",
+   "anchor": "pk"
+  },
+  "@pkOnCreate": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#pkOnCreate",
+   "en": "Generates the primary key on create.",
+   "pt": "Gera a chave primária ao criar.",
+   "anchor": "pkOnCreate"
+  },
+  "@prepared": {
+   "repo": "core",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/core/module-core_query.html",
+   "en": "Marks a repository method as a prepared statement.",
+   "pt": "Marca um método de repositório como statement preparado.",
+   "note": "Documented on the query module page."
+  },
+  "@prop": {
+   "repo": "decoration",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decoration/global.html#prop",
+   "en": "Metadata property decorator.",
+   "pt": "Decorador de metadados de propriedade.",
+   "anchor": "prop"
+  },
+  "@propMetadata": {
+   "repo": "decoration",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decoration/global.html#propMetadata",
+   "en": "Low-level property metadata writer.",
+   "pt": "Escritor de metadados de propriedade de baixo nível.",
+   "anchor": "propMetadata"
+  },
+  "@property": {
+   "repo": "for-fabric",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/for-fabric/",
+   "en": "Fabric example-local property decorator.",
+   "pt": "Decorador de propriedade local ao exemplo Fabric.",
+   "note": "Appears only in for-fabric example code; not a published decaf export."
+  },
+  "@query": {
+   "repo": "core",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/core/module-core_query.html",
+   "en": "Marks a repository method as a query.",
+   "pt": "Marca um método de repositório como query.",
+   "note": "Documented on the query module page."
+  },
+  "@readonly": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#readonly",
+   "en": "Marks a property read-only.",
+   "pt": "Marca a propriedade como somente leitura.",
+   "anchor": "readonly"
+  },
+  "@renderIf": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#renderIf",
+   "en": "Conditional rendering.",
+   "pt": "Renderização condicional.",
+   "anchor": "renderIf"
+  },
+  "@renderedBy": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#renderedBy",
+   "en": "Selects the rendering engine.",
+   "pt": "Seleciona o motor de renderização.",
+   "anchor": "renderedBy"
+  },
+  "@repository": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#repository",
+   "en": "Marks a repository class.",
+   "pt": "Marca uma classe de repositório.",
+   "anchor": "repository"
+  },
+  "@required": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#required",
+   "en": "Field is mandatory.",
+   "pt": "Campo obrigatório.",
+   "anchor": "required"
+  },
+  "@serialize": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#serialize",
+   "en": "Serialization hook.",
+   "pt": "Hook de serialização.",
+   "anchor": "serialize"
+  },
+  "@serializedBy": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#serializedBy",
+   "en": "Serializer metadata.",
+   "pt": "Metadados de serializador.",
+   "anchor": "serializedBy"
+  },
+  "@service": {
+   "repo": "core",
+   "kind": "module",
+   "url": "https://decaf-ts.github.io/core/module-core_services.html",
+   "en": "Marks a class or property as a service.",
+   "pt": "Marca uma classe ou propriedade como serviço.",
+   "note": "Documented on the services module page."
+  },
+  "@set": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#set",
+   "en": "Value belongs to a fixed set.",
+   "pt": "Valor pertence a um conjunto fixo.",
+   "anchor": "set"
+  },
+  "@showFor": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#showFor",
+   "en": "Shows a field for namespaces.",
+   "pt": "Mostra um campo para namespaces.",
+   "anchor": "showFor"
+  },
+  "@silly": {
+   "repo": "logging",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/logging/global.html#silly",
+   "en": "Logs at silly level.",
+   "pt": "Registra no nível silly.",
+   "anchor": "silly"
+  },
+  "@singleton": {
+   "repo": "injectable-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/injectable-decorators/global.html#singleton",
+   "en": "Registers a singleton instance.",
+   "pt": "Registra uma instância singleton.",
+   "anchor": "singleton"
+  },
+  "@step": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#step",
+   "en": "Numeric step constraint.",
+   "pt": "Restrição de passo numérico.",
+   "anchor": "step"
+  },
+  "@table": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#table",
+   "en": "Maps a model class to a database table.",
+   "pt": "Mapeia uma classe de modelo para uma tabela do banco.",
+   "anchor": "table"
+  },
+  "@timestamp": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#timestamp",
+   "en": "Timestamp metadata.",
+   "pt": "Metadados de timestamp.",
+   "anchor": "timestamp"
+  },
+  "@trace": {
+   "repo": "logging",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/logging/global.html#trace",
+   "en": "Logs at trace level.",
+   "pt": "Registra no nível trace.",
+   "anchor": "trace"
+  },
+  "@transactional": {
+   "repo": "transactional-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/transactional-decorators/global.html#transactional",
+   "en": "Wraps a method in a transactional lock.",
+   "pt": "Envolve um método em um lock transacional.",
+   "anchor": "transactional"
+  },
+  "@transient": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#transient",
+   "en": "Non-persisted property.",
+   "pt": "Propriedade não persistida.",
+   "anchor": "transient"
+  },
+  "@type": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#type",
+   "en": "Runtime type enforcement.",
+   "pt": "Verificação de tipo em runtime.",
+   "anchor": "type"
+  },
+  "@uichild": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uichild",
+   "en": "Nested child UI model.",
+   "pt": "Modelo de UI filho aninhado.",
+   "anchor": "uichild"
+  },
+  "@uielement": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uielement",
+   "en": "Renders a property with an HTML element.",
+   "pt": "Renderiza uma propriedade com um elemento HTML.",
+   "anchor": "uielement"
+  },
+  "@uihandlers": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uihandlers",
+   "en": "Registers UI handlers.",
+   "pt": "Registra handlers de UI.",
+   "anchor": "uihandlers"
+  },
+  "@uilayout": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uilayout",
+   "en": "Declares a layout.",
+   "pt": "Declara um layout.",
+   "anchor": "uilayout"
+  },
+  "@uilayoutprop": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uilayoutprop",
+   "en": "Maps a layout property.",
+   "pt": "Mapeia uma propriedade de layout.",
+   "anchor": "uilayoutprop"
+  },
+  "@uilistitem": {
+   "repo": "ui-decorators",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/ui-decorators/",
+   "en": "Legacy list-item marker (example-local).",
+   "pt": "Marcador legado de item de lista (exemplo local).",
+   "note": "Appears only in example code; not a published decaf export. Links to the owning repo docs root."
+  },
+  "@uilistmodel": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uilistmodel",
+   "en": "Marks a model as a list item.",
+   "pt": "Marca um modelo como item de lista.",
+   "anchor": "uilistmodel"
+  },
+  "@uilistprop": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uilistprop",
+   "en": "Maps a property in lists.",
+   "pt": "Mapeia uma propriedade em listas.",
+   "anchor": "uilistprop"
+  },
+  "@uimodel": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uimodel",
+   "en": "Marks a model as renderable.",
+   "pt": "Marca um modelo como renderizável.",
+   "anchor": "uimodel"
+  },
+  "@uionclick": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uionclick",
+   "en": "Binds a click handler.",
+   "pt": "Vincula um handler de clique.",
+   "anchor": "uionclick"
+  },
+  "@uionrender": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uionrender",
+   "en": "Binds a render handler.",
+   "pt": "Vincula um handler de renderização.",
+   "anchor": "uionrender"
+  },
+  "@uiorder": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uiorder",
+   "en": "Orders UI fields.",
+   "pt": "Ordena campos de UI.",
+   "anchor": "uiorder"
+  },
+  "@uipageprop": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uipageprop",
+   "en": "Maps a page property.",
+   "pt": "Mapeia uma propriedade de página.",
+   "anchor": "uipageprop"
+  },
+  "@uiprop": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uiprop",
+   "en": "Maps a property to a UI component.",
+   "pt": "Mapeia uma propriedade para um componente de UI.",
+   "anchor": "uiprop"
+  },
+  "@uisteppedmodel": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uisteppedmodel",
+   "en": "Declares a stepped form model.",
+   "pt": "Declara um modelo de formulário em etapas.",
+   "anchor": "uisteppedmodel"
+  },
+  "@uitablecol": {
+   "repo": "ui-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/ui-decorators/global.html#uitablecol",
+   "en": "Maps a table column.",
+   "pt": "Mapeia uma coluna de tabela.",
+   "anchor": "uitablecol"
+  },
+  "@unique": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#unique",
+   "en": "Adds a uniqueness constraint.",
+   "pt": "Adiciona uma restrição de unicidade.",
+   "anchor": "unique"
+  },
+  "@updatedAt": {
+   "repo": "core",
+   "kind": "member",
+   "url": "https://decaf-ts.github.io/core/BaseModel.html#updatedAt",
+   "en": "Updated-at timestamp property/decorator.",
+   "pt": "Propriedade/decorador de timestamp de atualização.",
+   "anchor": "updatedAt",
+   "note": "Documented on the BaseModel page (property), not a global anchor."
+  },
+  "@updatedBy": {
+   "repo": "core",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/core/global.html#updatedBy",
+   "en": "Marks the updated-by audit property.",
+   "pt": "Marca a propriedade de auditoria de atualização.",
+   "anchor": "updatedBy"
+  },
+  "@url": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#url",
+   "en": "Valid URL.",
+   "pt": "URL válida.",
+   "anchor": "url"
+  },
+  "@uses": {
+   "repo": "decoration",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decoration/global.html#uses",
+   "en": "Declares the adapter/repository flavour used.",
+   "pt": "Declara o adaptador/repositório usado.",
+   "anchor": "uses"
+  },
+  "@validator": {
+   "repo": "decorator-validation",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/decorator-validation/global.html#validator",
+   "en": "Registers a custom validator.",
+   "pt": "Registra um validador customizado.",
+   "anchor": "validator"
+  },
+  "@verbose": {
+   "repo": "logging",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/logging/global.html#verbose",
+   "en": "Logs at verbose level.",
+   "pt": "Registra no nível verbose.",
+   "anchor": "verbose"
+  },
+  "@version": {
+   "repo": "db-decorators",
+   "kind": "decorator",
+   "url": "https://decaf-ts.github.io/db-decorators/global.html#version",
+   "en": "Optimistic-locking version property.",
+   "pt": "Propriedade de versão para locking otimista.",
+   "anchor": "version"
+  },
+  "@withLogging": {
+   "repo": "decoration",
+   "kind": "example",
+   "url": "https://decaf-ts.github.io/decoration/",
+   "en": "Custom class decorator example.",
+   "pt": "Exemplo de decorador de classe customizado.",
+   "note": "Appears only in example code; not a published decaf export. Links to the owning repo docs root."
+  }
+ },
+ "excluded": {
+  "@acme": "Email domain in example data.",
+  "@base": "Part of the `@baseComponent` example token.",
+  "@decaf": "Package scope from `@decaf-ts/...` imports, not a decorator.",
+  "@descriptiontext": "Mangled `@description` + text.",
+  "@diffpropertyPath": "Mangled `@diff` + parameter text.",
+  "@emailmessage": "Mangled `@email` + message text.",
+  "@equalsotherValueOrPath": "Mangled `@eq` + parameter text.",
+  "@example": "JSDoc tag.",
+  "@greaterThanOrEqualx": "Mangled `@gte` + parameter text.",
+  "@greaterThanx": "Mangled `@gt` + parameter text.",
+  "@hashedByalgorithm": "Mangled `@hashedBy` + algorithm text.",
+  "@latest": "GitHub ref (master/latest).",
+  "@lessThanOrEqualx": "Mangled `@lte` + parameter text.",
+  "@lessThanx": "Mangled `@lt` + parameter text.",
+  "@listvalues": "Mangled `@list` + parameter text.",
+  "@master": "GitHub ref (master/latest).",
+  "@maxLengthn": "Mangled `@maxlength` + parameter text.",
+  "@maxvalue": "Mangled `@max` + parameter text.",
+  "@minLengthn": "Mangled `@minlength` + parameter text.",
+  "@minvalue": "Mangled `@min` + parameter text.",
+  "@passwordoptions": "Mangled `@password` + options text.",
+  "@patternregex": "Mangled `@pattern` + regex text.",
+  "@requiredmessage": "Mangled `@required` + message text.",
+  "@serializedByserializer": "Mangled `@serializedBy` + serializer text.",
+  "@stepstep": "Mangled `@step` + parameter text.",
+  "@typeT": "Mangled `@type` + generic parameter.",
+  "@urlmessage": "Mangled `@url` + message text.",
+  "@use": "Malformed `@uses` occurrence in prose.",
+  "@your": "Placeholder text in docs."
+ }
+}

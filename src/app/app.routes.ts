@@ -2,15 +2,17 @@ import { Routes } from '@angular/router';
 
 /**
  * @module app/app.routes
- * @description Manual lazy routes for the six site pages, hosted by the shared layout.
+ * @description Manual lazy routes for the site pages, hosted by the shared layout.
  */
 
 /**
  * @const routes
  * @description Route table of the web-page app.
- * @summary A single host route (`''`) lazily loading the `WebAppLayoutComponent` with six
- * lazy child routes for the index, modules, features, tutorials, examples and community
- * pages, all handled by the shared `SitePageComponent`. Unmatched paths redirect home.
+ * @summary A single host route (`''`) lazily loading the `WebAppLayoutComponent` with
+ * lazy child routes for the index, modules, features, tutorials, examples,
+ * documentation, showcase, apps and community pages, all handled by the shared
+ * `SitePageComponent` (except the per-highlight showcase detail route, which is
+ * handled by `ShowcaseDetailComponent`). Unmatched paths redirect home.
  * @example
  * import { provideRouter } from '@angular/router';
  * await provideRouter(routes);
@@ -44,6 +46,33 @@ export const routes: Routes = [
       },
       {
         path: 'examples',
+        loadComponent: () =>
+          import('./components/site-page/site-page.component').then((m) => m.SitePageComponent),
+      },
+      {
+        path: 'documentation',
+        loadComponent: () =>
+          import('./components/site-page/site-page.component').then((m) => m.SitePageComponent),
+      },
+      {
+        path: 'showcase',
+        loadComponent: () =>
+          import('./components/site-page/site-page.component').then((m) => m.SitePageComponent),
+      },
+      {
+        path: 'showcase/:id',
+        loadComponent: () =>
+          import('./components/showcase-detail/showcase-detail.component').then(
+            (m) => m.ShowcaseDetailComponent
+          ),
+      },
+      {
+        path: 'apps',
+        loadComponent: () =>
+          import('./components/site-page/site-page.component').then((m) => m.SitePageComponent),
+      },
+      {
+        path: 'news',
         loadComponent: () =>
           import('./components/site-page/site-page.component').then((m) => m.SitePageComponent),
       },

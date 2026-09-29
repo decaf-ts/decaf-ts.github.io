@@ -1,0 +1,133 @@
+.decaf-apps {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 28px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(17, 24, 39, 0.1);
+    }
+  }
+
+  &__name {
+    margin: 0;
+    font-family: var(--dcf-site-font-jakarta);
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #111827;
+  }
+
+  &__tagline {
+    margin: 6px 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #dc2626;
+  }
+
+  &__description {
+    margin: 0;
+    flex: 1;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #4b5563;
+  }
+
+  &__built-with {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__built-with-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #9ca3af;
+  }
+
+  &__modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__module {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: #f3f4f6;
+    color: #374151;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__action {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    color: #111827;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: #f3f4f6;
+    }
+
+    &--primary {
+      background: #dc2626;
+      border-color: #dc2626;
+      color: #ffffff;
+
+      &:hover {
+        background: #b91c1c;
+      }
+    }
+  }
+
+  &__showcases {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__showcase {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #4f46e5;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__empty {
+    grid-column: 1 / -1;
+    color: #6b7280;
+  }
+}

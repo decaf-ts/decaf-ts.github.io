@@ -1,23 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
-import { WebApp } from '../../structure/WebApp';
-import { SiteService, ensureSiteReady, isSiteLocale, DEFAULT_LOCALE } from '../../services/site.service';
-import { SITE_LOCALES, SiteLocale } from '../../seed/i18n-data';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { LocaleService } from '../../services/locale.service';
 
 /**
  * @module app/components/WebAppLayoutComponent
- * @description Root layout: hosts the routed page outlet plus the fixed language-switch
- * button. The navigation lives inside each page hero (same gradient), so the layout no
- * longer renders its own nav chrome.
+ * @description Root layout: hosts the routed page outlet. The navigation chrome
+ * (including the language selector, side-by-side with the Get Started button)
+ * lives inside each page hero; this component only owns locale bootstrapping and
+ * mirrors the active locale into the url query string.
  */
 
 /**
- * @description Root layout component hosting the routed page outlet and locale selector.
- * @summary On init the component resolves the active locale (url `?lang=`, the translate
- * service current language, `localStorage`, or the browser languages) and ensures the site
- * is seeded. A fixed language-switch button opens the available locales and reloads the
- * page graph with the selected i18n language. Navigation is rendered inside each page hero.
+ * @description Root layout component hosting the routed page outlet.
+ * @summary On init it delegates locale resolution and seeding to the shared
+ * {@link LocaleService} (url `?lang=`, translate language, `localStorage`, or
+ * browser languages). It then keeps the `?lang=` query parameter in sync with the
+ * active locale so a refresh or a shared link restores the chosen language.
  * @class
  * @example
  * <app-web-app-layout>...</app-web-app-layout>
@@ -30,106 +29,28 @@ import { SITE_LOCALES, SiteLocale } from '../../seed/i18n-data';
   styleUrl: './web-app-layout.component.scss',
 })
 export class WebAppLayoutComponent implements OnInit {
-  /**
-   * @description The seeded {@link WebApp} site model for the active locale.
-   */
-  site?: WebApp;
-  /**
-   * @description Currently active locale.
-   */
-  currentLocale: SiteLocale = DEFAULT_LOCALE;
-  /**
-   * @description The supported site locales.
-   */
-  locales: ReadonlyArray<SiteLocale> = SITE_LOCALES;
-  /**
-   * @description Whether the locale dropdown is open.
-   */
-  open = false;
+  private readonly destroyRef = inject(DestroyRef);
 
   constructor(
-    protected siteService: SiteService,
-    protected translateService: TranslateService,
-    private router: Router
+    private readonly localeService: LocaleService,
+    private readonly router: Router
   ) {}
 
   /**
-   * @description Angular lifecycle hook: resolves and applies the active locale, then reloads.
+   * @description Angular lifecycle hook: resolves the locale, then mirrors it in the url.
    * @returns {Promise<void>}
    */
   async ngOnInit(): Promise<void> {
-    const resolved = this.resolveLocale();
-    this.currentLocale = resolved;
-    this.translateService.use(resolved);
-    await this.reload();
+    const locale = await this.localeService.initialize();
+    this.localeService.locale$
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((active) => this.syncQueryParam(active));
+    this.syncQueryParam(locale);
   }
 
-  /**
-   * @description Ensures the active locale is seeded and refreshes the site model.
-   * @returns {Promise<void>}
-   */
-  async reload(): Promise<void> {
-    await ensureSiteReady(this.currentLocale);
-    this.site = await this.siteService.getSite(this.currentLocale);
-  }
-
-  /**
-   * @description Toggles the language dropdown.
-   * @returns {void}
-   */
-  toggleLocale(): void {
-    this.open = !this.open;
-  }
-
-  /**
-   * @description Applies the selected locale: switches i18n and re-seeds the site graph.
-   * @param {SiteLocale} locale - The locale to activate.
-   * @returns {Promise<void>}
-   */
-  async selectLocale(locale: SiteLocale): Promise<void> {
-    if (locale === this.currentLocale) {
-      this.open = false;
-      return;
-    }
-    this.open = false;
-    try {
-      window.localStorage.setItem('site-locale', locale);
-    } catch {
-      // storage unavailable (e.g. private mode)
-    }
-    this.currentLocale = locale;
-    this.translateService.use(locale);
-    await ensureSiteReady(locale);
-    this.site = await this.siteService.getSite(locale);
+  private syncQueryParam(locale: string): void {
+    const current = this.router.parseUrl(this.router.url).queryParamMap.get('lang');
+    if (current === locale) return;
     this.router.navigate([], { queryParams: { lang: locale }, queryParamsHandling: 'merge' });
-  }
-
-  /**
-   * @description Checks whether the code is a supported locale.
-   * @param {string} value - The candidate locale code.
-   * @returns {boolean} Whether the value is a known site locale.
-   */
-  isSiteLocale(value: string): value is SiteLocale {
-    return isSiteLocale(value);
-  }
-
-  /**
-   * @description Resolves the active locale in order: `?lang=` url, translate current
-   * language, `localStorage` `site-locale`, then the browser navigator languages.
-   * @returns {SiteLocale} The resolved locale, defaulting to {@link DEFAULT_LOCALE}.
-   */
-  private resolveLocale(): SiteLocale {
-    const url = new URL(window.location.href);
-    const fromUrl = url.searchParams.get('lang');
-    if (isSiteLocale(fromUrl)) return fromUrl;
-    if (isSiteLocale(this.translateService.currentLang)) return this.translateService.currentLang as SiteLocale;
-    const stored = window.localStorage.getItem('site-locale');
-    if (isSiteLocale(stored)) return stored;
-    for (const l of navigator.languages) {
-      for (const candidate of SITE_LOCALES) {
-        if (l.toLowerCase().startsWith(candidate.split('_')[0])) return candidate;
-      }
-    }
-    return DEFAULT_LOCALE;
   }
 }

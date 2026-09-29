@@ -1,0 +1,693 @@
+[
+ {
+  "id": "extensible-decoration",
+  "order": 1,
+  "icon": "sparkles",
+  "accent": "amber",
+  "modules": [
+   "decoration",
+   "core",
+   "ui-decorators",
+   "db-decorators"
+  ],
+  "title": {
+   "en": "Extensible Decoration",
+   "pt": "Decoração Extensível"
+  },
+  "tagline": {
+   "en": "Decorate once. Override per flavour.",
+   "pt": "Decore uma vez. Sobrescreva por flavour."
+  },
+  "detail": {
+   "en": "Decoration is decaf's foundation. Instead of binding decorators to one framework, `Decoration.for(key)` registers a **base decorator set** for a key and `flavouredAs(flavour)` overrides or extends it for a specific framework or environment — without touching a single call site.\n\n### Why it matters\n\n- **One API, many targets.** The same `@component` decorator can emit a plain class in the default `decaf` flavour and an Angular component in the `angular` flavour.\n- **A centralized metadata store.** `Metadata.get()` / `Metadata.set()` read and write nested keys (`properties.name`, `description.class`) for classes and members.\n- **Composable by design.** `@prop`, `@method`, `@param`, `@propMetadata`, `@methodMetadata` and `@apply` stack and record reflected types.\n- **Debuggable.** Generated decorators encode the flavour and key in the function name.\n\nBecause every other decaf module builds on this contract, a flavour can change framework behaviour globally without forking model code.",
+   "pt": "A Decoration é a base do decaf. Em vez de vincular decoradores a um framework, `Decoration.for(key)` registra um **conjunto base de decoradores** para uma chave e `flavouredAs(flavour)` o sobrescreve ou estende para um framework ou ambiente específico — sem tocar em nenhum ponto de uso.\n\n### Por que importa\n\n- **Uma API, vários alvos.** O mesmo decorador `@component` pode gerar uma classe simples no flavour padrão `decaf` e um componente Angular no flavour `angular`.\n- **Armazenamento centralizado de metadados.** `Metadata.get()` / `Metadata.set()` leem e escrevem chaves aninhadas (`properties.name`, `description.class`) para classes e membros.\n- **Composição por design.** `@prop`, `@method`, `@param`, `@propMetadata`, `@methodMetadata` e `@apply` compõem e registram tipos refletidos.\n- **Fácil de depurar.** Os decoradores gerados codificam o flavour e a chave no nome da função.\n\nComo todos os outros módulos decaf se apoiam nesse contrato, um flavour pode mudar o comportamento globalmente sem bifurcar o código do modelo."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Build a flavoured decorator pipeline",
+     "pt": "Construir um pipeline de decorador por flavour"
+    },
+    "lang": "typescript",
+    "code": "import { Decoration } from \"@decaf-ts/decoration\";\n\nconst base = Decoration.for(\"widget\")\n  .define((target: any) => target)\n  .apply();\n\nDecoration.flavouredAs(\"react\")\n  .for(\"widget\")\n  .extend((target: any) => target)\n  .apply();"
+   },
+   {
+    "title": {
+     "en": "Read and write centralized metadata",
+     "pt": "Ler e escrever metadados centralizados"
+    },
+    "lang": "typescript",
+    "code": "import { Metadata } from \"@decaf-ts/decoration\";\n\nMetadata.set(UserService, \"description.class\", \"A service\");\nMetadata.get(UserService, \"description.class\"); // \"A service\""
+   }
+  ],
+  "demo": {
+   "kind": "decoration",
+   "label": {
+    "en": "Switch flavour and watch the decorator change",
+    "pt": "Troque o flavour e veja o decorador mudar"
+   },
+   "config": {
+    "key": "component",
+    "flavours": [
+     "decaf",
+     "angular",
+     "nest"
+    ],
+    "source": "decoration"
+   }
+  }
+ },
+ {
+  "id": "model-centric",
+  "order": 2,
+  "icon": "cube",
+  "accent": "emerald",
+  "modules": [
+   "core",
+   "ui-decorators",
+   "for-angular",
+   "decorator-validation"
+  ],
+  "title": {
+   "en": "Model Centric",
+   "pt": "Centrado no Modelo"
+  },
+  "tagline": {
+   "en": "The model is the architecture.",
+   "pt": "O modelo é a arquitetura."
+  },
+  "detail": {
+   "en": "In decaf the model is not just a data bag — it is the architecture. The same class carries persistence metadata (`@table`, `@pk`, `@column`), validation rules (`@required`, `@email`) and UI metadata (`@uimodel`, `@uielement`, `@uilayout`).\n\n### What falls out of the model\n\n- **CRUD screens** are generated from the model metadata instead of hand-built templates.\n- **List and table views** come from `@uilistmodel`, `@uitablecol` and `@uilistprop`.\n- **Forms, layouts and wizards** come from `@uimodel`, `@uilayout` and `@uisteppedmodel`.\n- **Backend routes** are generated from the very same metadata (see *Backend Route Generation*).\n\nChange the model once and the persistence layer, the API and the UI follow. That is the decaf promise: model first, everything else generated.",
+   "pt": "No decaf, o modelo não é apenas um saco de dados — é a arquitetura. A mesma classe carrega metadados de persistência (`@table`, `@pk`, `@column`), regras de validação (`@required`, `@email`) e metadados de UI (`@uimodel`, `@uielement`, `@uilayout`).\n\n### O que nasce do modelo\n\n- **Telas de CRUD** são geradas a partir dos metadados do modelo, em vez de templates escritos à mão.\n- **Listas e tabelas** vêm de `@uilistmodel`, `@uitablecol` e `@uilistprop`.\n- **Formulários, layouts e wizards** vêm de `@uimodel`, `@uilayout` e `@uisteppedmodel`.\n- **Rotas de backend** são geradas exatamente a partir dos mesmos metadados (veja *Geração de Rotas de Backend*).\n\nMude o modelo uma vez e a camada de persistência, a API e a UI acompanham. Essa é a promessa do decaf: modelo primeiro, o resto gerado."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "One fully decorated model",
+     "pt": "Um modelo totalmente decorado"
+    },
+    "lang": "typescript",
+    "code": "import { description, uses } from \"@decaf-ts/decoration\";\nimport { column, createdAt, pk, table, updatedAt } from \"@decaf-ts/core\";\nimport { hideOn } from \"@decaf-ts/db-decorators\";\nimport { Model, ModelArg, email, maxlength, minlength, model, pattern, required } from \"@decaf-ts/decorator-validation\";\nimport { uielement, uilayoutprop, uilistmodel, uilistprop, uimodel } from \"@decaf-ts/ui-decorators\";\n\n@description(\"Persisted application user\")\n@uses(\"ram\")\n@table(\"users\")\n@uilistmodel(\"ngx-decaf-list-item\", { icon: \"ti-user\" })\n@uimodel(\"ngx-decaf-crud-form\", { cols: 2, rows: 2 })\n@model()\nclass User extends Model {\n  @pk()\n  @uielement(\"ngx-decaf-crud-field\", { label: \"user.id.label\" })\n  @uilayoutprop(1, 1)\n  id!: string;\n\n  @column(\"email\")\n  @required()\n  @email()\n  @pattern(/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/)\n  @uielement(\"ngx-decaf-crud-field\", { label: \"user.email.label\", type: \"email\" })\n  @uilistprop(\"title\")\n  @uilayoutprop(1, 2)\n  email!: string;\n\n  @column(\"name\")\n  @required()\n  @minlength(5)\n  @maxlength(64)\n  @uielement(\"ngx-decaf-crud-field\", { label: \"user.name.label\" })\n  @uilistprop(\"description\")\n  @uilayoutprop(2, 1)\n  name!: string;\n\n  @column(\"created_at\")\n  @createdAt()\n  @hideOn(\"create\", \"update\")\n  @uielement(\"ngx-decaf-crud-field\", { label: \"user.createdAt.label\", type: \"date\" })\n  @uilayoutprop(2, 2)\n  createdAt!: Date;\n\n  @column(\"updated_at\")\n  @updatedAt()\n  @hideOn(\"create\", \"update\")\n  @uielement(\"ngx-decaf-crud-field\", { label: \"user.updatedAt.label\", type: \"date\" })\n  @uilayoutprop(3, 1)\n  updatedAt!: Date;\n\n  constructor(arg?: ModelArg<User>) {\n    super(arg);\n  }\n}"
+   }
+  ],
+  "demo": {
+   "kind": "model",
+   "label": {
+    "en": "Render a model as a form and a list",
+    "pt": "Renderize um modelo como formulário e lista"
+   },
+   "config": {
+    "model": "UserProfile",
+    "tags": [
+     "ngx-decaf-crud-form",
+     "ngx-decaf-crud-field"
+    ],
+    "listTag": "ngx-decaf-crud-list"
+   }
+  }
+ },
+ {
+  "id": "backend-route-generation",
+  "order": 3,
+  "icon": "route",
+  "accent": "sky",
+  "modules": [
+   "for-http",
+   "for-nest",
+   "core"
+  ],
+  "title": {
+   "en": "Backend Route Generation",
+   "pt": "Geração de Rotas de Backend"
+  },
+  "tagline": {
+   "en": "Your models are the API.",
+   "pt": "Seus modelos são a API."
+  },
+  "detail": {
+   "en": "Stop hand-writing controllers. decaf derives the route surface from the model metadata and the repository capabilities, so a model gets a full CRUD, bulk, query and grouping API the moment it is exposed.\n\n### Generated surface\n\n- **CRUD and bulk CRUD** — create, read, update and delete, single and in bulk.\n- **Query routes** — `find*`, `listBy`, `page`, `paginateBy` and raw statement routes.\n- **Grouping and aggregation** — `count`, `avg`, `max`, `min`, `sum`, `distinct` and `group`, toggled through `allowGroupingQueries`.\n- **Per-controller auth** — `@Auth`, `@Public`, `@RequireRoles` and `@RequireNamespaces` hook straight into the generated surface.\n\n`ModelControllerFactory` (for-http) and `FromModelController` / `@expose()` (for-nest) build the controller class from model metadata, and the config flags trim the surface instead of patching routes out later.",
+   "pt": "Pare de escrever controllers à mão. O decaf deriva a superfície de rotas dos metadados do modelo e das capacidades do repositório, então um modelo ganha uma API completa de CRUD, bulk, consultas e agrupamento no momento em que é exposto.\n\n### Superfície gerada\n\n- **CRUD e CRUD em lote** — create, read, update e delete, individual e em lote.\n- **Rotas de consulta** — `find*`, `listBy`, `page`, `paginateBy` e rotas de statement bruto.\n- **Agrupamento e agregação** — `count`, `avg`, `max`, `min`, `sum`, `distinct` e `group`, controlados por `allowGroupingQueries`.\n- **Auth por controller** — `@Auth`, `@Public`, `@RequireRoles` e `@RequireNamespaces` se conectam direto à superfície gerada.\n\n`ModelControllerFactory` (for-http) e `FromModelController` / `@expose()` (for-nest) constroem a classe do controller a partir dos metadados do modelo, e as flags de configuração reduzem a superfície em vez de remover rotas depois."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Generate a model controller (for-http)",
+     "pt": "Gerar um controller de modelo (for-http)"
+    },
+    "lang": "typescript",
+    "code": "import { ModelControllerFactory } from \"@decaf-ts/for-http/server\";\n\nconst Controller = ModelControllerFactory.create(User, repo, {\n  allowBulkStatement: true,\n  allowGroupingQueries: { count: true, group: false },\n});"
+   },
+   {
+    "title": {
+     "en": "Expose a model as a Nest controller",
+     "pt": "Expor um modelo como controller Nest"
+    },
+    "lang": "typescript",
+    "code": "import { expose, controllerConfig, FromModelController } from \"@decaf-ts/for-nest\";\n\n@expose(true)\n@controllerConfig({\n  allowBulkStatement: true,\n  auth: { public: false },\n})\nclass Product {}\n\nconst Controller = FromModelController.create(Product);"
+   }
+  ],
+  "demo": {
+   "kind": "routes",
+   "label": {
+    "en": "Explore the generated route surface",
+    "pt": "Explore a superfície de rotas gerada"
+   },
+   "config": {
+    "model": "Product",
+    "surface": [
+     "create",
+     "read",
+     "update",
+     "delete",
+     "createAll",
+     "findBy",
+     "listBy",
+     "page",
+     "countOf",
+     "group"
+    ]
+   }
+  }
+ },
+ {
+  "id": "cross-persistence",
+  "order": 4,
+  "icon": "database",
+  "accent": "violet",
+  "modules": [
+   "core",
+   "for-typeorm",
+   "for-pouch",
+   "for-nano",
+   "for-couchdb",
+   "for-fabric",
+   "for-drizzle"
+  ],
+  "title": {
+   "en": "Cross-Persistence",
+   "pt": "Cross-Persistence"
+  },
+  "tagline": {
+   "en": "One model, every database.",
+   "pt": "Um modelo, todos os bancos."
+  },
+  "detail": {
+   "en": "A decaf model is not married to a database. Bind it to a flavour with `@uses(flavour)` and `Repository.forModel(Model)` resolves the matching adapter-backed repository. Swap the adapter, keep the model, the service and the queries.\n\n### Backends covered\n\n- **SQL** via `@decaf-ts/for-typeorm` (PostgreSQL and friends) and `@decaf-ts/for-drizzle`.\n- **Document stores** via `@decaf-ts/for-pouch` (PouchDB/CouchDB) and `@decaf-ts/for-couchdb`.\n- **Embedded** via `@decaf-ts/for-nano`.\n- **Blockchain** via `@decaf-ts/for-fabric`.\n- **In-memory and filesystem** via the built-in RAM and FS adapters.\n\nRevision handling, bulk APIs and transactions are adapter-aware: the Pouch repository keeps revision metadata in sync, the TypeORM adapter switches to the matching transactional `EntityManager` when it sees a `transactionLock`, and the same service code runs unchanged on all of them.",
+   "pt": "Um modelo decaf não é casado com um banco de dados. Vincule-o a um flavour com `@uses(flavour)` e `Repository.forModel(Model)` resolve o repositório apoiado pelo adapter correspondente. Troque o adapter, mantenha o modelo, o serviço e as consultas.\n\n### Backends cobertos\n\n- **SQL** via `@decaf-ts/for-typeorm` (PostgreSQL e afins) e `@decaf-ts/for-drizzle`.\n- **Bancos de documentos** via `@decaf-ts/for-pouch` (PouchDB/CouchDB) e `@decaf-ts/for-couchdb`.\n- **Embarcado** via `@decaf-ts/for-nano`.\n- **Blockchain** via `@decaf-ts/for-fabric`.\n- **Memória e sistema de arquivos** via os adapters RAM e FS embutidos.\n\nTratamento de revisão, APIs em lote e transações são conscientes do adapter: o repositório Pouch mantém os metadados de revisão em sincronia, o adapter TypeORM troca para o `EntityManager` transacional ao ver um `transactionLock`, e o mesmo código de serviço roda sem mudanças em todos eles."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Bind a model to TypeORM and resolve its repository",
+     "pt": "Vincular um modelo ao TypeORM e resolver seu repositório"
+    },
+    "lang": "typescript",
+    "code": "import \"@decaf-ts/for-typeorm\";\nimport { uses } from \"@decaf-ts/decoration\";\nimport { model, Model, required } from \"@decaf-ts/decorator-validation\";\nimport { BaseModel, pk, table } from \"@decaf-ts/core\";\nimport { TypeORMFlavour } from \"@decaf-ts/for-typeorm\";\nimport { Repository } from \"@decaf-ts/core\";\n\n@uses(TypeORMFlavour)\n@table(\"app_users\")\n@model()\nclass AppUser extends BaseModel {\n  @pk({ type: \"Number\" })\n  id!: number;\n\n  @required()\n  name!: string;\n}\n\nconst repo = Repository.forModel(AppUser);\nawait repo.create(new AppUser({ name: \"Ada\" }));"
+   },
+   {
+    "title": {
+     "en": "The same model on PouchDB",
+     "pt": "O mesmo modelo no PouchDB"
+    },
+    "lang": "typescript",
+    "code": "import \"@decaf-ts/for-pouch\";\nimport { uses } from \"@decaf-ts/decoration\";\nimport { model, required } from \"@decaf-ts/decorator-validation\";\nimport { BaseModel, pk, Repository } from \"@decaf-ts/core\";\n\n@uses(\"pouch\")\n@model()\nclass User extends BaseModel {\n  @pk({ type: \"Number\" })\n  id!: number;\n\n  @required()\n  name!: string;\n}\n\nconst repo = Repository.forModel(User);\nconst created = await repo.create(new User({ id: 1, name: \"Ada\" }));\nconst read = await repo.read(created.id);"
+   }
+  ],
+  "demo": {
+   "kind": "persistence",
+   "label": {
+    "en": "Swap the backend under one model",
+    "pt": "Troque o backend sob o mesmo modelo"
+   },
+   "config": {
+    "model": "AppUser",
+    "flavours": [
+     "ram",
+     "pouch",
+     "nano",
+     "typeorm"
+    ],
+    "operations": [
+     "create",
+     "read",
+     "update",
+     "delete"
+    ]
+   }
+  }
+ },
+ {
+  "id": "cross-ui",
+  "order": 5,
+  "icon": "layers",
+  "accent": "rose",
+  "modules": [
+   "ui-decorators",
+   "for-angular",
+   "for-react",
+   "for-react-native"
+  ],
+  "title": {
+   "en": "Cross-UI",
+   "pt": "Cross-UI"
+  },
+  "tagline": {
+   "en": "One model, every renderer.",
+   "pt": "Um modelo, todo renderizador."
+  },
+  "detail": {
+   "en": "The same `ui-decorators` metadata that drives an Angular screen can drive a React or React Native view. Models declare *what* the UI is; the renderer decides *how* to draw it.\n\n### One contract, many runtimes\n\n- **`@renderedBy(\"angular\")`** pins a model to one engine when several are live.\n- **`NgxRenderingEngine.render(model, ...)`** maps the field tree to real `ngx-decaf-crud-form`, `ngx-decaf-crud-field`, `ngx-decaf-fieldset` and `ngx-decaf-layout` components.\n- **`@uichild`** nests a child model into a fieldset; the child's own `@uilayout` still controls its internal grid.\n- **List items** map to cards and table columns through `@uilistmodel`, `@uilistprop` and `@uitablecol`.\n\nKeep labels and placeholders as translation keys on the model, and each runtime translates them locally.",
+   "pt": "Os mesmos metadados de `ui-decorators` que dirigem uma tela Angular podem dirigir uma view React ou React Native. Os modelos declaram *o que* é a UI; o renderizador decide *como* desenhá-la.\n\n### Um contrato, vários runtimes\n\n- **`@renderedBy(\"angular\")`** fixa um modelo a um motor quando há vários ativos.\n- **`NgxRenderingEngine.render(model, ...)`** mapeia a árvore de campos para componentes reais `ngx-decaf-crud-form`, `ngx-decaf-crud-field`, `ngx-decaf-fieldset` e `ngx-decaf-layout`.\n- **`@uichild`** aninha um modelo filho em um fieldset; o `@uilayout` do filho continua controlando sua grade interna.\n- **Itens de lista** viram cards e colunas de tabela por meio de `@uilistmodel`, `@uilistprop` e `@uitablecol`.\n\nMantenha labels e placeholders como chaves de tradução no modelo e cada runtime as traduz localmente."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "A model-driven Angular form",
+     "pt": "Um formulário Angular dirigido pelo modelo"
+    },
+    "lang": "typescript",
+    "code": "import { renderedBy, uichild, uielement, uilayout, uilayoutprop, uimodel } from \"@decaf-ts/ui-decorators\";\nimport { model, Model, required, date, minlength, email, ModelArg } from \"@decaf-ts/decorator-validation\";\n\n@uilayout(\"ngx-decaf-layout\", 2, 2, { class: \"address-grid\" })\n@model()\nclass Address extends Model {\n  @uilayoutprop(1, 1)\n  @required()\n  @uielement(\"ngx-decaf-crud-field\", { label: \"address.street.label\", type: \"text\" })\n  street!: string;\n\n  @uilayoutprop(2, 1)\n  @uielement(\"ngx-decaf-crud-field\", { label: \"address.number.label\", type: \"number\" })\n  number!: number;\n}\n\n@uimodel(\"ngx-decaf-crud-form\", { class: \"profile-form\" })\n@renderedBy(\"angular\")\n@model()\nclass UserProfile extends Model {\n  @required()\n  @minlength(3)\n  @uielement(\"ngx-decaf-crud-field\", { label: \"profile.name.label\", type: \"text\" })\n  name!: string;\n\n  @uichild(Address.name, \"ngx-decaf-fieldset\", { collapsable: false })\n  address!: Address;\n\n  constructor(arg?: ModelArg<UserProfile>) {\n    super(arg);\n  }\n}"
+   },
+   {
+    "title": {
+     "en": "Render the model with the Angular engine",
+     "pt": "Renderizar o modelo com o motor Angular"
+    },
+    "lang": "typescript",
+    "code": "import { NgxRenderingEngine } from \"@decaf-ts/for-angular\";\n\nconst engine = NgxRenderingEngine.get();\nconst output = engine.render(model, {}, viewContainerRef, injector, templateRef);"
+   }
+  ],
+  "demo": {
+   "kind": "ui",
+   "label": {
+    "en": "Switch renderer under one model",
+    "pt": "Troque o renderizador sob o mesmo modelo"
+   },
+   "config": {
+    "model": "UserProfile",
+    "renderers": [
+     "angular",
+     "react",
+     "react-native"
+    ]
+   }
+  }
+ },
+ {
+  "id": "graph-workflow-engine",
+  "order": 6,
+  "icon": "share-2",
+  "accent": "cyan",
+  "modules": [
+   "integrations",
+   "as-graph",
+   "for-angular",
+   "ui-decorators"
+  ],
+  "title": {
+   "en": "Graph Workflow Engine",
+   "pt": "Motor de Workflows em Grafo"
+  },
+  "tagline": {
+   "en": "Typed nodes, ports and edges — executed.",
+   "pt": "Nós, portas e arestas tipados — executados."
+  },
+  "detail": {
+   "en": "decaf ships a backend graph execution engine and a frontend-safe shared layer for building, validating and running workflows made of typed nodes.\n\n### Runtime pieces\n\n- **`GraphExecutionPlanner` and `GraphTopology`** order the graph, detect cycles and resolve relations before execution.\n- **`GraphNodeExecutorRegistry`** registers one executor per node kind: code, log, switch, foreach, while and until.\n- **Validation helpers** (`GraphDefinitionValidator`, `GraphPortSchemaResolver`, `GraphValueValidator`) reject bad ports and relations early.\n- **Pinning** (`GraphPinningService`, `GraphPinningDependencyResolver`, `GraphValueStore`) reuses previously computed values.\n- **Events** (`GraphExecutionEventFactory`, `GraphExecutionEventEmitter`, `GraphExecutionObserver`) drive progress in the Angular graph editor.\n\nKeep shared declarations in `@decaf-ts/integrations/graph/shared` and execution in the engine entrypoint, so frontend bundles never pull in runtime code.",
+   "pt": "O decaf fornece um motor de execução de grafos no backend e uma camada compartilhada segura para o frontend construir, validar e executar workflows feitos de nós tipados.\n\n### Peças de runtime\n\n- **`GraphExecutionPlanner` e `GraphTopology`** ordenam o grafo, detectam ciclos e resolvem relações antes da execução.\n- **`GraphNodeExecutorRegistry`** registra um executor por tipo de nó: code, log, switch, foreach, while e until.\n- **Validadores** (`GraphDefinitionValidator`, `GraphPortSchemaResolver`, `GraphValueValidator`) rejeitam portas e relações inválidas cedo.\n- **Pinning** (`GraphPinningService`, `GraphPinningDependencyResolver`, `GraphValueStore`) reaproveita valores já calculados.\n- **Eventos** (`GraphExecutionEventFactory`, `GraphExecutionEventEmitter`, `GraphExecutionObserver`) alimentam o progresso no editor Angular.\n\nMantenha as declarações compartilhadas em `@decaf-ts/integrations/graph/shared` e a execução no entrypoint do engine, para que bundles de frontend nunca carreguem código de runtime."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Plan, validate and execute a workflow",
+     "pt": "Planejar, validar e executar um workflow"
+    },
+    "lang": "typescript",
+    "code": "import {\n  GraphExecutionEngine,\n  GraphNodeExecutorRegistry,\n  GraphExecutionPlanner,\n} from \"@decaf-ts/integrations/graph\";\n\nconst planner = new GraphExecutionPlanner();\nconst plan = planner.plan(workflowDefinition);\n\nconst engine = new GraphExecutionEngine(new GraphNodeExecutorRegistry());\nconst result = await engine.execute(plan);\nconsole.log(result.status); // \"succeeded\""
+   },
+   {
+    "title": {
+     "en": "Share graph metadata with the frontend",
+     "pt": "Compartilhar metadados do grafo com o frontend"
+    },
+    "lang": "typescript",
+    "code": "import {\n  GraphExecutionEventType,\n  GraphWorkflowDefinition,\n  Metadata,\n} from \"@decaf-ts/integrations/graph/shared\";\n\nconst workflows = Metadata.workflows(GraphWorkflowDefinition);\nconsole.log(GraphExecutionEventType.NODE_COMPLETED);"
+   }
+  ],
+  "demo": {
+   "kind": "graph",
+   "label": {
+    "en": "Run a workflow and watch nodes light up",
+    "pt": "Execute um workflow e veja os nós acenderem"
+   },
+   "config": {
+    "workflow": "onboarding",
+    "nodes": [
+     "start",
+     "code",
+     "switch",
+     "foreach",
+     "end"
+    ]
+   }
+  }
+ },
+ {
+  "id": "task-engine",
+  "order": 7,
+  "icon": "list-checks",
+  "accent": "orange",
+  "modules": [
+   "core"
+  ],
+  "title": {
+   "en": "Durable Task Engine",
+   "pt": "Motor de Tarefas Durável"
+  },
+  "tagline": {
+   "en": "Fire and forget, with retries and progress.",
+   "pt": "Dispare e esqueça, com retries e progresso."
+  },
+  "detail": {
+   "en": "Long-running work belongs in the task engine, not in a request handler. Build an atomic task or a multi-step composite, push it, and track it — the engine persists state and events through your adapter.\n\n### What you get\n\n- **`TaskBuilder`** for atomic jobs and **`CompositeTaskBuilder`** for step pipelines.\n- **`TaskStepSpecBuilder`** for per-step `lock`, `dependsOn`, `maxAttempts`, `backoff` and `allowConcurrent`.\n- **`TaskHandler` + `@task(\"classification\")`** register handlers from metadata; `TaskContext` gives `progress()`, `heartbeat()`, `retry()`, `cancel()` and `reschedule()`.\n- **Trackers** from `push(task, true)` / `schedule(task).for(date)` resolve completion without polling the repository yourself.\n- **Worker-aware engines** fan out to worker threads through the `@decaf-ts/core/workers` entrypoint.\n\nStates are first-class: `pending`, `scheduled`, `running`, `waiting_retry`, `failed`, `succeeded` and `canceled`.",
+   "pt": "Trabalho de longa duração pertence ao motor de tarefas, não a um handler de requisição. Construa uma tarefa atômica ou um composto multi-etapas, envie e acompanhe — o motor persiste estado e eventos através do seu adapter.\n\n### O que você ganha\n\n- **`TaskBuilder`** para jobs atômicos e **`CompositeTaskBuilder`** para pipelines de etapas.\n- **`TaskStepSpecBuilder`** para `lock`, `dependsOn`, `maxAttempts`, `backoff` e `allowConcurrent` por etapa.\n- **`TaskHandler` + `@task(\"classification\")`** registram handlers a partir de metadados; `TaskContext` oferece `progress()`, `heartbeat()`, `retry()`, `cancel()` e `reschedule()`.\n- **Trackers** de `push(task, true)` / `schedule(task).for(date)` resolvem a conclusão sem polling manual.\n- **Engines com workers** distribuem para threads de trabalho pelo entrypoint `@decaf-ts/core/workers`.\n\nOs estados são de primeira classe: `pending`, `scheduled`, `running`, `waiting_retry`, `failed`, `succeeded` e `canceled`."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Build and push a task",
+     "pt": "Construir e enviar uma tarefa"
+    },
+    "lang": "typescript",
+    "code": "import { TaskBuilder, CompositeTaskBuilder } from \"@decaf-ts/core\";\n\nconst atomic = new TaskBuilder()\n  .setClassification(\"email-send\")\n  .setInput({ to: \"user@example.com\" })\n  .setMaxAttempts(3)\n  .build();\n\nconst composite = new CompositeTaskBuilder()\n  .setClassification(\"import-user\")\n  .addStep(\"load-user\", { id: 1 })\n  .addStep(\"save-user\")\n  .build();"
+   },
+   {
+    "title": {
+     "en": "A task handler with progress",
+     "pt": "Um handler de tarefa com progresso"
+    },
+    "lang": "typescript",
+    "code": "import { TaskHandler, task, TaskContext } from \"@decaf-ts/core\";\n\n@task(\"email-send\")\nclass EmailSendHandler extends TaskHandler<{ to: string }, boolean> {\n  async run(input: { to: string }, ctx: TaskContext) {\n    ctx.logger.info(`sending email to ${input.to}`);\n    await ctx.progress({ percent: 50 });\n    return true;\n  }\n}"
+   }
+  ],
+  "demo": {
+   "kind": "tasks",
+   "label": {
+    "en": "Submit a task and follow its progress",
+    "pt": "Envie uma tarefa e acompanhe o progresso"
+   },
+   "config": {
+    "tasks": [
+     "email-send",
+     "import-user"
+    ],
+    "steps": [
+     "load-user",
+     "save-user"
+    ]
+   }
+  }
+ },
+ {
+  "id": "authorization",
+  "order": 8,
+  "icon": "shield",
+  "accent": "indigo",
+  "modules": [
+   "core",
+   "for-nest",
+   "for-http",
+   "integrations"
+  ],
+  "title": {
+   "en": "Authorization Built In",
+   "pt": "Autorização Embutida"
+  },
+  "tagline": {
+   "en": "Guard the method, not the endpoint.",
+   "pt": "Proteja o método, não o endpoint."
+  },
+  "detail": {
+   "en": "Authorization is part of the decaf service contract, not an afterthought bolted onto the transport. Core exposes `@allowIf` and `@blockIf` guards whose handlers receive the original call args plus the resolved contextual args, and the Nest bridge layers role/namespace checks on top.\n\n### Two levels\n\n- **Method-level guards** — `@allowIf((userId) => userId !== \"banned\")` and `@blockIf(...)` return `void` to allow or an `AuthorizationError` to block.\n- **Route-level auth** — `@Auth`, `@Public`, `@RequireRoles` and `@RequireNamespaces` attach to generated or custom controllers.\n- **Context-aware** — handlers resolve `{ log, ctx }` through `logCtx(...)`, so the decision can use the request context.\n- **Namespace and feature access** — the integrations layer adds tenant/namespace and feature-flag access subjects on top.\n\nThe same guards apply whether the call arrives through the generated REST surface or from an in-process service.",
+   "pt": "A autorização faz parte do contrato de serviço do decaf, não é um pensamento tardio colado no transporte. O core expõe os guards `@allowIf` e `@blockIf`, cujos handlers recebem os argumentos originais da chamada mais os argumentos contextuais resolvidos, e a ponte Nest adiciona checagens de papel e namespace por cima.\n\n### Dois níveis\n\n- **Guards no método** — `@allowIf((userId) => userId !== \"banned\")` e `@blockIf(...)` retornam `void` para permitir ou um `AuthorizationError` para bloquear.\n- **Auth na rota** — `@Auth`, `@Public`, `@RequireRoles` e `@RequireNamespaces` se aplicam a controllers gerados ou customizados.\n- **Consciente do contexto** — handlers resolvem `{ log, ctx }` via `logCtx(...)`, então a decisão pode usar o contexto da requisição.\n- **Namespace e features** — a camada de integrações adiciona subjects de acesso por tenant/namespace e feature flag.\n\nOs mesmos guards valem para a chamada gerada pela superfície REST e para a chamada in-process."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Method-level auth guards",
+     "pt": "Guards de auth no método"
+    },
+    "lang": "typescript",
+    "code": "import { allowIf, blockIf } from \"@decaf-ts/core\";\n\nclass UserService {\n  @allowIf((userId) => userId !== \"banned\")\n  async updateUser(userId: string) {}\n}"
+   },
+   {
+    "title": {
+     "en": "Route-level auth on a Nest controller",
+     "pt": "Auth na rota em um controller Nest"
+    },
+    "lang": "typescript",
+    "code": "import { Auth, Public, RequireRoles } from \"@decaf-ts/for-nest\";\n\n@Auth(User)\nclass UserController {\n  @Public()\n  list() {}\n\n  @RequireRoles(\"admin\")\n  remove() {}\n}"
+   }
+  ],
+  "demo": {
+   "kind": "auth",
+   "label": {
+    "en": "Try the guards with different roles",
+    "pt": "Teste os guards com papéis diferentes"
+   },
+   "config": {
+    "rules": [
+     "allowIf",
+     "blockIf"
+    ],
+    "roles": [
+     "public",
+     "user",
+     "admin"
+    ]
+   }
+  }
+ },
+ {
+  "id": "integrations",
+  "order": 9,
+  "icon": "plug",
+  "accent": "teal",
+  "modules": [
+   "integrations"
+  ],
+  "title": {
+   "en": "Platform Integrations",
+   "pt": "Integrações de Plataforma"
+  },
+  "tagline": {
+   "en": "Keycloak, blobs, flags and secrets — one layer.",
+   "pt": "Keycloak, blobs, flags e secrets — uma camada."
+  },
+  "detail": {
+   "en": "The `@decaf-ts/integrations` package is the wiring layer that connects a decaf app to the infrastructure around it, so feature code never grows one-off integration glue.\n\n### What is in the box\n\n- **Identity** — Keycloak provisioning and auth, plus the Nest auth/context bridge.\n- **Secrets** — model-backed and cloud secret providers behind one `SecretService`.\n- **Blobs** — local, S3-compatible, Azure, GCS, IPFS and in-memory stores behind one blob service.\n- **Feature flags** — a persisted registry with environment sync, subject-scoped access and `@renderIfFeature` / `@hideOnFeature` UI gating.\n- **Namespaces** — tenant, org-unit, role, permission and resource authorization scaffolding.\n- **Observability** — Kibana provisioning for data views, dashboards, roles and users.\n- **Orchestration** — Docker Compose service wrappers and a dynamic loader for models, adapters, repositories, services, controllers, environments, components and graph nodes.\n\nEach service normalizes its responses into decaf context and model shapes, and destructive operations stay behind the server-level policy.",
+   "pt": "O pacote `@decaf-ts/integrations` é a camada de fiação que conecta um app decaf à infraestrutura ao redor, para que o código de feature nunca acumule cola de integração pontual.\n\n### O que vem na caixa\n\n- **Identidade** — provisionamento e auth com Keycloak, além da ponte de auth/contexto do Nest.\n- **Segredos** — provedores de segredos model-backed e em nuvem atrás de um `SecretService`.\n- **Blobs** — backends local, S3-compatível, Azure, GCS, IPFS e memória atrás de um serviço de blob.\n- **Feature flags** — registro persistido com sync de ambiente, acesso por subject e gating de UI com `@renderIfFeature` / `@hideOnFeature`.\n- **Namespaces** — scaffolding de autorização por tenant, unidade organizacional, papel, permissão e recurso.\n- **Observabilidade** — provisionamento de Kibana para data views, dashboards, papéis e usuários.\n- **Orquestração** — wrappers de serviços Docker Compose e um loader dinâmico para modelos, adapters, repositórios, serviços, controllers, ambientes, componentes e nós de grafo.\n\nCada serviço normaliza suas respostas para o contexto e os shapes de modelo do decaf."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Feature flags and UI gating",
+     "pt": "Feature flags e gating de UI"
+    },
+    "lang": "typescript",
+    "code": "import { FeatureFlagService, renderIfFeature, hideOnFeature } from \"@decaf-ts/integrations\";\n\nconst service = new FeatureFlagService();\nawait service.initialize({ adapter });\n\nawait service.syncFromEnvironment();\nconst enabled = await service.isEnabledForSubject(\"new-dashboard\", {\n  kind: \"user\",\n  key: \"user-1\",\n});\n\n@renderIfFeature(\"new-dashboard\")\nclass DashboardCard {}"
+   },
+   {
+    "title": {
+     "en": "Secrets behind one service",
+     "pt": "Segredos atrás de um serviço"
+    },
+    "lang": "typescript",
+    "code": "import { SecretService } from \"@decaf-ts/integrations\";\n\nconst secrets = new SecretService();\nawait secrets.boot({ adapter });\n\nconst value = await secrets.get(\"API_TOKEN\");"
+   }
+  ],
+  "demo": {
+   "kind": "integrations",
+   "label": {
+    "en": "Toggle a flag and gate the UI",
+    "pt": "Alterne uma flag e controle a UI"
+   },
+   "config": {
+    "flags": [
+     "new-dashboard",
+     "beta-reader"
+    ],
+    "subjects": [
+     "user",
+     "namespace",
+     "route"
+    ]
+   }
+  }
+ },
+ {
+  "id": "validation",
+  "order": 10,
+  "icon": "check-circle",
+  "accent": "lime",
+  "modules": [
+   "decorator-validation",
+   "core"
+  ],
+  "title": {
+   "en": "Validation by Decoration",
+   "pt": "Validação por Decoração"
+  },
+  "tagline": {
+   "en": "Declare the rules on the model.",
+   "pt": "Declare as regras no modelo."
+  },
+  "detail": {
+   "en": "Validation is metadata, not a second schema. `@required`, `@email`, `@minLength`, `@pattern`, `@type` and `@list` live on the model properties, and `instance.hasErrors()` reports the result as a structured `ModelErrorDefinition`.\n\n### Extend it without forking it\n\n- **Built-in validators** cover required, type, email, length, pattern and list checks.\n- **Custom validators** pair a `@validator(key)` class with a decorator built through `innerValidationDecorator(...)`.\n- **Dynamic models** — `ModelBuilder` builds the same metadata in code when the model itself is generated.\n- **Composable rules** — combine a custom rule with `@required()` through `@apply(...)`.\n\nThe same metadata feeds the UI renderer, so an invalid field is also an invalid control.",
+   "pt": "Validação é metadado, não um segundo schema. `@required`, `@email`, `@minLength`, `@pattern`, `@type` e `@list` ficam nas propriedades do modelo, e `instance.hasErrors()` reporta o resultado como um `ModelErrorDefinition` estruturado.\n\n### Estenda sem bifurcar\n\n- **Validadores embutidos** cobrem required, type, email, length, pattern e list.\n- **Validadores customizados** combinam uma classe `@validator(key)` com um decorador construído via `innerValidationDecorator(...)`.\n- **Modelos dinâmicos** — `ModelBuilder` constrói os mesmos metadados em código quando o próprio modelo é gerado.\n- **Regras compostas** — combine uma regra customizada com `@required()` via `@apply(...)`.\n\nOs mesmos metadados alimentam o renderizador de UI, então um campo inválido também é um controle inválido."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Declare validators on the model",
+     "pt": "Declare validadores no modelo"
+    },
+    "lang": "typescript",
+    "code": "import { model, Model, required, email, minLength, pattern } from \"@decaf-ts/decorator-validation\";\n\n@model()\nclass User extends Model {\n  @required()\n  name!: string;\n\n  @required()\n  @email()\n  email!: string;\n\n  @minLength(8)\n  password!: string;\n\n  @pattern(/^[a-z0-9-]+$/i)\n  slug!: string;\n}\n\nconst errors = new User().hasErrors();"
+   },
+   {
+    "title": {
+     "en": "A custom validator",
+     "pt": "Um validador customizado"
+    },
+    "lang": "typescript",
+    "code": "import { Validator, Validation, validator, innerValidationDecorator, type, model, Model } from \"@decaf-ts/decorator-validation\";\nimport { apply } from \"@decaf-ts/decoration\";\n\nconst GTIN_KEY = \"gtin\";\n\n@validator(GTIN_KEY)\nclass GtinValidator extends Validator {\n  constructor() {\n    super(\"Invalid GTIN\");\n  }\n\n  hasErrors(value: string | number): string | undefined {\n    return /^\\d{14}$/.test(String(value)) ? undefined : this.getMessage();\n  }\n}\n\nValidation.register(new GtinValidator());\n\nconst gtin = () =>\n  apply(\n    innerValidationDecorator(gtin, GTIN_KEY, { message: \"Invalid GTIN\", async: false }),\n    type([String, Number])\n  );"
+   }
+  ],
+  "demo": {
+   "kind": "forms",
+   "label": {
+    "en": "Break the rules and watch the errors",
+    "pt": "Quebre as regras e veja os erros"
+   },
+   "config": {
+    "model": "User",
+    "fields": [
+     "name",
+     "email",
+     "password",
+     "slug"
+    ]
+   }
+  }
+ },
+ {
+  "id": "encryption-at-rest",
+  "order": 11,
+  "icon": "lock",
+  "accent": "red",
+  "modules": [
+   "crypto",
+   "core"
+  ],
+  "title": {
+   "en": "Encryption at Rest",
+   "pt": "Criptografia em Repouso"
+  },
+  "tagline": {
+   "en": "Encrypt the field, not the app.",
+   "pt": "Criptografe o campo, não o app."
+  },
+  "detail": {
+   "en": "Sensitive fields do not need a second persistence model. Put `@encrypt(secret, algorithm)` on the property and the repository encrypts before create/update and decrypts after read.\n\n### What the crypto module covers\n\n- **Field encryption** — `@encrypt()` stores an IV-prefixed ciphertext string and round-trips it through the read/update hooks.\n- **Key derivation** — `deriveKeyFromSecret(secret, salt?)` and `CryptoService` wrap AES-GCM.\n- **Low-level access** — `getSubtle()` / `getCrypto()` expose the runtime crypto provider.\n- **JWT** — `sign(payload, options)` and `verify(token, options)` implement HS256 tokens.\n- **Dynamic models** — import `@decaf-ts/crypto/overrides` before `ModelBuilder.encrypt(...)`.\n\nThe decorator is persistence-aware: it is applied by the repository, so application code keeps using the plain value.",
+   "pt": "Campos sensíveis não precisam de um segundo modelo de persistência. Coloque `@encrypt(secret, algorithm)` na propriedade e o repositório criptografa antes de create/update e descriptografa depois de read.\n\n### O que o módulo de criptografia cobre\n\n- **Criptografia de campo** — `@encrypt()` armazena uma string cifrada prefixada com IV e faz round-trip pelos hooks de read/update.\n- **Derivação de chave** — `deriveKeyFromSecret(secret, salt?)` e `CryptoService` encapsulam AES-GCM.\n- **Acesso de baixo nível** — `getSubtle()` / `getCrypto()` expõem o provedor de crypto do runtime.\n- **JWT** — `sign(payload, options)` e `verify(token, options)` implementam tokens HS256.\n- **Modelos dinâmicos** — importe `@decaf-ts/crypto/overrides` antes de `ModelBuilder.encrypt(...)`.\n\nO decorador é consciente da persistência: é aplicado pelo repositório, então o código da aplicação continua usando o valor puro."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Encrypt a model field",
+     "pt": "Criptografar um campo do modelo"
+    },
+    "lang": "typescript",
+    "code": "import { model, Model, prop } from \"@decaf-ts/decorator-validation\";\nimport { encrypt } from \"@decaf-ts/crypto/integration\";\n\n@model()\nclass User extends Model {\n  @prop()\n  name!: string;\n\n  @prop()\n  @encrypt(\"mySecret\", { name: \"AES-GCM\", length: 256 })\n  ssn?: string;\n}"
+   },
+   {
+    "title": {
+     "en": "Sign and verify a JWT",
+     "pt": "Assinar e verificar um JWT"
+    },
+    "lang": "typescript",
+    "code": "import { sign, verify } from \"@decaf-ts/crypto/jwt\";\n\nconst token = await sign({ userId: \"1\" }, {\n  secret: \"very-strong-secret\",\n  expiry: \"1h\",\n});\n\nconst payload = await verify<{ userId: string }>(token, {\n  secret: \"very-strong-secret\",\n});"
+   }
+  ],
+  "demo": {
+   "kind": "crypto",
+   "label": {
+    "en": "Encrypt a value and decrypt it back",
+    "pt": "Criptografe um valor e descriptografe de volta"
+   },
+   "config": {
+    "algorithm": "AES-GCM",
+    "field": "ssn",
+    "length": 256
+   }
+  }
+ },
+ {
+  "id": "repository-queries",
+  "order": 12,
+  "icon": "search",
+  "accent": "fuchsia",
+  "modules": [
+   "core",
+   "db-decorators"
+  ],
+  "title": {
+   "en": "Repository & Queries",
+   "pt": "Repositório e Consultas"
+  },
+  "tagline": {
+   "en": "CRUD, bulk, queries and observers.",
+   "pt": "CRUD, lote, consultas e observadores."
+  },
+  "detail": {
+   "en": "The repository is the single seam between your service and storage. `Repository.forModel(Model)` returns the adapter-backed repository, and you can extend it with decorated custom queries without forking the core CRUD path.\n\n### The built-in surface\n\n- **CRUD and bulk** — `create`, `read`, `update`, `delete` and their `*All` variants.\n- **High-level helpers** — `findBy`, `findOneBy`, `findByPaginate`, `listBy`, `paginateBy`, `countOf`, `maxOf`, `minOf`, `avgOf`, `sumOf`, `distinctOf` and `groupOf`.\n- **Custom queries** — put `@query()` or `@prepared()` on a repository method and call it directly on the instance.\n- **Observers** — repositories emit operation events so services can react to writes.\n- **Context-aware** — methods accept `...args: MaybeContextualArg<Context>` and resolve their logger through `logCtx(...)`.\n\nUse `repo.for(config)` to switch adapter config and `repo.override(flags)` to change runtime behavior for one call chain.",
+   "pt": "O repositório é a única costura entre o seu serviço e o armazenamento. `Repository.forModel(Model)` retorna o repositório apoiado pelo adapter, e você pode estendê-lo com consultas decoradas sem bifurcar o caminho CRUD do core.\n\n### A superfície embutida\n\n- **CRUD e lote** — `create`, `read`, `update`, `delete` e suas variantes `*All`.\n- **Helpers de alto nível** — `findBy`, `findOneBy`, `findByPaginate`, `listBy`, `paginateBy`, `countOf`, `maxOf`, `minOf`, `avgOf`, `sumOf`, `distinctOf` e `groupOf`.\n- **Consultas customizadas** — coloque `@query()` ou `@prepared()` em um método do repositório e chame-o direto na instância.\n- **Observadores** — repositórios emitem eventos de operação para os serviços reagirem.\n- **Consciente do contexto** — os métodos aceitam `...args: MaybeContextualArg<Context>` e resolvem seu logger via `logCtx(...)`.\n\nUse `repo.for(config)` para trocar a configuração do adapter e `repo.override(flags)` para mudar o comportamento de runtime em uma cadeia de chamadas."
+  },
+  "codeExamples": [
+   {
+    "title": {
+     "en": "Resolve a repository and use CRUD",
+     "pt": "Resolver um repositório e usar CRUD"
+    },
+    "lang": "typescript",
+    "code": "import { Repository } from \"@decaf-ts/core\";\n\nconst repo = Repository.forModel(User);\nawait repo.create(new User({ id: \"1\", name: \"Ada\" }));\n\nconst active = await repo.findBy(Condition.attr<User>(\"active\").eq(true));\nconst total = await repo.countOf();"
+   },
+   {
+    "title": {
+     "en": "Add a decorated custom query",
+     "pt": "Adicionar uma consulta decorada"
+    },
+    "lang": "typescript",
+    "code": "import { query, prepared } from \"@decaf-ts/core\";\n\nclass UserRepo extends Repository<User, RamAdapter> {\n  @query()\n  async findActiveUsers() {\n    return this.select().where(Condition.attr<User>(\"active\").eq(true)).execute();\n  }\n\n  @prepared()\n  async findByName(name: string) {\n    return this.select().where(Condition.attr<User>(\"name\").eq(name)).execute();\n  }\n}"
+   }
+  ],
+  "demo": {
+   "kind": "persistence",
+   "label": {
+    "en": "Build a query and run it",
+    "pt": "Monte uma consulta e execute"
+   },
+   "config": {
+    "model": "User",
+    "helpers": [
+     "findBy",
+     "listBy",
+     "paginateBy",
+     "countOf",
+     "groupOf"
+    ]
+   }
+  }
+ }
+]

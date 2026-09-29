@@ -36,6 +36,13 @@ export class Brand extends Model {
   @prop() src: string = '';
 
   /**
+   * @description Inline SVG markup of the brand logo, trusted by `SafeHtmlPipe`.
+   * @summary Preferred over `src` so the marquee renders without any external
+   * network asset. When empty the component renders a monogram fallback.
+   */
+  @prop() icon: string = '';
+
+  /**
    * @description Alternate text for the logo image.
    */
   @prop() alt: string = '';

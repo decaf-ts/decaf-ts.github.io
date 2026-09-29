@@ -604,3 +604,134 @@ img {
 .\[\&\>svg\]\:h-4 > svg { height: 1rem; }
 .\[\&\>svg\]\:w-8 > svg { width: 2rem; }
 .\[\&\>svg\]\:h-8 > svg { height: 2rem; }
+
+/* --- Rendered markdown (seeded module/showcase descriptions) ---------------
+   Angular's default view encapsulation does not style `[innerHTML]` content, and
+   the utility reset above removes the default heading/list/paragraph spacing, so
+   the rendered markdown is styled globally here through the `.md-body` wrapper. */
+.md-body {
+  color: #4b5563;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 22px 0 10px;
+    font-family: var(--dcf-site-font-jakarta);
+    font-weight: 700;
+    line-height: 1.35;
+    color: #111827;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.15rem; }
+  h4 { font-size: 1.05rem; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 0.95rem; }
+
+  p {
+    margin: 0 0 12px;
+  }
+
+  ul,
+  ol {
+    margin: 0 0 14px;
+    padding-left: 22px;
+    list-style-position: outside;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    margin: 0 0 6px;
+  }
+
+  li > ul,
+  li > ol {
+    margin: 6px 0 0;
+  }
+
+  a {
+    color: #dc2626;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  strong {
+    font-weight: 700;
+    color: #111827;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.88em;
+    background: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+
+  hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  blockquote {
+    margin: 0 0 14px;
+    padding: 4px 0 4px 16px;
+    border-left: 3px solid #e5e7eb;
+    color: #6b7280;
+  }
+
+  pre,
+  .md-code {
+    margin: 0 0 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #0f172a;
+    color: #e2e8f0;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  pre code,
+  .md-code code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  .md-decorator {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.92em;
+    color: #b91c1c;
+    border-bottom: 1px dotted #dc2626;
+    cursor: help;
+  }
+}

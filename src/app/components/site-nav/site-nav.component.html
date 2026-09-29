@@ -1,17 +1,54 @@
 <nav class="site-nav relative z-10 w-full px-16 py-6">
-  <div class="flex items-center justify-between">
-    <div class="flex items-center space-x-2">
-      <img src="assets/logo_contrast.svg" alt="{{ 'common.logo_alt' | translate }}" class="h-9 w-auto" />
-    </div>
+  <div class="flex items-center justify-between gap-4">
+    <a routerLink="/" class="site-nav__brand" [attr.aria-label]="'common.logo_alt' | translate">
+      <img src="assets/logo_contrast.svg" alt="{{ 'common.logo_alt' | translate }}" class="site-nav__logo h-9 w-auto" />
+    </a>
     <div class="hidden md:flex items-center space-x-8">
       @for (item of items; track item.id) {
         <a [routerLink]="internalHref(item.href)" class="site-nav__link text-white hover:text-white/80 transition-colors">{{ item.titleKey | translate }}</a>
       }
     </div>
-    @if (cta) {
-      <a
-        [routerLink]="internalHref(cta.href)"
-        class="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full hover:bg-white/30 transition-all duration-300">{{ cta.titleKey | translate }}</a>
-    }
+    <div class="site-nav__actions flex items-center gap-3">
+      <div class="site-nav__locale">
+        <button
+          type="button"
+          class="site-nav__locale-button"
+          (click)="toggleLocale()"
+          [attr.aria-expanded]="open"
+          [attr.aria-label]="currentLabel()"
+        >
+          <span class="site-nav__locale-globe" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" />
+              <path d="M3 12H21" stroke="currentColor" stroke-width="1.6" />
+              <path d="M12 3C14.5 5.5 14.5 18.5 12 21C9.5 18.5 9.5 5.5 12 3Z" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </span>
+          <span class="site-nav__locale-label">{{ currentLabel() }}</span>
+          <span class="site-nav__locale-chevron" [class.site-nav__locale-chevron--open]="open" aria-hidden="true"></span>
+        </button>
+        @if (open) {
+          <ul class="site-nav__locale-menu">
+            @for (option of options; track option.code) {
+              <li>
+                <button
+                  type="button"
+                  class="site-nav__locale-option"
+                  [class.site-nav__locale-option--active]="option.code === current"
+                  (click)="selectLocale(option.code)"
+                >
+                  {{ option.label }}
+                </button>
+              </li>
+            }
+          </ul>
+        }
+      </div>
+      @if (cta) {
+        <a
+          [routerLink]="internalHref(cta.href)"
+          class="site-nav__cta bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full hover:bg-white/30 transition-all duration-300">{{ cta.titleKey | translate }}</a>
+      }
+    </div>
   </div>
 </nav>

@@ -12,13 +12,35 @@
   }
 
   &__item {
+    position: relative;
     background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 16px;
-    padding: 24px;
+    padding: 28px 24px 24px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: #fca5a5;
+      box-shadow: 0 16px 32px rgba(17, 24, 39, 0.08);
+    }
+  }
+
+  &__index {
+    font-family: var(--dcf-site-font-jakarta);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #dc2626;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__title {
@@ -35,5 +57,83 @@
     line-height: 1.625;
     color: #6b7280;
     margin: 0;
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 0 0 10px;
+      padding-left: 20px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9em;
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.feature-examples {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__title {
+    margin: 0;
+    font-family: var(--dcf-site-font-jakarta);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #111827;
+  }
+
+  &__snippet {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__snippet-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #374151;
+  }
+
+  &__lang {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    background: #f3f4f6;
+    border-radius: 999px;
+    padding: 2px 8px;
+  }
+
+  &__snippet-summary {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  &__code {
+    margin: 0;
+    padding: 20px;
+    border-radius: 14px;
+    background: #0f172a;
+    color: #e2e8f0;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
   }
 }

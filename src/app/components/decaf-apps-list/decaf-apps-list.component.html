@@ -1,0 +1,59 @@
+<div id="decaf-apps-list" class="decaf-apps">
+  @for (item of items; track item['model'].id) {
+    <article class="decaf-apps__card">
+      <header class="decaf-apps__header">
+        <h3 class="decaf-apps__name">{{ app(item).name }}</h3>
+        @if (app(item).tagline) {
+          <p class="decaf-apps__tagline">{{ app(item).tagline }}</p>
+        }
+      </header>
+      <p class="decaf-apps__description">{{ excerpt(app(item).description) }}</p>
+      @if (modulesOf(app(item)).length) {
+        <div class="decaf-apps__built-with">
+          <span class="decaf-apps__built-with-label">{{ 'apps.built_with' | translate }}</span>
+          <ul class="decaf-apps__modules">
+            @for (module of modulesOf(app(item)); track module) {
+              <li class="decaf-apps__module">{{ module }}</li>
+            }
+          </ul>
+        </div>
+      }
+      <footer class="decaf-apps__actions">
+        @if (app(item).site) {
+          <a
+            class="decaf-apps__action decaf-apps__action--primary"
+            [href]="app(item).site"
+            target="_blank"
+            rel="noopener noreferrer"
+          >{{ 'apps.visit' | translate }}</a>
+        }
+        @if (app(item).repo) {
+          <a
+            class="decaf-apps__action"
+            [href]="app(item).repo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >{{ 'apps.view_code' | translate }}</a>
+        }
+        @if (app(item).docs) {
+          <a
+            class="decaf-apps__action"
+            [href]="app(item).docs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >{{ 'documentation.open_docs' | translate }}</a>
+        }
+      </footer>
+      @if (showcasesOf(app(item)).length) {
+        <div class="decaf-apps__showcases">
+          @for (highlight of showcasesOf(app(item)); track highlight) {
+            <a class="decaf-apps__showcase" [routerLink]="['/showcase', highlight]">{{ highlight }}</a>
+          }
+        </div>
+      }
+    </article>
+  }
+  @if (items?.length === 0) {
+    <p class="decaf-apps__empty">{{ 'apps.subtitle' | translate }}</p>
+  }
+</div>

@@ -1,14 +1,28 @@
 /**
- * Visual-diff suite: every page × locale × breakpoint of the built app must
- * pixel-match the corresponding www-mock page (the preserved pixel-perfect
- * reference).
+ * Visual-regression suite: every page × locale × breakpoint of the built app is
+ * compared against the committed golden screenshots under
+ * `tests/playwright/visual/`.
+ *
+ * The goldens are captured from the **app itself** (`VISUAL_TARGET=app`). The app
+ * is the design source of truth: the round-2 landing/modules/features redesign was
+ * approved by the board (SAA-1918/SAA-1919) and superseded the round-1 `www-mock`
+ * static replica, which is retained in the repo only as a historical reference.
+ * Baselining the app's own approved output keeps full page × locale × breakpoint
+ * coverage without the hand-maintained, non-deterministic `www-mock` Tailwind
+ * replica (whose index capture drifts run-to-run). Only the five pages that have a
+ * `www-mock` counterpart are visual-diffed; the round-2 routes (`documentation`,
+ * `showcase`, `showcase/:id`, `apps`, `news`) and `community` have no mock
+ * reference and are covered by the e2e + ui-i18n suites instead.
  *
  * Two-phase run:
- *   1. Generate goldens from www-mock:
- *      VISUAL_TARGET=mock npx playwright test visual-diff --update-snapshots
+ *   1. Generate/refresh goldens from the approved app:
+ *      npm run test:visual:update
  *      (goldens are stored under tests/playwright/visual/ in the repo)
- *   2. Verify the app matches those goldens:
- *      VISUAL_TARGET=app npx playwright test visual-diff
+ *   2. Verify the app still matches those goldens:
+ *      npm run test:visual
+ *
+ * `VISUAL_TARGET=mock` is kept for historical reference/parity checks against
+ * the round-1 mock; it is not used to generate the committed goldens.
  */
 import { test, expect } from '@playwright/test';
 import * as fs from 'node:fs';
@@ -43,17 +57,21 @@ test.describe(`visual-diff (target=${TARGET})`, () => {
             if (TARGET === 'mock') {
               await openMock(page, pg.mockFile, locale.code);
             } else {
-              await openApp(page, pg.name, locale.code);
+              await openApp(page, pg.appPath, locale.code);
             }
 
             // Grow the viewport to the full content height and capture a plain
             // viewport screenshot (width == breakpoint width), instead of
             // `fullPage` whose CDP contentSize includes unclipped composited
             // marquee layers and inflates the golden width past the viewport.
-            // For the app, pin the height to the mock golden's height so any
-            // content-height gap surfaces as a tolerable pixel diff.
+            // When verifying the app, pin the height to the committed golden's
+            // height so any content-height gap surfaces as a tolerable pixel diff.
+            // While (re)generating goldens, capture the app's natural height so
+            // a legitimate content-height change is recorded rather than clipped.
             const name = `${pg.name}-${locale.code}-${bp.name}.png`;
-            const fixedHeight = TARGET === 'app' ? goldenHeight(name) : undefined;
+            const updating = test.info().config.updateSnapshots !== 'none';
+            const fixedHeight =
+              TARGET === 'app' && !updating ? goldenHeight(name) : undefined;
             await prepareFullCapture(page, bp.width, fixedHeight);
 
             await expect(page).toHaveScreenshot(name, {

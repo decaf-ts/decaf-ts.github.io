@@ -1,0 +1,197 @@
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 24px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &__card {
+    --showcase-accent: #dc2626;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: var(--showcase-accent);
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(17, 24, 39, 0.1);
+    }
+
+    &[data-accent='amber'] { --showcase-accent: #d97706; }
+    &[data-accent='emerald'] { --showcase-accent: #059669; }
+    &[data-accent='sky'] { --showcase-accent: #0284c7; }
+    &[data-accent='violet'] { --showcase-accent: #7c3aed; }
+    &[data-accent='rose'] { --showcase-accent: #e11d48; }
+    &[data-accent='cyan'] { --showcase-accent: #0891b2; }
+    &[data-accent='orange'] { --showcase-accent: #ea580c; }
+    &[data-accent='indigo'] { --showcase-accent: #4f46e5; }
+    &[data-accent='teal'] { --showcase-accent: #0d9488; }
+    &[data-accent='lime'] { --showcase-accent: #65a30d; }
+    &[data-accent='red'] { --showcase-accent: #dc2626; }
+    &[data-accent='fuchsia'] { --showcase-accent: #c026d3; }
+  }
+
+  &__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--showcase-accent) 12%, white);
+    color: var(--showcase-accent);
+
+    .ti {
+      font-size: 26px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--dcf-site-font-jakarta);
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #111827;
+  }
+
+  &__tagline {
+    margin: 0;
+    flex: 1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4b5563;
+  }
+
+  &__modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__module {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: #f3f4f6;
+    color: #374151;
+  }
+
+  &__link {
+    align-self: flex-start;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--showcase-accent);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.showcase-grid__overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 18px;
+  background: rgba(17, 24, 39, 0.94);
+  color: #ffffff;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  pointer-events: none;
+  z-index: 2;
+
+  &-label {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fca5a5;
+  }
+
+  &-text {
+    margin: 6px 0 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
+
+.showcase-grid__card:hover .showcase-grid__overlay,
+.showcase-grid__card:focus-within .showcase-grid__overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.showcase-marquee {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to left, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+  mask-image: linear-gradient(to left, transparent 0, black 24px, black calc(100% - 24px), transparent 100%);
+
+  &__track {
+    display: flex;
+    width: max-content;
+    animation: showcase-marquee__scroll 90s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &__page {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .showcase-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
+    padding-right: 24px;
+    width: max-content;
+
+    .showcase-grid__card {
+      flex: 0 0 320px;
+      width: 320px;
+    }
+  }
+}
+
+@keyframes showcase-marquee__scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

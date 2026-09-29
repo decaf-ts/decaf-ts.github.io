@@ -11,11 +11,14 @@
     "demo_label": "Exemplos do Módulo",
     "no_examples": "Ainda não há exemplos.",
     "demo_icon": "<svg width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" class=\"text-red-300\"><path d=\"M9 12L11 14L15 10\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>",
+    "read_more": "Ler a descrição completa",
     "see_tutorials": "See Tutorials"
   },
   "nav": {
     "modules": "Módulos",
     "features": "Funcionalidades",
+    "showcase": "Vitrine",
+    "apps": "Apps",
     "documentation": "Documentação",
     "community": "Comunidade"
   },
@@ -59,6 +62,7 @@
   "examples": {
     "document_title": "Decaf - Exemplos",
     "title": "Exemplos para {module}",
+    "default_hint": "Escolha um módulo para ver os exemplos ou navegue por todos os exemplos abaixo.",
     "no_description": "Sem descrição disponível.",
     "code": "Código",
     "example_title": "Exemplo {n} · {lang}",
@@ -74,101 +78,137 @@
         "title": "Exemplos para {module}",
         "summary": "Exemplos de uso e boas práticas para {module}."
       },
-      "decoration": {
-        "title": "Decoration",
-        "summary": "Decorators e auxiliares de metadata para TypeScript."
+      "utils": {
+        "title": "Utilitários",
+        "summary": "Utilitários gerais para projetos Decaf."
       },
       "logging": {
         "title": "Logging",
         "summary": "Utilitários de logging estruturado e integrações."
       },
-      "utils": {
-        "title": "Utils",
-        "summary": "Utilitários gerais para projectos Decaf."
+      "testing": {
+        "title": "Testes",
+        "summary": "Relatórios de testes e utilitários compartilhados."
       },
-      "reflection": {
-        "title": "Reflection",
-        "summary": "Auxiliares de reflexão de tipos em runtime."
+      "decoration": {
+        "title": "Decoração",
+        "summary": "Decoradores e helpers de metadados para TypeScript."
       },
       "decorator-validation": {
-        "title": "Validação com Decorators",
-        "summary": "Padrões de validação com recurso a decorators."
+        "title": "Validação por Decoradores",
+        "summary": "Padrões de validação com decoradores."
       },
       "injectable-decorators": {
-        "title": "Decorators Injectáveis",
-        "summary": "Decorators pensados para injeção de dependências."
+        "title": "Decoradores Injetáveis",
+        "summary": "Decoradores para injeção de dependência."
       },
       "as-zod": {
         "title": "As Zod",
-        "summary": "Auxiliares Zod e pontes de schema."
+        "summary": "Helpers e pontes de schema com Zod."
       },
       "db-decorators": {
-        "title": "DB Decorators",
-        "summary": "Mapeamento e acesso a BD via decorators."
+        "title": "Decoradores de BD",
+        "summary": "Mapeamento e acesso a banco via decoradores."
       },
       "transactional-decorators": {
-        "title": "Decorators Transacionais",
-        "summary": "Gestão de transações com decorators."
+        "title": "Decoradores Transacionais",
+        "summary": "Tratamento de transações com decoradores."
       },
       "core": {
         "title": "Core",
-        "summary": "Primitivas partilhadas nucleares dos módulos Decaf."
+        "summary": "Primitivas centrais compartilhadas entre os módulos Decaf."
+      },
+      "crypto": {
+        "title": "Criptografia",
+        "summary": "Criptografia de campos, JWT e serviços de cripto."
       },
       "for-http": {
         "title": "Para HTTP",
-        "summary": "Integrações e auxiliares de cliente/servidor HTTP."
+        "summary": "Integrações e helpers de cliente/servidor HTTP."
       },
       "ui-decorators": {
-        "title": "UI Decorators",
-        "summary": "Padrões de UI suportados por decorators."
+        "title": "Decoradores de UI",
+        "summary": "Padrões de UI habilitados por decoradores."
       },
       "cli": {
         "title": "CLI",
-        "summary": "Ferramentas e auxiliares de linha de comandos."
+        "summary": "Ferramentas e helpers de linha de comando."
       },
       "for-couchdb": {
         "title": "Para CouchDB",
-        "summary": "Integrações e auxiliares para CouchDB."
+        "summary": "Helpers e integrações para CouchDB."
       },
       "for-nano": {
         "title": "Para Nano",
-        "summary": "Auxiliares baseados em Nano."
+        "summary": "Helpers para banco baseado em Nano."
       },
       "for-pouch": {
         "title": "Para Pouch",
-        "summary": "Integrações e auxiliares PouchDB."
+        "summary": "Helpers e integrações para PouchDB."
       },
       "for-typeorm": {
         "title": "Para TypeORM",
-        "summary": "Auxiliares e padrões TypeORM."
+        "summary": "Helpers e padrões para TypeORM."
       },
       "for-fabric": {
         "title": "Para Fabric",
-        "summary": "Ferramentas e exemplos Hyperledger Fabric."
+        "summary": "Ferramentas e exemplos para Hyperledger Fabric."
       },
       "for-nest": {
         "title": "Para Nest",
-        "summary": "Integrações e decorators para NestJS."
+        "summary": "Integrações e decoradores para NestJS."
       },
       "styles": {
-        "title": "Styles",
-        "summary": "Estilos e tokens partilhados para UI."
+        "title": "Estilos",
+        "summary": "Estilos e tokens compartilhados de UI."
+      },
+      "integrations": {
+        "title": "Integrações",
+        "summary": "Keycloak, blobs, flags, secrets e mais."
       },
       "for-angular": {
         "title": "Para Angular",
-        "summary": "Integrações e auxiliares Angular."
-      },
-      "mcp-server": {
-        "title": "MCP Server",
-        "summary": "Componentes de servidor Model Context Protocol."
+        "summary": "Integrações e helpers para Angular."
       },
       "for-react-native": {
         "title": "Para React Native",
-        "summary": "Integrações e auxiliares React Native."
+        "summary": "Integrações e helpers para React Native."
       },
       "demo": {
         "title": "Demo",
         "summary": "Módulo de demonstração."
+      },
+      "for-drizzle": {
+        "title": "Para Drizzle",
+        "summary": "Helpers e padrões para o ORM Drizzle."
+      },
+      "weaver": {
+        "title": "Weaver",
+        "summary": "Orquestração de workspaces entre repositórios."
+      },
+      "with-ai": {
+        "title": "With AI",
+        "summary": "Skills e agentes para desenvolvimento assistido por IA."
+      },
+      "reusable-actions": {
+        "title": "Ações Reutilizáveis",
+        "summary": "Workflows compartilhados do GitHub Actions."
+      },
+      "for-nextjs": {
+        "title": "Para Next.js",
+        "summary": "Integrações e helpers para Next.js."
+      },
+      "for-react": {
+        "title": "Para React",
+        "summary": "Integrações e helpers para React."
+      },
+      "as-infra": {
+        "title": "As Infra",
+        "summary": "Scaffolding e ferramentas de infraestrutura."
+      },
+      "as-graph": {
+        "title": "As Graph",
+        "summary": "Estruturas de dados de grafo e execução."
       }
     }
   },
@@ -182,7 +222,103 @@
     "grade": {
       "demo_label": "Demonstração de Notas"
     },
-    "see_how": "Ver Como Funciona"
+    "see_how": "Ver Como Funciona",
+    "title": "O Que o Decaf Faz, em Código",
+    "subtitle": "Doze capacidades que definem a suíte — cada uma com trechos reais e uma demo ao vivo.",
+    "see_code": "Ver o código",
+    "modules_used": "Módulos usados",
+    "run_demo": "Executar a demo",
+    "demo": {
+      "allow": "permitir",
+      "block": "bloquear",
+      "valid": "válido",
+      "invalid": "inválido",
+      "on": "ligado",
+      "off": "desligado",
+      "plain": "claro",
+      "cipher": "cifrado"
+    },
+    "not_found": "Esse destaque da vitrine não existe.",
+    "back": "Voltar para a vitrine",
+    "model": {
+      "id": {
+        "label": "Id do utilizador",
+        "placeholder": "1"
+      },
+      "name": {
+        "label": "Nome completo",
+        "placeholder": "Ada Lovelace"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "ada@exemplo.com"
+      },
+      "website": {
+        "label": "Site",
+        "placeholder": "https://decaf-ts.dev"
+      },
+      "password": {
+        "label": "Palavra-passe",
+        "placeholder": "••••••••"
+      },
+      "gender": {
+        "label": "Género",
+        "options": {
+          "male": "Masculino",
+          "female": "Feminino"
+        }
+      },
+      "contact": {
+        "label": "Contacto preferido",
+        "options": {
+          "morning": "Manhã",
+          "afternoon": "Tarde",
+          "evening": "Noite"
+        }
+      },
+      "birthdate": {
+        "label": "Data de nascimento"
+      },
+      "agree": {
+        "label": "Aceito os termos"
+      }
+    },
+    "cross_ui": {
+      "name": {
+        "label": "Nome",
+        "placeholder": "Motor de grafos"
+      },
+      "summary": {
+        "label": "Resumo",
+        "placeholder": "O que esta capacidade faz"
+      },
+      "category": {
+        "label": "Categoria",
+        "options": {
+          "core": "Núcleo",
+          "ui": "UI",
+          "backend": "Backend"
+        }
+      }
+    },
+    "validation": {
+      "name": {
+        "label": "Nome",
+        "placeholder": "Pelo menos 5 caracteres"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "voce@exemplo.com"
+      },
+      "password": {
+        "label": "Palavra-passe",
+        "placeholder": "••••••••"
+      },
+      "age": {
+        "label": "Idade",
+        "placeholder": "18"
+      }
+    }
   },
   "faq": {
     "kicker": "Respostas ao Alcance",
@@ -223,7 +359,8 @@
   "tutorials": {
     "document_title": "Decaf - Tutoriais",
     "title": "Tutoriais",
-    "subtitle": "Exemplos e receitas reais de alto valor para usar os módulos @decaf-ts."
+    "subtitle": "Exemplos e receitas reais de alto valor para usar os módulos @decaf-ts.",
+    "default_hint": "Escolha um módulo para ver os tutoriais ou navegue por todos os tutoriais abaixo."
   },
   "community": {
     "document_title": "Decaf - Comunidade",
@@ -244,5 +381,40 @@
       "title": "Tutoriais",
       "description": "Guias passo a passo e manuais de contribuição para se tornar produtivo com o Decaf."
     }
+  },
+  "apps": {
+    "document_title": "Decaf - Apps",
+    "kicker": "Feito com Decaf",
+    "title": "Apps Feitas com Decaf",
+    "subtitle": "Aplicações reais em produção na stack Decaf.",
+    "built_with": "Feito com",
+    "visit": "Visitar",
+    "view_code": "Ver código",
+    "highlights": "Destaques"
+  },
+  "documentation": {
+    "document_title": "Decaf - Documentação",
+    "kicker": "Documentação",
+    "title": "Central de Documentação",
+    "subtitle": "Aceda à documentação oficial de cada módulo Decaf — APIs, guias e material de referência.",
+    "open_docs": "Abrir documentação",
+    "repo": "Repositório",
+    "empty": "Ainda não há documentação disponível."
+  },
+  "locale": {
+    "names": {
+      "en_en": "Inglês",
+      "en_us": "Inglês (EUA)",
+      "pt_br": "Português (Brasil)",
+      "pt_pt": "Português (Portugal)"
+    }
+  },
+  "news": {
+    "document_title": "Notícias",
+    "title": "Últimos Lançamentos",
+    "subtitle": "O que mudou na suíte decaf, direto dos changelogs.",
+    "empty": "Ainda não há lançamentos. Volte em breve.",
+    "no_notes": "Sem notas de lançamento para esta versão.",
+    "view_release": "Ver lançamento"
   }
 }

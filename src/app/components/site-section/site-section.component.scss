@@ -359,6 +359,20 @@
     margin-bottom: 16px;
   }
 
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  &__hint {
+    color: #6b7280;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin: 0 0 24px;
+  }
+
   &__title {
     font-family: var(--dcf-site-font-jakarta);
     font-weight: 700;

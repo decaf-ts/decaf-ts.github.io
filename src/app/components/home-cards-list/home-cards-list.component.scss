@@ -6,8 +6,8 @@
 
   &__track {
     display: flex;
-    width: 200%;
-    animation: home-cards__scroll 40s linear infinite;
+    width: max-content;
+    animation: home-cards__scroll 120s linear infinite;
 
     &:hover {
       animation-play-state: paused;
@@ -15,9 +15,9 @@
   }
 
   &__page {
-    flex: 0 0 50%;
-    width: 50%;
-    display: block;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: stretch;
   }
 }
 
@@ -26,25 +26,20 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(50%);
+    transform: translateX(-50%);
   }
 }
 
 .home-cards {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   gap: 32px;
-  width: 100%;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+  padding-right: 32px;
+  width: max-content;
 
   &__item {
+    flex: 0 0 280px;
+    width: 280px;
     display: flex;
     flex-direction: column;
   }

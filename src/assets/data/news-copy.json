@@ -1,0 +1,150 @@
+{
+ "_meta": {
+  "title": "News page editorial bar + localized copy",
+  "specification": "DECAF-49",
+  "description": "Editorial contract for the /news page generated from consuming decaf-ts GitHub releases (scripts/collect-data.cjs -> src/assets/data/news.json). Provides the readable item shape, excerpt rules for thin/empty release bodies, the repo roster to consume, and the localized section/nav copy (en+pt) the FE lifts into i18n.",
+  "sourceApi": "https://api.github.com/repos/decaf-ts/<repo>/releases?per_page=<n>",
+  "verifiedAt": "2026-09-29",
+  "note": "GitHub release bodies in this org are frequently just the version string; the excerpt rule below falls back to the module summary so no item renders empty."
+ },
+ "itemShape": {
+  "id": "stable string key: `<repo>@<tag>` (the releases API has no id that survives a re-fetch order change)",
+  "repo": "decaf-ts module repo name, e.g. `core`",
+  "module": "display name from modules.json (`name`)",
+  "title": "release `name` when meaningful, else `<module> <tag>`",
+  "tag": "`tag_name` with a single leading `v` stripped, e.g. `0.31.2`",
+  "version": "raw `tag_name`, e.g. `v0.31.2`",
+  "date": "ISO-8601 UTC from `published_at`; render with the locale date pipe",
+  "prerelease": "boolean from the releases API; render a `pre` chip and sort below stable releases",
+  "excerpt": "first readable paragraph of `body` (markdown-stripped, whitespace-collapsed); when the body is empty or only repeats the version, fall back to the module one-line summary from modules.json",
+  "url": "`html_url` (the release page) so the item is actionable",
+  "changelogUrl": "`<repo repo url>/releases/tag/<tag_name>` when `html_url` is absent"
+ },
+ "editorialRules": {
+  "sort": "published_at descending, stable releases before prereleases within the same day",
+  "grouping": "group by repo, newest first; render the repo name as the item tag",
+  "excerptMaxChars": 280,
+  "excerptMinChars": 80,
+  "emptyBodyFallback": "Use the module summary from src/assets/data/modules.json, prefixed with `Release <tag> - `.",
+  "dedupe": "one item per (repo, tag); never render a release twice when several repos share a version number.",
+  "never": "Never render an empty card: every item needs title, tag, date, repo and a non-empty excerpt."
+ },
+ "repos": [
+  "core",
+  "db-decorators",
+  "decorator-validation",
+  "decoration",
+  "ui-decorators",
+  "injectable-decorators",
+  "transactional-decorators",
+  "crypto",
+  "logging",
+  "utils",
+  "for-angular",
+  "for-http",
+  "for-nest",
+  "for-fabric",
+  "for-typeorm",
+  "for-couchdb",
+  "for-pouch",
+  "for-nano",
+  "as-zod",
+  "testing",
+  "integrations",
+  "cli",
+  "for-react",
+  "for-nextjs",
+  "with-ai"
+ ],
+ "i18n": {
+  "nav.news": {
+   "en": "News",
+   "pt": "Notícias"
+  },
+  "news.title": {
+   "en": "Latest news",
+   "pt": "Últimas notícias"
+  },
+  "news.subtitle": {
+   "en": "Release notes and changelogs from the decaf-ts module family, in one place.",
+   "pt": "Notas de versão e changelogs da família de módulos decaf-ts, em um só lugar."
+  },
+  "news.kicker": {
+   "en": "Changelog",
+   "pt": "Changelog"
+  },
+  "news.loading": {
+   "en": "Loading releases…",
+   "pt": "Carregando releases…"
+  },
+  "news.empty": {
+   "en": "No releases yet. Check back soon.",
+   "pt": "Ainda não há releases. Volte em breve."
+  },
+  "news.error": {
+   "en": "Could not load releases right now. See the GitHub repository for the latest.",
+   "pt": "Não foi possível carregar os releases agora. Veja o repositório no GitHub para as novidades."
+  },
+  "news.retry": {
+   "en": "Try again",
+   "pt": "Tentar novamente"
+  },
+  "news.filter.all": {
+   "en": "All modules",
+   "pt": "Todos os módulos"
+  },
+  "news.filter.repo": {
+   "en": "Filter by module",
+   "pt": "Filtrar por módulo"
+  },
+  "news.field.tag": {
+   "en": "Tag",
+   "pt": "Tag"
+  },
+  "news.field.date": {
+   "en": "Published",
+   "pt": "Publicado"
+  },
+  "news.field.repo": {
+   "en": "Module",
+   "pt": "Módulo"
+  },
+  "news.readMore": {
+   "en": "Read the release notes",
+   "pt": "Ler as notas de versão"
+  },
+  "news.viewOnGithub": {
+   "en": "View on GitHub",
+   "pt": "Ver no GitHub"
+  },
+  "news.prerelease": {
+   "en": "Pre-release",
+   "pt": "Pré-release"
+  },
+  "news.count": {
+   "en": "{count} releases",
+   "pt": "{count} releases"
+  }
+ },
+ "sample": {
+  "raw": {
+   "tag_name": "v0.31.2",
+   "name": "v0.31.2",
+   "published_at": "2026-09-17T01:22:48Z",
+   "prerelease": false,
+   "html_url": "https://github.com/decaf-ts/core/releases/tag/v0.31.2",
+   "body": "0.31.2"
+  },
+  "curated": {
+   "id": "core@v0.31.2",
+   "repo": "core",
+   "module": "core",
+   "title": "core 0.31.2",
+   "tag": "0.31.2",
+   "date": "2026-09-17T01:22:48Z",
+   "prerelease": false,
+   "excerpt": "Release 0.31.2 - The foundational Decaf package: models, repository pattern, adapters, a query DSL, task engine and migrations.",
+   "url": "https://github.com/decaf-ts/core/releases/tag/v0.31.2"
+  }
+ }
+}

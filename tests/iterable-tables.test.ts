@@ -9,6 +9,32 @@ import { Faq } from '../src/app/models/Faq';
 import { Tutorial } from '../src/app/models/Tutorial';
 import { Example } from '../src/app/models/Example';
 import { ModuleFeature } from '../src/app/models/ModuleFeature';
+import { resolveMarqueeIcon } from '../src/app/seed/marquee-icons';
+
+function readAsset(name: string): unknown {
+  return JSON.parse(
+    fs.readFileSync(path.resolve(__dirname, '../src/assets/data', name), 'utf-8')
+  );
+}
+
+/**
+ * Stubs `global.fetch` by asset url. Any url not listed resolves to a 404, which the
+ * service treats as an absent asset (falling back to the locale seed where applicable).
+ */
+function stubFetch(assets: Record<string, unknown>): void {
+  global.fetch = jest.fn(async (input: unknown) => {
+    const url = String(input);
+    if (Object.prototype.hasOwnProperty.call(assets, url)) {
+      return { ok: true, json: async () => assets[url] };
+    }
+    return { ok: false, status: 404, json: async () => ({}) };
+  }) as unknown as typeof fetch;
+}
+
+const MODULES_JSON = readAsset('modules.json');
+const MARQUEE_JSON = readAsset('marquee.json') as {
+  brands: { id: string; name: string; icon: string }[];
+};
 
 describe('iterable table seeding reads', () => {
   const user = 'iterable-tables-test';
@@ -17,21 +43,40 @@ describe('iterable table seeding reads', () => {
   beforeAll(() => {
     new RamAdapter({ user });
     service = new SiteService();
-    const modulesJson = JSON.parse(
-      fs.readFileSync(path.resolve(__dirname, '../src/assets/data/modules.json'), 'utf-8')
-    );
-    global.fetch = jest.fn().mockResolvedValue({
-      ok: true,
-      json: async () => modulesJson,
-    }) as unknown as typeof fetch;
   });
 
-  it('reads seeded Brand rows back through Repository.forModel', async () => {
+  beforeEach(() => {
+    // Default: only the modules asset is present, so the marquee-driven tables fall
+    // back to the locale seed. Tests that need the authored marquee override this.
+    stubFetch({ 'assets/data/modules.json': MODULES_JSON });
+  });
+
+  it('reads seeded Brand rows from the marquee asset with resolved icons in order', async () => {
+    stubFetch({
+      'assets/data/modules.json': MODULES_JSON,
+      'assets/data/marquee.json': MARQUEE_JSON,
+    });
     await service.seed('en_us');
-    const brand = await Repository.forModel(Brand).read('en_us_Transistor');
-    expect(brand).toBeInstanceOf(Brand);
-    expect(brand!.name).toBe('Transistor');
-    expect(brand!.src).toContain('http');
+
+    const expected = MARQUEE_JSON.brands;
+    expect(expected).toHaveLength(14);
+    const ids = expected.map((b) => `en_us_${b.id}`);
+    const brands = await Repository.forModel(Brand).readAll(ids);
+    expect(brands).toHaveLength(14);
+    expect(brands.every((b) => b instanceof Brand)).toBe(true);
+
+    const ordered = brands.slice().sort((a, b) => a.order - b.order);
+    expect(ordered.map((b) => b.id)).toEqual(ids);
+    expect(ordered.map((b) => b.order)).toEqual(expected.map((_, i) => i));
+    for (const [i, brand] of ordered.entries()) {
+      expect(brand.name).toBe(expected[i].name);
+      expect(brand.icon).toBe(resolveMarqueeIcon(expected[i].icon));
+      expect(brand.icon).toContain('<svg');
+    }
+
+    const decafTs = ordered.find((b) => b.id === 'en_us_decaf-ts')!;
+    expect(decafTs.name).toBe('decaf-ts');
+    expect(decafTs.icon).toBe(resolveMarqueeIcon('coffee'));
   });
 
   it('reads seeded HomeCard rows back through Repository.forModel', async () => {

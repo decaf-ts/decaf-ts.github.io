@@ -1,0 +1,18 @@
+{
+  "en_en": {
+    "en": "English",
+    "pt": "Inglês"
+  },
+  "en_us": {
+    "en": "English (US)",
+    "pt": "Inglês (EUA)"
+  },
+  "pt_br": {
+    "en": "Portuguese (Brazil)",
+    "pt": "Português (Brasil)"
+  },
+  "pt_pt": {
+    "en": "Portuguese (Portugal)",
+    "pt": "Português (Portugal)"
+  }
+}

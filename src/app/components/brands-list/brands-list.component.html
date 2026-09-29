@@ -3,14 +3,20 @@
     @for (copy of [0, 1]; track copy) {
       <div class="brands-marquee__page" [attr.aria-hidden]="copy === 1 ? 'true' : null">
         <div class="brands-marquee__grid">
-          @for (brand of pageItems(); track $index) {
-            <img
-              class="brands-marquee__logo"
-              [src]="brand['model'].src"
-              [alt]="brand['model'].alt || brand['model'].name"
-              width="158"
-              height="48"
-            />
+          @for (item of pageItems(); track $index) {
+            @if (hasIcon(brand(item))) {
+              <span
+                class="brands-marquee__logo brands-marquee__logo--icon"
+                role="img"
+                [attr.aria-label]="brand(item).name"
+                [innerHTML]="icon(brand(item)) | safeHtml"
+              ></span>
+            } @else {
+              <span
+                class="brands-marquee__logo brands-marquee__logo--monogram"
+                [attr.aria-label]="brand(item).name"
+              >{{ monogram(brand(item)) }}</span>
+            }
           }
         </div>
       </div>

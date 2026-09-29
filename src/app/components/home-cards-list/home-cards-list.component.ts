@@ -48,13 +48,17 @@ export class HomeCardsListComponent extends ModuleListBase {
   }
 
   /**
-   * @description Cycles the unique cards into the mock's eight-card pattern.
-   * @returns {KeyValue[]} The eight grid rows (indices 0,1,2,0,1,2,0,1 of the table).
+   * @description Cycles the unique cards into a full marquee page.
+   * @summary The page must always fill its 4-column grid so the seamless CSS
+   * scroll never reveals blank space: the slots are the larger of the mock's
+   * eight-card 4x2 grid and the number of unique cards, rounded up to a whole
+   * number of grid rows, and the unique cards are repeated to fill them.
+   * @returns {KeyValue[]} The grid rows of one marquee page.
    */
   cycledItems(): KeyValue[] {
     const items = this.items || [];
     if (!items.length) return [];
-    const pattern = [0, 1, 2, 0, 1, 2, 0, 1];
-    return pattern.map((i) => items[i % items.length]);
+    const slots = Math.max(8, Math.ceil(items.length / 4) * 4);
+    return Array.from({ length: slots }, (_, i) => items[i % items.length]);
   }
 }

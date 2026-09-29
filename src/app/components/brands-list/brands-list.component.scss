@@ -15,9 +15,9 @@
 
   &__track {
     display: flex;
-    width: calc(200% + 64px);
+    width: max-content;
     will-change: transform;
-    animation: brands-marquee__scroll 30s linear infinite;
+    animation: brands-marquee__scroll 40s linear infinite;
 
     &:hover {
       animation-play-state: paused;
@@ -26,55 +26,48 @@
 
   &__page {
     flex: 0 0 auto;
-    width: 50%;
-    padding: 40px 32px 0 0;
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 40px 32px;
+    display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    width: 100%;
+    gap: 64px;
+    padding-right: 64px;
+    width: max-content;
 
     > .brands-marquee__logo {
-      grid-column-end: span 2;
-      width: 100%;
-      height: auto;
-      max-height: 48px;
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 96px;
+      height: 48px;
       object-fit: contain;
-    }
 
-    > .brands-marquee__logo:nth-child(4) {
-      @media (min-width: 640px) {
-        grid-column-start: 2;
-      }
-    }
+      &--icon {
+        color: #4b5563;
 
-    > .brands-marquee__logo:nth-child(5) {
-      grid-column-start: 2;
-
-      @media (min-width: 640px) {
-        grid-column-start: auto;
-      }
-    }
-
-    @media (min-width: 640px) {
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      gap: 40px 40px;
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-
-      > .brands-marquee__logo {
-        grid-column-end: span 1;
+        ::ng-deep svg {
+          width: 40px;
+          height: 40px;
+          max-height: 40px;
+        }
       }
 
-      > .brands-marquee__logo:nth-child(4),
-      > .brands-marquee__logo:nth-child(5) {
-        grid-column-start: auto;
+      &--monogram {
+        font-family: var(--dcf-site-font-jakarta);
+        font-weight: 800;
+        font-size: 1.35rem;
+        letter-spacing: 0.04em;
+        color: #9ca3af;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        max-width: 88px;
+        margin: 0 auto;
       }
     }
   }

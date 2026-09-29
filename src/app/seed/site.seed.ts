@@ -209,7 +209,9 @@ export interface SeedItem {
 const NAV_ITEMS: { title: string; href: string }[] = [
   { title: 'nav.modules', href: '/modules' },
   { title: 'nav.features', href: '/features' },
-  { title: 'nav.documentation', href: '#' },
+  { title: 'nav.documentation', href: '/documentation' },
+  { title: 'nav.showcase', href: '/showcase' },
+  { title: 'nav.apps', href: '/apps' },
   { title: 'nav.community', href: '/community' },
 ];
 
@@ -246,7 +248,7 @@ const FOOTER_COLS: { tag: string; titleKey: string; links: { titleKey: string; h
     tag: 'product',
     titleKey: 'footer.col.product',
     links: [
-      { titleKey: 'footer.product.documentation', href: '#' },
+      { titleKey: 'footer.product.documentation', href: '/documentation' },
       { titleKey: 'footer.product.api', href: '#' },
       { titleKey: 'footer.product.blog', href: '#' },
       { titleKey: 'footer.product.support', href: '#' },
@@ -276,12 +278,6 @@ const FOOTER_COLS: { tag: string; titleKey: string; links: { titleKey: string; h
 
 const HERO_MOCKUP_LAYERS =
   '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="text-gray-400"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-
-const SHOWCASE_CHECK =
-  '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-red-300"><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/></svg>';
-
-const SHOWCASE_STAR =
-  '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" class="text-gray-400"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 const NEWS_BANNER_SPARK =
   '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="text-white"><path d="M4.5 2.4925V13.5075C4.50163 13.5954 4.52641 13.6813 4.57184 13.7566C4.61727 13.8318 4.68174 13.8938 4.75875 13.9362C4.83576 13.9786 4.92259 14 5.01048 13.9981C5.09837 13.9962 5.18422 13.9712 5.25938 13.9256L14.2644 8.41812C14.3363 8.37459 14.3958 8.31323 14.4371 8.23998C14.4784 8.16674 14.5 8.08408 14.5 8C14.5 7.91592 14.4784 7.83326 14.4371 7.76002C14.3958 7.68677 14.3363 7.62541 14.2644 7.58187L5.25938 2.07437C5.18422 2.02875 5.09837 2.00376 5.01048 2.0019C4.92259 2.00004 4.83576 2.02139 4.75875 2.06379C4.68174 2.1062 4.61727 2.16815 4.57184 2.24342C4.52641 2.31869 4.50163 2.4046 4.5 2.4925Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
@@ -377,6 +373,7 @@ function buildIndex(locale: SiteLocale): SeedPage {
           kind: 'inline',
           tag: 'news',
           titleKey: 'banner.latest_news',
+          href: '/news',
           icon: NEWS_BANNER_SPARK,
         },
         {
@@ -385,7 +382,7 @@ function buildIndex(locale: SiteLocale): SeedPage {
           titleKey: 'hero.cta.explore_modules',
           href: '/modules',
         },
-        { kind: 'link', tag: 'cta-secondary', titleKey: 'hero.cta.documentation', href: '#' },
+        { kind: 'link', tag: 'cta-secondary', titleKey: 'hero.cta.documentation', href: '/documentation' },
         {
           kind: 'inline',
           tag: 'preview',
@@ -415,45 +412,24 @@ function buildIndex(locale: SiteLocale): SeedPage {
         subtitleKey: 'cta2.description',
         items: [
           { kind: 'link', tag: 'cta-primary', titleKey: 'cta2.get_started', href: '/modules' },
-          { kind: 'link', tag: 'cta-secondary', titleKey: 'cta2.see_docs', href: '#' },
+          { kind: 'link', tag: 'cta-secondary', titleKey: 'cta2.see_docs', href: '/documentation' },
         ],
       },
       {
-        kind: 'showcase',
-        id: `${locale}_showcase_task`,
+        kind: 'showcase-highlights',
+        id: `${locale}_showcase_highlights`,
         kickerKey: 'showcase.kicker',
-        titleKey: 'showcase.task.title',
-        subtitleKey: 'showcase.task.description',
-        href: '#',
-        items: [
-          { kind: 'inline', tag: 'visual', titleKey: 'showcase.task.demo_label', icon: SHOWCASE_CHECK },
-          { kind: 'link', tag: 'cta-primary', titleKey: 'showcase.see_how', href: '#' },
-        ],
+        titleKey: 'showcase.title',
+        subtitleKey: 'showcase.subtitle',
+        href: '/showcase',
       },
       {
-        kind: 'showcase',
-        id: `${locale}_showcase_grade`,
-        flip: true,
-        kickerKey: 'showcase.kicker',
-        titleKey: 'showcase.grade.title',
-        subtitleKey: 'showcase.task.description',
-        href: '#',
-        items: [
-          { kind: 'inline', tag: 'visual', titleKey: 'showcase.grade.demo_label', icon: SHOWCASE_STAR },
-          { kind: 'link', tag: 'cta-primary', titleKey: 'showcase.see_how', href: '#' },
-        ],
-      },
-      {
-        kind: 'showcase',
-        id: `${locale}_showcase_task_repeat`,
-        kickerKey: 'showcase.kicker',
-        titleKey: 'showcase.task.title',
-        subtitleKey: 'showcase.task.description',
-        href: '#',
-        items: [
-          { kind: 'inline', tag: 'visual', titleKey: 'showcase.task.demo_label', icon: SHOWCASE_CHECK },
-          { kind: 'link', tag: 'cta-primary', titleKey: 'showcase.see_how', href: '#' },
-        ],
+        kind: 'decaf-apps',
+        id: `${locale}_decaf_apps`,
+        kickerKey: 'apps.kicker',
+        titleKey: 'apps.title',
+        subtitleKey: 'apps.subtitle',
+        href: '/apps',
       },
       {
         kind: 'faq',
@@ -606,6 +582,66 @@ function buildCommunityPage(locale: SiteLocale): SeedPage {
 }
 
 /**
+ * @description Builds the documentation hub page {@link SeedPage}.
+ * @function buildDocumentationPage
+ * @param {SiteLocale} locale - The locale code used for ids.
+ * @returns {SeedPage} The documentation page definition.
+ */
+function buildDocumentationPage(locale: SiteLocale): SeedPage {
+  return buildSubPage(locale, 'documentation', 'documentation.document_title', {
+    titleKey: 'documentation.title',
+    subtitleKey: 'documentation.subtitle',
+  }, [
+    { kind: 'documentation', id: `${locale}_documentation_list` },
+  ]);
+}
+
+/**
+ * @description Builds the showcase page {@link SeedPage}.
+ * @function buildShowcasePage
+ * @param {SiteLocale} locale - The locale code used for ids.
+ * @returns {SeedPage} The showcase page definition.
+ */
+function buildShowcasePage(locale: SiteLocale): SeedPage {
+  return buildSubPage(locale, 'showcase', 'showcase.title', {
+    titleKey: 'showcase.title',
+    subtitleKey: 'showcase.subtitle',
+  }, [
+    { kind: 'showcase-highlights', id: `${locale}_showcase_list` },
+  ]);
+}
+
+/**
+ * @description Builds the decaf apps page {@link SeedPage}.
+ * @function buildAppsPage
+ * @param {SiteLocale} locale - The locale code used for ids.
+ * @returns {SeedPage} The decaf apps page definition.
+ */
+function buildAppsPage(locale: SiteLocale): SeedPage {
+  return buildSubPage(locale, 'apps', 'apps.document_title', {
+    titleKey: 'apps.title',
+    subtitleKey: 'apps.subtitle',
+  }, [
+    { kind: 'decaf-apps', id: `${locale}_apps_list` },
+  ]);
+}
+
+/**
+ * @description Builds the latest-release news page {@link SeedPage}.
+ * @function buildNewsPage
+ * @param {SiteLocale} locale - The locale code used for ids.
+ * @returns {SeedPage} The news page definition.
+ */
+function buildNewsPage(locale: SiteLocale): SeedPage {
+  return buildSubPage(locale, 'news', 'news.document_title', {
+    titleKey: 'news.title',
+    subtitleKey: 'news.subtitle',
+  }, [
+    { kind: 'news', id: `${locale}_news_list` },
+  ]);
+}
+
+/**
  * @description Builds the full {@link SeedSiteData} graph for a locale.
  * @function buildSite
  * @param {SiteLocale} locale - The locale whose content should be used.
@@ -618,6 +654,10 @@ export function buildSite(locale: SiteLocale): SeedSiteData {
     buildFeaturesPage(locale),
     buildTutorialsPage(locale),
     buildExamplesPage(locale),
+    buildDocumentationPage(locale),
+    buildShowcasePage(locale),
+    buildAppsPage(locale),
+    buildNewsPage(locale),
     buildCommunityPage(locale),
   ];
   return {

@@ -355,32 +355,14 @@ export const SITE_EN_US: {
        "title": "File & Package Utilities",
        "description": "Helpers to read/write/patch files and inspect package metadata programmatically."
       },
-      {
-       "title": "Text Processing",
-       "description": "Common string utilities for case conversions, templating and placeholder replacement."
-      }
-     ]
-    },
-    "reflection": {
-     "title": "Reflection",
-     "summary": "Runtime type inspection utilities built on reflect-metadata for validators and metadata-driven systems.",
-     "features": [
-      {
-       "title": "Type Checks",
-       "description": "Validate values against expected types at runtime with high fidelity."
-      },
-      {
-       "title": "Decorator Introspection",
-       "description": "Query class and property decorators to build metadata-driven frameworks."
-      },
-      {
-       "title": "Deep Equality",
-       "description": "Robust isEqual utilities for comparing complex structures including Maps and TypedArrays."
-      }
-     ]
+       {
+        "title": "Text Processing",
+        "description": "Common string utilities for case conversions, templating and placeholder replacement."
+       }
+      ]
+     }
     }
-   }
-  };
+   };
 
 /**
  * @const SITE_PT_BR

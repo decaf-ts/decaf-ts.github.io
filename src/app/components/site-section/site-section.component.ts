@@ -17,7 +17,12 @@ import { FeatureCardsListComponent } from '../feature-cards-list/feature-cards-l
 import { ModuleOverviewListComponent } from '../module-overview-list/module-overview-list.component';
 import { TutorialsListComponent } from '../tutorials-list/tutorials-list.component';
 import { ExamplesListComponent } from '../examples-list/examples-list.component';
+import { DocumentationListComponent } from '../documentation-list/documentation-list.component';
+import { ShowcaseHighlightsListComponent } from '../showcase-highlights-list/showcase-highlights-list.component';
+import { DecafAppsListComponent } from '../decaf-apps-list/decaf-apps-list.component';
+import { NewsListComponent } from '../news-list/news-list.component';
 import { SiteService } from '../../services/site.service';
+import { SloganService } from '../../services/slogans.service';
 
 /**
  * @module app/components/SiteSectionComponent
@@ -59,6 +64,10 @@ import { SiteService } from '../../services/site.service';
     ModuleOverviewListComponent,
     TutorialsListComponent,
     ExamplesListComponent,
+    DocumentationListComponent,
+    ShowcaseHighlightsListComponent,
+    DecafAppsListComponent,
+    NewsListComponent,
   ],
   templateUrl: './site-section.component.html',
   styleUrl: './site-section.component.scss',
@@ -82,6 +91,7 @@ export class SiteSectionComponent extends NgxComponentDirective implements OnIni
   constructor(
     private ngxTranslate: TranslateService,
     private siteService: SiteService,
+    private sloganService: SloganService,
     override router: Router
   ) {
     super();
@@ -89,13 +99,7 @@ export class SiteSectionComponent extends NgxComponentDirective implements OnIni
 
   async ngOnInit(): Promise<void> {
     if (this.model.kind === 'footer' || this.model.kind === 'footer-slim') {
-      const slogans = await firstValueFrom(this.ngxTranslate.get('banner.slogans'));
-      this.footerSlogan =
-        Array.isArray(slogans) && slogans.length > 0
-          ? (slogans[0] as string)
-          : typeof slogans === 'string' && slogans && slogans !== 'banner.slogans'
-            ? slogans
-            : null;
+      this.footerSlogan = await this.resolveSlogan();
     }
     const moduleName = this.queryModule();
     if (this.model.kind === 'page-hero' && moduleName) {
@@ -110,6 +114,35 @@ export class SiteSectionComponent extends NgxComponentDirective implements OnIni
    */
   queryModule(): string {
     return (this.router.parseUrl(this.router.url).queryParamMap.get('module') || '').trim();
+  }
+
+  /**
+   * @description Whether the section is rendered on the landing page.
+   * @summary Used to cap the landing showcase teaser while the `/showcase` page
+   * lists every highlight.
+   * @returns {boolean} `true` when the active route is the site root.
+   */
+  isLanding(): boolean {
+    return this.router.url.split('?')[0] === '/';
+  }
+
+  /**
+   * @description Picks a slogan that changes on every refresh/navigation.
+   * @summary Prefers the localized `banner.slogans` i18n pool so non-English
+   * locales never leak English copy, then falls back to the adapter-backed
+   * {@link SloganService} catalog (module-biased when a module is active) and
+   * finally to a single translated string.
+   * @returns {Promise<string|null>} The selected slogan, or `null` when none exist.
+   */
+  private async resolveSlogan(): Promise<string | null> {
+    const slogans = await firstValueFrom(this.ngxTranslate.get('banner.slogans'));
+    if (Array.isArray(slogans) && slogans.length) {
+      return slogans[Math.floor(Math.random() * slogans.length)] as string;
+    }
+    if (typeof slogans === 'string' && slogans && slogans !== 'banner.slogans') {
+      return slogans;
+    }
+    return this.sloganService.slogan(this.queryModule() || undefined);
   }
 
   /**

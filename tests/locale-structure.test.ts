@@ -18,11 +18,13 @@ describe('locale page-structure', () => {
     });
 
     it('derives nav structure from shared keys and the page list from locale structure', () => {
-      expect(site.nav.length).toBe(4);
+      expect(site.nav.length).toBe(6);
       expect(site.nav.map((n) => n.title)).toEqual([
         'nav.modules',
         'nav.features',
         'nav.documentation',
+        'nav.showcase',
+        'nav.apps',
         'nav.community',
       ]);
       expect(site.pages.map((p) => p.id)).toEqual([
@@ -31,6 +33,10 @@ describe('locale page-structure', () => {
         'features',
         'tutorials',
         'examples',
+        'documentation',
+        'showcase',
+        'apps',
+        'news',
         'community',
       ]);
     });
@@ -82,6 +88,10 @@ describe('locale page-structure', () => {
       'features',
       'tutorials',
       'examples',
+      'documentation',
+      'showcase',
+      'apps',
+      'news',
       'community',
     ]);
     for (const page of site!.pages) {

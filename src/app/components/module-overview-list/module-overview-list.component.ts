@@ -5,6 +5,7 @@ import { KeyValue } from '@decaf-ts/for-angular';
 import { ModuleDoc } from '../../models/ModuleDoc';
 import { ModuleListBase } from '../list-base/module-list.base';
 import { MODULE_LINK_ORDER, ModuleLinkKey, moduleLinkLabel } from '../../seed/link-labels';
+import { MarkdownPipe } from '../markdown.pipe';
 
 /**
  * @module app/components/ModuleOverviewListComponent
@@ -26,7 +27,7 @@ import { MODULE_LINK_ORDER, ModuleLinkKey, moduleLinkLabel } from '../../seed/li
 @Component({
   selector: 'app-module-overview-list',
   standalone: true,
-  imports: [RouterLink, TranslatePipe],
+  imports: [RouterLink, TranslatePipe, MarkdownPipe],
   templateUrl: './module-overview-list.component.html',
   styleUrl: './module-overview-list.component.scss',
 })
@@ -60,10 +61,18 @@ export class ModuleOverviewListComponent extends ModuleListBase {
       storyboard: mod.storyboard,
     };
     const locale = (this.translateService?.getCurrentLang() as string) || 'en_us';
+    const seen = new Set<string>();
     return MODULE_LINK_ORDER.map((key) => ({
       label: moduleLinkLabel(key, locale),
       href: values[key],
-    })).filter((link) => !!link.href);
+    }))
+      .filter((link) => !!link.href)
+      .filter((link) => {
+        const href = link.href.trim().replace(/\/+$/, '');
+        if (seen.has(href)) return false;
+        seen.add(href);
+        return true;
+      });
   }
 
   /**

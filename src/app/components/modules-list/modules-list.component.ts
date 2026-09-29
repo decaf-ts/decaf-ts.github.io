@@ -60,10 +60,18 @@ export class ModulesListComponent extends ModuleListBase {
       storyboard: mod.storyboard,
     };
     const locale = (this.translateService?.getCurrentLang() as string) || 'en_us';
+    const seen = new Set<string>();
     return MODULE_LINK_ORDER.map((key) => ({
       label: moduleLinkLabel(key, locale),
       href: values[key],
-    })).filter((link) => !!link.href);
+    }))
+      .filter((link) => !!link.href)
+      .filter((link) => {
+        const href = link.href.trim().replace(/\/+$/, '');
+        if (seen.has(href)) return false;
+        seen.add(href);
+        return true;
+      });
   }
 
   /**

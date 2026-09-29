@@ -1,0 +1,19 @@
+<div id="documentation-list" class="documentation-list">
+  @for (item of items; track item['model'].name) {
+    <article class="documentation-list__card">
+      <h3 class="documentation-list__title">{{ module(item).title || module(item).name }}</h3>
+      <p class="documentation-list__excerpt">{{ excerpt(module(item).description) }}</p>
+      @if (docHref(module(item))) {
+        <a
+          class="documentation-list__link"
+          [href]="docHref(module(item))"
+          target="_blank"
+          rel="noopener noreferrer"
+        >{{ (isRepoOnly(module(item)) ? 'documentation.repo' : 'documentation.open_docs') | translate }}</a>
+      }
+    </article>
+  }
+  @if (items?.length === 0) {
+    <p class="documentation-list__empty">{{ 'documentation.empty' | translate }}</p>
+  }
+</div>

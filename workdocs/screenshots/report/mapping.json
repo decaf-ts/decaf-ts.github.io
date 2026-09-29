@@ -1,0 +1,2302 @@
+[
+  {
+    "id": "index",
+    "description": "Home -- hero, module marquee and CTA",
+    "mode": "report",
+    "file": "report/index.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "banner.latest_news"
+      },
+      {
+        "number": 9,
+        "key": "hero.title"
+      },
+      {
+        "number": 10,
+        "key": "hero.subtitle"
+      },
+      {
+        "number": 11,
+        "key": "hero.cta.explore_modules"
+      },
+      {
+        "number": 12,
+        "key": "hero.cta.documentation"
+      },
+      {
+        "number": 13,
+        "key": "hero.preview_label"
+      },
+      {
+        "number": 14,
+        "key": "logo_cloud.title"
+      },
+      {
+        "number": 15,
+        "key": "logo_cloud.description"
+      },
+      {
+        "number": 16,
+        "key": "features.kicker"
+      },
+      {
+        "number": 17,
+        "key": "features.title"
+      },
+      {
+        "number": 18,
+        "key": "features.description"
+      },
+      {
+        "number": 19,
+        "key": "cta2.title"
+      },
+      {
+        "number": 20,
+        "key": "cta2.description"
+      },
+      {
+        "number": 21,
+        "key": "cta2.get_started"
+      },
+      {
+        "number": 22,
+        "key": "cta2.see_docs"
+      },
+      {
+        "number": 23,
+        "key": "showcase.kicker"
+      },
+      {
+        "number": 24,
+        "key": "showcase.title"
+      },
+      {
+        "number": 25,
+        "key": "showcase.subtitle"
+      },
+      {
+        "number": 26,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 27,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 28,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 29,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 30,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 31,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 32,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 33,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 34,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 35,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 36,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 37,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 38,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 39,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 40,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 41,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 42,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 43,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 44,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 45,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 46,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 47,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 48,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 49,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 50,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 51,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 52,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 53,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 54,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 55,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 56,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 57,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 58,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 59,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 60,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 61,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 62,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 63,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 64,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 65,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 66,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 67,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 68,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 69,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 70,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 71,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 72,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 73,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 74,
+        "key": "showcase.see_how"
+      },
+      {
+        "number": 75,
+        "key": "apps.kicker"
+      },
+      {
+        "number": 76,
+        "key": "apps.title"
+      },
+      {
+        "number": 77,
+        "key": "apps.subtitle"
+      },
+      {
+        "number": 78,
+        "key": "apps.built_with"
+      },
+      {
+        "number": 79,
+        "key": "apps.visit"
+      },
+      {
+        "number": 80,
+        "key": "apps.view_code"
+      },
+      {
+        "number": 81,
+        "key": "apps.built_with"
+      },
+      {
+        "number": 82,
+        "key": "apps.view_code"
+      },
+      {
+        "number": 83,
+        "key": "faq.kicker"
+      },
+      {
+        "number": 84,
+        "key": "faq.title"
+      },
+      {
+        "number": 85,
+        "key": "faq.description"
+      },
+      {
+        "number": 86,
+        "key": "footer.description"
+      },
+      {
+        "number": 87,
+        "key": "footer.col.product"
+      },
+      {
+        "number": 88,
+        "key": "footer.product.documentation"
+      },
+      {
+        "number": 89,
+        "key": "footer.product.api"
+      },
+      {
+        "number": 90,
+        "key": "footer.product.blog"
+      },
+      {
+        "number": 91,
+        "key": "footer.product.support"
+      },
+      {
+        "number": 92,
+        "key": "footer.col.contact"
+      },
+      {
+        "number": 93,
+        "key": "footer.contact.email"
+      },
+      {
+        "number": 94,
+        "key": "footer.contact.chat"
+      },
+      {
+        "number": 95,
+        "key": "footer.contact.feedback"
+      },
+      {
+        "number": 96,
+        "key": "footer.contact.help"
+      },
+      {
+        "number": 97,
+        "key": "footer.col.legal"
+      },
+      {
+        "number": 98,
+        "key": "footer.legal.terms"
+      },
+      {
+        "number": 99,
+        "key": "footer.legal.privacy"
+      },
+      {
+        "number": 100,
+        "key": "footer.legal.cookie"
+      },
+      {
+        "number": 101,
+        "key": "footer.legal.gdpr"
+      },
+      {
+        "number": 102,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "modules",
+    "description": "Modules -- browsable module grid",
+    "mode": "report",
+    "file": "report/modules.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "modules.title"
+      },
+      {
+        "number": 9,
+        "key": "modules.subtitle"
+      },
+      {
+        "number": 10,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 11,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 12,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 13,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 14,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 15,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 16,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 17,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 18,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 19,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 20,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 21,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 22,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 23,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 24,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 25,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 26,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 27,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 28,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 29,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 30,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 31,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 32,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 33,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 34,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 35,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 36,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 37,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 38,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 39,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 40,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 41,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 42,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 43,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 44,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 45,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 46,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 47,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 48,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 49,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 50,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 51,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 52,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 53,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 54,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 55,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 56,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 57,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 58,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 59,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 60,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 61,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 62,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 63,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 64,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 65,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 66,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 67,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 68,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 69,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 70,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 71,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 72,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 73,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 74,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 75,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 76,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 77,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 78,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 79,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 80,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 81,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 82,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 83,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 84,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 85,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 86,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 87,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 88,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 89,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 90,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 91,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 92,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 93,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 94,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 95,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 96,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 97,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 98,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 99,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 100,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 101,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 102,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 103,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 104,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 105,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 106,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 107,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 108,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 109,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 110,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 111,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 112,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 113,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 114,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 115,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 116,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 117,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 118,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 119,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 120,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 121,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 122,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 123,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 124,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 125,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 126,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 127,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 128,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 129,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 130,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 131,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 132,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 133,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 134,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 135,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 136,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 137,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 138,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 139,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 140,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 141,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 142,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 143,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 144,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 145,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 146,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 147,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 148,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 149,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 150,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 151,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 152,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 153,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 154,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 155,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 156,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 157,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 158,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 159,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 160,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 161,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 162,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 163,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 164,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 165,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 166,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 167,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 168,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 169,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 170,
+        "key": "modules.kicker"
+      },
+      {
+        "number": 171,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 172,
+        "key": "modules.see_tutorials"
+      },
+      {
+        "number": 173,
+        "key": "modules.demo_icon"
+      },
+      {
+        "number": 174,
+        "key": "modules.demo_label"
+      },
+      {
+        "number": 175,
+        "key": "footer.description"
+      },
+      {
+        "number": 176,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "features",
+    "description": "Features -- feature highlights",
+    "mode": "report",
+    "file": "report/features.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "features.title"
+      },
+      {
+        "number": 9,
+        "key": "features.description"
+      },
+      {
+        "number": 10,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 11,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 12,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 13,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 14,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 15,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 16,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 17,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 18,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 19,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 20,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 21,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 22,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 23,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 24,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 25,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 26,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 27,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 28,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 29,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 30,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 31,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 32,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 33,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 34,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 35,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 36,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 37,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 38,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 39,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 40,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 41,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 42,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 43,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 44,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 45,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 46,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 47,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 48,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 49,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 50,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 51,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 52,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 53,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 54,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 55,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 56,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 57,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 58,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 59,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 60,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 61,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 62,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 63,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 64,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 65,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 66,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 67,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 68,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 69,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 70,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 71,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 72,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 73,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 74,
+        "key": "modules.read_more"
+      },
+      {
+        "number": 75,
+        "key": "modules.see_examples"
+      },
+      {
+        "number": 76,
+        "key": "footer.description"
+      },
+      {
+        "number": 77,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "tutorials",
+    "description": "Tutorials -- guided tutorial list",
+    "mode": "report",
+    "file": "report/tutorials.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "tutorials.default_hint"
+      },
+      {
+        "number": 9,
+        "key": "footer.description"
+      },
+      {
+        "number": 10,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "examples",
+    "description": "Examples -- code examples list",
+    "mode": "report",
+    "file": "report/examples.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "examples.default_hint"
+      },
+      {
+        "number": 9,
+        "key": "footer.description"
+      },
+      {
+        "number": 10,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "documentation",
+    "description": "Documentation hub -- round-2 documentation landing page",
+    "mode": "report",
+    "file": "report/documentation.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "documentation.title"
+      },
+      {
+        "number": 9,
+        "key": "documentation.subtitle"
+      },
+      {
+        "number": 10,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 11,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 12,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 13,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 14,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 15,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 16,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 17,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 18,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 19,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 20,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 21,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 22,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 23,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 24,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 25,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 26,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 27,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 28,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 29,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 30,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 31,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 32,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 33,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 34,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 35,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 36,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 37,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 38,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 39,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 40,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 41,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 42,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 43,
+        "key": "footer.description"
+      },
+      {
+        "number": 44,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "showcase",
+    "description": "Showcase -- round-2 highlights grid",
+    "mode": "report",
+    "file": "report/showcase.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "showcase.title"
+      },
+      {
+        "number": 9,
+        "key": "showcase.subtitle"
+      },
+      {
+        "number": 10,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 11,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 12,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 13,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 14,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 15,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 16,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 17,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 18,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 19,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 20,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 21,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 22,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 23,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 24,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 25,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 26,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 27,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 28,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 29,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 30,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 31,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 32,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 33,
+        "key": "showcase.see_code"
+      },
+      {
+        "number": 34,
+        "key": "footer.description"
+      },
+      {
+        "number": 35,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "showcase-detail",
+    "description": "Showcase detail (extensible-decoration) -- highlight with live demo and code",
+    "mode": "report",
+    "file": "report/showcase-detail.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "showcase.modules_used"
+      },
+      {
+        "number": 2,
+        "key": "showcase.run_demo"
+      },
+      {
+        "number": 3,
+        "key": "showcase.see_code"
+      }
+    ]
+  },
+  {
+    "id": "showcase-detail-not-found",
+    "description": "Showcase detail -- unknown id renders the not-found state",
+    "mode": "report",
+    "file": "report/showcase-detail-not-found.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "showcase.not_found"
+      }
+    ]
+  },
+  {
+    "id": "apps",
+    "description": "Apps -- round-2 apps built with Decaf",
+    "mode": "report",
+    "file": "report/apps.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "apps.title"
+      },
+      {
+        "number": 9,
+        "key": "apps.subtitle"
+      },
+      {
+        "number": 10,
+        "key": "apps.built_with"
+      },
+      {
+        "number": 11,
+        "key": "apps.visit"
+      },
+      {
+        "number": 12,
+        "key": "apps.view_code"
+      },
+      {
+        "number": 13,
+        "key": "apps.built_with"
+      },
+      {
+        "number": 14,
+        "key": "apps.view_code"
+      },
+      {
+        "number": 15,
+        "key": "footer.description"
+      },
+      {
+        "number": 16,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "news",
+    "description": "News -- latest releases page",
+    "mode": "report",
+    "file": "report/news.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "news.title"
+      },
+      {
+        "number": 9,
+        "key": "news.subtitle"
+      },
+      {
+        "number": 10,
+        "key": "footer.description"
+      },
+      {
+        "number": 11,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "community",
+    "description": "Community -- round-2 community page",
+    "mode": "report",
+    "file": "report/community.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "community.title"
+      },
+      {
+        "number": 9,
+        "key": "community.subtitle"
+      },
+      {
+        "number": 10,
+        "key": "community.kicker"
+      },
+      {
+        "number": 11,
+        "key": "community.discover"
+      },
+      {
+        "number": 12,
+        "key": "community.discover_subtitle"
+      },
+      {
+        "number": 13,
+        "key": "community.discord.title"
+      },
+      {
+        "number": 14,
+        "key": "community.discord.description"
+      },
+      {
+        "number": 15,
+        "key": "community.github.title"
+      },
+      {
+        "number": 16,
+        "key": "community.github.description"
+      },
+      {
+        "number": 17,
+        "key": "community.tutorials.title"
+      },
+      {
+        "number": 18,
+        "key": "community.tutorials.description"
+      },
+      {
+        "number": 19,
+        "key": "footer.description"
+      },
+      {
+        "number": 20,
+        "key": "footer.copyright"
+      }
+    ]
+  },
+  {
+    "id": "locale-menu",
+    "description": "Navigation locale menu -- open language popup",
+    "mode": "report",
+    "file": "report/locale-menu.png",
+    "numbering": [
+      {
+        "number": 1,
+        "key": "nav.modules"
+      },
+      {
+        "number": 2,
+        "key": "nav.features"
+      },
+      {
+        "number": 3,
+        "key": "nav.documentation"
+      },
+      {
+        "number": 4,
+        "key": "nav.showcase"
+      },
+      {
+        "number": 5,
+        "key": "nav.apps"
+      },
+      {
+        "number": 6,
+        "key": "nav.community"
+      },
+      {
+        "number": 7,
+        "key": "cta.get_started"
+      },
+      {
+        "number": 8,
+        "key": "documentation.title"
+      },
+      {
+        "number": 9,
+        "key": "documentation.subtitle"
+      },
+      {
+        "number": 10,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 11,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 12,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 13,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 14,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 15,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 16,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 17,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 18,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 19,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 20,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 21,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 22,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 23,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 24,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 25,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 26,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 27,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 28,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 29,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 30,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 31,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 32,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 33,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 34,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 35,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 36,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 37,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 38,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 39,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 40,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 41,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 42,
+        "key": "documentation.open_docs"
+      },
+      {
+        "number": 43,
+        "key": "footer.description"
+      },
+      {
+        "number": 44,
+        "key": "footer.copyright"
+      }
+    ]
+  }
+]

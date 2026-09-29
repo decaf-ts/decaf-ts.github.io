@@ -1,0 +1,32 @@
+<div id="news-list" class="news-list">
+  @for (item of items; track item['model'].id) {
+    <article class="news-list__card" [attr.id]="'news-' + news(item)['id']">
+      <header class="news-list__header">
+        <span class="news-list__repo">{{ news(item).repo }}</span>
+        @if (news(item).tag) {
+          <span class="news-list__tag">{{ news(item).tag }}</span>
+        }
+        @if (displayDate(news(item))) {
+          <time class="news-list__date" [attr.datetime]="news(item).date">{{ displayDate(news(item)) }}</time>
+        }
+      </header>
+      <h2 class="news-list__title">{{ displayTitle(news(item)) }}</h2>
+      @if (news(item).excerpt) {
+        <p class="news-list__excerpt">{{ news(item).excerpt }}</p>
+      } @else {
+        <p class="news-list__excerpt news-list__excerpt--muted">{{ 'news.no_notes' | translate }}</p>
+      }
+      @if (releaseUrl(news(item))) {
+        <a
+          class="news-list__link"
+          [href]="releaseUrl(news(item))"
+          target="_blank"
+          rel="noopener noreferrer"
+        >{{ 'news.view_release' | translate }} ↗</a>
+      }
+    </article>
+  }
+  @if (items?.length === 0) {
+    <p class="news-list__empty">{{ 'news.empty' | translate }}</p>
+  }
+</div>

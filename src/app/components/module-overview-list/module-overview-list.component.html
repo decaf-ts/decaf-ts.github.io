@@ -3,6 +3,12 @@
     <article class="module-overview__card">
       <h3 class="module-overview__title">{{ title(module(item)) }}</h3>
       <p class="module-overview__summary">{{ summary(module(item)) }}</p>
+      @if (module(item).description) {
+        <details class="module-overview__details">
+          <summary class="module-overview__details-toggle">{{ 'modules.read_more' | translate }}</summary>
+          <div class="module-overview__details-body md-body" [innerHTML]="module(item).description | markdown"></div>
+        </details>
+      }
       <a
         [routerLink]="'/features'"
         [queryParams]="{ module: module(item).name }"
